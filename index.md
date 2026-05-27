@@ -1,13 +1,13 @@
 ---
 layout: default
-title: เก๋าตังค์ — Kaotang
+title: DooSpend
 ---
 
-# เก๋าตังค์ (Kaotang)
+# DooSpend
 
-**AI expense tracker for Thai working adults — iOS · iPhone-first**
+**แอปบันทึกค่าใช้จ่าย สำหรับคนที่ขี้เกียจจด — iOS · iPhone**
 
-บันทึกรายจ่ายง่ายๆ + AI อ่านสลิป + ดูบัตรไหนคุ้มก่อนรูด — ข้อมูลอยู่ในเครื่องคุณ ไม่ส่ง server ใคร
+AI ช่วยจดอัตโนมัติ — ถ่ายสลิป, screenshot จากแอปไหนก็ได้, พูด, สแกน QR · ข้อมูลอยู่ในเครื่องคุณ ไม่ส่ง server ใคร
 
 ---
 
@@ -19,5 +19,4 @@ title: เก๋าตังค์ — Kaotang
 
 ## ติดต่อ
 
-- **Support:** [support@kaotang.app](mailto:support@kaotang.app)
-- **Feedback:** [leonlek@hotmail.com](mailto:leonlek@hotmail.com)
+- **Support / Feedback:** [leonlek@hotmail.com](mailto:leonlek@hotmail.com)

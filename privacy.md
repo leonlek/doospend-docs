@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Privacy Policy — เก๋าตังค์ (Kaotang)
+title: Privacy Policy — DooSpend
 ---
 
-# Privacy Policy — เก๋าตังค์ (Kaotang)
+# Privacy Policy — DooSpend
 
 _Last updated: 2026-05-27_
 
 ## TL;DR
 
-**เก๋าตังค์ เก็บข้อมูลการเงินทุกอย่างไว้บนเครื่องคุณเท่านั้น — เราไม่มี server ของเราเอง, ไม่มี user account online, ไม่ส่งข้อมูลส่วนตัวให้บุคคลที่สาม**
+**DooSpend เก็บข้อมูลการเงินทุกอย่างไว้บนเครื่องคุณเท่านั้น — เราไม่มี server ของเราเอง, ไม่มี user account online, ไม่ส่งข้อมูลส่วนตัวให้บุคคลที่สาม**
 
 รายการรายรับ-รายจ่าย, บัญชี, บัตรเครดิต, สลิป, งบประมาณ — ทุกอย่างเก็บใน local SwiftData บนเครื่อง iPhone ของคุณ และจะหายไปทันทีเมื่อคุณลบแอป (ยกเว้นถ้าคุณกดสำรองออกไฟล์ .json ด้วยตัวเองก่อน)
 
@@ -70,7 +70,7 @@ _Last updated: 2026-05-27_
 ## ที่ **ไม่** เก็บ / ไม่เก็บแน่นอน
 
 - ❌ **ไม่อ่าน SMS** — ระบบไม่ขอ permission อ่าน SMS แม้แต่ผูก bank
-- ❌ **ไม่ผูก bank account** — เก๋าตังค์ไม่เชื่อมต่อ Open Banking / Yodlee / Plaid
+- ❌ **ไม่ผูก bank account** — DooSpendไม่เชื่อมต่อ Open Banking / Yodlee / Plaid
 - ❌ **ไม่ใช้ Analytics SDK** — ไม่มี Firebase, Mixpanel, Amplitude
 - ❌ **ไม่มี crash reporting third-party** — ไม่มี Crashlytics, Sentry
 - ❌ **ไม่เก็บ device ID, IDFA, advertising ID**
@@ -98,4 +98,4 @@ _Last updated: 2026-05-27_
 
 ## ติดต่อ
 
-มีคำถามเกี่ยวกับ privacy? ส่งเมลมาที่ **support@kaotang.app**
+มีคำถามเกี่ยวกับ privacy? ส่งเมลมาที่ **leonlek@hotmail.com**

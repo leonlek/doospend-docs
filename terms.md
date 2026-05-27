@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Terms of Use — เก๋าตังค์ (Kaotang)
+title: Terms of Use — DooSpend
 ---
 
-# Terms of Use — เก๋าตังค์ (Kaotang)
+# Terms of Use — DooSpend
 
 _Last updated: 2026-05-27_
 
 ## 1. การยอมรับเงื่อนไข
 
-การติดตั้งและใช้งานแอป "เก๋าตังค์" (Kaotang) ถือว่าคุณยอมรับเงื่อนไขทั้งหมดในเอกสารฉบับนี้ ถ้าไม่ยอมรับ กรุณาลบแอปออก
+การติดตั้งและใช้งานแอป "DooSpend" (DooSpend) ถือว่าคุณยอมรับเงื่อนไขทั้งหมดในเอกสารฉบับนี้ ถ้าไม่ยอมรับ กรุณาลบแอปออก
 
 ## 2. การใช้งาน
 
@@ -62,4 +62,4 @@ _Last updated: 2026-05-27_
 
 ## ติดต่อ
 
-มีคำถามเกี่ยวกับ Terms? ส่งเมลมาที่ **support@kaotang.app**
+มีคำถามเกี่ยวกับ Terms? ส่งเมลมาที่ **leonlek@hotmail.com**
