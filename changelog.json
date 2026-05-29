@@ -1,0 +1,18 @@
+{
+  "$schema_note": "Lives at https://leonlek.github.io/doospend-docs/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array.",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "title": "🎉 ยินดีต้อนรับสู่ DooSpend",
+      "date": "29 พฤษภาคม 2569",
+      "items": [
+        "📷 ถ่ายสลิป AI แยกหมวดให้อัตโนมัติ — ไม่ต้องพิมพ์เอง",
+        "🛒 นำเข้ารายการช้อปจาก Shopee / Lazada / TrueMoney ทั้งหน้าจอเดียว",
+        "💳 Best Card บอกใช้บัตรไหนคุ้มสุดในแต่ละจ่าย",
+        "👥 สมุด (บัญชีร่วม) — คำนวณว่าใครติดใคร พร้อม iCloud sync",
+        "📊 วางแผนล้างหนี้บัตร: Avalanche vs Snowball",
+        "🔍 สแกนจ่ายก่อนกด — เตือนเมื่อยอดผิดปกติ"
+      ]
+    }
+  ]
+}

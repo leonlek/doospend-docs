@@ -44,9 +44,9 @@
       <td>เราไม่มี server ของตัวเอง ไม่เห็นข้อมูลนี้</td>
     </tr>
     <tr>
-      <td>Pocket (บัญชีร่วม) + transactions ใน Pocket นั้น</td>
+      <td>สมุด (บัญชีร่วม) + รายการในสมุดนั้น</td>
       <td>Apple CKShare → iCloud shared database</td>
-      <td>เฉพาะคนที่ Pocket owner เชิญผ่านลิงค์เท่านั้นที่เห็น Owner ยุติ share ได้ทันที</td>
+      <td>เฉพาะคนที่เจ้าของสมุดเชิญผ่านลิงค์เท่านั้นที่เห็น เจ้าของยุติ share ได้ทันที</td>
     </tr>
     <tr>
       <td>รูปสลิป (ตอนคุณกด "ถ่ายสลิป")</td>
@@ -97,13 +97,13 @@
 <h3>4.2 Apple iCloud + Apple StoreKit</h3>
 <p>ข้อมูลใน CloudKit database เป็น <strong>private database ของคุณเอง</strong> ใน Apple ID ของคุณ Apple เก็บแบบเข้ารหัสและไม่อ่าน เราไม่มีสิทธิ์เข้าถึง</p>
 
-<h3>4.3 Pocket sharing via CKShare</h3>
-<p>เมื่อคุณเชิญคนอื่นเข้า Pocket — Apple's CKShare API จัดการเรื่องการอนุญาตและ sync ระหว่าง iCloud accounts ของผู้เข้าร่วม:</p>
+<h3>4.3 การแชร์สมุด ผ่าน CKShare</h3>
+<p>เมื่อคุณเชิญคนอื่นเข้าสมุด — Apple's CKShare API จัดการเรื่องการอนุญาตและ sync ระหว่าง iCloud accounts ของผู้เข้าร่วม:</p>
 <ul>
   <li>ลิงค์เชิญทำงานได้เฉพาะกับ Apple ID ที่ owner allow → คนที่ไม่ได้รับเชิญเปิดลิงค์ไม่ได้</li>
-  <li>ข้อมูลใน shared Pocket อยู่ใน <strong>Apple iCloud shared database</strong> ของ owner — Apple จัดการ encryption + access control</li>
-  <li>เราไม่มี server กลางของ Pocket — owner ปิด share = ผู้เข้าร่วมเสียสิทธิ์เข้าถึงทันที</li>
-  <li>"เพิ่มโดย: ชื่อ" ใน transactions ใช้ Apple ID record name ของ Apple — ไม่ใช่อีเมล / เบอร์ของคุณ</li>
+  <li>ข้อมูลในสมุดที่แชร์อยู่ใน <strong>Apple iCloud shared database</strong> ของเจ้าของ — Apple จัดการ encryption + access control</li>
+  <li>เราไม่มี server กลางของสมุด — เจ้าของปิด share = ผู้เข้าร่วมเสียสิทธิ์เข้าถึงทันที</li>
+  <li>"เพิ่มโดย: ชื่อ" ในรายการใช้ Apple ID record name ของ Apple — ไม่ใช่อีเมล / เบอร์ของคุณ</li>
 </ul>
 
 <h2>5. การลบข้อมูล</h2>
