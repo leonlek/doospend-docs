@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>คู่มือใช้งาน — DooSpend</title>
+<meta name="description" content="DooSpend Help — วิธีถ่ายสลิป, สแกน QR, วางแผนล้างหนี้บัตร, ซิงก์ iCloud, และคำถามที่พบบ่อย">
+<link rel="stylesheet" href="_shared.css">
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="logo">D</div>
+  <div class="name"><a href="./">DooSpend</a></div>
+</header>
+
+<h1>คู่มือใช้งาน</h1>
+<p class="lastUpdated">ปรับปรุงล่าสุด: 29 พฤษภาคม 2569 (2026)</p>
+
+<div class="nav">
+  <a href="./">หน้าหลัก</a>
+  <a href="privacy.html">นโยบายความเป็นส่วนตัว</a>
+  <a href="terms.html">เงื่อนไขการใช้งาน</a>
+  <a href="help.html" class="active">คู่มือใช้งาน</a>
+</div>
+
+<h2>เริ่มต้นใช้งาน</h2>
+<ol>
+  <li>ดาวน์โหลด DooSpend จาก App Store</li>
+  <li>เปิดแอป — ดูตัวอย่างใน onboarding 3-4 หน้า</li>
+  <li>เพิ่มบัญชีของคุณ (เงินสด, ธนาคาร, บัตรเครดิต) — Settings → กระเป๋าเงิน</li>
+  <li>เริ่มบันทึก — กดปุ่ม "+" กลาง tab bar หรือใช้ tile ลัดบน Dashboard</li>
+</ol>
+
+<h2>4 วิธีบันทึกค่าใช้จ่าย</h2>
+
+<h3>1. ถ่ายสลิป</h3>
+<p>กด "ถ่ายสลิป" → กล้องเปิด → ถ่ายสลิป → AI อ่านยอด ร้านค้า วันที่ ให้ → ตรวจสอบ → กดยืนยัน</p>
+<ul>
+  <li>รองรับสลิปโอน, สลิป PromptPay, ใบเสร็จร้านอาหาร ฯลฯ</li>
+  <li>ใช้ Apple Vision อ่านข้อความก่อน → Claude Haiku 4.5 จัดการข้อมูล (cost ถูกกว่า full vision)</li>
+  <li>นับ 1 ครั้ง quota AI</li>
+</ul>
+
+<h3>2. เลือกสลิป (จากคลังภาพ)</h3>
+<p>กด "เลือกสลิป" → modal โผล่ขึ้น 2 ตัวเลือก:</p>
+<ul>
+  <li><strong>สลิปทั่วไป</strong> — เลือกได้สูงสุด 10 ใบ AI ช่วยอ่านทีละใบ</li>
+  <li><strong>หน้าจอที่มีหลายรายการ</strong> — สำหรับ Shopee/Lazada history หรือ statement ธนาคาร 1 ภาพ AI แตกได้สูงสุด 5 รายการ</li>
+</ul>
+
+<h3>3. พิมพ์เร็ว / พูด</h3>
+<p>พิมพ์หรือพูดสั้นๆ เช่น "กาแฟ 75 บาท สตาร์บัคส์" → AI แยกยอด ร้าน หมวด ให้</p>
+<p>เสียงแปลงเป็นข้อความบน iPhone (ไม่ส่งเสียงออกจากเครื่อง) แล้วส่งเฉพาะข้อความให้ AI</p>
+
+<h3>4. สแกน QR PromptPay (จดก่อนจ่าย)</h3>
+<p>กด "สแกนจ่าย" → กล้องสแกน QR → preview ขึ้นโชว์ผู้รับ ยอด heads-up checklist (ตรวจก่อนจ่าย)</p>
+<ul>
+  <li>QR ถูกแสดงในแอป — เปิดแอปธนาคารของคุณเอง สแกนจาก DooSpend หรือบันทึก QR ลงคลังภาพ</li>
+  <li>เราไม่ได้ทำธุรกรรม — คุณยืนยันโอนผ่านแอปธนาคารของคุณ</li>
+  <li>หลังจ่ายเสร็จกด ✓ ใน DooSpend เพื่อบันทึกเป็น transaction</li>
+</ul>
+
+<h2>ฟีเจอร์เด่นสำหรับบัตรเครดิต</h2>
+
+<h3>Best Card Selector</h3>
+<p>ตอนบันทึกรายการ ถ้ามีบัตร 2+ ใบและตั้ง reward rules → แอปจะ ✨ เด้งบอก "ใช้บัตรนี้ได้ X บาท reward"</p>
+
+<h3>วางแผนล้างหนี้ (Avalanche / Snowball)</h3>
+<p>Settings → "วางแผนล้างหนี้" หรือ Dashboard tile "วางแผนล้างหนี้" ที่จะโผล่เมื่อมีบัตร 2+ ใบยอดค้าง</p>
+<ul>
+  <li><strong>Avalanche</strong> — จ่ายดอกเบี้ยสูงสุดก่อน ประหยัดเงินมากสุด</li>
+  <li><strong>Snowball</strong> — จ่ายยอดน้อยสุดก่อน ปิดบัตรเร็ว สู้ urge อยากเลิกแผน</li>
+  <li>ตั้งงบจ่ายต่อเดือน → ดู timeline จะหมดเมื่อไหร่</li>
+</ul>
+
+<h3>Statement OCR</h3>
+<p>Account detail → "Import Statement" → upload PDF/รูป statement → AI parse → reconcile กับรายการที่บันทึกแล้ว → เพิ่มที่ขาด</p>
+
+<h3>แจ้งเตือนวันครบกำหนด</h3>
+<p>ระบบ schedule local notification 5 จังหวะอัตโนมัติ (7d/3d/1d/วันครบ/หลัง 1d) ปิด/เปิดได้ใน Settings → "แจ้งเตือนบัตรเครดิต"</p>
+
+<h2>Pockets / ร่วมจ่าย (multi-user)</h2>
+
+<p>Pocket = บัญชีร่วมสำหรับ tag transactions ที่แบ่งกับครอบครัว / เพื่อน / ทริปกลุ่ม ออกแบบให้ทำงานข้ามเครื่อง — owner เชิญผ่าน iCloud link สมาชิกใหม่กดลิงค์แล้วเห็น Pocket + tx ทั้งหมดในไม่กี่วินาที</p>
+
+<h3>สร้าง Pocket + เชิญคนอื่น</h3>
+<ol>
+  <li>tab "ร่วมจ่าย" → "+" → ตั้งชื่อ "ทริปสวนสัตว์" + เลือกไอคอน/สี</li>
+  <li>tap pocket → menu "..." → "เชิญคนอื่นเข้า Pocket"</li>
+  <li>UICloudSharingController โผล่ → เลือก Messages / Email / Copy link</li>
+  <li>ส่งให้เพื่อน — ลิงค์ใช้ได้กับ iPhone/iPad ที่ sign in iCloud</li>
+</ol>
+
+<h3>tag transaction เข้า Pocket</h3>
+<ol>
+  <li>เพิ่ม transaction ปกติ (capture แบบไหนก็ได้)</li>
+  <li>tap chip "ร้านค้า / โน้ต" → sheet เปิด → section "Pocket (บัญชีร่วม)"</li>
+  <li>เลือก Pocket → ถ้าเป็น tx ที่คนอื่นจ่ายให้เปลี่ยน "ใครจ่าย"</li>
+  <li>save → tx ปรากฏใน Pocket detail พร้อม badge "เพิ่มโดย: ฉัน/เพื่อน"</li>
+</ol>
+
+<h3>Settlement — "ใครติดใคร"</h3>
+<p>เปิด Pocket detail หลังทริปจบ — settlement card จะโผล่ขึ้นมาเองเมื่อมี 2+ คน contribute โชว์:</p>
+<ul>
+  <li>ใช้รวม / คนละเท่าไหร่ (equal split)</li>
+  <li>รายการโอนขั้นต่ำ "A → B ฿X"</li>
+  <li>Per-person summary "เกิน / ขาด / พอดี"</li>
+</ul>
+<p>นำตัวเลข transfer ไป PromptPay / โอนหากันเองตามนั้น — DooSpend ไม่ได้ทำธุรกรรม</p>
+
+<h3>ข้อมูลใน Pocket</h3>
+<ul>
+  <li>sync ผ่าน iCloud private + shared database</li>
+  <li>เฉพาะคนที่ได้รับเชิญเท่านั้นที่เห็น</li>
+  <li>Owner ปิด share ได้จาก UICloudSharingController</li>
+</ul>
+
+<h2>ฟีเจอร์อื่นๆ</h2>
+
+<h3>ซิงก์ iCloud</h3>
+<p>ทำงานอัตโนมัติถ้าคุณ sign in iCloud — ข้อมูลตามไปทุกเครื่องที่ใช้ Apple ID เดียวกัน เช็คสถานะใน Settings → ความปลอดภัย & ซิงก์</p>
+
+<h3>ดู summary ย้อนหลัง</h3>
+<p>summary card บน Dashboard มีปุ่ม chevron ซ้าย/ขวา ข้างชื่อเดือน — ดูยอดของเดือนก่อนๆ ได้โดยไม่ต้องเปิดหน้าอื่น</p>
+
+<h3>ชื่อร้านแทนที่ (Merchant Alias)</h3>
+<p>เมื่อ AI อ่านชื่อร้านยาวเกินไป เช่น "STARBUCKS COFFEE COMPANY LIMITED" → คุณเปลี่ยนเป็น "Starbucks" → แอปจำให้ ครั้งหน้าสลิปร้านเดิมจะเปลี่ยนชื่อให้อัตโนมัติ</p>
+<p>จัดการรายการ alias ได้ที่ Settings → "ชื่อร้านแทนที่"</p>
+
+<h3>พื้นที่ภาพ (ลบรูปสลิปเก่า)</h3>
+<p>Settings → "พื้นที่ภาพ" → เลือกอายุภาพที่อยากเก็บ (6 เดือน / 12 เดือน / เก็บถาวร) → กดปุ่ม "ลบรูปเก่ากว่า X เดือน" — รายการเงินยังอยู่ครบ ลบเฉพาะรูป</p>
+
+<h3>Quick Actions (Home Screen)</h3>
+<p>กดค้างที่ icon DooSpend บน Home Screen → menu: ถ่ายสลิป, สแกนจ่าย, เพิ่มรายการ, พูด</p>
+
+<h2>Quota AI</h2>
+<table>
+  <thead>
+    <tr><th>แผน</th><th>โควต้า</th><th>ราคา</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>ฟรี</td><td>5 ครั้ง/เดือน</td><td>ฟรี</td></tr>
+    <tr><td>Pro รายเดือน</td><td>150 ครั้ง/เดือน</td><td>฿69/เดือน</td></tr>
+  </tbody>
+</table>
+<p>1 "ครั้ง AI" = 1 รายการที่ AI ช่วยอ่าน (สลิป, voice/text parse) — manual entry ไม่นับ การกด "ตรวจสอบใหม่" บนรายการที่ AI อ่านไปแล้วนับเพิ่ม</p>
+
+<h2>คำถามที่พบบ่อย</h2>
+
+<h3>Q: ข้อมูลของฉันปลอดภัยมั้ย?</h3>
+<p>ปลอดภัย — เก็บใน iPhone/iPad + iCloud private ส่วนตัวของคุณ เราไม่มี server มี่เก็บ transactions ดูรายละเอียดที่ <a href="privacy.html">นโยบายความเป็นส่วนตัว</a></p>
+
+<h3>Q: แอปทำงานบน Android มั้ย?</h3>
+<p>ไม่มีตอนนี้ DooSpend เป็น iOS-only แอป</p>
+
+<h3>Q: ถ้าเปลี่ยน iPhone ข้อมูลจะหายมั้ย?</h3>
+<p>ไม่หาย ถ้าคุณ sign in iCloud — ลง DooSpend บนเครื่องใหม่ → ข้อมูลขึ้นเองภายในไม่กี่วินาที</p>
+
+<h3>Q: ใน Pocket — ใครเห็นข้อมูลของฉัน?</h3>
+<p>เฉพาะคนที่คุณ (หรือ Pocket owner) เชิญผ่าน iCloud link เท่านั้น สมาชิกเห็น tx ทั้งหมดใน Pocket แต่ไม่เห็น tx ส่วนตัวของคุณ (ส่วนตัว = ไม่ tag pocket)</p>
+
+<h3>Q: Settlement คำนวณยังไง?</h3>
+<p>แบ่งเท่าๆ กัน (equal split): ใช้รวม ÷ จำนวนคน = ส่วนแต่ละคนควรจ่าย. ใครจ่ายเกิน → คนอื่นติด, ใครจ่ายขาด → ต้องคืน. แอป auto-match ให้ minimum transfers</p>
+
+<h3>Q: AI อ่านสลิปผิด ทำยังไง?</h3>
+<p>ตรวจที่ pending entry ก่อนยืนยัน — คุณแก้ยอด, ร้านค้า, วันที่ ได้ ถ้าแก้ชื่อร้านบ่อยๆ ครั้งหน้าแอปจะจำให้ผ่าน Merchant Alias</p>
+
+<h3>Q: ยกเลิก Pro ยังไง?</h3>
+<p>iOS Settings → Apple ID (ชื่อคุณบนสุด) → Subscriptions → DooSpend Pro → ยกเลิก ใช้ได้จนครบรอบเดือนที่จ่ายไปแล้ว</p>
+
+<h3>Q: ส่ง refund ตรงกับคุณได้มั้ย?</h3>
+<p>ไม่ได้ — refund ทำผ่าน Apple ที่ <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a></p>
+
+<h2>ติดต่อ</h2>
+<p>ปัญหาการใช้งาน, feature request, รายงานบัก — <a href="mailto:apiwat.pe@gmail.com">apiwat.pe@gmail.com</a></p>
+
+<footer>
+  <span>© 2026 DooSpend</span>
+  <span><a href="./">Home</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
+</footer>
+
+</div>
+</body>
+</html>

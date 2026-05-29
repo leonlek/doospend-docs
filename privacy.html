@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>นโยบายความเป็นส่วนตัว — DooSpend</title>
+<meta name="description" content="DooSpend Privacy Policy — เราเก็บอะไรบ้าง ส่งไปไหนบ้าง ตรงๆ ไม่อ้อมค้อม">
+<link rel="stylesheet" href="_shared.css">
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="logo">D</div>
+  <div class="name"><a href="./">DooSpend</a></div>
+</header>
+
+<h1>นโยบายความเป็นส่วนตัว</h1>
+<p class="lastUpdated">ปรับปรุงล่าสุด: 29 พฤษภาคม 2569 (2026)</p>
+
+<div class="nav">
+  <a href="./">หน้าหลัก</a>
+  <a href="privacy.html" class="active">นโยบายความเป็นส่วนตัว</a>
+  <a href="terms.html">เงื่อนไขการใช้งาน</a>
+  <a href="help.html">คู่มือใช้งาน</a>
+</div>
+
+<div class="callout">
+  <strong>สรุปสั้นๆ:</strong> ข้อมูลการเงินของคุณ <strong>ไม่ออกจาก iPhone/iPad ของคุณ</strong> และ Apple iCloud ส่วนตัวของคุณ เราไม่มี server ที่เก็บ transactions, ยอด, หรือบัญชี ส่วนที่ "ส่งออกไป" มีแค่ภาพสลิปที่ส่งให้ AI อ่าน (Anthropic ผ่าน Cloudflare Worker) และไม่ผูกกับตัวตนคุณเลย
+</div>
+
+<h2>1. เราเป็นใคร</h2>
+<p>DooSpend เป็นแอป iOS ส่วนตัว (independent / indie developer) พัฒนาโดย Apiwat Pengjam ติดต่อได้ที่ <a href="mailto:apiwat.pe@gmail.com">apiwat.pe@gmail.com</a></p>
+
+<h2>2. ข้อมูลที่เราเก็บและที่อยู่</h2>
+<table>
+  <thead>
+    <tr><th>ประเภทข้อมูล</th><th>เก็บที่ไหน</th><th>หมายเหตุ</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>รายการรับ-จ่าย ยอด บัญชี หมวด งบ ผ่อน subscription</td>
+      <td>ใน iPhone/iPad ของคุณ + Apple iCloud ส่วนตัวของคุณ</td>
+      <td>เราไม่มี server ของตัวเอง ไม่เห็นข้อมูลนี้</td>
+    </tr>
+    <tr>
+      <td>Pocket (บัญชีร่วม) + transactions ใน Pocket นั้น</td>
+      <td>Apple CKShare → iCloud shared database</td>
+      <td>เฉพาะคนที่ Pocket owner เชิญผ่านลิงค์เท่านั้นที่เห็น Owner ยุติ share ได้ทันที</td>
+    </tr>
+    <tr>
+      <td>รูปสลิป (ตอนคุณกด "ถ่ายสลิป")</td>
+      <td>ใน iPhone/iPad ของคุณ + iCloud ส่วนตัว</td>
+      <td>เก็บถาวรจนกว่าคุณลบ — มี Settings → "พื้นที่ภาพ" ให้ลบกลุ่มได้</td>
+    </tr>
+    <tr>
+      <td>รูปสลิปที่ส่งให้ AI อ่าน</td>
+      <td>ส่งผ่าน Cloudflare Worker → Anthropic Claude API (US)</td>
+      <td>ส่งครั้งเดียวเพื่ออ่าน ไม่เก็บถาวร ไม่ผูกกับ user ID</td>
+    </tr>
+    <tr>
+      <td>เสียงพูด (ตอนกด "พูด")</td>
+      <td>แปลงเป็นข้อความบน iPhone (ใช้ SFSpeechRecognizer ของ Apple)</td>
+      <td><strong>เสียงดิบไม่ออกจากเครื่อง</strong> — มีแต่ข้อความ transcribed ที่ส่งต่อให้ AI</td>
+    </tr>
+    <tr>
+      <td>การใช้ AI (จำนวนครั้ง/เดือน)</td>
+      <td>นับใน iPhone/iPad ของคุณ + iCloud ส่วนตัว</td>
+      <td>ใช้เช็ค quota Free/Pro</td>
+    </tr>
+    <tr>
+      <td>การซื้อ Pro subscription</td>
+      <td>Apple StoreKit (ไม่ผ่านเรา)</td>
+      <td>Apple จัดการเก็บเงินและเก็บข้อมูลการชำระเงิน ตามนโยบายของ Apple เอง</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3. ข้อมูลที่เราไม่เก็บ</h2>
+<ul>
+  <li>เราไม่ใช้ analytics / tracking SDK (Google Analytics, Firebase, Facebook SDK, ฯลฯ)</li>
+  <li>เราไม่มี user account / login — ไม่ต้องสมัครก็ใช้ได้</li>
+  <li>เราไม่อ่าน SMS, contacts, location, calendar, health</li>
+  <li>เราไม่ขายข้อมูลให้ third party (เราไม่มีข้อมูลให้ขายอยู่แล้ว)</li>
+</ul>
+
+<h2>4. บริการ Third Party ที่เราใช้</h2>
+
+<h3>4.1 Anthropic Claude (ผ่าน Cloudflare Worker)</h3>
+<p>ภาพสลิปและข้อความ voice transcript จะถูกส่งผ่าน Cloudflare Worker (proxy ของเราเอง) ไปยัง Anthropic Claude API เพื่ออ่านยอด ร้านค้า วันที่ และจำแนกหมวด</p>
+<ul>
+  <li>คำขอ <strong>ไม่มี user identifier</strong> ไม่มีอีเมล ไม่มี Apple ID</li>
+  <li>Anthropic ระบุใน policy ของเขาว่าไม่ใช้ API requests ไปเทรนโมเดล (<a href="https://www.anthropic.com/privacy">Anthropic Privacy</a>)</li>
+  <li>Cloudflare Worker proxy ของเราไม่ log ภาพหรือเนื้อหา — บันทึกแค่จำนวนคำขอเพื่อ rate limit</li>
+</ul>
+
+<h3>4.2 Apple iCloud + Apple StoreKit</h3>
+<p>ข้อมูลใน CloudKit database เป็น <strong>private database ของคุณเอง</strong> ใน Apple ID ของคุณ Apple เก็บแบบเข้ารหัสและไม่อ่าน เราไม่มีสิทธิ์เข้าถึง</p>
+
+<h3>4.3 Pocket sharing via CKShare</h3>
+<p>เมื่อคุณเชิญคนอื่นเข้า Pocket — Apple's CKShare API จัดการเรื่องการอนุญาตและ sync ระหว่าง iCloud accounts ของผู้เข้าร่วม:</p>
+<ul>
+  <li>ลิงค์เชิญทำงานได้เฉพาะกับ Apple ID ที่ owner allow → คนที่ไม่ได้รับเชิญเปิดลิงค์ไม่ได้</li>
+  <li>ข้อมูลใน shared Pocket อยู่ใน <strong>Apple iCloud shared database</strong> ของ owner — Apple จัดการ encryption + access control</li>
+  <li>เราไม่มี server กลางของ Pocket — owner ปิด share = ผู้เข้าร่วมเสียสิทธิ์เข้าถึงทันที</li>
+  <li>"เพิ่มโดย: ชื่อ" ใน transactions ใช้ Apple ID record name ของ Apple — ไม่ใช่อีเมล / เบอร์ของคุณ</li>
+</ul>
+
+<h2>5. การลบข้อมูล</h2>
+<ul>
+  <li>ลบ transaction รายการเดียว: swipe ในรายการ</li>
+  <li>ลบรูปสลิปกลุ่ม: Settings → "พื้นที่ภาพ" → ตามนโยบายอายุภาพ</li>
+  <li>ลบทุกอย่างในเครื่อง: ลบแอป (delete จาก Home Screen) → จะลบข้อมูลในเครื่องและใน iCloud private database ทั้งหมด</li>
+</ul>
+
+<h2>6. เด็กและเยาวชน</h2>
+<p>DooSpend ออกแบบสำหรับผู้ใหญ่ (อายุ 17+ ตาม App Store rating) แอปไม่เก็บข้อมูลเด็กแยกต่างหาก ถ้าผู้ใช้เด็กใช้แอปนี้ ข้อมูลจะอยู่ในเครื่อง/iCloud ของเด็กตามปกติ</p>
+
+<h2>7. การเปลี่ยนนโยบาย</h2>
+<p>ถ้าเปลี่ยนนโยบาย เราจะอัปเดตวันที่ด้านบนของหน้านี้ การเปลี่ยนแปลงสำคัญ (เช่น เพิ่ม third party ใหม่) จะแจ้งในแอปด้วย</p>
+
+<h2>8. ติดต่อเรื่อง privacy</h2>
+<p>คำถามหรือคำขอเกี่ยวกับข้อมูลของคุณ — <a href="mailto:apiwat.pe@gmail.com">apiwat.pe@gmail.com</a></p>
+
+<footer>
+  <span>© 2026 DooSpend</span>
+  <span><a href="./">Home</a> · <a href="terms.html">Terms</a> · <a href="help.html">Help</a></span>
+</footer>
+
+</div>
+</body>
+</html>
