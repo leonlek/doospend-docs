@@ -2,6 +2,18 @@
   "$schema_note": "Lives at https://leonlek.github.io/doospend-docs/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array.",
   "versions": [
     {
+      "version": "1.1.0",
+      "title": "👥 แชร์สมุดกับเพื่อน — จดพร้อมกันแบบเรียลไทม์",
+      "date": "30 พฤษภาคม 2569",
+      "items": [
+        "👥 เชิญเพื่อนเข้าสมุด — ทุกคนจดรายการเดียวกัน เห็นอัปเดตแบบเรียลไทม์",
+        "🧮 สรุป \"ใครติดใคร\" อัตโนมัติ พร้อมรายการโอนขั้นต่ำ A → B ฿X",
+        "💸 \"ฉันจ่าย\" หักเข้าบัญชีส่วนตัวจริง — หรือเลือก \"ไม่หักบัญชี\" แยกทริปไว้ต่างหาก",
+        "👤 การ์ดสมาชิก บอกใครเข้าร่วมแล้ว / ใครยังรอตอบรับ",
+        "🎨 หน้าจดของสมุดที่แชร์ใช้สีของสมุดเอง รู้ทันทีว่ากำลังจดลงสมุดไหน"
+      ]
+    },
+    {
       "version": "1.0.0",
       "title": "🎉 ยินดีต้อนรับสู่ DooSpend",
       "date": "29 พฤษภาคม 2569",
