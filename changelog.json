@@ -2,6 +2,30 @@
   "$schema_note": "Lives at https://leonlek.github.io/doospend-docs/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array.",
   "versions": [
     {
+      "version": "1.3.0",
+      "title": "📲 Widget + สั่งจดด้วย Siri — จดง่ายขึ้นทุกที่",
+      "date": "27 มิถุนายน 2569",
+      "items": [
+        "📲 Widget หน้าโฮม + Lock Screen — เห็นยอดเดือนนี้ งบ และหมวดที่ใช้บ่อย เหลือบเดียว แตะเพื่อจดได้เลย",
+        "🗣️ สั่งจดด้วย Siri & Shortcuts — \"บันทึกด่วน\" ลงรายจ่ายด้วยเสียง / ปุ่มลัด / Action Button ไม่ต้องเปิดแอป",
+        "📅 ตั้งวันเริ่มรอบเดือนเอง — ให้ตรงวันเงินเดือน ยอด/งบ/สรุปนับตามรอบของคุณ",
+        "🤖 สลิป/แคปหน้าจอ เดาหมวดให้อัตโนมัติ เหมือนพิมพ์ข้อความ",
+        "✨ จัดหน้าตั้งค่าใหม่ให้สะอาดขึ้น + เตือนบัตรเครดิตพอดีๆ ไม่รก"
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "title": "✨ จัดหน้าใหม่ให้โล่ง อ่านง่ายขึ้น",
+      "date": "31 พฤษภาคม 2569",
+      "items": [
+        "🏠 หน้าแรกเน้นยอดใช้เดือนนี้ชัดๆ ปุ่มจดเร็วอยู่ครบ ไม่รกตา",
+        "📋 รายการล่าสุดแสดงกระชับ ความสูงคงที่",
+        "🔎 หน้า \"ทั้งหมด\" ยุบตัวกรองเป็นปุ่มเดียว แตะเพื่อกรอง",
+        "⚡ แชร์สมุด: รายการที่เพิ่ม/ที่เพื่อนซิงก์มา ขึ้นโชว์ทันที ดึงรีเฟรชเองได้",
+        "🔒 เขียนให้ชัดว่าตอนใช้ AI ส่งอะไรออก — แค่รหัสสุ่มประจำเครื่อง ไม่ใช่ชื่อ/อีเมล"
+      ]
+    },
+    {
       "version": "1.1.0",
       "title": "👥 แชร์สมุดกับเพื่อน — จดพร้อมกันแบบเรียลไทม์",
       "date": "30 พฤษภาคม 2569",
