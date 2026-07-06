@@ -2,6 +2,18 @@
   "$schema_note": "Lives at https://leonlek.github.io/doospend-docs/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array.",
   "versions": [
     {
+      "version": "1.4.0",
+      "title": "👥 สมุดร่วมจ่ายฉลาดขึ้น — หารยืดหยุ่น + สรุปทริป + จ่ายคืนด้วย QR",
+      "date": "6 กรกฎาคม 2569",
+      "items": [
+        "➗ หารยืดหยุ่น — เลือกได้ว่าแต่ละบิล \"แบ่งกับใคร\" ไม่ต้องหารเท่ากันทุกคน (ค่าเริ่มต้นยังหารเท่า)",
+        "🧾 จบทริปกด \"แชร์สรุปทริป\" — ได้การ์ดสรุปใครติดใคร + PromptPay QR ให้เพื่อนสแกนโอนคืนได้เลย",
+        "☁️ เช็คสถานะซิงก์ iCloud ชัดขึ้น — รู้ว่าซิงก์แล้ว/กำลังส่ง/ออฟไลน์ ทั้งแบบรวมและรายสมุด",
+        "🔍 สแกน QR จ่ายเงิน เลือกรูป QR จากคลังได้ (นอกจากถ่ายสด)",
+        "✨ ปัดเพื่อลบรายการ · กดค้างดูรายละเอียด + แก้ไข/ทำซ้ำ/ลบ · ข้อความแจ้งเตือนเป็นมิตรขึ้น"
+      ]
+    },
+    {
       "version": "1.3.0",
       "title": "📲 Widget + สั่งจดด้วย Siri — จดง่ายขึ้นทุกที่",
       "date": "27 มิถุนายน 2569",
