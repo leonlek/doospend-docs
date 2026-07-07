@@ -26,7 +26,7 @@
 </div>
 
 <div class="callout">
-  <strong>สรุปสั้นๆ:</strong> ข้อมูลการเงินของคุณ <strong>ไม่ออกจาก iPhone/iPad ของคุณ</strong> และ Apple iCloud ส่วนตัวของคุณ เราไม่มี server ที่เก็บ transactions, ยอด, หรือบัญชี ส่วนที่ "ส่งออกไป" มีแค่ภาพสลิปที่ส่งให้ AI อ่าน (Anthropic ผ่าน Cloudflare Worker) และไม่ผูกกับตัวตนคุณเลย
+  <strong>สรุปสั้นๆ:</strong> ข้อมูลการเงินของคุณ <strong>ไม่ออกจาก iPhone/iPad ของคุณ</strong> และ Apple iCloud ส่วนตัวของคุณ เราไม่มี server ที่เก็บ transactions, ยอด, หรือบัญชี ส่วนที่ "ส่งออกไป" มีแค่ภาพ/ข้อความที่คุณกดให้ AI อ่าน — สลิป, สเตทเมนต์บัตร, screenshot ประวัติคำสั่งซื้อ และข้อความ voice (Anthropic ผ่าน Cloudflare Worker) คำขอ AI แนบเพียง "รหัสสุ่มประจำเครื่อง" เพื่อนับโควตา/กันใช้เกิน ซึ่งไม่ใช่ชื่อ อีเมล หรือ Apple ID และไม่บอกว่าคุณเป็นใคร
 </div>
 
 <h2>1. เราเป็นใคร</h2>
@@ -54,14 +54,14 @@
       <td>เก็บถาวรจนกว่าคุณลบ — มี Settings → "พื้นที่ภาพ" ให้ลบกลุ่มได้</td>
     </tr>
     <tr>
-      <td>รูปสลิปที่ส่งให้ AI อ่าน</td>
+      <td>ภาพ/ข้อความที่ส่งให้ AI อ่าน — สลิป, สเตทเมนต์บัตร, screenshot ประวัติคำสั่งซื้อ (Shopee/Lazada/ฯลฯ)</td>
       <td>ส่งผ่าน Cloudflare Worker → Anthropic Claude API (US)</td>
-      <td>ส่งครั้งเดียวเพื่ออ่าน ไม่เก็บถาวร ไม่ผูกกับ user ID</td>
+      <td>ส่งเฉพาะตอนคุณกดใช้ฟีเจอร์นั้น ครั้งเดียวเพื่ออ่าน ไม่เก็บถาวร แนบรหัสสุ่มประจำเครื่องสำหรับนับโควตา (ไม่ใช่ชื่อ/อีเมล/Apple ID)</td>
     </tr>
     <tr>
       <td>เสียงพูด (ตอนกด "พูด")</td>
-      <td>แปลงเป็นข้อความบน iPhone (ใช้ SFSpeechRecognizer ของ Apple)</td>
-      <td><strong>เสียงดิบไม่ออกจากเครื่อง</strong> — มีแต่ข้อความ transcribed ที่ส่งต่อให้ AI</td>
+      <td>แปลงเป็นข้อความด้วย SFSpeechRecognizer ของ Apple (Apple อาจประมวลผลเสียงบน server ของ Apple)</td>
+      <td>เสียงดิบ <strong>ไม่ส่งให้ proxy หรือ Anthropic</strong> — มีแต่ข้อความ transcribed ที่ส่งต่อให้ AI การประมวลผลเสียงเป็นไปตามนโยบายของ Apple</td>
     </tr>
     <tr>
       <td>การใช้ AI (จำนวนครั้ง/เดือน)</td>
@@ -87,11 +87,11 @@
 <h2>4. บริการ Third Party ที่เราใช้</h2>
 
 <h3>4.1 Anthropic Claude (ผ่าน Cloudflare Worker)</h3>
-<p>ภาพสลิปและข้อความ voice transcript จะถูกส่งผ่าน Cloudflare Worker (proxy ของเราเอง) ไปยัง Anthropic Claude API เพื่ออ่านยอด ร้านค้า วันที่ และจำแนกหมวด</p>
+<p>เมื่อคุณกดใช้ฟีเจอร์ AI ภาพหรือข้อความต่อไปนี้จะถูกส่งผ่าน Cloudflare Worker (proxy ของเราเอง) ไปยัง Anthropic Claude API เพื่ออ่านยอด ร้านค้า วันที่ และจำแนกหมวด: ภาพสลิป, ภาพ/ข้อความสเตทเมนต์บัตรเครดิต, screenshot ประวัติคำสั่งซื้อ (เช่น Shopee, Lazada, TrueMoney), และข้อความ voice transcript ข้อมูลเหล่านี้อาจมีรายละเอียดการเงิน (ร้านค้า ยอด วันที่) — เราส่งให้ AI อ่านเฉพาะตอนที่คุณสั่งเท่านั้น</p>
 <ul>
-  <li>คำขอ <strong>ไม่มี user identifier</strong> ไม่มีอีเมล ไม่มี Apple ID</li>
-  <li>Anthropic ระบุใน policy ของเขาว่าไม่ใช้ API requests ไปเทรนโมเดล (<a href="https://www.anthropic.com/privacy">Anthropic Privacy</a>)</li>
-  <li>Cloudflare Worker proxy ของเราไม่ log ภาพหรือเนื้อหา — บันทึกแค่จำนวนคำขอเพื่อ rate limit</li>
+  <li>คำขอแนบ <strong>รหัสสุ่มประจำเครื่อง</strong> (random UUID ที่สร้างในเครื่องและเก็บใน Keychain) ส่งใน header <code>x-device-id</code> เพื่อใช้นับโควตา AI ต่อเดือนและกันการใช้เกิน รหัสนี้คงอยู่ข้ามการลบ-ติดตั้งแอปใหม่ แต่ <strong>ไม่ใช่</strong> ชื่อ อีเมล หรือ Apple ID และไม่สามารถบอกได้ว่าคุณเป็นใคร นอกจากนี้ยังแนบ tier (free/pro) และเวอร์ชันแอป</li>
+  <li>Anthropic <strong>ไม่</strong> ได้รับรหัสประจำเครื่องนี้ (proxy ของเราใช้เอง) และระบุใน policy ว่าไม่ใช้ API requests ไปเทรนโมเดล (<a href="https://www.anthropic.com/privacy">Anthropic Privacy</a>)</li>
+  <li>Cloudflare Worker proxy ของเราไม่ log ภาพหรือเนื้อหา — บันทึกแค่จำนวนคำขอต่อรหัสประจำเครื่องเพื่อนับโควตา/rate limit</li>
 </ul>
 
 <h3>4.2 Apple iCloud + Apple StoreKit</h3>
