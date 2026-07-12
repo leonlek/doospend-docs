@@ -2,6 +2,16 @@
   "$schema_note": "Lives at https://leonlek.github.io/doospend-docs/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array.",
   "versions": [
     {
+      "version": "1.5.0",
+      "title": "📥 ย้ายจากแอปเก่าได้แล้ว — นำเข้า CSV / Excel / statement บัตร",
+      "date": "12 กรกฎาคม 2569",
+      "items": [
+        "📥 ย้ายมาจากแอปเก่า — นำเข้าไฟล์ CSV / Excel (Money Manager, Spendee, MoneyLover ฯลฯ) หรือ statement บัตร (PDF จากอีเมลแบงก์) → เข้าแท็บ \"ตรวจสอบ\" ให้ยืนยัน · CSV/Excel ฟรี ไม่ใช้โควตา AI",
+        "🔁 รายการที่เกิดซ้ำ (subscription) พอถึงกำหนด เด้งเข้า \"ตรวจสอบ\" ให้ยืนยันเองอัตโนมัติ + เตือนล่วงหน้าหน้าแรก",
+        "📤 ส่งออกดีขึ้น — CSV เปิดใน Excel ภาษาไทยไม่เพี้ยน · PDF เป็นรายงานสรุป (ยอด/หมวด/ร้าน) · กดส่งออกแล้วแชร์จบในปุ่มเดียว"
+      ]
+    },
+    {
       "version": "1.4.0",
       "title": "👥 สมุดร่วมจ่ายฉลาดขึ้น — หารยืดหยุ่น + สรุปทริป + จ่ายคืนด้วย QR",
       "date": "6 กรกฎาคม 2569",
