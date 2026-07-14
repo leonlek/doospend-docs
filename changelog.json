@@ -2,6 +2,18 @@
   "$schema_note": "Lives at https://leonlek.github.io/doospend-docs/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array.",
   "versions": [
     {
+      "version": "1.6.0",
+      "title": "💳 วงเงินร่วม + ตั้งบิลทำซ้ำเอง — คุมบัตรหลายใบง่ายขึ้น",
+      "date": "15 กรกฎาคม 2569",
+      "items": [
+        "💳 วงเงินร่วม — บัตรหลัก + บัตรเสริมที่ใช้วงเงินก้อนเดียวกัน ผูกเข้าด้วยกันได้ (เปิด \"ใช้วงเงินร่วมกับบัตรอื่น\") → แอปเตือนเมื่อยอดใช้รวมทั้งกลุ่มใกล้/เต็มวงเงิน ไม่ใช่มองทีละใบ",
+        "🔁 ตั้งบิลทำซ้ำทุกเดือนเอง — จากหน้าเพิ่มรายการ ตั้งค่าเช่า/ค่างวด/ค่าสมาชิก ให้เด้งเข้า \"ตรวจสอบ\" ให้ยืนยันเองทุกเดือน",
+        "🧹 จัดการข้อมูลซ้ำง่ายขึ้น — ถ้าซิงก์ทำรายการซ้ำ กด \"รวมทั้งหมด\" เคลียร์ทีเดียว (แอปไม่ลบให้เงียบๆ)",
+        "📲 Widget ฉลาดขึ้น — ยังไม่ตั้งงบก็เห็นกราฟใช้จ่าย 7 วัน แตะตั้งงบได้เลย",
+        "✨ เลือกหลายรายการใส่สมุด/เพื่อใครทีเดียว · หน้าแรกอ่านง่ายขึ้น · เพิ่มหมวด \"เครื่องเขียน\" · แก้จุกจิกอีกเพียบ"
+      ]
+    },
+    {
       "version": "1.5.0",
       "title": "📥 ย้ายจากแอปเก่าได้แล้ว — นำเข้า CSV / Excel / statement บัตร",
       "date": "12 กรกฎาคม 2569",
