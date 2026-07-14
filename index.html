@@ -170,6 +170,28 @@
   .cval small{display:block;font-size:9px;color:var(--muted);font-weight:500}
   .crown{font-size:10px;font-weight:800;color:var(--green)}
 
+  /* real-screenshot device frame */
+  .device{width:300px;border-radius:46px;background:#0c0e0d;padding:11px;
+          box-shadow:var(--shadow);position:relative}
+  .device img{width:100%;display:block;border-radius:35px}
+  @media(max-width:800px){.phone-stage .device{width:248px}}
+
+  /* real-screenshot showcase (3-up) */
+  .showcase{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .showcase .wrap{padding:60px 22px}
+  .sc-lead{text-align:center;max-width:640px;margin:0 auto 42px}
+  .sc-lead h2{font-size:clamp(24px,3.2vw,36px);font-weight:800;margin:12px 0 12px}
+  .sc-lead p{color:var(--muted);font-size:16px}
+  .shots-row{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;align-items:flex-start}
+  .shot{width:236px}
+  .shot .device{width:100%;border-radius:38px;padding:9px}
+  .shot .device img{border-radius:30px}
+  .shot h4{font-size:15.5px;font-weight:750;margin:16px 0 4px;text-align:center}
+  .shot p{font-size:13px;color:var(--muted);text-align:center;margin:0;line-height:1.5}
+  @media(max-width:800px){.shots-row{gap:14px}.shot{width:154px}
+    .shot .device{border-radius:28px;padding:6px}.shot .device img{border-radius:22px}
+    .shot h4{font-size:13px;margin-top:11px}.shot p{font-size:11.5px}}
+
   /* strip */
   .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2)}
   .strip .wrap{display:flex;flex-wrap:wrap;gap:14px 34px;justify-content:center;padding:20px 22px;
@@ -354,44 +376,9 @@
         </div>
       </div>
 
-      <!-- PHONE: the จะจ่าย? (Best Card) card — the signature feature -->
-      <div class="phone-stage reveal" aria-hidden="true">
-        <div class="phone">
-          <div class="screen">
-            <div class="sc-head"><b>กรกฎาคม 2569</b><span>฿349,854</span></div>
-            <div class="appcard">
-              <div class="ac-title"><span class="dot" style="background:var(--tint2)">💡</span>จะจ่าย? — รูดใบไหนดี</div>
-              <div class="catrow">
-                <span class="cchip">🛍️ ช้อปปิ้ง</span>
-                <span class="cchip off">🔒 อาหาร</span>
-                <span class="cchip off">🔒 เดินทาง</span>
-              </div>
-              <div class="crow">
-                <span class="cav" style="background:rgba(225,112,94,.16)">💳</span>
-                <span class="cinfo"><b>Citi Cashback <span class="crown">👑 คุ้มสุด</span></b><small>เงินคืน 5% · รูดได้อีก ฿8,000</small></span>
-                <span class="cval" style="color:var(--green)">+฿50<small>ต่อพันบาท</small></span>
-              </div>
-              <div class="crow">
-                <span class="cav" style="background:rgba(221,159,50,.16)">💳</span>
-                <span class="cinfo"><b>SCB M Legend</b><small>คะแนน · ไม่จำกัดเพดาน</small></span>
-                <span class="cval" style="color:var(--gold)">+80<small>คะแนน/พัน</small></span>
-              </div>
-              <div class="crow">
-                <span class="cav" style="background:rgba(62,130,196,.16)">✈️</span>
-                <span class="cinfo"><b>KBank Journey</b><small>ไมล์ · ไม่จำกัดเพดาน</small></span>
-                <span class="cval" style="color:var(--blue)">+40<small>ไมล์/พัน</small></span>
-              </div>
-            </div>
-            <div class="appcard">
-              <div class="ac-title"><span class="dot" style="background:var(--tint2)">🧾</span>ต้องจ่าย · ฿82,075</div>
-              <div class="crow" style="border-top:none;padding-top:2px">
-                <span class="cav" style="background:var(--tint)">💳</span>
-                <span class="cinfo"><b>KTC Visa Signature</b><small>ครบ 14 ก.ค. · อีก 3 วัน</small></span>
-                <span class="cval">฿13,625</span>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- PHONE: real dashboard screenshot (captured from the app, demo data) -->
+      <div class="phone-stage reveal">
+        <div class="device"><img src="shot-dashboard.png" alt="หน้าหลัก DooSpend — จะจ่าย? รูดใบไหนดี + สรุปเดือนนี้" width="720" height="1564" loading="eager"></div>
       </div>
     </div>
   </section>
@@ -405,6 +392,34 @@
       <span>🔒 <b>ข้อมูลอยู่ในเครื่อง</b></span>
     </div>
   </div>
+
+  <!-- REAL SCREENSHOTS SHOWCASE -->
+  <section class="showcase">
+    <div class="wrap">
+      <div class="sc-lead reveal">
+        <span class="eyebrow">ภาพจริงจากแอป</span>
+        <h2>นี่คือหน้าตาจริง ไม่ใช่ภาพจำลอง</h2>
+        <p>ทุกอย่างเป็นภาษาไทย ปฏิทินพุทธ สลิปไทย บัตรไทย — ออกแบบมาเพื่อเงินของคนไทยจริงๆ</p>
+      </div>
+      <div class="shots-row">
+        <div class="shot reveal">
+          <div class="device"><img src="shot-bestcard.png" alt="ผู้ช่วยบัตร เด้งบอกใบคุ้มสุดตอนจ่าย" width="720" height="1564" loading="lazy"></div>
+          <h4>รูดใบไหนคุ้ม</h4>
+          <p>เด้งบอกตอนกรอกยอด ว่ารูดใบนี้ได้คืนเท่าไหร่</p>
+        </div>
+        <div class="shot reveal">
+          <div class="device"><img src="shot-inbox.png" alt="ตรวจสอบ — AI จดสลิป/แคป/statement ให้" width="720" height="1564" loading="lazy"></div>
+          <h4>AI จดให้ รอยืนยัน</h4>
+          <p>สลิป · แคปหน้าจอ · statement เด้งเข้า “ตรวจสอบ” ให้กดยืนยัน</p>
+        </div>
+        <div class="shot reveal">
+          <div class="device"><img src="shot-trip.png" alt="สมุดร่วมจ่าย — สรุปทริปใครติดใคร" width="720" height="1564" loading="lazy"></div>
+          <h4>หารกับเพื่อน</h4>
+          <p>จบทริปสรุปใครติดใคร + QR พร้อมเพย์จ่ายคืนได้เลย</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- FEATURES -->
   <section class="sec" id="features">
