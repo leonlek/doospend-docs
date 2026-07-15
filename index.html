@@ -179,6 +179,9 @@
      hints), and the attribute height keeps applying (1564px = stretched phone)
      unless CSS explicitly resets it while width:100% shrinks the box. */
   .device img{width:100%;height:auto;display:block;border-radius:35px}
+  /* real settlement-card crop in the ร่วมจ่าย spotlight */
+  .settle-shot{width:min(400px,100%);height:auto;display:block;border-radius:18px;
+               border:1px solid var(--line);box-shadow:var(--shadow)}
   @media(max-width:800px){.phone-stage .device{width:248px}}
 
   /* real-screenshot showcase (3-up) */
@@ -540,13 +543,11 @@
         </ul>
       </div>
       <div class="spot-visual reveal">
-        <div class="tile" style="max-width:280px">
-          <div class="ac-title">สรุปสมุด — ใครติดใคร</div>
-          <div class="settle"><span>🧑 ต้น</span><span style="color:var(--coral);font-weight:700">ติด ฿640</span></div>
-          <div class="settle"><span>🧑‍🦰 เมย์</span><span style="color:var(--coral);font-weight:700">ติด ฿420</span></div>
-          <div class="settle"><span>🧑 ฉัน</span><span style="color:var(--green);font-weight:700">รับ ฿1,060</span></div>
-        </div>
-        <div class="qr" aria-hidden="true"></div>
+        <!-- real settlement card cropped from the app (replaces the CSS mock +
+             fake checkerboard QR) — per-row PromptPay QR buttons are the real ones -->
+        <img class="settle-shot" src="shot-settle.png"
+             alt="สรุปสมุด ใครติดใคร — อเล็กซ์ติดฉัน ฿2,847 พร้อมปุ่ม QR พร้อมเพย์จ่ายคืน และปุ่มแชร์สรุปทริป"
+             width="720" height="491" loading="lazy">
       </div>
     </div>
   </div></section>
