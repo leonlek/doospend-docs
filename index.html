@@ -173,7 +173,10 @@
   /* real-screenshot device frame */
   .device{width:300px;border-radius:46px;background:#0c0e0d;padding:11px;
           box-shadow:var(--shadow);position:relative}
-  .device img{width:100%;display:block;border-radius:35px}
+  /* height:auto is REQUIRED — the img tags carry width/height attributes (layout
+     hints), and the attribute height keeps applying (1564px = stretched phone)
+     unless CSS explicitly resets it while width:100% shrinks the box. */
+  .device img{width:100%;height:auto;display:block;border-radius:35px}
   @media(max-width:800px){.phone-stage .device{width:248px}}
 
   /* real-screenshot showcase (3-up) */
