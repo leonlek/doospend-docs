@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://leonlek.github.io/doospend-docs/sitemap.xml
