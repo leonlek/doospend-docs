@@ -43,13 +43,8 @@ header {
 header .logo {
   width: 40px;
   height: 40px;
-  background: var(--green);
   border-radius: 9px;
-  display: grid;
-  place-items: center;
-  color: #fff;
-  font-weight: 700;
-  font-size: 18px;
+  object-fit: cover;
 }
 
 header .name {
@@ -197,7 +192,6 @@ footer a { color: var(--muted); }
     --border: #2A332D;
     --bg: #11181A;
   }
-  header .logo { background: var(--green); color: #11181A; }
   .nav a { background: #1A2422; }
   .nav a.active { color: #11181A; }
   code, .mono { color: var(--text); }
