@@ -119,8 +119,7 @@
   header.scrolled{border-bottom-color:var(--line)}
   nav{display:flex;align-items:center;justify-content:space-between;height:66px}
   .brand{display:flex;align-items:center;gap:9px;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.02em}
-  .mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(140deg,var(--green),#3fa576);
-        display:grid;place-items:center;color:#fff;font-weight:800;font-size:17px;box-shadow:0 4px 12px -4px rgba(46,125,91,.6)}
+  .mark{width:30px;height:30px;border-radius:9px;object-fit:cover;box-shadow:0 4px 12px -4px rgba(46,125,91,.6)}
   .navlinks{display:flex;gap:26px;font-size:14.5px;font-weight:500;color:var(--muted)}
   .navlinks a:hover{color:var(--ink)}
   .navright{display:flex;align-items:center;gap:14px}
@@ -368,7 +367,7 @@
 <header id="hdr">
   <div class="wrap">
     <nav>
-      <a class="brand" href="#top"><span class="mark">฿</span>DooSpend</a>
+      <a class="brand" href="#top"><img class="mark" src="icon-180.png" width="30" height="30" alt="DooSpend">DooSpend</a>
       <div class="navlinks">
         <a href="#features">ฟีเจอร์</a>
         <a href="#bestcard">ผู้ช่วยบัตร</a>
@@ -682,7 +681,7 @@
   <div class="wrap">
     <div class="foot">
       <div>
-        <a class="brand" href="#top"><span class="mark">฿</span>DooSpend</a>
+        <a class="brand" href="#top"><img class="mark" src="icon-180.png" width="30" height="30" alt="DooSpend">DooSpend</a>
         <p style="color:var(--muted);font-size:13.5px;margin-top:12px;max-width:30ch">รูดใบไหนคุ้ม รู้ก่อนจ่าย แล้ว AI จดให้เอง — แอปบันทึกรายรับรายจ่ายบน iPhone สำหรับคนขี้เกียจจด</p>
       </div>
       <div class="footcols">
