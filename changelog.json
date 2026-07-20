@@ -1,5 +1,5 @@
 {
-  "$schema_note": "Lives at https://leonlek.github.io/doospend-docs/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array.",
+  "$schema_note": "Lives at https://doospend.com/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array.",
   "versions": [
     {
       "version": "1.7.0",
