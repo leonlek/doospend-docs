@@ -2,6 +2,18 @@
   "$schema_note": "Lives at https://doospend.com/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array.",
   "versions": [
     {
+      "version": "1.8.0",
+      "title": "☀️ วันนี้ใช้ได้อีกเท่าไหร่ — คุมงบเป็นรายวัน",
+      "date": "20 กรกฎาคม 2569",
+      "items": [
+        "☀️ \"วันนี้ใช้ได้อีก\" มาแล้ว — ตั้งงบเดือน (ตามวันเงินเดือนได้) แล้วแอปเกลี่ยให้เป็นรายวัน บอกว่าวันนี้ใช้ได้อีกเท่าไหร่ + เตือนล่วงหน้าถ้าจังหวะนี้จะเกินงบ + เตือนยอดทุกเช้า",
+        "➖ \"ไม่นับในค่าใช้จ่าย\" — แยกยอดจ่ายหนี้/ผ่อนก้อนใหญ่ออกจากสรุปเดือน ไม่ให้กลบค่าใช้จ่ายจริง (ตั้งได้ทั้งรายรายการและทั้งหมวด)",
+        "🧾 AI อ่านสลิปแม่นขึ้น — รองรับยอดที่มีหน่วย \"บาท\" / เลขไทย / เว้นวรรค และถ้าอ่านยอดไม่ได้จะบอกให้แตะกรอกเอง ไม่เด้ง error มั่ว",
+        "💡 การ์ด \"จะจ่าย?\" อ่านง่ายขึ้น — ตัวเลขสอดคล้องกัน สั้นลง เหลือ 3 บรรทัด",
+        "🔳 สแกน QR จ่าย: ปุ่มปิดย้ายมุมซ้ายบน + กรอบเล็งใหญ่ขึ้น"
+      ]
+    },
+    {
       "version": "1.7.0",
       "title": "🏪 กฎบัตรเจาะจงร้าน — บัตร co-brand ก็คุ้มถูกใบ",
       "date": "17 กรกฎาคม 2569",
