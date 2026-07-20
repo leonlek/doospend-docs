@@ -78,7 +78,7 @@
   .mocknote b{color:#8FD3AE}
 
   /* header */
-  header{position:sticky;top:30px;z-index:60;background:rgba(251,252,248,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  header{position:sticky;top:0;z-index:60;background:rgba(251,252,248,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;gap:18px;padding-block:12px}
   .brand{display:flex;align-items:center;gap:9px;font-family:var(--display);font-weight:800;font-size:17px}
   .brand img{width:30px;height:30px;border-radius:8px}
@@ -103,7 +103,7 @@
   .hero h1{font-size:clamp(30px,4.4vw,46px);font-weight:800;margin-top:14px}
   .h1kick{display:block;font-size:.66em;font-weight:700;color:var(--ink);white-space:nowrap;margin-top:10px}
   /* mobile: keep the gradient headline on one line (shrink to fit, don't wrap) */
-  @media(max-width:560px){.hero h1{font-size:25px}.hero h1 .grad{white-space:nowrap}}
+  @media(max-width:560px){.hero h1{font-size:clamp(26px,7.5vw,30px)}.hero h1 .grad{white-space:nowrap}.hero .lead{font-size:13.5px}}
   .hero .lead{font-size:16px;color:var(--muted);margin-top:14px;max-width:33em}
   .cta{display:inline-flex;align-items:center;gap:9px;background:#15221B;color:#fff;border-radius:13px;padding:12px 22px;font-size:14.5px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.08)}
   .cta small{display:block;font-size:10px;font-weight:500;opacity:.75}
@@ -157,7 +157,7 @@
   .strip{background:var(--green-deep);color:#DFEBE2;font-size:13px;font-weight:600;padding:12px 0;margin-top:34px}
   .strip .wrap{display:flex;gap:26px;flex-wrap:wrap;justify-content:center}
   /* mobile: tighten so the 5 chips wrap to 2 rows (not 3) */
-  @media(max-width:560px){.strip{font-size:11px}.strip .wrap{gap:8px 13px}}
+  @media(max-width:560px){.strip{font-size:12px}.strip .wrap{gap:6px 11px}}
 
   /* sections */
   .sec{padding:56px 0}
@@ -322,7 +322,7 @@
     <div class="txt">
       <span class="eyebrow">เริ่มที่การจด</span>
       <h2>จดได้ทุกทาง — ถ่ายสลิป พูด พิมพ์ สแกน หรือแชร์มา</h2>
-      <p class="sub">กดปุ่มเดียว เลือกวิธีที่ถนัด แล้ว AI ลงยอด/ร้าน/หมวดให้ — ไม่ชัวร์ก็พักไว้ในถาดตรวจสอบก่อน ไม่มั่วลงบัญชี</p>
+      <p class="sub">กดปุ่มเดียว เลือกวิธีที่ถนัด แล้ว AI ลงยอด/ร้าน/หมวดให้ — ไม่ชัวร์ก็พักไว้ในถาดตรวจสอบก่อน</p>
       <div class="bullets">
         <span>📸 <b>ถ่ายสลิป/ใบเสร็จ</b> — AI อ่านยอด+ร้านให้</span>
         <span>🖼️ <b>แชร์ภาพหน้าจอเข้ามาจากแอปไหนก็ได้</b> — สลิปแบงค์ · ออเดอร์ช้อป/ฟู้ด</span>
@@ -493,7 +493,7 @@
   <div class="foot">
     <div>
       <span class="brand"><img src="icon-180.png" alt="DooSpend">DooSpend</span>
-      <p style="color:var(--muted);font-size:13.5px;margin-top:12px;max-width:30ch">ขี้เกียจจด? ให้ AI จัดการให้ — แอปบันทึกรายรับรายจ่ายบน iPhone สำหรับคนขี้เกียจจด</p>
+      <p style="color:var(--muted);font-size:13.5px;margin-top:12px;max-width:34ch">แอปบันทึกรายรับรายจ่ายบน iPhone สำหรับคนขี้เกียจจด — ถ่ายสลิปให้ AI จดให้เอง</p>
     </div>
     <div class="footcols">
       <div class="footcol"><b>ผลิตภัณฑ์</b><a href="#features">ฟีเจอร์</a><a href="#card">ผู้ช่วยบัตร</a><a href="#pricing">ราคา</a></div>
