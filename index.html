@@ -45,6 +45,28 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://doospend.com/#org",
+      "name": "DooSpend",
+      "url": "https://doospend.com/",
+      "logo": "https://doospend.com/icon-180.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://doospend.com/#website",
+      "name": "DooSpend",
+      "url": "https://doospend.com/",
+      "inLanguage": "th",
+      "publisher": { "@id": "https://doospend.com/#org" }
+    }
+  ]
+}
+</script>
 <style>
   :root{
     --green:#2E7D5B; --green-deep:#1C563C; --green-soft:#E7F0E9; --gold:#DD9F32; --coral:#E1705E;
@@ -72,10 +94,6 @@
   .wrap{max-width:1020px;margin:0 auto;padding:0 24px}
   .eyebrow{font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--green)}
   .grad{background:linear-gradient(100deg,var(--green),#54ba86 55%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
-
-  /* mock banner */
-  .mocknote{position:sticky;top:0;z-index:99;background:var(--ink);color:#fff;font-size:12px;text-align:center;padding:7px 14px}
-  .mocknote b{color:#8FD3AE}
 
   /* header */
   header{position:sticky;top:0;z-index:60;background:rgba(251,252,248,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
