@@ -269,7 +269,7 @@
   .final h2{font-size:clamp(24px,3.2vw,32px)}
   .final .cta{background:#fff;color:var(--ink);margin-top:20px}
   /* Android waitlist (in the final CTA band) */
-  .androidwait{margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16)}
+  .androidwait{margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16);scroll-margin-top:84px}
   .aw-t{font-size:13.5px;opacity:.9}
   .aw-form{display:flex;gap:8px;justify-content:center;margin-top:12px;flex-wrap:wrap}
   .aw-form input{padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.12);color:#fff;font-size:14px;min-width:220px}
@@ -551,6 +551,10 @@
 })();
 (function(){
   var f=document.getElementById('awForm'); if(!f) return;
+  // เข้าจากลิงก์ #android (แชร์จากข้างนอก) → focus ช่องอีเมลให้เลย
+  if(location.hash==='#android'){
+    setTimeout(function(){ var em=document.getElementById('awEmail'); if(em) em.focus(); }, 400);
+  }
   f.addEventListener('submit', function(e){
     e.preventDefault();
     var btn=document.getElementById('awBtn'), em=document.getElementById('awEmail');
