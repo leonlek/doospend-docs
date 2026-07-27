@@ -2,6 +2,18 @@
   "$schema_note": "Lives at https://doospend.com/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array.",
   "versions": [
     {
+      "version": "1.8.3",
+      "title": "🔧 ยอดจ่ายกลับมาตรง — แก้สลิปโอนที่ลงเป็นรายรับ",
+      "date": "27 กรกฎาคม 2569",
+      "items": [
+        "🔧 สลิปโอนที่ AI เดาหมวดไม่ออก เคยลงเป็น “รายรับ” ทำให้ยอดจ่ายต่ำกว่าจริง — แก้แล้ว รายการที่ลงผิดไปก่อนหน้านี้ต้องแก้เอง (แถวสเตทเมนต์และนำเข้าไฟล์เจอปัญหาเดียวกัน แก้พร้อมกัน)",
+        "🔢 ยอดผ่อน/เงินกู้ กรอกสตางค์ได้แล้ว",
+        "📊 โควตา AI ตรงกันทุกเครื่องที่ใช้ Apple ID เดียวกัน — เดิมแต่ละเครื่องเห็นแค่จำนวนที่ตัวเองใช้",
+        "⭐ ตั้งบัญชีเริ่มต้นได้จากหน้ารายการบัญชีเลย แตะดาวหลังชื่อ",
+        "🧾 สเตทเมนต์ที่ต้องใช้ Pro บอกตั้งแต่ในลิสต์ · อัปเกรดแล้วกดอ่านต่อได้จากรายการเดิม ไม่ต้องแชร์ไฟล์ใหม่"
+      ]
+    },
+    {
       "version": "1.8.0",
       "title": "☀️ วันนี้ใช้ได้อีกเท่าไหร่ — คุมงบเป็นรายวัน",
       "date": "20 กรกฎาคม 2569",
