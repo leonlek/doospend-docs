@@ -559,7 +559,7 @@
     e.preventDefault();
     var btn=document.getElementById('awBtn'), em=document.getElementById('awEmail');
     btn.disabled=true; btn.textContent='กำลังส่ง…';
-    fetch('https://doospend-proxy.leonlek.workers.dev/android-waitlist',{
+    fetch('https://api.doospend.com/android-waitlist',{
       method:'POST', headers:{'content-type':'application/json'},
       body:JSON.stringify({email:em.value.trim()})
     }).then(function(r){
