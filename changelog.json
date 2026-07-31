@@ -2,6 +2,18 @@
   "$schema_note": "Lives at https://doospend.com/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array.",
   "versions": [
     {
+      "version": "1.8.4",
+      "title": "🏪 AI อ่านชื่อร้านบนสลิปโอนแม่นขึ้น",
+      "date": "1 สิงหาคม 2569",
+      "items": [
+        "🏪 สลิปโอน: AI อ่านชื่อร้านแม่นขึ้น — เดิมมักหยิบชื่อคนโอนหรือชื่อธนาคารมาเป็นชื่อร้าน",
+        "💳 บัตรเครดิต: ดอกเบี้ยและค่าธรรมเนียมไม่ถูกนับเป็นยอดที่ได้เงินคืนอีกต่อไป และใส่ยอดค้างยกมาได้แล้ว",
+        "🎨 ไอคอนหมวดเพิ่มเป็น 123 แบบ แบ่ง 11 กลุ่ม (เดิม 48)",
+        "🔍 หน้าตรวจสอบ: แตะยอดเพื่อสลับ รายจ่าย/รายรับ · ปัดลงปิดรูปเต็มจอ",
+        "⇄ หน้ากรอก: ปุ่มสลับบัญชีแตะเดียว · เพิ่ม “เพื่อใคร” ได้ทันที"
+      ]
+    },
+    {
       "version": "1.8.3",
       "title": "🔧 ยอดจ่ายกลับมาตรง — แก้สลิปโอนที่ลงเป็นรายรับ",
       "date": "27 กรกฎาคม 2569",
