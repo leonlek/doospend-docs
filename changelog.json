@@ -2,6 +2,18 @@
   "$schema_note": "Lives at https://doospend.com/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array.",
   "versions": [
     {
+      "version": "1.8.5",
+      "title": "📸 กดค้างที่ + ถ่ายสลิปเลย",
+      "date": "5 สิงหาคม 2569",
+      "items": [
+        "📸 กดค้างปุ่ม + เข้ากล้องถ่ายสลิปทันที",
+        "🧮 ผ่อน: ใส่ดอกเบี้ยเป็น %/เดือน ได้แล้ว",
+        "🧾 ตรวจสอบกลุ่ม: ดูเอกสารต้นฉบับได้ · ภาพติดไปกับรายการ",
+        "📊 นำเข้า Excel/Windows ได้แล้ว · สร้างหมวดตรงหน้าจับคู่",
+        "💵 \"เหลือ\" → \"รับ-จ่าย\""
+      ]
+    },
+    {
       "version": "1.8.4",
       "title": "🏪 AI อ่านชื่อร้านบนสลิปโอนแม่นขึ้น",
       "date": "1 สิงหาคม 2569",
