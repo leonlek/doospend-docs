@@ -25,6 +25,36 @@
   var live = CHANNELS.filter(function (c) { return c.url; });
   if (!live.length) return;
 
+  // สไตล์อยู่ในไฟล์นี้ ไม่ใช่ _shared.css — **หน้าแรกไม่ได้โหลด _shared.css**
+  // (มี <style> ของตัวเอง) ปุ่มจึงเคยไปกองท้ายหน้าแบบไม่มีสไตล์. ให้ widget
+  // ถือสไตล์ของตัวเองไปเลย จะได้ทำงานเหมือนกันทุกหน้าไม่ว่าหน้านั้นใช้ CSS ชุดไหน
+  var css = document.createElement('style');
+  css.textContent = [
+    '.chatfab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));',
+      'z-index:70;display:flex;flex-direction:column;align-items:flex-end;gap:10px;',
+      'font-family:inherit;transition:opacity .18s ease,transform .18s ease}',
+    '.chatfab.is-hidden{opacity:0;transform:translateY(12px);pointer-events:none}',
+    '.chatfab-list{display:flex;flex-direction:column;align-items:flex-end;gap:8px}',
+    // `display` ชนะ attribute `hidden` เสมอ — ต้องปิดเองให้ชัด ไม่งั้นกางค้างตั้งแต่โหลดหน้า
+    '.chatfab-list[hidden]{display:none}',
+    '.chatfab-item{display:flex;align-items:center;gap:8px;padding:9px 14px 9px 11px;',
+      'background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:999px;',
+      'box-shadow:0 6px 18px rgba(0,0,0,.14);font-size:15px;font-weight:600;line-height:1;',
+      'color:#1C1C1E;text-decoration:none;white-space:nowrap}',
+    '.chatfab-item:hover{background:#F6F8F7}',
+    '.chatfab-btn{width:56px;height:56px;display:grid;place-items:center;border:0;',
+      'border-radius:50%;background:#2E7D5F;box-shadow:0 8px 22px rgba(0,0,0,.22);',
+      'cursor:pointer;-webkit-tap-highlight-color:transparent}',
+    '.chatfab-close{display:none}',
+    '.chatfab.is-open .chatfab-open{display:none}',
+    '.chatfab.is-open .chatfab-close{display:block}',
+    '@media (prefers-color-scheme:dark){',
+      '.chatfab-item{background:#1A2422;border-color:rgba(255,255,255,.10);color:#E8EDEB}',
+      '.chatfab-item:hover{background:#22302D}}',
+    '@media (prefers-reduced-motion:reduce){.chatfab{transition:none}}'
+  ].join('');
+  document.head.appendChild(css);
+
   function svg(path, color) {
     return '<svg viewBox="0 0 24 24" width="22" height="22" fill="' + color + '" aria-hidden="true">' + path + '</svg>';
   }
