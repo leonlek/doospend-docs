@@ -65,6 +65,12 @@
     return '<svg viewBox="0 0 24 24" width="22" height="22" fill="' + color + '" aria-hidden="true">' + path + '</svg>';
   }
 
+  // บนมือถือ **ห้ามเปิดแท็บใหม่**: ลิงก์พวกนี้ต้องสลับไปเปิดแอป (Messenger/LINE)
+  // แท็บใหม่ที่เพิ่งเปิดมักไม่ได้รับ user-gesture ต่อ เบราว์เซอร์เลยไม่ยิง intent —
+  // อาการคือแท็บค้างหมุนครึ่งเดียวแล้วไม่เปิดแอป (เคสจริงบน Messenger)
+  // บนเดสก์ท็อปเปิดแท็บใหม่ได้ เพราะจบที่หน้าเว็บ ไม่ต้องสลับแอป และผู้ใช้ไม่เสียหน้าเดิม
+  var newTab = !(window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+
   var root = document.createElement('div');
   root.className = 'chatfab';
   root.innerHTML =
@@ -72,7 +78,7 @@
       live.map(function (c) {
         // rel=noopener: เปิดแท็บใหม่โดยไม่ให้หน้าปลายทางอ้างถึงหน้าเราได้
         return '<a class="chatfab-item" href="' + c.url + '"' +
-               (c.id === 'email' ? '' : ' target="_blank" rel="noopener"') + '>' +
+               (c.id !== 'email' && newTab ? ' target="_blank" rel="noopener"' : '') + '>' +
                svg(c.icon, c.color) + '<span>' + c.label + '</span></a>';
       }).join('') +
     '</div>' +
