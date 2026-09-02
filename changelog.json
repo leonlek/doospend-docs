@@ -1,6 +1,43 @@
 {
-  "$schema_note": "Lives at https://doospend.com/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array.",
+  "$schema_note": "Lives at https://doospend.com/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array. Every entry MUST carry an \"en\" object (title/date/items) — the app shows it when the user picks English; without it the popup falls back to Thai.",
   "versions": [
+    {
+      "version": "2.3.0",
+      "title": "📅 จดค่าใช้จ่ายที่ยังไม่ถึงวันไว้ก่อนได้แล้ว\n🧮 เงินสุทธิรวมเงินยืม-ให้ยืมแล้ว",
+      "date": "2 กันยายน 2569",
+      "items": [
+        "📅 จดไว้ล่วงหน้าได้แล้ว — ใส่วันข้างหน้าตอนเพิ่มรายการ แล้วมันจะไปพักที่ \"ตรวจสอบ\" โดยยังไม่นับเป็นเงินสักบาท ยอดบัญชี งบ และยอด \"ใช้ได้\" ไม่ขยับจนกว่าจะกดยืนยัน",
+        "🔔 ยังไม่ถึงวันก็เงียบสนิท — เหลือ 3 วันค่อยขึ้น badge และเตือน · ถึงวันแล้วเตือนอีกครั้งและกดยืนยันได้ · จ่ายก่อนกำหนดใช้ปุ่ม \"จ่ายเลย — ลงวันนี้\"",
+        "💾 แก้แถวในตรวจสอบแล้วกด \"ไว้ก่อน\" ของที่แก้อยู่ครบแล้ว — เดิมแถวเดี่ยวทิ้งการแก้ทั้งหมด",
+        "🧮 เงินยืมเข้าสมการแล้ว — ยืมมาเงินเข้ากระเป๋าจริงแต่ยังไม่ใช่เงินเรา เดิมเงินสุทธิบวกให้ทั้งก้อน ตอนนี้หักหนี้ออก · ให้เพื่อนยืมเงินออกจากกระเป๋าแต่ยังเป็นของเรา เดิมลดทั้งก้อน ตอนนี้บวกกลับให้",
+        "😌 เปิดแอปมาแล้วเงินสุทธิเปลี่ยนไปจากเมื่อวาน ไม่ได้แปลว่าเงินหาย — เป็นตัวเลขที่ตรงกับความจริงมากขึ้น ยอดในแต่ละบัญชีไม่ขยับสักบาท",
+        "💸 \"ใช้ได้\" หักหนี้บัตรและหนี้ที่ยืมมาด้วยแล้ว — จะได้ไม่ชวนใช้เงินที่ต้องเอาไปคืนเขา",
+        "📈 กราฟเงินสุทธิย้อนหลังคิดหนี้ของ*วันนั้น* — วันที่ยืมเงินมาเส้นไม่กระโดดขึ้นอีกแล้ว",
+        "💳 เพิ่ม \"หนี้ทั้งหมด\" รวมบัตร + ผ่อน + ยืม ไว้ที่เดียว · บัญชีเงินออมบอกด้วยว่ามีเงินที่กันไว้จากบัญชีอื่นอีกเท่าไหร่",
+        "⚠️ ยอด \"เลยกำหนด\" นับเฉพาะส่วนที่ยังค้างจริง — บิลที่จ่ายไปบางส่วนแล้วไม่ถูกทวงเต็มจำนวนอีก",
+        "🌐 ข้อความทั้งแอปเดินตามภาษาที่เลือกในแอปแล้ว — เดิมบางคำเดินตามภาษาเครื่อง",
+        "🧮 หน้าผ่อน / ยืม-ให้ยืม มียอดรวมบนหัวกลุ่มทุกกลุ่ม และเลขยาว ๆ ย่อขนาดแทนที่จะโดนตัดหาย",
+        "👥 ชิป \"เพื่อใคร\" ย้ายมาอยู่บนแป้นตัวเลข เลือกได้ระหว่างพิมพ์ยอด ส่วนแถวเต็มไปอยู่ในหน้า \"เพิ่มเติม\" ให้ฟอร์มหลักโล่งขึ้น"
+      ],
+      "en": {
+        "title": "📅 Note down expenses that haven't happened yet\n🧮 Net worth now counts money you borrowed and lent",
+        "date": "2 September 2026",
+        "items": [
+          "📅 Plan ahead — pick a future date when adding an expense and it waits in \"Review\" instead, without counting as money yet. Balances, budgets and \"available\" don't move until you confirm it",
+          "🔔 Nothing nags you early — the badge and the first reminder arrive 3 days out; on the day itself you get a second reminder and can confirm. Paid early? Use \"Pay now — dated today\"",
+          "💾 Edits on a review row now survive \"Later\" — single rows used to throw every edit away",
+          "🧮 Lending is in the maths now — borrowing puts real money in your wallet but isn't yours yet, so the debt is subtracted; lending to a friend takes money out but is still yours, so it's added back",
+          "😌 If net worth looks different from yesterday, nothing went missing — the figure is simply closer to the truth. Not one account balance moved",
+          "💸 \"Available\" now subtracts both card debt and money you borrowed, so it won't invite you to spend what you owe someone",
+          "📈 The net-worth history chart uses each day's own debt — the line no longer jumps up on the day you borrowed",
+          "💳 Added \"total debt\" — cards, instalments and borrowing in one place; savings accounts also say how much more is set aside from your other accounts",
+          "⚠️ The \"overdue\" total counts only what's still owed — a partly-paid bill is no longer chased for the full amount",
+          "🌐 Every string now follows the language you picked in the app — some used to follow the phone's",
+          "🧮 The instalments / lending page shows a total on every group header, and long figures shrink to fit instead of being cut off",
+          "👥 The \"for whom\" chip moved onto the number pad so you can pick while typing the amount; the full row lives in \"More\", leaving the main form clearer"
+        ]
+      }
+    },
     {
       "version": "2.2.0",
       "title": "💳 บิลบัตรพูดเรื่องรอบบิลจริง\n🎯 เป้าหมายออม + หน้าหลักจัดเองได้",
@@ -18,7 +55,25 @@
         "🗂️ หมวดหมู่: จัดเรียงง่ายขึ้น ตรงกับแถบหมวดลัดที่เห็นตอนจด · กดค้างที่ทางลัดเพื่อสลับหมวดได้",
         "💬 ข้อความแจ้งเตือน/ข้อผิดพลาดทั้งแอปเขียนใหม่ — บอกว่าต้องทำอะไรต่อ ไม่ใช่แค่บอกว่าพัง · ทักทีมงานทาง Facebook หรือ LINE ได้แล้ว นอกจากอีเมล",
         "🐛 แก้บั๊ก: รายจ่ายประจำที่รอบข้ามเดือนไม่กลายเป็นของค้างอีก (เคยโผล่เฉพาะหลังวันที่ 20) · ปุ่มย้อนกลับจากจอภาพรวมพากลับถูกที่ · แถวบัตรที่ไม่มีบิลค้างก็แตะเข้าไปดูได้"
-      ]
+      ],
+      "en": {
+        "title": "💳 Card bills that talk about your real statement cycle\n🎯 Savings goals + a home screen you arrange yourself",
+        "date": "22 August 2026",
+        "items": [
+          "💳 Card bills now follow your real statement cycle — how many days overdue · what this bill comes to · which day it closes, on both the payments card and the calendar (leave the statement day blank if you don't know it yet)",
+          "📅 Spending overview: pick a month from the strip, up to 3 months back · day headers name the weekday",
+          "🧮 Fixed wrong figures when your month starts on a day other than the 1st (a payday, say)",
+          "🎯 Savings goals and the savings chart rebuilt — the ring leads, history moved to its own screen",
+          "🏠 Arrange the home screen yourself — drag the cards, switch off the ones you don't use, handles always visible",
+          "🔔 The bell now takes you to the exact thing it warned about · recurring payments and loans falling due are all covered",
+          "🏷️ Renaming a category no longer breaks auto-categorising — every category carries its own permanent key",
+          "🧾 Instalments: log a payment and link it to an existing plan right there (new plans are created on the instalments screen only) · sharper matching",
+          "📄 Statement import: the entry point no longer disappears after your first import · Review says clearly when the connection drops and offers a “read again” button",
+          "🗂️ Categories: easier to reorder, and the order matches the shortcut row you see while logging · press and hold a shortcut to swap it",
+          "💬 Every alert and error message rewritten — they say what to do next, not just that something broke · you can now reach us on Facebook or LINE as well as email",
+          "🐛 Fixes: a recurring payment whose cycle crosses a month no longer looks overdue (it only showed up after the 20th) · the back button from the overview screen lands where it should · card rows with no bill outstanding can be opened too"
+        ]
+      }
     },
     {
       "version": "2.1.0",
@@ -36,7 +91,24 @@
         "🧹 หน้าหลักสั้นลง — เหลือเฉพาะของที่ต้องรีบ ที่เหลือกดดูได้ในจอเดียว",
         "🧭 เรียงเมนูหน้าเพิ่มเติมใหม่ ของที่ใช้บ่อยอยู่บนสุด",
         "🐛 แก้บั๊ก: หมวดหมู่ที่ลบไปแล้วไม่กลับมาอีก (ขอบคุณที่แจ้งเข้ามา) · บิลรายปีที่ไม่ได้ตั้งวันตัด กลับมาแสดงและเตือนล่วงหน้าได้ตามปกติ"
-      ]
+      ],
+      "en": {
+        "title": "🎯 Savings goals\n🗓️ This month's obligations (new screen)",
+        "date": "17 August 2026",
+        "items": [
+          "🎯 Savings goals — set a target and the app keeps that money out of what's safe to spend, then tells you how much to put aside each month to get there (1 goal free)",
+          "🧩 Savings chart (Pro) — the app spreads the target across the squares and you tick them off one at a time (daily/weekly/monthly); the total lands exactly on your goal",
+          "🔔 A warning when an account holds less than what you've set aside",
+          "🗓️ A screen for this month's obligations — card bills · recurring payments · instalments · money you borrowed, in date order",
+          "💳 Two separate totals, kept clear — card bills (already spent) and everything else due (not yet gone)",
+          "📅 Switch to a calendar view and the heavy days stand out · scroll ahead to next month",
+          "⚠️ Anything overdue is grouped at the top so you don't have to hunt for it",
+          "✅ “Paid this month” is kept for you to look back on, expanded when you want it",
+          "🧹 A shorter home screen — only what's urgent stays; the rest is one tap away on a single screen",
+          "🧭 The More menu is reordered, with what you use most at the top",
+          "🐛 Fixes: deleted categories stay deleted (thanks for reporting it) · a yearly bill with no billing day set shows up and warns you ahead of time again"
+        ]
+      }
     },
     {
       "version": "2.0.0",
