@@ -21,6 +21,20 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://doospend.com/changelog.html</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://doospend.com/changelog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doospend.com/en/changelog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doospend.com/changelog.html"/>
+    <lastmod>2026-09-11</lastmod><changefreq>weekly</changefreq><priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://doospend.com/en/changelog.html</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://doospend.com/changelog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://doospend.com/en/changelog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doospend.com/changelog.html"/>
+    <lastmod>2026-09-11</lastmod><changefreq>weekly</changefreq><priority>0.5</priority>
+  </url>
   <url><loc>https://doospend.com/help.html</loc><lastmod>2026-09-11</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://doospend.com/privacy.html</loc><lastmod>2026-08-08</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://doospend.com/terms.html</loc><lastmod>2026-07-19</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>

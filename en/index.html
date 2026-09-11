@@ -315,6 +315,28 @@
     .chips{flex-wrap:wrap;justify-content:flex-start}
     .lang{padding:0 8px;font-size:12px}
   }
+
+  /* ── รีวิวผู้ใช้ (ก่อนส่วนราคา · เจ้าของเคาะ 11 ก.ย. 69) ──────────────────
+     **ไม่มีคะแนน ไม่มีจำนวนคน ไม่มีวันที่ ไม่มีดาว — เหลือแต่คำที่ผู้ใช้เขียน**
+     เพราะเลขทุกตัวเก่าได้ (5.0 ตกได้ · 42 เพิ่มได้) แล้วหน้าเว็บก็พูดของเก่าเงียบ ๆ
+     ส่วนคำพูดของคนเป็นจริงตลอดไป ไม่ต้องมีใครมาอัปเดตและไม่ต้องมีวันกำกับ
+
+     เครื่องหมายคำพูดสีเขียวทำงานแทนดาว: บอกว่านี่คือคำของคนอื่น ไม่ใช่คำโฆษณาที่เราเขียน ·
+     **ห้ามใช้ไอคอน/แบดจ์ของ Apple และห้ามทำหน้าตาเลียนแบบ UI ของ App Store** */
+  .reviews{border-top:1px solid var(--line)}
+  .qmark{font-family:var(--display);font-size:30px;font-weight:800;line-height:.7;color:var(--green);opacity:.35}
+  .rv{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 19px;display:flex;flex-direction:column;gap:9px}
+  .rv .q{font-size:14.5px;line-height:1.66;margin:0}
+  .rv .nm{font-size:12.5px;color:var(--faint);font-weight:600;margin-top:auto}
+  .cgrid{display:grid;grid-template-columns:1.25fr 1fr;gap:14px;margin-top:18px}
+  @media(max-width:820px){.cgrid{grid-template-columns:1fr}}
+  .hero-rv{background:linear-gradient(150deg,var(--green-soft),var(--card) 72%);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column}
+  .hero-rv .q{font-family:var(--display);font-size:19.5px;font-weight:700;line-height:1.5;letter-spacing:-.01em;margin:12px 0 0}
+  .hero-rv .q2{font-size:14px;color:var(--muted);line-height:1.62;margin:12px 0 0}
+  .hero-rv .nm{font-size:12.5px;color:var(--muted);font-weight:600;margin-top:16px}
+  .csmall{display:flex;flex-direction:column;gap:14px}
+  .storelink{display:inline-block;margin-top:20px;color:var(--green);font-size:13.5px;font-weight:700;text-decoration:none}
+  @media(max-width:560px){.hero-rv{padding:20px}.hero-rv .q{font-size:17.5px}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is the app itself in English?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — Settings → Language switches the whole interface to English, and the calendar can be set to the Gregorian year instead of the Thai Buddhist era. Amounts are in Thai baht and the QR features are PromptPay, so DooSpend fits best if you spend in Thailand."}}, {"@type": "Question", "name": "Does DooSpend read my bank account?", "acceptedAnswer": {"@type": "Answer", "text": "No. It never connects to a bank, never asks for a password, and never reads your SMS. Your entries live on your device and in your own private iCloud. When a slip gets logged, it is because you took or shared that image yourself."}}, {"@type": "Question", "name": "How does the AI logging work, and is it safe?", "acceptedAnswer": {"@type": "Answer", "text": "You snap a slip or speak, and the AI reads out the amount, the store and a category. The image goes through our proxy to Anthropic's Claude with a random per-device id used only to count your quota — not your name, e-mail or Apple ID. The result always comes back for you to confirm before anything is saved, and the app asks for your permission before the first time it sends anything."}}, {"@type": "Question", "name": "I do not use credit cards — is DooSpend still for me?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. The card advisor is an extra, not the heart of the app. On cash, PromptPay or a wallet you still get all of it: AI logging from slips, \"what is left today\" on a payday-aligned budget, bill splitting with a who-owes-whom summary and a PromptPay QR to settle, a heads-up when a subscription has gone quiet, lending records, and QR scanning that shows you the payee before you transfer. If your wallet earns cashback or points (TrueMoney, say), you can give it reward rules just like a card."}}, {"@type": "Question", "name": "Can I keep loan and instalment payments out of my spending?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — mark it \"not counted as spending\", either on the single entry or on a whole category (a \"mortgage\" or \"debt repayment\" category, say). Those big amounts stop burying what you actually spent in the monthly summary and the budget, while the money still leaves your balance for real — and if you paid by card you still earn the rewards. A switch on the summary screen lets you fold them back in temporarily when you want to see the all-in figure."}}, {"@type": "Question", "name": "How is the card advisor different from a rewards app?", "acceptedAnswer": {"@type": "Answer", "text": "DooSpend keeps no database of bank promotions. You enter your own cards' reward rules once, and the app ranks them for the category you are about to spend on, right now — including a warning before a cashback or points cap fills up. Because the rules are yours, nothing goes stale behind your back; if a bank changes its promo, you update the rule."}}, {"@type": "Question", "name": "What about a co-brand card that only earns at one store?", "acceptedAnswer": {"@type": "Answer", "text": "Supported — set the rule to \"this store only\" (shopee, lazada…) and the card only earns the bonus on entries at that store. There is an \"every store except\" mode too, for a dining promo that excludes delivery apps. The home screen shows store chips you can tap to see which card wins there."}}, {"@type": "Question", "name": "Is the free tier actually usable? What costs money?", "acceptedAnswer": {"@type": "Answer", "text": "Logging, budgets and what is left this month, card rules, reward tracking and one savings goal are free — and logging your own data is never paywalled. Pro (฿69/month or ฿590/year) is for the work the app does on your behalf: what you can still spend today plus the morning nudge, the best-card pick across every category with the prompt while you log and cap warnings, the savings board and extra goals, 150 AI entries a month, unlimited statement imports, and creating shared pockets."}}, {"@type": "Question", "name": "Is it iPhone only? Is there an Android version?", "acceptedAnswer": {"@type": "Answer", "text": "For now DooSpend is built for iPhone (iOS 18 and up) so it can lean on your own private iCloud. There is no Android release yet — leave your e-mail here and you will hear when there is."}}, {"@type": "Question", "name": "Can I bring my data over from another expense app?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — import the CSV or Excel file your old app exports (Money Manager, Spendee, MoneyLover and friends) for free, or hand it a credit-card statement PDF and let the AI break the whole page into entries. Everything lands in the review queue for you to confirm before it is saved."}}]}</script>
 </head>
@@ -478,11 +500,12 @@
     <div class="grid3">
       <div class="feat"><b>🌐 English interface</b>The whole app runs in English — Settings → Language · calendar switches between the Gregorian and Thai Buddhist era · amounts are in Thai baht and the QR features are PromptPay, so it fits best if you spend in Thailand</div>
       <div class="feat"><b>💳 Card debt &amp; instalments</b>Pay-off planner (avalanche or snowball) plus instalment tracking — how many payments are left and how much</div>
-      <div class="feat"><b>📅 Card due dates</b>Reminders 7, 3 and 1 day before, a clear outstanding balance, and shared credit limits for supplementary cards</div>
+      <div class="feat"><b>📅 Card due dates</b>Five reminder points you can switch on and off separately (7, 3 and 1 day before · on the day · a day late), a clear outstanding balance, and shared credit limits for supplementary cards</div>
       <div class="feat"><b>🔁 Recurring bills</b>Heads-up before a subscription, instalment, rent or insurance charge — then a row to confirm it actually went out</div>
       <div class="feat"><b>🎯 Savings goals</b>Set a goal and the app holds that money back out of what you can spend (one goal free) · the tick-a-square savings board is Pro</div>
-      <div class="feat"><b>🤝 Lending</b>Record what you lent out and get a nudge to ask for it back</div>
+      <div class="feat"><b>🤝 Borrowed and lent</b>Record both directions — it feeds into your net worth automatically — plus a nudge to chase it · whatever interest you agreed on, record it as agreed (none · equal instalments · interest-only · deducted upfront)</div>
       <div class="feat"><b>➖ Keep debt out of "spending"</b>Mark an entry (or a whole category) as "not counted as spending" so big repayments do not bury what you actually spent</div>
+      <div class="feat"><b>📕 Pockets — money in separate pots</b>A trip, a wedding, the house — keep it in its own pocket, give the pocket its own budget, and see which categories ate it</div>
       <div class="feat"><b>👤 Who it was for</b>Tag spending by person (kids, partner, parents) and see a per-person summary</div>
       <div class="feat"><b>🏪 By store and by category</b>Which shops and which categories eat the most — tap any of them to dig in</div>
       <div class="feat"><b>📥 Move in from another app</b>CSV and Excel import is always free · a credit-card statement PDF can be read for you too</div>
@@ -491,6 +514,32 @@
       <div class="feat"><b>🔐 Face ID lock</b>Face or passcode before the app opens — nobody else browses your money</div>
       <div class="feat"><b>☁️ Sync, backup, export</b>Synced across your devices through your own iCloud, so a lost phone is not lost data · restore, or export CSV and PDF yourself</div>
     </div>
+  </div></section>
+
+  <!-- User reviews — quoted verbatim from App Store Connect · never reworded -->
+  <section class="sec reviews" id="reviews"><div class="wrap">
+    <p class="sub" style="margin-top:0">Reviews on the App Store — quoted word for word, translated from Thai</p>
+    <div class="cgrid">
+      <div class="hero-rv">
+        <span class="qmark" style="font-size:42px">&ldquo;</span>
+        <p class="q">I have tried a lot of expense-tracking apps, <span style="color:var(--green)">and this one is my favourite by far</span></p>
+        <p class="q2">Thank you for making such a good app — it is so easy and convenient to use. Rooting for you 🩷<br><span style="opacity:.75">ต้นฉบับ: “ลองใช้แอปจดบันทึกรายรับรายจ่ายมาเยอะมาก แต่ชอบของแอปนี้มากที่สุดเลย ขอบคุณที่ทำแอปดีๆ ออกมานะคะ ใช้งานง่ายและสะดวกมากเลยค่ะ เป็นกำลังใจให้นะคะ”</span></p>
+        <span class="nm">— peach.pink</span>
+      </div>
+      <div class="csmall">
+        <div class="rv">
+          <span class="qmark">&ldquo;</span>
+          <p class="q">Easy to use, clean UI, <b>managing my cards is simple</b>, and I can add my own categories. Exactly what I needed.</p>
+          <span class="nm">— AHermoi</span>
+        </div>
+        <div class="rv">
+          <span class="qmark">&ldquo;</span>
+          <p class="q">Good app, cute icon, fun to use. <b>I will definitely recommend it to people I know.</b></p>
+          <span class="nm">— RTN56</span>
+        </div>
+      </div>
+    </div>
+    <a class="storelink" href="https://apps.apple.com/th/app/doospend/id6774424817?see-all=reviews">Read all the reviews on the App Store →</a>
   </div></section>
 
   <!-- pricing -->
@@ -566,7 +615,7 @@
       <p style="color:var(--muted);font-size:13.5px;margin-top:12px;max-width:38ch">An iPhone expense tracker for people who hate logging things — snap the slip and AI writes it up</p>
     </div>
     <div class="footcols">
-      <div class="footcol"><b>Product</b><a href="#features">Features</a><a href="#card">Card advisor</a><a href="#pricing">Pricing</a></div>
+      <div class="footcol"><b>Product</b><a href="#features">Features</a><a href="#card">Card advisor</a><a href="#pricing">Pricing</a><a href="changelog.html">What’s new <span id="clFoot" style="opacity:.7"></span></a></div>
       <div class="footcol"><b>Company</b><a href="../privacy.html">Privacy</a><a href="#faq">FAQ</a></div>
       <div class="footcol"><b>Legal</b><a href="../privacy.html">Privacy policy</a><a href="../terms.html">Terms of use</a></div>
       <div class="footcol"><b>Contact</b><a href="mailto:apiwat.pe@gmail.com">E-mail</a><a href="../help.html">Help (in Thai)</a></div>
@@ -605,6 +654,7 @@
   });
 })();
 </script>
+<script src="../_changelog.js?v=1" defer></script>
 <script src="../_chat.js?v=8" defer></script>
 </body>
 </html>
