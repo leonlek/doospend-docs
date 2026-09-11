@@ -10,9 +10,18 @@
 (function () {
   'use strict';
 
+  /**
+   * **ป้ายตามภาษาของหน้า** (11 ก.ย. 69 · ตอนเพิ่มหน้า landing อังกฤษ)
+   *
+   * ไฟล์นี้ไฟล์เดียวถูกใช้ทุกหน้า (ไทยและอังกฤษ) — อ่าน `<html lang>` แล้วเลือกป้าย
+   * ไม่ต้องมีสองไฟล์ให้เพี้ยนจากกัน · ใส่ลิงก์ที่เดียวเหมือนเดิม
+   */
+  var EN = (document.documentElement.lang || 'th').slice(0, 2) === 'en';
+  function t(th, en) { return EN ? en : th; }
+
   var CHANNELS = [
     // LINE Official Account @464uvacf — %40 คือ @ ที่เข้ารหัสแล้ว (รูปแบบที่ LINE ใช้เอง)
-    { id: 'line', label: 'คุยทาง LINE', url: 'https://line.me/R/ti/p/%40464uvacf', color: '#06C755',
+    { id: 'line', label: t('คุยทาง LINE', 'Chat on LINE'), url: 'https://line.me/R/ti/p/%40464uvacf', color: '#06C755',
       icon: '<path d="M12 2C6.5 2 2 5.6 2 10.1c0 4 3.6 7.4 8.4 8 .3.1.8.2.9.5.1.3.1.7 0 1l-.2.9c0 .3-.2 1 .9.6 1.1-.5 6-3.5 8.2-6C21.6 13.4 22 11.8 22 10.1 22 5.6 17.5 2 12 2ZM8.1 12.6H6.2c-.3 0-.5-.2-.5-.5V8.3c0-.3.2-.5.5-.5s.5.2.5.5v3.3h1.4c.3 0 .5.2.5.5s-.2.5-.5.5Zm2-.5c0 .3-.2.5-.5.5s-.5-.2-.5-.5V8.3c0-.3.2-.5.5-.5s.5.2.5.5v3.8Zm4.4 0c0 .2-.1.4-.4.5h-.2c-.2 0-.3-.1-.4-.2l-1.9-2.6v2.3c0 .3-.2.5-.5.5s-.5-.2-.5-.5V8.3c0-.2.1-.4.4-.5h.2c.1 0 .3.1.4.2l1.9 2.6V8.3c0-.3.2-.5.5-.5s.5.2.5.5v3.8Zm3.1-2.4c.3 0 .5.2.5.5s-.2.5-.5.5h-1.4v.9h1.4c.3 0 .5.2.5.5s-.2.5-.5.5h-1.9c-.3 0-.5-.2-.5-.5V8.3c0-.3.2-.5.5-.5h1.9c.3 0 .5.2.5.5s-.2.5-.5.5h-1.4v.9h1.4Z"/>' },
     // Facebook Page 'doospend'
     //
@@ -21,10 +30,10 @@
     // ใช้ **รหัสตัวเลข** ไม่ใช่ชื่อ: m.me/doospend ใช้ไม่ได้เพราะ "doospend" เป็นชื่อเพจ
     // ไม่ใช่ชื่อผู้ใช้ (เพจนี้ไม่มี username เลย URL เป็น profile.php?id=…)
     // ตรวจแล้ว m.me/61591609032895 ตอบ 302 ไป m.facebook.com/msg/… = เข้าห้องแชทตรงจริง
-    { id: 'messenger', label: 'คุยทาง Messenger', url: 'https://m.me/61591609032895', color: '#0866FF',
+    { id: 'messenger', label: t('คุยทาง Messenger', 'Chat on Messenger'), url: 'https://m.me/61591609032895', color: '#0866FF',
       icon: '<path d="M12 2C6.4 2 2.2 6.1 2.2 11.6c0 2.9 1.2 5.4 3.1 7.1.2.2.3.4.3.6l.1 1.8c0 .6.6 1 1.1.7l2-.9c.2-.1.4-.1.6-.1 1 .3 2 .4 3.1.4 5.6 0 9.8-4.1 9.8-9.6S17.6 2 12 2Zm5.9 7.4-2.9 4.6c-.5.7-1.4.9-2.1.4l-2.3-1.7c-.2-.2-.5-.2-.7 0l-3.1 2.4c-.4.3-.9-.2-.7-.6l2.9-4.6c.5-.7 1.4-.9 2.1-.4l2.3 1.7c.2.2.5.2.7 0l3.1-2.4c.4-.3.9.2.7.6Z"/>' },
     // อีเมล — มีอยู่แล้ว จึงเป็นช่องทางสำรองที่ทำงานได้ตั้งแต่วันนี้
-    { id: 'email', label: 'ส่งอีเมล', url: 'mailto:apiwat.pe@gmail.com', color: '#2E7D5F',
+    { id: 'email', label: t('ส่งอีเมล', 'Send an e-mail'), url: 'mailto:apiwat.pe@gmail.com', color: '#2E7D5F',
       icon: '<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Zm8 7.2 8-4.7V6H4v.5l8 4.7Zm0 2.3-8-4.7V18h16V8.8l-8 4.7Z"/>' }
   ];
 
@@ -82,7 +91,7 @@
                svg(c.icon, c.color) + '<span>' + c.label + '</span></a>';
       }).join('') +
     '</div>' +
-    '<button class="chatfab-btn" type="button" aria-expanded="false" aria-label="คุยกับเรา">' +
+    '<button class="chatfab-btn" type="button" aria-expanded="false" aria-label="' + t('คุยกับเรา', 'Talk to us') + '">' +
       '<svg class="chatfab-open" viewBox="0 0 24 24" width="26" height="26" fill="#fff" aria-hidden="true">' +
         '<path d="M12 3c5 0 9 3.4 9 7.6 0 4.2-4 7.6-9 7.6-.9 0-1.8-.1-2.6-.3l-4 1.9c-.4.2-.9-.2-.8-.7l.7-3C3.3 14.8 3 12.8 3 10.6 3 6.4 7 3 12 3Z"/>' +
       '</svg>' +
