@@ -3,24 +3,22 @@
   "versions": [
     {
       "version": "2.5.0",
-      "date": "19 กันยายน 2569",
-      "title": "🌏 ใช้สกุลเงินอะไรก็ได้ ไม่ใช่แค่บาท\n💱 จดของต่างประเทศ กรอกยอดที่ถูกตัดจริง",
+      "date": "21 กันยายน 2569",
+      "title": "🌏 เปลี่ยนสกุลเงินหลักของสมุดได้หลายประเทศ\n💱 เลือกสกุลเงินเฉพาะรายรายการสำหรับการใช้จ่ายต่างประเทศแบบครั้งคราว",
       "items": [
-        "🌏 เลือกสกุลเงินของสมุดได้ — ทั้งแอปเปลี่ยนตาม ทั้งยอด สัญลักษณ์ และจำนวนทศนิยม",
-        "💱 จดรายการต่างประเทศ กรอกแค่ยอดที่ถูกตัดจริง ไม่ต้องหาเรตหรือค่าธรรมเนียมเอง",
-        "🗑️ ลบได้ทุกที่ที่ควรลบได้ — ปุ่มถังขยะสีแดงเหมือนกันทั้งแอป",
-        "🌱 เปิดแอปครั้งแรกแล้วได้หมวดครบทุกใบ (เคยมีบางเครื่องได้แค่ \"อื่นๆ\")",
-        "💳 หน้าบัญชีโชว์ทั้งแผนผ่อนและรายการยืม-ให้ยืม"
+        "🌏 ตั้งสกุลเงินหลักของสมุดได้ ทั้งแอปเปลี่ยนตามถาวร ทั้งยอดเงิน สัญลักษณ์ และจำนวนทศนิยม",
+        "💱 เลือกสกุลเงินเฉพาะรายรายการสำหรับการใช้จ่ายต่างประเทศ โดยสกุลหลักของสมุดไม่เปลี่ยน",
+        "💳 หน้าบัญชีแสดงแผนผ่อนและรายการยืม-ให้ยืมในที่เดียว",
+        "✨ ปรับการแสดงผลทั้งแอปให้กระชับขึ้น"
       ],
       "en": {
-        "date": "19 September 2026",
-        "title": "🌏 Any currency, not just Baht\n💱 Foreign spending — just enter what you were charged",
+        "date": "21 September 2026",
+        "title": "🌏 Change your book's main currency — any country you like\n💱 Pick a currency per entry for occasional spending abroad",
         "items": [
-          "🌏 Pick your book's currency — every amount, symbol and decimal place follows",
-          "💱 Log foreign spending by typing the amount you were actually charged — no rate or fee to look up",
-          "🗑️ Delete works everywhere it should, with the same red bin throughout",
-          "🌱 A fresh install now gets every starter category (some devices only got \"Other\")",
-          "💳 The account screen shows instalment plans and lending rows together"
+          "🌏 Set the book's main currency — every amount, symbol and decimal place follows, for good",
+          "💱 Choose a currency on individual entries when spending abroad; the book's main currency stays unchanged",
+          "💳 The account screen shows instalment plans and lending records together",
+          "✨ A tighter, more compact layout throughout"
         ]
       }
     },
