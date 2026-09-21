@@ -4,7 +4,7 @@
     {
       "version": "2.5.0",
       "date": "21 กันยายน 2569",
-      "title": "🌏 เปลี่ยนสกุลเงินหลักของสมุดได้หลายประเทศ\n💱 เลือกสกุลเงินเฉพาะรายรายการสำหรับการใช้จ่ายต่างประเทศแบบครั้งคราว",
+      "title": "🌏 เปลี่ยนสกุลเงินหลักของสมุดได้หลายประเทศ\n💱 ไปต่างประเทศครั้งคราว เลือกสกุลเงินรายรายการ",
       "items": [
         "🌏 ตั้งสกุลเงินหลักของสมุดได้ ทั้งแอปเปลี่ยนตามถาวร ทั้งยอดเงิน สัญลักษณ์ และจำนวนทศนิยม",
         "💱 เลือกสกุลเงินเฉพาะรายรายการสำหรับการใช้จ่ายต่างประเทศ โดยสกุลหลักของสมุดไม่เปลี่ยน",
@@ -13,7 +13,7 @@
       ],
       "en": {
         "date": "21 September 2026",
-        "title": "🌏 Change your book's main currency — any country you like\n💱 Pick a currency per entry for occasional spending abroad",
+        "title": "🌏 Change your book's main currency — any country you like\n💱 Travelling? Pick a currency per entry",
         "items": [
           "🌏 Set the book's main currency — every amount, symbol and decimal place follows, for good",
           "💱 Choose a currency on individual entries when spending abroad; the book's main currency stays unchanged",
