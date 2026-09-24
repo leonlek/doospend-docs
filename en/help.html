@@ -199,7 +199,9 @@
 
 <h2>Your book's currency</h2>
 <p>Set which currency this book is kept in and the whole app follows: every amount, the symbol, and the number of decimal places (yen and won have no minor unit, so no decimals are shown at all). Find it under <strong>More → Main currency</strong>.</p>
-<p><strong>Amounts you already logged are never converted.</strong> Changing the currency changes the <em>label in front of the number</em>, not the number itself — 500 stays 500. The app makes you save a backup first, and only switches once that file has actually been written.</p>
+<p><strong>Amounts you already logged are never converted.</strong> Changing the currency changes the <em>label in front of the number</em>, not the number itself — 500 stays 500.</p>
+<p><strong>A backup always comes first (once the book has data)</strong> — the app keeps a <strong>copy on this device</strong>, then asks you to pick a <strong>folder</strong> for a second copy (iCloud Drive, on your iPhone, or any location enabled in Files). It only switches once the file is really saved and opens in restore. File names carry a timestamp, so nothing is overwritten. <strong>A book with no data yet</strong> (freshly installed — no entries, opening balances of zero) switches straight away with no backup.</p>
+<p><strong>Seeing "Accounts are in more than one currency"?</strong> It can happen when two devices on the same iCloud change the currency differently before they sync. Tap "Pick the book's currency" and choose one — no numbers are converted.</p>
 <p><strong>A few things work only in a Baht book</strong> because they are tied to Thai systems: PromptPay scan-to-pay, shared books, the tax estimate screen, and the Thai credit-card defaults (16%/year interest, collection fee, 10% minimum). Cards in other currencies let you enter those terms yourself — the app will not guess them for you.</p>
 
 <h3>Spending in a foreign currency</h3>
@@ -321,9 +323,11 @@
 <h3>Recurring payments (subscriptions &amp; monthly bills)</h3>
 <p>Everything you pay on a cycle in one place — memberships (Netflix, Spotify, iCloud), car payments, rent, insurance, water and electricity — with the monthly and yearly totals.</p>
 <ul>
-  <li><strong>Billing cycle</strong> can be weekly, monthly or yearly. Monthly ones get a "billed on the Nth"; weekly and yearly count from the first billing date (yearly amounts are averaged per month in the total so they're comparable)</li>
+  <li><strong>Billing cycle</strong> can be weekly, monthly or yearly. Weekly ones pick a <strong>day of the week</strong>; monthly ones get a "billed on the Nth" and can repeat <strong>every 1, 2, 3, 4 or 6 months</strong>; yearly ones pick a <strong>day and month</strong> (yearly amounts are averaged per month in the total so they're comparable) · The price on each row is <strong>per cycle</strong> — a bill every 2 months shows "/2 months"</li>
+  <li><strong>New bills start from the next cycle that hasn't happened yet</strong> — a billing day that already passed this month isn't added to Review after the fact (if you paid it and haven't logged it, log it as usual). A billing day of today goes to Review right away. The same rule applies to weekly, monthly and yearly bills, and to <strong>editing the billing day later</strong> — rows from past cycles still waiting in Review are kept. <strong>Use again</strong> starts counting from that day, without filling in the cycles while it was closed. A bill made from an entry you already logged counts that entry as that month's cycle, so you don't get a second row.</li>
+  <li><strong>End date</strong> — set a date, or a number of cycles ("10 cycles"). After that date the app stops reminding you and stops sending the bill to Review, and the bill moves to "Closed". Cancelled a service but still paying until the period ends? Set an end date instead of deleting it. To bring it back, tap "Use again" in the Closed group</li>
   <li><strong>Amount varies</strong> (water, electricity) — turn this on and the row that arrives in the queue is tagged <em>check against the bill</em>, pre-filled with last month's amount to edit. It still pre-fills; it just tells you not to confirm blindly. A bill you ticked <em>repeat monthly</em> on while logging is not marked as varying, because the amount you just typed is the real one</li>
-  <li>Near the billing date the app drops the entry into <strong>Review</strong> to confirm — it never logs money silently, because the amount may change or the service may have been cancelled. How many days ahead is set in More → <strong>Reminders</strong> (1 day by default); the same number controls both the row and the notification</li>
+  <li>Near the billing date the app drops the entry into <strong>Review</strong> to confirm — it never logs money silently, because the amount may change or the service may have been cancelled. How many days ahead is set in More → <strong>Reminders</strong> (1 day by default); the same number controls both the row and the notification · The <strong>bell</strong> reminds you of bills coming up within 7 days and of bills waiting in Review, including overdue ones — one row per bill, and tapping it opens Review</li>
   <li>The card header says <strong>billed next</strong> — which one comes soonest, on what date, in how many days, for how much. Several on the same day are combined into one row with the total</li>
   <li>Quiet for more than 45 days → a <em>forgot to cancel?</em> tag on the row and a note in the bell (something that genuinely saves money)</li>
 </ul>
@@ -364,6 +368,7 @@
 
 <h3>Backup &amp; restore (.json) + export CSV/PDF</h3>
 <p>More → <strong>Backup &amp; restore</strong> writes a complete <code>.json</code> of everything to Files or iCloud Drive, and restores it back. Backup files always use the Gregorian era, so they move safely between devices whatever your calendar setting.</p>
+<p><strong>Backups on this device</strong> — the copies the app keeps before a currency change are listed on the Backup &amp; restore screen (the latest 3). Tap ⋯ on a row to <strong>Restore from this copy</strong> or <strong>Save elsewhere</strong>. They live on this device only: deleting the app removes them, and "Delete all data" removes them too.</p>
 <p>Export to <strong>CSV</strong> (for a spreadsheet) or <strong>PDF</strong> (a report) from More → <strong>Export</strong> — pick a period and an account. Exporting is a Pro feature; importing CSV back in is always free.</p>
 
 <h3>The Review tab — fix it before you confirm</h3>
