@@ -2,6 +2,35 @@
   "$schema_note": "Lives at https://doospend.com/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array. Every entry MUST carry an \"en\" object (title/date/items) — the app shows it when the user picks English; without it the popup falls back to Thai.",
   "versions": [
     {
+      "version": "2.6.0",
+      "date": "25 กันยายน 2569",
+      "title": "🗓️ รายจ่ายประจำตั้งวันสิ้นสุดได้\n🔁 ตัดทุก 2–6 เดือน · เลือกวันในสัปดาห์/วันของปี",
+      "items": [
+        "🛟 แอปเสถียรขึ้นตอนสลับออกระหว่างซิงก์ iCloud",
+        "🔔 กระดิ่งเตือนรายจ่ายประจำที่รอยืนยัน ทั้งใกล้ถึงและเลยกำหนด",
+        "🗓️ ตั้งรายจ่ายประจำใหม่ เริ่มนับจากรอบถัดไป ไม่ย้อนเก็บรอบที่ผ่านมาแล้ว",
+        "💾 ก่อนเปลี่ยนสกุลเงิน แอปเก็บสำเนาข้อมูลไว้ในเครื่อง กู้คืนได้จากจอสำรองข้อมูล",
+        "🗓️ ตั้งวันสิ้นสุดหรือจำนวนรอบของรายจ่ายประจำ ครบแล้วแอปหยุดเตือนให้เอง",
+        "🔁 รอบบิลทุก 2, 3, 4 หรือ 6 เดือน · รายสัปดาห์เลือกวัน · รายปีเลือกวันและเดือน",
+        "📊 หัวจอรายจ่ายประจำ งบ และเป้าออม สรุปยอดสำคัญไว้ในการ์ดเดียว",
+        "✨ ปรับการแสดงผลหลายจุด ทั้งหัวข้อจอและการจัดแถว"
+      ],
+      "en": {
+        "date": "25 September 2026",
+        "title": "🗓️ Recurring bills can now end on a date\n🔁 Bill every 2–6 months · pick the weekday or day of the year",
+        "items": [
+          "🛟 More stable when you switch away while iCloud is syncing",
+          "🔔 The bell now reminds you of recurring bills waiting in Review, both upcoming and overdue",
+          "🗓️ New recurring bills start from the next cycle instead of adding ones that already passed",
+          "💾 Before changing currency, the app keeps a copy of your data on this device — restore it from Backup",
+          "🗓️ Set an end date or number of cycles for a recurring bill; reminders stop on their own when it's done",
+          "🔁 Bill every 2, 3, 4 or 6 months · weekly bills pick a day · yearly bills pick the day and month",
+          "📊 Recurring bills, budgets and savings goals open with a single summary card",
+          "✨ Layout polish across many screens, from titles to row alignment"
+        ]
+      }
+    },
+    {
       "version": "2.5.0",
       "date": "21 กันยายน 2569",
       "title": "🌏 เปลี่ยนสกุลเงินหลักของสมุดได้หลายประเทศ\n💱 ไปต่างประเทศครั้งคราว เลือกสกุลเงินรายรายการ",
