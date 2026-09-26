@@ -1,9 +1,9 @@
 {
   "v": 1,
-  "countOnly": 4000,
-  "countWithAmount": 500,
-  "amountBaht": 3000000,
-  "note": "ทดสอบยิงจริงชั่วคราว (26 ก.ย. 69) — จะคืนค่าทันทีหลังทดสอบ",
+  "countOnly": 1000,
+  "countWithAmount": 200,
+  "amountBaht": 1000000,
+  "note": "ทดสอบยิงจริงชั่วคราว (26 ก.ย. 69 · กรณีเกณฑ์ลดลง) — จะคืนค่าทันทีหลังทดสอบ",
   "source": "https://www.rd.go.th/fileadmin/download/Q&A_271162.pdf",
-  "updated": "2026-09-26"
+  "updated": "2026-09-27"
 }
