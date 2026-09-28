@@ -2,6 +2,77 @@
   "$schema_note": "Lives at https://doospend.com/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array. Every entry MUST carry an \"en\" object (title/date/items) — the app shows it when the user picks English; without it the popup falls back to Thai.",
   "versions": [
     {
+      "version": "2.7.0",
+      "date": "28 กันยายน 2569",
+      "title": "🏦 เงินเข้ารายปี เทียบเกณฑ์สรรพากร\n📄 ส่งออกแฟ้มชี้แจง PDF/CSV",
+      "highlights": [
+        {
+          "icon": "🏦",
+          "title": "เงินเข้ารายปีทุกบัญชี",
+          "detail": "นับฝากและรับโอนทั้งปี เทียบกับเกณฑ์ที่ธนาคารต้องรายงานกรมสรรพากร · ดูรายการทีละรายการได้ฟรี ยอดรวมทั้งปีสำหรับ Pro"
+        },
+        {
+          "icon": "🧮",
+          "title": "รวมบัญชีธนาคารเดียวกัน",
+          "detail": "ติ๊กหลายบัญชีในธนาคารเดียวกัน นับรวมแบบที่ธนาคารนับ (Pro)"
+        },
+        {
+          "icon": "📄",
+          "title": "แฟ้มชี้แจงเงินเข้า",
+          "detail": "ส่งออก PDF แนบรูปสลิปได้ หรือ CSV เปิดใน Excel (Pro)"
+        },
+        {
+          "icon": "📊",
+          "title": "กราฟแนวโน้มตามช่วงที่เลือก",
+          "detail": "ดูรายปีเป็นแท่งรายเดือน · รายเดือนและรายสัปดาห์เป็นแท่งรายวัน"
+        }
+      ],
+      "items": [
+        "💰 จอรายละเอียดงบ บอกว่าแต่ละงบนับรายการไหนบ้าง",
+        "🎯 การ์ดกระเป๋าบอกยอดที่เป้าออมจองไว้",
+        "📁 สร้างสมุดหรือเพื่อใครใหม่ได้ระหว่างจด",
+        "📷 เลือกหลายรูปจากคลัง แถวในหน้าตรวจสอบขึ้นเท่าจำนวนรูปทันที",
+        "🗓️ บิลรายปีเลือกได้เฉพาะวันที่มีจริงในเดือนนั้น",
+        "✅ ใช้พอดีงบ 100% แสดงว่า “เต็มแล้ว” แทน “เกินงบ”",
+        "✨ ไอคอนรายการเป็นวงกลม หน้าหมวดค้นหาด้วยปุ่ม 🔍 และปรับการแสดงผลหลายจุด"
+      ],
+      "en": {
+        "date": "28 September 2026",
+        "title": "🏦 Yearly incoming vs. the Revenue Department thresholds\n📄 Export a PDF/CSV statement",
+        "highlights": [
+          {
+            "icon": "🏦",
+            "title": "Yearly incoming for every account",
+            "detail": "Counts deposits and transfers in for the whole year, against the thresholds banks must report to the Revenue Department · individual transactions are free, yearly totals are Pro"
+          },
+          {
+            "icon": "🧮",
+            "title": "Combine accounts at the same bank",
+            "detail": "Tick several accounts at one bank to count them together, the way the bank does (Pro)"
+          },
+          {
+            "icon": "📄",
+            "title": "Incoming statement file",
+            "detail": "Export a PDF with slip photos, or a CSV for Excel (Pro)"
+          },
+          {
+            "icon": "📊",
+            "title": "Trend chart follows the range",
+            "detail": "A year shows monthly bars · a month or week shows daily bars"
+          }
+        ],
+        "items": [
+          "💰 Budget detail shows which transactions each budget counts",
+          "🎯 The wallet card shows how much savings goals have set aside",
+          "📁 Create a pocket or a “for whom” while you log",
+          "📷 Picking several photos adds a review row per photo right away",
+          "🗓️ Yearly bills only offer days that exist in that month",
+          "✅ Spending exactly 100% of a budget reads “Full”, not “Over budget”",
+          "✨ Round transaction icons, a 🔍 search button on Categories, and many small layout tweaks"
+        ]
+      }
+    },
+    {
       "version": "2.6.0",
       "date": "25 กันยายน 2569",
       "title": "🗓️ รายจ่ายประจำตั้งวันสิ้นสุดได้\n🔁 ตัดทุก 2–6 เดือน · เลือกวันในสัปดาห์/วันของปี",
