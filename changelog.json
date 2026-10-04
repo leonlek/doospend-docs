@@ -2,6 +2,85 @@
   "$schema_note": "Lives at https://doospend.com/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array. Every entry MUST carry an \"en\" object (title/date/items) — the app shows it when the user picks English; without it the popup falls back to Thai.",
   "versions": [
     {
+      "version": "2.8.0",
+      "date": "3 ตุลาคม 2569",
+      "title": "⭐ ปักงบขึ้นหน้าหลัก\n📥 หน้าตรวจสอบจัดกลุ่มใหม่",
+      "highlights": [
+        {
+          "icon": "⭐",
+          "title": "ปักงบขึ้นหน้าหลัก",
+          "detail": "งบรวมเป็นแถบบนหน้าหลัก · ติดดาวงบอื่นขึ้นเป็นวงกลมได้อีก 4 งบ"
+        },
+        {
+          "icon": "🎯",
+          "title": "งบหมวดบนบัญชีเดียว",
+          "detail": "ตั้งงบ “อาหาร บน KTC” ได้ · นับเฉพาะหมวดนั้นบนบัญชีนั้น"
+        },
+        {
+          "icon": "📈",
+          "title": "จอรายละเอียดงบ",
+          "detail": "กราฟใช้สะสมเทียบเส้นงบ · ใช้จ่ายตามหมวดพร้อม % แตะเพื่อดูเฉพาะหมวด"
+        },
+        {
+          "icon": "📥",
+          "title": "หน้าตรวจสอบจัดกลุ่มใหม่",
+          "detail": "ที่เพิ่มเข้ามา · ตามกำหนด · ล่วงหน้า · ยืนยันแล้วบอกว่าบันทึกรายการไหนไป"
+        }
+      ],
+      "items": [
+        "💸 แถบ “โอน” ในชีตตรวจสอบ สำหรับเติม e-wallet หรือโอนเข้าบัญชีตัวเอง",
+        "📤 ส่งออกตามตัวกรองที่เปิดอยู่ และส่งออกรายสมุด (Pro)",
+        "📅 ยอดใช้ได้ต่อวันบนแถวงบและในหน้ารายละเอียดงบ (Pro)",
+    "🚫 ติ๊ก “ไม่นับในค่าใช้จ่าย” แล้วไม่นับในงบไหนเลย · ยังเห็นเป็นแถวจางในรายละเอียดงบ",
+        "📊 กราฟแนวโน้มมีเส้นเฉลี่ย แตะแท่งเพื่อดูยอด",
+        "🗑️ ลบบัญชีแล้ว งบที่ผูกบัญชีนั้นถูกลบไปด้วย · กล่องยืนยันบอกทีละเรื่องว่าอะไรอยู่ อะไรหาย",
+        "👆 แตะแถบหรือวงกลมงบบนหน้าหลัก เปิดรายละเอียดของงบนั้นเลย",
+        "☑️ เลือกหมวดของงบเป็นรายการติ๊ก ติ๊กครบ = ทุกหมวด รวมหมวดที่เพิ่มทีหลัง",
+        "📄 ไฟล์ CSV/PDF เรียงรายการตามที่เห็นบนจอ",
+    "💳 การ์ดแผนผ่อนและการ์ดเงินเข้ารายปีอ่านง่ายขึ้น",
+        "✨ ปรับการแสดงผลหลายจุด"
+      ],
+      "en": {
+        "date": "3 October 2026",
+        "title": "⭐ Pin budgets to Home\n📥 A regrouped Review screen",
+        "highlights": [
+          {
+            "icon": "⭐",
+            "title": "Pin budgets to Home",
+            "detail": "Your overall budget shows as a bar on Home · star up to 4 more to show as rings"
+          },
+          {
+            "icon": "🎯",
+            "title": "Category budgets on one account",
+            "detail": "Set a budget like “Food on KTC” · it counts only that category on that account"
+          },
+          {
+            "icon": "📈",
+            "title": "Budget detail",
+            "detail": "A cumulative spending chart against the budget line · spending by category with %, tap to filter"
+          },
+          {
+            "icon": "📥",
+            "title": "Review, regrouped",
+            "detail": "Newly added · Scheduled · Upcoming · confirming tells you which entry was saved"
+          }
+        ],
+        "items": [
+          "💸 A “Transfer” tab in the review sheet for e-wallet top-ups and moves between your own accounts",
+          "📤 Export what the current filter shows, or a single pocket (Pro)",
+          "📅 Daily allowance on each budget row and in budget detail (Pro)",
+    "🚫 Entries marked “Not counted as spending” count toward no budget · they still show, faded, in budget detail",
+          "📊 Trend charts show an average line · tap a bar to see its amount",
+          "🗑️ Deleting an account also deletes its budgets · the confirmation lists, line by line, what stays and what goes",
+          "👆 Tap a budget bar or ring on Home to open that budget",
+          "☑️ Budget categories are a checklist — ticking every one means all categories, including ones added later",
+          "📄 CSV/PDF exports list entries in the order you see on screen",
+    "💳 Clearer instalment-plan and yearly-incoming cards",
+          "✨ Many small layout tweaks"
+        ]
+      }
+    },
+    {
       "version": "2.7.0",
       "date": "28 กันยายน 2569",
       "title": "🏦 เงินเข้ารายปี เทียบเกณฑ์สรรพากร\n📄 ส่งออกแฟ้มชี้แจง PDF/CSV",

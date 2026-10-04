@@ -184,13 +184,39 @@
 <h2>Budgets &amp; your financial month</h2>
 <p>Set monthly and per-category budgets, and set the <strong>day your month starts</strong> to match your payday (say the 25th) — every summary and budget then follows that cycle instead of the 1st to the end of the calendar month.</p>
 
+<h3>Pin budgets to Home (star)</h3>
+<p>Your <strong>monthly overall budget</strong> (every category, every account) shows as a long bar on Home and is starred for you when you create it · tap <strong>⭐</strong> on any other budget row (or the ⋯ menu in budget detail) to add it as a ring — <strong>up to 4 rings</strong></p>
+<ul>
+  <li>Under the bar, "Overall · Safe to spend today" comes from the monthly overall budget alone — the rings aren't added in (Pro)</li>
+  <li>Nothing starred = no budgets on Home · unstar the overall budget if you'd rather not see the bar</li>
+  <li>Rings: the centre is the % spent · below it the budget name and "฿X a day" (Pro) or "฿X left" · over budget reads "฿X over" · when any ring is tied to an account, every ring shows an account line ("on K Plus" / "All accounts")</li>
+  <li><strong>Tap a bar or ring</strong> to open that budget · back takes you to the budget list</li>
+</ul>
+
+<h3>Category budgets on one account</h3>
+<p>When you create a budget, pick the <strong>account</strong> first, then the <strong>categories</strong> — "Food + Café on KTC" counts only those two categories paid with KTC.</p>
+<ul>
+  <li>The same category can have a budget on different accounts (Food on KTC and Food on KBank), and alongside "Food on every account" — the account budget is a slice of the all-accounts one, so spending counts in both</li>
+  <li>Categories are a <strong>checklist</strong> — tick "All categories", or tick every one, to count everything, including categories added later and uncategorized entries · untick some to count only the ticked ones</li>
+  <li>A category on the <strong>same account</strong> belongs to one budget (taken categories are greyed out) · a budget with no categories can't repeat the same account and period</li>
+  <li><strong>Deleting an account deletes its budgets too</strong> — the confirmation names them first (so a budget never silently becomes "every account")</li>
+</ul>
+
+<h3>Budget detail</h3>
+<ul>
+  <li>A <strong>cumulative spending chart</strong> against the budget line for the whole cycle — daily for weekly and monthly budgets, monthly for yearly</li>
+  <li><strong>Spending by category</strong> with each category's % (the categories always add up to the amount spent) · tap one to see only its transactions, tap again for all</li>
+  <li>Each budget row, and the summary card in budget detail, shows "฿X a day" — what you can spend per day until the cycle ends (Pro) · it's worked out from what you spent before today, so spending today doesn't move today's number; tomorrow it spreads again</li>
+  <li>Entries marked "Not counted as spending" stay in the list, dimmed, but don't count toward the amount spent or the day's total</li>
+</ul>
+
 <h3>Not counted as spending (keeping debt and instalments separate)</h3>
 <p>Big debt and instalment payments tend to drown out your real spending. Mark them <strong>not counted as spending</strong> and they stay out of the month's totals and budgets. There are two levels:</p>
 <ul>
   <li><strong>A whole category</strong> — edit the category (say <em>Mortgage</em> or <em>Debt payment</em>) and turn on <strong>entries in this category aren't counted as spending</strong>. New entries in it are excluded automatically (existing ones aren't changed retroactively)</li>
   <li><strong>A single entry</strong> — in the add form tap <strong>More</strong> → turn on <strong>Not counted as spending</strong> for that entry only</li>
 </ul>
-<p>The money still leaves the account for real, and if you paid by card you still earn the points or cashback — it simply isn't included in the <em>spending</em> total. Excluded entries show a − mark and appear dimmed in the list. On the Dashboard, "today" and "this month" always leave them out; the <strong>Transactions</strong> screen hides them by default, but the filter (funnel) → turn off <strong>Hide not-counted rows</strong> shows the full picture including debt whenever you want (search always finds everything).</p>
+<p>The money still leaves the account for real, and if you paid by card you still earn the points or cashback — it simply isn't included in the <em>spending</em> total, and it <strong>counts toward no budget</strong> (overall, category or account). Excluded entries show a − mark and appear dimmed in the list. On the Dashboard, "today" and "this month" always leave them out; the <strong>Transactions</strong> screen shows them dimmed — to leave them out, open the filter (funnel) → turn on <strong>Hide not-counted rows</strong> (search always finds everything).</p>
 <p>Want to see what the total would be if everything counted? The summary screen has an <strong>Include not-counted rows</strong> switch under the card. It's temporary on purpose — leave the screen and it's off again, because remembering it would mean two versions of the truth in one app and a screenshot travels further than its context. With it on, the chart splits that money out as its own amber <em>not counted as spending</em> slice pinned to the end of the legend, rather than folding it into its category — so you can see where the difference comes from. With it off, that money isn't in the chart at all, so the chart always matches the card. The Dashboard, budgets and pockets deliberately do not have this switch.</p>
 
 <h3>What's left to spend today</h3>
@@ -392,6 +418,7 @@
 
 <h3>Backup &amp; restore (.json) + export CSV/PDF</h3>
 <p>More → <strong>Backup &amp; restore</strong> writes a complete <code>.json</code> of everything to Files or iCloud Drive, and restores it back. Backup files always use the Gregorian era, so they move safely between devices whatever your calendar setting.</p>
+<p><strong>Export just what you see (Pro)</strong> — on Transactions, set a filter, then open the funnel menu → <strong>Export filtered</strong> to get only the rows it shows · on a pocket, tap the export button in the top bar for every entry in that pocket</p>
 <p><strong>Backups on this device</strong> — the copies the app keeps before a currency change are listed on the Backup &amp; restore screen (the latest 3). Tap ⋯ on a row to <strong>Restore from this copy</strong> or <strong>Save elsewhere</strong>. They live on this device only: deleting the app removes them, and "Delete all data" removes them too.</p>
 <p>Export to <strong>CSV</strong> (for a spreadsheet) or <strong>PDF</strong> (a report) from More → <strong>Export</strong> — pick a period and an account. Exporting is a Pro feature; importing CSV back in is always free.</p>
 
@@ -402,6 +429,9 @@
   <li><strong>Tap the image</strong> for full screen — swipe down to close</li>
   <li>An imported statement or file comes in as a <strong>group</strong> — open it and tap <strong>View original document</strong> to compare with the real file. The original travels with the entries you confirm</li>
   <li>A row the app suspects was imported before is tagged <strong>possible duplicate</strong> and isn't confirmed with the group — open it and tap <strong>not a duplicate</strong> if it isn't</li>
+  <li>Rows are grouped: <strong>Newly added</strong> (slips, text, files) on top · <strong>Scheduled</strong> (recurring bills, instalments, and planned entries due within 3 days) · <strong>Upcoming</strong> (more than 3 days away), folded</li>
+  <li><strong>Confirm + next</strong> walks the whole queue, and a short note says what was saved, e.g. "Saved · 7-Eleven ฿65.00"</li>
+  <li>For a transfer (an e-wallet top-up, a move between your own accounts) switch to the <strong>Transfer</strong> tab and pick the destination account — it isn't counted as spending</li>
 </ul>
 
 <h2>AI quota</h2>
