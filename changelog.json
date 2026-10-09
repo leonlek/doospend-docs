@@ -2,6 +2,75 @@
   "$schema_note": "Lives at https://doospend.com/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array. Every entry MUST carry an \"en\" object (title/date/items) — the app shows it when the user picks English; without it the popup falls back to Thai.",
   "versions": [
     {
+      "version": "2.9.0",
+      "date": "10 ตุลาคม 2569",
+      "title": "🏷️ แท็ก\n📅 หน้ารายการเลือกช่วงได้",
+      "highlights": [
+        {
+          "icon": "🏷️",
+          "title": "แท็ก",
+          "detail": "ติดได้หลายแท็กต่อรายการ · ดูยอดรวมตามแท็ก · ติดให้รายการเก่าได้"
+        },
+        {
+          "icon": "📅",
+          "title": "หน้ารายการใหม่",
+          "detail": "เลือกช่วง 7 วัน · 30 วัน · 3 เดือน · ปี · กำหนดเอง · มีกราฟแนวโน้ม · ดูรายปีเป็นการ์ดรายเดือน"
+        },
+        {
+          "icon": "🎯",
+          "title": "งบ",
+          "detail": "“วันนี้ใช้ได้อีก” คิดสดตามที่ใช้จริง · งบรายปีตามปีการเงิน · ติดดาวขึ้นหน้าหลักได้แม้มีงบใบเดียว"
+        },
+        {
+          "icon": "⌨️",
+          "title": "ปรับแป้นพิมพ์ได้",
+          "detail": "เลือกแสดงหรือซ่อนปุ่มลัด งวดผ่อน · สมุด · เพื่อใคร · แท็ก ได้ที่ ตั้งค่า → ปรับแต่งแป้นพิมพ์"
+        }
+      ],
+      "items": [
+        "⏰ จดล่วงหน้า — เลือกวันอนาคตแล้วรายการไปรอยืนยันในตรวจสอบ ยังไม่นับเป็นรายจ่าย",
+        "🔁 รายจ่ายประจำทุก N เดือน และบิลบัตรแบบยอดยกมา",
+        "🤝 หนี้ — การ์ดสรุปยอดต่อเดือน · งวดถัดไปนับตามที่จ่ายจริง · ดอก 0% ก็มีตารางงวด",
+        "📄 ส่งออก PDF จากแท็บปี มีหน้ายอดรายเดือน",
+        "🛠️ แก้ปุ่ม “เลิกทำ” หลังปัดลบที่กดไม่ได้ · งบใบเดียวขึ้นหน้าหลักได้แล้ว",
+        "✨ ปรับการแสดงผลหลายจุด"
+      ],
+      "en": {
+        "date": "10 October 2026",
+        "title": "🏷️ Tags\n📅 Pick any range on Transactions",
+        "highlights": [
+          {
+            "icon": "🏷️",
+            "title": "Tags",
+            "detail": "Several tags per entry · totals by tag · tag older entries too"
+          },
+          {
+            "icon": "📅",
+            "title": "A new Transactions screen",
+            "detail": "Pick 7 days · 30 days · 3 months · a year · custom · trend chart · a year shows as monthly cards"
+          },
+          {
+            "icon": "🎯",
+            "title": "Budgets",
+            "detail": "“Left today” follows what you actually spend · yearly budgets follow your financial year · star a budget to Home even if it's your only one"
+          },
+          {
+            "icon": "⌨️",
+            "title": "Customize the keypad",
+            "detail": "Show or hide the Instalment · Pocket · For whom · Tags shortcuts in Settings → Customize keypad"
+          }
+        ],
+        "items": [
+          "⏰ Log ahead — pick a future date and the entry waits in Review, not counted as spending yet",
+          "🔁 Recurring every N months, and card bills with a carried-over balance",
+          "🤝 Debts — a per-month summary card · next instalment follows what you've actually paid · 0% loans get a schedule too",
+          "📄 PDF export from the Year tab includes a monthly totals page",
+          "🛠️ Fixed: “Undo” after a swipe-delete couldn't be tapped · a single budget can now go on Home",
+          "✨ Many small display polishes"
+        ]
+      }
+    },
+    {
       "version": "2.8.0",
       "date": "3 ตุลาคม 2569",
       "title": "⭐ ปักงบขึ้นหน้าหลัก\n📥 หน้าตรวจสอบจัดกลุ่มใหม่",
@@ -31,13 +100,13 @@
         "💸 แถบ “โอน” ในชีตตรวจสอบ สำหรับเติม e-wallet หรือโอนเข้าบัญชีตัวเอง",
         "📤 ส่งออกตามตัวกรองที่เปิดอยู่ และส่งออกรายสมุด (Pro)",
         "📅 ยอดใช้ได้ต่อวันบนแถวงบและในหน้ารายละเอียดงบ (Pro)",
-    "🚫 ติ๊ก “ไม่นับในค่าใช้จ่าย” แล้วไม่นับในงบไหนเลย · ยังเห็นเป็นแถวจางในรายละเอียดงบ",
+        "🚫 ติ๊ก “ไม่นับในค่าใช้จ่าย” แล้วไม่นับในงบไหนเลย · ยังเห็นเป็นแถวจางในรายละเอียดงบ",
         "📊 กราฟแนวโน้มมีเส้นเฉลี่ย แตะแท่งเพื่อดูยอด",
         "🗑️ ลบบัญชีแล้ว งบที่ผูกบัญชีนั้นถูกลบไปด้วย · กล่องยืนยันบอกทีละเรื่องว่าอะไรอยู่ อะไรหาย",
         "👆 แตะแถบหรือวงกลมงบบนหน้าหลัก เปิดรายละเอียดของงบนั้นเลย",
         "☑️ เลือกหมวดของงบเป็นรายการติ๊ก ติ๊กครบ = ทุกหมวด รวมหมวดที่เพิ่มทีหลัง",
         "📄 ไฟล์ CSV/PDF เรียงรายการตามที่เห็นบนจอ",
-    "💳 การ์ดแผนผ่อนและการ์ดเงินเข้ารายปีอ่านง่ายขึ้น",
+        "💳 การ์ดแผนผ่อนและการ์ดเงินเข้ารายปีอ่านง่ายขึ้น",
         "✨ ปรับการแสดงผลหลายจุด"
       ],
       "en": {
@@ -69,13 +138,13 @@
           "💸 A “Transfer” tab in the review sheet for e-wallet top-ups and moves between your own accounts",
           "📤 Export what the current filter shows, or a single pocket (Pro)",
           "📅 Daily allowance on each budget row and in budget detail (Pro)",
-    "🚫 Entries marked “Not counted as spending” count toward no budget · they still show, faded, in budget detail",
+          "🚫 Entries marked “Not counted as spending” count toward no budget · they still show, faded, in budget detail",
           "📊 Trend charts show an average line · tap a bar to see its amount",
           "🗑️ Deleting an account also deletes its budgets · the confirmation lists, line by line, what stays and what goes",
           "👆 Tap a budget bar or ring on Home to open that budget",
           "☑️ Budget categories are a checklist — ticking every one means all categories, including ones added later",
           "📄 CSV/PDF exports list entries in the order you see on screen",
-    "💳 Clearer instalment-plan and yearly-incoming cards",
+          "💳 Clearer instalment-plan and yearly-incoming cards",
           "✨ Many small layout tweaks"
         ]
       }
