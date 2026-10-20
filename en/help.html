@@ -74,6 +74,7 @@
 
 <h3>4. Quick type &nbsp;/&nbsp; 5. Speak</h3>
 <p>Type or say something short, like "coffee 75 Starbucks" → the AI separates the amount, the merchant and the category. Speech becomes text <strong>on your device</strong> (no audio leaves the phone) and only the text is sent.</p>
+<p><strong>Put an account name in the text</strong>, e.g. "coffee 65 KTC", and the app picks the KTC account · <strong>Speaking</strong>: when you finish, the app reads it for you, then you check it and save in the same sheet.</p>
 
 <h2>Log it ahead of time (so you don't forget)</h2>
 <p>An entry in this app means <em>it already happened</em>. Give it a future date and the money leaves your wallet straight away even though you haven't paid — budgets and your "available" figure go wrong with it. So there's a separate path.</p>
@@ -208,6 +209,7 @@
   <li><strong>Spending by category</strong> with each category's % (the categories always add up to the amount spent) · tap one to see only its transactions, tap again for all</li>
   <li>Each budget row, and the summary card in budget detail, shows "฿X a day" — what you can spend per day until the cycle ends (Pro) · it's worked out from what you spent before today, so spending today doesn't move today's number; tomorrow it spreads again</li>
   <li>Entries marked "Not counted as spending" stay in the list, dimmed, but don't count toward the amount spent or the day's total</li>
+  <li>A <strong>"today" tick</strong> on budget bars and rings shows how far into the period you are · the detail page shows the dates of every period</li>
 </ul>
 
 <h3>Not counted as spending (keeping debt and instalments separate)</h3>
@@ -219,9 +221,22 @@
 <p>The money still leaves the account for real, and if you paid by card you still earn the points or cashback — it simply isn't included in the <em>spending</em> total, and it <strong>counts toward no budget</strong> (overall, category or account). Excluded entries show a − mark and appear dimmed in the list. On the Dashboard, "today" and "this month" always leave them out; the <strong>Transactions</strong> screen shows them dimmed — to leave them out, open the filter (funnel) → turn on <strong>Hide not-counted rows</strong> (search always finds everything).</p>
 <p>Want to see what the total would be if everything counted? The summary screen has an <strong>Include not-counted rows</strong> switch under the card. It's temporary on purpose — leave the screen and it's off again, because remembering it would mean two versions of the truth in one app and a screenshot travels further than its context. With it on, the chart splits that money out as its own amber <em>not counted as spending</em> slice pinned to the end of the legend, rather than folding it into its category — so you can see where the difference comes from. With it off, that money isn't in the chart at all, so the chart always matches the card. The Dashboard, budgets and pockets deliberately do not have this switch.</p>
 
+<h3>The "This month" slot on Home — Month spent · Net so far · Month-end net</h3>
+<p>Tap the <strong>ⓘ</strong> next to "This month" on the summary card to choose what that slot shows:</p>
+<ul>
+  <li><strong>Month spent</strong> — what you spent in this financial month (as before)</li>
+  <li><strong>Net so far</strong> — money in − money out that has already happened up to today (free) · transfers between your accounts and entries marked "Not counted as spending" are left out</li>
+  <li><strong>Month-end net</strong> (Pro) — Net so far, plus what you have set up that hasn't happened yet this month: <strong>recurring income</strong> (your salary, say) · recurring bills · instalments · the interest part of debt payments · planned entries · money due back to you</li>
+</ul>
+<p>The ⓘ sheet has a <strong>timeline</strong> of the month (a running net line · hollow orange dots = scheduled items) and says what isn't counted, such as rows still waiting in Review · <strong>the app never guesses your future day-to-day spending</strong>, so the month-end figure comes only from what you set up · the more recurring income and bills you set up, the closer it gets, so you can plan your money to the end of the month · credit card bill payments aren't counted twice — what you bought was counted when you swiped</p>
+
 <h3>What's left to spend today</h3>
 <p>The <strong>left today</strong> line on the Dashboard summary card, with a warning if this pace will blow the budget.</p>
 <p>Once you've set an overall monthly budget, the app spreads it across the days of <em>your</em> financial month and tells you "฿X left today" on the Dashboard. If your pace is heading over budget before the cycle ends, it warns you early, and there's a morning notification with the figure (on/off in More → Reminders). The figure follows what you actually spend today — go past today's share and it reads "฿X over today". This daily number is a <strong>Pro</strong> feature — free users still see the budget bar and what's left for the month as usual.</p>
+<p><strong>Bills are set aside before splitting by day</strong> — per day = (budget − bills due in the budget's period − what you spent yourself before today) ÷ days left · bills are recurring bills · instalments · loan interest · planned entries due in this period (the actual amount once paid, the set amount until then), so rent due at the end of the month isn't treated as money to spend at the start · tap the <strong>ⓘ</strong> on Home to see the formula and the bills · if the bills alone exceed the budget there's no number, it says "Bills exceed this budget" instead · the budget bar and the amount spent don't change</p>
+
+<h3>Count bills in this budget (per budget)</h3>
+<p>Every budget has a <strong>"Count bills in this budget"</strong> switch — in the create/edit budget sheet under the amount, and on the budget detail screen · <strong>on by default</strong> (as every budget was before): bills count in the budget and are set aside before splitting by day · <strong>off</strong> = this budget counts only your own spending — bills don't count here and aren't set aside, for people who only want to watch everyday spending · an overall budget on Home with the switch off shows "· bills not counted" after its name, because the "This month" figure above it still counts everything</p>
 
 <h3>Several budgets after Pro ends</h3>
 <p>Free tracks and edits <strong>1 budget (the first one you created)</strong>. If you set up more while on Pro, the others are <strong>paused</strong> — they stay on the Budgets screen as grey "Paused" rows with no bar, no alerts and nothing on Home, but they're <strong>not deleted</strong> (you can delete them yourself). Come back to Pro and they all resume right away, because your entries never went anywhere.</p>
@@ -318,9 +333,16 @@
 
 <h3>Transactions — pick a range &amp; trend chart</h3>
 <p>Tap the range title to view by day · week · month · year, or the <strong>Range</strong> tab (7 days · 30 days · 3 months · this year · last year · all · custom) · a year shows as monthly cards (in · out · net) you can expand · there's a line/bar trend chart · the ⓘ next to "Out"/"In" on the cards means some entries in this range aren't counted — tap to see them · a PDF exported from the Year tab includes a monthly totals page</p>
+<p><strong>Search</strong> — tap 🔍 at the top right to search by merchant, note, category or account · all filters live in one sheet (the funnel next to the search field) · quick ranges · the totals line while searching shows the count, money out and in, and lets you export the results (Pro)</p>
 
 <h3>Customize the keypad</h3>
 <p>Show or hide the keypad shortcuts — Instalment · Pocket · For whom · Tags — in Settings → Customize keypad</p>
+
+<h3>Customize the entry screen</h3>
+<p>Bring the rows you use most (Pocket · For whom · Tags, for example) up onto the entry screen so you don't have to open "More", and drag to reorder them — in Settings → Customize entry screen · rows moved up no longer appear in "More"</p>
+
+<h3>Reorder accounts in Wallet</h3>
+<p>Wallet → menu ⋯ → <strong>Reorder accounts</strong> to drag your accounts into any order</p>
 
 <h3>iCloud sync</h3>
 <p>Automatic if you're signed in to iCloud — your data follows every device on the same Apple ID. Check the status in More → <strong>Security &amp; sync</strong>: nothing pending / syncing / waiting for a connection / not signed in to iCloud. Each shared pocket has its own sync chip.</p>
@@ -354,6 +376,7 @@
   <li><strong>Attach a slip</strong> on the instalment row in Review — snap one or pick from your library, as proof this instalment was paid</li>
   <li>If you snap a slip whose amount and merchant match an outstanding instalment, the app <em>offers</em> to link it. It never links for you, because a wrong guess means you'd never know which instalment went missing</li>
 </ul>
+<p><strong>The plan page</strong> — tap a plan to open its page: instalments paid out of the total · <strong>Paid in total</strong> · several missed instalments all counted · a plan paid off early is labelled <strong>"Closed early"</strong> · the pay-this-instalment button is on the plan page</p>
 <p><strong>When you create a plan</strong></p>
 <ul>
   <li><strong>Interest</strong> goes in as %/month (the way Thai cards and finance companies quote it) — the app works out the per-instalment amount and the real total you'll pay</li>
@@ -380,6 +403,7 @@
   <li><strong>Interest deducted up front</strong> — borrow 10,000, receive 9,000. The app knows that interest was paid on day one, so the progress bar measures against what really has to be repaid, not the face value</li>
 </ul>
 <p>The app records what you agreed; it doesn't judge who should get what. Every figure comes from what you entered and what you logged as repaid.</p>
+<p><strong>The debt page</strong> — the <strong>"Log a repayment"</strong> button sits above the history and shows the amount it will log · each history row shows the date and amount, read the same way as savings history</p>
 <p><strong>Free:</strong> unlimited debts, repayments and outstanding balances. <strong>Pro:</strong> debts that carry interest (where the app does the interest, spreads the instalments and watches the due date) — a debt you set up with interest earlier stays editable.</p>
 
 <h3>Recurring payments (subscriptions &amp; monthly bills)</h3>
@@ -400,6 +424,8 @@
   <li>Instalments are skipped — a row already linked to a plan is ignored (instalments meet every criterion naturally, being ~30 days apart for the exact same amount, but the app already knows what they are)</li>
   <li>Merchants are grouped by the same rule aliases and card rules use, so capitalisation or double spaces don't create a "new" shop that asks all over again</li>
 </ul>
+<p><strong>Recurring income</strong> — a salary, rent you receive, or any income that arrives on a cycle, set up the same way as a recurring bill · when it's due it waits in Review for you to confirm, and it <strong>counts toward "Month-end net"</strong> · you can also create one from an income entry you already logged (edit the entry → More → Linked to → "＋ Set up as new recurring income")</p>
+<p><strong>Linking entries to rounds</strong> — tap a bill to open its <strong>rounds page</strong>: which rounds are paid and which are waiting · an entry confirmed from Review, or paid from the button on the rounds page, is linked to that round for you · link and unlink only on the rounds page · a linked entry's amount, date and account can still be edited, but you can't switch it between expense and income · deleting the entry puts that round back to unpaid</p>
 <p>Or while logging an expense, turn on <strong>repeat monthly</strong> under the date field and the app sets up the monthly entry for you. Next month it reminds you and drops it into <strong>Review</strong> to confirm the amount. Edit or stop it in <strong>Recurring</strong> (stopping the repeat happens there, not on the entry — deleting one month's entry does not stop the repeat).</p>
 
 <h3>Merging duplicates</h3>
