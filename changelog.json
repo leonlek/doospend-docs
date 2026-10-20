@@ -2,6 +2,83 @@
   "$schema_note": "Lives at https://doospend.com/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array. Every entry MUST carry an \"en\" object (title/date/items) — the app shows it when the user picks English; without it the popup falls back to Thai.",
   "versions": [
     {
+      "version": "2.10.0",
+      "date": "17 ตุลาคม 2569",
+      "title": "📊 สุทธิสิ้นเดือน\n💰 รายรับประจำ",
+      "highlights": [
+        {
+          "icon": "📊",
+          "title": "รู้ก่อนว่าสิ้นเดือนเหลือเท่าไหร่",
+          "detail": "ตั้งเงินเดือนเป็นรายรับประจำ หรือจดรายรับที่คาดว่าจะได้ไว้ล่วงหน้า · ช่อง “เดือนนี้” บอกสุทธิวันนี้ และสุทธิสิ้นเดือน (Pro) ไว้วางแผนใช้เงินให้ถึงสิ้นเดือน"
+        },
+        {
+          "icon": "💰",
+          "title": "ผูกรายการกับรอบของบิล",
+          "detail": "ผูกรายการที่จดกับรอบของรายจ่าย/รายรับประจำ · หน้ารอบบอกว่ารอบไหนจ่ายแล้ว รอบไหนยังรอ"
+        },
+        {
+          "icon": "🧩",
+          "title": "ปรับแต่งหน้าจด + กระเป๋า",
+          "detail": "ยกแถวที่ใช้บ่อยขึ้นหน้าจดและลากเรียงได้ (ตั้งค่า → ปรับแต่งหน้าจด) · ลากเรียงบัญชีในกระเป๋า"
+        },
+        {
+          "icon": "🎯",
+          "title": "งบมีขีด “วันนี้”",
+          "detail": "แถบและวงของงบบอกว่าผ่านมาถึงไหนของรอบแล้ว · หน้ารายละเอียดบอกช่วงวันที่ทุกคาบ"
+        }
+      ],
+      "items": [
+        "🔍 ค้นหาในหน้ารายการ — ค้นจากชื่อร้าน โน้ต หมวด หรือบัญชี · ตัวกรองรวมในชีตเดียว · ช่วงลัด",
+        "🎙️ จดด่วน พูดหรือพิมพ์ — พูดจบแล้วอ่านให้เอง ตรวจและบันทึกต่อในชีตเดียว",
+        "📆 แผนผ่อน — หน้าใหม่ · “รวมที่จ่ายไป” · ค้างหลายงวดนับครบ · บอกเมื่อปิดก่อนกำหนด",
+        "⚠️ แถบ “อาจซ้ำ” ดูยอด วันที่ รายรับ/รายจ่าย และบัญชี · กด ✕ ปิดได้",
+        "📒 สมุดแสดงแบบเดียวกับงบ",
+        "🐷 เป้าออม — แก้ประวัติการออมได้",
+        "📅 วันนี้ใช้ได้อีก — หักบิลที่ตั้งไว้ก่อนหารวัน · แตะ ⓘ ดูสูตร · ปิด “นับบิลในงบนี้” ได้ทีละงบ",
+        "⌨️ พิมพ์เร็ว — ใส่ชื่อบัญชีในข้อความได้ เช่น “กาแฟ 65 KTC”",
+        "🤝 หนี้ — ปุ่มบันทึกจ่ายคืนบอกยอด · ประวัติการจ่ายอ่านง่ายขึ้น",
+        "✨ ปรับการแสดงผลหลายจุด"
+      ],
+      "en": {
+        "date": "17 October 2026",
+        "title": "📊 Month-end net\n💰 Recurring income",
+        "highlights": [
+          {
+            "icon": "📊",
+            "title": "See your month-end balance ahead",
+            "detail": "Set your salary as recurring income, or add income you expect ahead of time · the “Month” slot shows Net today and Month-end net (Pro) so you can plan your spending to the end of the month"
+          },
+          {
+            "icon": "💰",
+            "title": "Link entries to a bill's rounds",
+            "detail": "Link what you log to a round of a recurring bill or income · the rounds page shows which are paid and which are waiting"
+          },
+          {
+            "icon": "🧩",
+            "title": "Customize the entry screen + Wallet",
+            "detail": "Bring the rows you use most up to the entry screen and drag to reorder (Settings → Customize entry screen) · drag to reorder accounts in Wallet"
+          },
+          {
+            "icon": "🎯",
+            "title": "Budgets mark “today”",
+            "detail": "Budget bars and rings show how far into the period you are · the detail page shows the dates of every period"
+          }
+        ],
+        "items": [
+          "🔍 Search on Transactions — by merchant, note, category or account · all filters in one sheet · quick ranges",
+          "🎙️ Quick add by voice or text — reads it for you when you finish speaking, review and save in the same sheet",
+          "📆 Instalment plans — a new page · “Paid in total” · several missed instalments all counted · shows when a plan closed early",
+          "⚠️ The “possible duplicate” strip checks amount, date, income/expense and account · tap ✕ to dismiss",
+          "📒 Pockets look like budgets",
+          "🐷 Savings goals — edit your saving history",
+          "📅 Safe to spend today — sets your bills aside before splitting by day · tap ⓘ for the formula · turn off “Count bills in this budget” per budget",
+          "⌨️ Type it fast — put an account name in the text, e.g. “coffee 65 KTC”",
+          "🤝 Debts — the repayment button shows the amount · payment history is easier to read",
+          "✨ Many small display polishes"
+        ]
+      }
+    },
+    {
       "version": "2.9.0",
       "date": "10 ตุลาคม 2569",
       "title": "🏷️ แท็ก\n📅 หน้ารายการเลือกช่วงได้",
