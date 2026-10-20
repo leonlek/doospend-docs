@@ -26,28 +26,93 @@
 
 <link rel="icon" type="image/png" href="icon-180.png">
 <link rel="apple-touch-icon" href="icon-180.png">
+<style>
+/* ── เลย์เอาต์คู่มือ: สารบัญซ้าย · เนื้อหาขวา (20 ต.ค. 69 · แบบ Money Lover) ── */
+body.help{--side:288px;--top:60px}
+.hbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--border)}
+.hbar .in{max-width:1180px;margin:0 auto;height:var(--top);display:flex;align-items:center;gap:14px;padding:0 20px}
+.hbar .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:700;font-size:17px;white-space:nowrap}
+.hbar .brand img{width:32px;height:32px;border-radius:8px}
+.hbar .brand span{color:var(--green);font-weight:600}
+.hbar .links{margin-left:auto;display:flex;gap:16px;font-size:14px}
+.hbar .links a{text-decoration:none;color:var(--muted);white-space:nowrap}
+.hbar .links a:hover{color:var(--green)}
+.hbar .tocbtn{display:none;border:1px solid var(--border);background:var(--card,#fff);color:var(--text);border-radius:10px;
+  padding:6px 11px;font:inherit;font-size:14px;cursor:pointer}
+.hwrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:var(--side) minmax(0,1fr);gap:48px;padding:0 20px}
+.toc{position:sticky;top:var(--top);align-self:start;height:calc(100vh - var(--top));overflow:auto;padding:24px 4px 40px 0;
+  scrollbar-width:thin}
+.toc .ttl{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.search{position:relative;margin:0 0 14px}
+.search input{width:100%;font:inherit;font-size:14px;padding:9px 12px 9px 34px;border-radius:12px;border:1px solid var(--border);
+  background:var(--card,#fff);color:var(--text);outline:none}
+.search input:focus{border-color:var(--green);box-shadow:0 0 0 3px var(--green-soft)}
+.search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--muted)}
+.toc ul{list-style:none;margin:0;padding:0}
+.toc li{margin:0}
+.toc a{display:block;text-decoration:none;color:var(--text);font-size:14px;line-height:1.4;padding:6px 10px;border-radius:8px}
+.toc a:hover{background:var(--green-soft)}
+.toc .grp>a.g{font-weight:600}
+.toc .grp>ul{display:none;margin:2px 0 6px 10px;border-left:1px solid var(--border);padding-left:6px}
+.toc .grp>ul a{color:var(--muted);font-size:13.5px;padding:5px 10px}
+.toc .grp.open>ul{display:block}
+.toc a.on{color:var(--green)!important;background:var(--green-soft);font-weight:600}
+.toc .none{display:none;color:var(--muted);font-size:13px;padding:8px 10px}
+.toc.filtering .grp>ul{display:block}
+.toc.filtering li.hide{display:none}
+.hmain{min-width:0;max-width:720px;padding:20px 0 80px}
+.crumb{font-size:14px;color:var(--muted);margin:6px 0 18px}
+.crumb a{color:var(--green);text-decoration:none}
+.hmain h1{font-size:34px;line-height:1.2;margin:0 0 8px;letter-spacing:-.02em;text-wrap:balance}
+.hmain .lastUpdated{margin:0 0 18px}
+.hsec{scroll-margin-top:calc(var(--top) + 12px);padding-top:8px}
+.hsec h2{font-size:24px;margin:36px 0 12px;padding-top:22px;border-top:1px solid var(--border);text-wrap:balance}
+.hsec:first-of-type h2{border-top:0;padding-top:0}
+.hmain h3{scroll-margin-top:calc(var(--top) + 12px);font-size:17px;margin:28px 0 8px}
+.hmain h3:target,.hsec:target>h2{color:var(--green)}
+.totop{display:inline-block;margin-top:28px;font-size:14px;color:var(--muted);text-decoration:none}
+.scrim{display:none}
+@media (prefers-color-scheme:dark){body.help{--card:#1A2422}}
+@media (max-width:900px){
+  .hwrap{grid-template-columns:1fr;gap:0}
+  .hbar .links{display:none}
+  .hbar .tocbtn{display:inline-flex;margin-left:auto}
+  .toc{position:fixed;z-index:40;top:0;left:0;bottom:0;width:min(86vw,340px);height:auto;background:var(--bg);
+    padding:20px 16px 40px;transform:translateX(-105%);transition:transform .22s ease;box-shadow:0 0 40px rgba(0,0,0,.18)}
+  body.tocopen .toc{transform:none}
+  body.tocopen .scrim{display:block;position:fixed;inset:0;z-index:30;background:rgba(0,0,0,.32)}
+  .hmain h1{font-size:28px}
+}
+.anc{margin-left:8px;font-weight:400;color:var(--muted);text-decoration:none;opacity:0;transition:opacity .15s}
+h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
+@media (hover:none){.anc{opacity:.45}}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--text);color:var(--bg);
+  font-size:14px;padding:9px 16px;border-radius:999px;opacity:0;pointer-events:none;transition:all .2s;z-index:60}
+.toast.show{opacity:1;transform:translateX(-50%)}
+</style>
 </head>
-<body>
-<div class="container">
-
-<header>
-  <img class="logo" src="icon-180.png" width="40" height="40" alt="DooSpend">
-  <div class="name"><a href="./">DooSpend</a></div>
-</header>
-
+<body class="help">
+<div class="hbar"><div class="in">
+  <a class="brand" href="./"><img src="./icon-180.png" alt="">DooSpend <span>คู่มือใช้งาน</span></a>
+  <nav class="links"><a href="./">หน้าหลัก</a><a href="changelog.html">มีอะไรใหม่</a><a href="en/help.html">English</a></nav>
+  <button class="tocbtn" type="button">☰ สารบัญ</button>
+</div></div>
+<div class="scrim"></div>
+<div class="hwrap">
+<aside class="toc">
+  <div class="search"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="9" r="6"/><path d="m14 14 4 4"/></svg><input type="search" placeholder="ค้นหาในคู่มือ" aria-label="ค้นหาในคู่มือ"></div>
+  <p class="ttl">สารบัญ</p>
+  <ul><li class="grp" data-sec="getting-started"><a class="g" href="#getting-started">เริ่มต้นใช้งาน</a></li><li class="grp" data-sec="five-ways-to-log-an-expense"><a class="g" href="#five-ways-to-log-an-expense">5 วิธีบันทึกค่าใช้จ่าย</a><ul><li><a href="#1-snap-a-slip-or-receipt">1. ถ่ายสลิป/ใบเสร็จ</a></li><li><a href="#2-pick-from-your-photo-library">2. เลือกจากคลัง</a></li><li><a href="#3-scan-a-qr-before-you-pay">3. สแกน QR จดก่อนจ่าย</a></li><li><a href="#4-quick-type-5-speak">4. พิมพ์เร็ว  /  5. พูด</a></li></ul></li><li class="grp" data-sec="log-it-ahead-of-time"><a class="g" href="#log-it-ahead-of-time">จดไว้ล่วงหน้า (กันลืม)</a></li><li class="grp" data-sec="credit-cards"><a class="g" href="#credit-cards">ฟีเจอร์เด่นสำหรับบัตรเครดิต</a><ul><li><a href="#best-card-selector">Best Card Selector</a></li><li><a href="#payoff-plan">วางแผนล้างหนี้ (Avalanche / Snowball)</a></li><li><a href="#bringing-data-in-from-elsewhere">นำเข้าข้อมูลจากที่อื่น</a></li><li><a href="#balance-carried-over">ยอดค้างยกมา (เริ่มใช้แอปกลางคัน)</a></li><li><a href="#cash-advance-from-a-card">กดเงินสดจากบัตร</a></li><li><a href="#due-date-reminders">แจ้งเตือนวันครบกำหนด</a></li><li><a href="#shared-credit-limit">วงเงินร่วม (บัตรหลัก + บัตรเสริม)</a></li></ul></li><li class="grp" data-sec="pockets"><a class="g" href="#pockets">สมุด — จดร่วม / หารกับเพื่อน</a><ul><li><a href="#create-a-shared-pocket">สร้างสมุดที่แชร์ + เชิญเพื่อน</a></li><li><a href="#adding-entries-to-a-shared">เพิ่มรายการในสมุดที่แชร์</a></li><li><a href="#split">แบ่งกับใคร (เลือกคนหารบิล)</a></li><li><a href="#pocket-summary">สรุปสมุด — &quot;ใครติดใคร&quot;</a></li><li><a href="#share-a-trip-summary-and-let">แชร์สรุปทริป + ให้เพื่อนสแกนจ่ายคืน</a></li><li><a href="#leaving-or-deleting-a-pocket">ออกจากสมุด / ลบสมุด</a></li><li><a href="#how-pocket-data-is-stored">ข้อมูลในสมุด</a></li></ul></li><li class="grp" data-sec="for-whom"><a class="g" href="#for-whom">เพื่อใคร — จ่ายให้ใคร</a></li><li class="grp" data-sec="budgets-and-your-financial-month"><a class="g" href="#budgets-and-your-financial-month">งบประมาณ &amp; รอบเดือนการเงิน</a><ul><li><a href="#pin-budgets-to-home">เลือกงบขึ้นหน้าหลัก (ดาว)</a></li><li><a href="#category-budgets-on-one-account">งบหมวดบนบัญชีเดียว</a></li><li><a href="#budget-detail">จอรายละเอียดงบ</a></li><li><a href="#not-counted-as-spending">ไม่นับในค่าใช้จ่าย (แยกหนี้/ผ่อน)</a></li><li><a href="#the-this-month-slot-on-home">ช่อง &quot;เดือนนี้&quot; บนหน้าหลัก — ใช้ไป · สุทธิวันนี้ · สุทธิสิ้นเดือน</a></li><li><a href="#whats-left-to-spend-today">วันนี้ใช้ได้อีกเท่าไหร่ (คุมงบรายวัน)</a></li><li><a href="#count-bills-in-this-budget">นับบิลในงบนี้ (ต่องบ)</a></li><li><a href="#several-budgets-after-pro-ends">งบหลายใบ เมื่อหมด Pro</a></li></ul></li><li class="grp" data-sec="your-books-currency"><a class="g" href="#your-books-currency">สกุลเงินของสมุด</a><ul><li><a href="#spending-in-a-foreign-currency">จดของที่จ่ายเป็นเงินต่างประเทศ</a></li></ul></li><li class="grp" data-sec="savings-goals"><a class="g" href="#savings-goals">เป้าหมายออม</a><ul><li><a href="#where-does-this-money-sit">เงินก้อนนี้อยู่ที่ไหน — เลือกครั้งเดียวตอนสร้าง</a></li><li><a href="#savings-board">ตารางออมเงิน (Pro)</a></li><li><a href="#savings-history">ประวัติการออม — แก้ย้อนหลังได้</a></li><li><a href="#when-you-reach-the-goal">ถึงเป้าแล้ว</a></li><li><a href="#where-the-reserved-money-shows">เงินที่กันไว้ไปโผล่ที่ไหนบ้าง</a></li><li><a href="#deleting-a-goal-or-its-account">ลบเป้า / ลบบัญชีของเป้า</a></li></ul></li><li class="grp" data-sec="money-in-by-year-and-the-revenue"><a class="g" href="#money-in-by-year-and-the-revenue">เงินเข้ารายปี &amp; เกณฑ์สรรพากร</a><ul><li><a href="#the-reporting-thresholds">เกณฑ์ที่ธนาคารต้องรายงาน</a></li><li><a href="#what-the-app-counts">แอปนับอะไรบ้าง</a></li><li><a href="#free-pro">ฟรี / Pro</a></li></ul></li><li class="grp" data-sec="debts-instalments-and-recurring"><a class="g" href="#debts-instalments-and-recurring">หนี้ ผ่อน &amp; รายการประจำ</a><ul><li><a href="#instalments">ผ่อน (Installments)</a></li><li><a href="#lending-and-borrowing">ยืม — ให้ยืม</a></li><li><a href="#recurring-payments">รายจ่ายประจำ (Subscriptions &amp; รายเดือน)</a></li></ul></li><li class="grp" data-sec="transactions-and-customizing"><a class="g" href="#transactions-and-customizing">หน้ารายการ &amp; ปรับแต่ง</a><ul><li><a href="#tags">แท็ก</a></li><li><a href="#transactions">หน้ารายการ — เลือกช่วง &amp; กราฟแนวโน้ม</a></li><li><a href="#looking-back-at-past-months">ดู summary ย้อนหลัง</a></li><li><a href="#customize-the-keypad">ปรับแต่งแป้นพิมพ์</a></li><li><a href="#customize-the-entry-screen">ปรับแต่งหน้าจด</a></li><li><a href="#reorder-accounts-in-wallet">เรียงบัญชีในกระเป๋า</a></li><li><a href="#default-account-and-list">บัญชีเริ่มต้น + ทางลัดในลิสต์</a></li><li><a href="#merchant-aliases">ชื่อร้านแทนที่ (Merchant Alias)</a></li><li><a href="#merging-duplicates">จัดการข้อมูลซ้ำ</a></li><li><a href="#language-and-calendar">ภาษา &amp; ปฏิทิน</a></li></ul></li><li class="grp" data-sec="review-and-shortcuts"><a class="g" href="#review-and-shortcuts">ตรวจสอบ &amp; ทางลัด</a><ul><li><a href="#the-review-tab">ตรวจสอบ (คิวรอยืนยัน)</a></li><li><a href="#share-into-the-app">แชร์เข้าแอป (Share Sheet)</a></li><li><a href="#letting-ai-do-the-logging">ให้ AI ช่วยจดให้ (เปิด/ปิดได้)</a></li><li><a href="#quick-actions">Quick Actions (Home Screen)</a></li><li><a href="#widgets">Widget (หน้าโฮม + Lock Screen)</a></li><li><a href="#siri-and-shortcuts">Siri &amp; Shortcuts (บันทึกด่วน)</a></li></ul></li><li class="grp" data-sec="sync-backup-and-security"><a class="g" href="#sync-backup-and-security">ซิงก์ สำรอง &amp; ความปลอดภัย</a><ul><li><a href="#icloud-sync">ซิงก์ iCloud</a></li><li><a href="#backup-and-restore-export-csv">สำรอง &amp; กู้คืน (.json) + ส่งออก CSV/PDF</a></li><li><a href="#face-id-lock">ล็อกด้วย Face ID</a></li><li><a href="#photo-storage">พื้นที่ภาพ (ลบรูปสลิปเก่า)</a></li></ul></li><li class="grp" data-sec="ai-quota"><a class="g" href="#ai-quota">Quota AI</a></li><li class="grp" data-sec="faq"><a class="g" href="#faq">คำถามที่พบบ่อย</a><ul><li><a href="#faq-data-safe">Q: ข้อมูลของฉันปลอดภัยมั้ย?</a></li><li><a href="#faq-there-android-version">Q: แอปทำงานบน Android มั้ย?</a></li><li><a href="#faq-if-change-iphone-lose-data">Q: ถ้าเปลี่ยน iPhone ข้อมูลจะหายมั้ย?</a></li><li><a href="#faq-pocket-see-data">Q: ในสมุด — ใครเห็นข้อมูลของฉัน?</a></li><li><a href="#faq-settlement-calculated">Q: Settlement คำนวณยังไง?</a></li><li><a href="#faq-ai-misread-slip-now">Q: AI อ่านสลิปผิด ทำยังไง?</a></li><li><a href="#faq-use-ai-leaves-phone">Q: ตอนใช้ AI ส่งอะไรออกจากเครื่องบ้าง?</a></li><li><a href="#faq-does-best-card-use-real-live">Q: Best Card แนะนำจากข้อมูลโปรจริงไหม?</a></li><li><a href="#faq-set-up-co-brand-card-that-only">Q: บัตร co-brand ที่ให้แต้มเฉพาะร้าน (เช่น บัตร Shopee) ตั้งกฎยังไง?</a></li><li><a href="#faq-cancel-pro">Q: ยกเลิก Pro ยังไง?</a></li><li><a href="#faq-refund-me-directly">Q: ส่ง refund ตรงกับคุณได้มั้ย?</a></li></ul></li><li class="grp" data-sec="contact"><a class="g" href="#contact">ติดต่อ</a></li></ul>
+  <p class="none">ไม่เจอหัวข้อที่ตรง — ลองคำอื่น</p>
+</aside>
+<!-- หัวข้อใหม่: ใส่ id ภาษาอังกฤษ (ชื่อเดียวกันทั้ง help.html และ en/help.html) + ปุ่ม <a class="anc"> + แถวในสารบัญ <aside class="toc"> · ห้ามเปลี่ยน id เดิม (ลิงก์ที่ส่งให้ผู้ใช้ไปแล้วจะเสีย) -->
+<main class="hmain">
+<div class="crumb"><a href="./">DooSpend</a> › คู่มือใช้งาน</div>
 <h1>คู่มือใช้งาน</h1>
-<p class="lastUpdated">ปรับปรุงล่าสุด: 13 กันยายน 2569 (2026) — ตรงกับเวอร์ชัน 2.4.0</p>
-
-<div class="nav">
-  <a href="./">หน้าหลัก</a>
-  <a href="privacy.html">นโยบายความเป็นส่วนตัว</a>
-  <a href="terms.html">เงื่อนไขการใช้งาน</a>
-  <a href="help.html" class="active">คู่มือใช้งาน</a>
-  <a href="changelog.html">มีอะไรใหม่</a>
-  <a href="en/help.html">English</a>
-</div>
-
-<h2>เริ่มต้นใช้งาน</h2>
+<p class="lastUpdated">ปรับปรุงล่าสุด 20 ตุลาคม 2569 · ตรงกับเวอร์ชัน 2.10.0</p>
+<section class="hsec" id="getting-started">
+<h2>เริ่มต้นใช้งาน<a class="anc" href="#getting-started" aria-label="link">#</a></h2>
 <ol>
   <li>ดาวน์โหลด DooSpend จาก App Store</li>
   <li>เปิดแอป — ดูตัวอย่างใน onboarding ไม่กี่หน้า</li>
@@ -55,15 +120,17 @@
   <li>เริ่มบันทึก — กดปุ่ม "+" กลาง tab bar หรือใช้ tile ลัดบน Dashboard</li>
 </ol>
 
-<h2>5 วิธีบันทึกค่าใช้จ่าย</h2>
+</section>
+<section class="hsec" id="five-ways-to-log-an-expense">
+<h2>5 วิธีบันทึกค่าใช้จ่าย<a class="anc" href="#five-ways-to-log-an-expense" aria-label="link">#</a></h2>
 <p>แตะปุ่ม "+" กลาง tab bar จะมีเมนู 5 ทาง — ทุกวิธีที่ใช้ AI จะไปรอที่แท็บ "ตรวจสอบ" ให้ยืนยันก่อนบันทึกจริงเสมอ</p>
 <figure class="shot" style="max-width:290px"><img src="shot-quickmenu.png" width="1320" height="2868" loading="lazy" decoding="async" alt="กดปุ่ม + แล้วเมนูกางออก เห็นทุกวิธีจดในครั้งเดียว"><figcaption>กดปุ่ม + แล้วเมนูกางออก เห็นทุกวิธีจดในครั้งเดียว</figcaption></figure>
 
-<h3>1. ถ่ายสลิป/ใบเสร็จ</h3>
+<h3 id="1-snap-a-slip-or-receipt">1. ถ่ายสลิป/ใบเสร็จ<a class="anc" href="#1-snap-a-slip-or-receipt" aria-label="link">#</a></h3>
 <p>เปิดกล้องถ่ายทีละใบ — สลิปโอน/พร้อมเพย์ หรือใบเสร็จร้าน → AI อ่านยอด ร้าน วันที่ ให้ (นับ 1 ครั้ง quota)</p>
 <p><strong>ทางลัด:</strong> <strong>กดค้าง</strong>ที่ปุ่ม "+" เข้ากล้องถ่ายสลิปทันที ไม่ต้องผ่านเมนู</p>
 
-<h3>2. เลือกจากคลัง</h3>
+<h3 id="2-pick-from-your-photo-library">2. เลือกจากคลัง<a class="anc" href="#2-pick-from-your-photo-library" aria-label="link">#</a></h3>
 <p>เลือกได้หลายรูปพร้อมกัน — AI จำแนกประเภทให้เองอัตโนมัติ (ไม่ต้องเลือกโหมดเอง):</p>
 <ul>
   <li>สลิปโอน / ใบเสร็จ (รูปละ 1 รายการ)</li>
@@ -73,7 +140,7 @@
 <p><strong>เลือกทีละหลายใบ จะเห็นว่าโหลดถึงใบไหนแล้ว</strong> — รูปที่ยังไม่ได้ดาวน์โหลดจาก iCloud ใช้เวลาต่อใบ แถบความคืบหน้าจึงบอกว่า "กำลังโหลด 4 จาก 10" ไม่ใช่ค้างเฉย ๆ</p>
 <p>ใบไหนโหลดไม่สำเร็จ (เน็ตหลุด / รูปยังอยู่บน iCloud) จะขึ้นให้ <strong>กด "ลองใหม่" เฉพาะใบนั้น</strong> ใบที่เข้ามาแล้วไม่ต้องเลือกซ้ำ และไม่มีใบไหนหายไปเงียบ ๆ</p>
 
-<h3>3. สแกน QR จดก่อนจ่าย</h3>
+<h3 id="3-scan-a-qr-before-you-pay">3. สแกน QR จดก่อนจ่าย<a class="anc" href="#3-scan-a-qr-before-you-pay" aria-label="link">#</a></h3>
 <p>สแกน QR ร้าน → preview โชว์ผู้รับ + ยอด + heads-up ให้ตรวจก่อนจ่าย</p>
 <p>หรือแตะ "เลือกจากคลัง" เพื่อสแกน QR จากรูปที่บันทึกไว้ (เช่น QR ที่แคปมา)</p>
 <ul>
@@ -81,11 +148,13 @@
   <li>กด "จดไว้ก่อนจ่าย" → รายการไปรอที่ "ตรวจสอบ" → ยืนยันอีกครั้งหลังจ่ายจริง</li>
 </ul>
 
-<h3>4. พิมพ์เร็ว &nbsp;/&nbsp; 5. พูด</h3>
+<h3 id="4-quick-type-5-speak">4. พิมพ์เร็ว &nbsp;/&nbsp; 5. พูด<a class="anc" href="#4-quick-type-5-speak" aria-label="link">#</a></h3>
 <p>พิมพ์หรือพูดสั้นๆ เช่น "กาแฟ 75 สตาร์บัคส์" → AI แยกยอด ร้าน หมวด ให้. เสียงแปลงเป็นข้อความบนเครื่อง (ไม่ส่งเสียงออกจากเครื่อง) แล้วส่งเฉพาะข้อความให้ AI</p>
 <p><strong>ใส่ชื่อบัญชีในข้อความได้</strong> เช่น "กาแฟ 65 KTC" แอปเลือกบัญชี KTC ให้ · <strong>พูด</strong>: พูดจบแล้วแอปอ่านให้เอง จากนั้นตรวจและกดบันทึกต่อได้ในชีตเดียว</p>
 
-<h2>จดไว้ล่วงหน้า (กันลืม)</h2>
+</section>
+<section class="hsec" id="log-it-ahead-of-time">
+<h2>จดไว้ล่วงหน้า (กันลืม)<a class="anc" href="#log-it-ahead-of-time" aria-label="link">#</a></h2>
 <p>รายการในแอปนี้แปลว่า <strong>เกิดขึ้นแล้ว</strong> — ลงวันที่ในอนาคตเมื่อไหร่ เงินก็หายจากกระเป๋าทันทีทั้งที่ยังไม่ได้จ่าย งบและยอด "ใช้ได้" ก็เพี้ยนตาม จึงมีทางแยกให้</p>
 <p>ตอนเพิ่มรายการ <strong>เลือกวันที่เป็นวันข้างหน้า</strong> ปุ่มจะเปลี่ยนเป็น "จดไว้ล่วงหน้า" — รายการจะไปพักที่แท็บ <strong>ตรวจสอบ</strong> แทนที่จะบันทึกจริง</p>
 <ul>
@@ -98,13 +167,13 @@
   <li>แก้อะไรบนแถวแล้วกด "ไว้ก่อน" <strong>ของที่แก้อยู่ครบ</strong> — กลับมาเปิดใหม่ได้ตามเดิม</li>
 </ul>
 
-<h2>ฟีเจอร์เด่นสำหรับบัตรเครดิต</h2>
-
-<h3>Best Card Selector</h3>
+</section>
+<section class="hsec" id="credit-cards">
+<h2>ฟีเจอร์เด่นสำหรับบัตรเครดิต<a class="anc" href="#credit-cards" aria-label="link">#</a></h2><h3 id="best-card-selector">Best Card Selector<a class="anc" href="#best-card-selector" aria-label="link">#</a></h3>
 <figure class="shot"><img src="help-bestcard.png" width="900" height="232" loading="lazy" decoding="async" alt="ป้ายเด้งตอนกรอกรายการ — "ใช้ KTC Visa Signature ได้ +฿20.00" พร้อมชิปชื่อร้านให้แตะ"><figcaption>ป้ายเด้งตอนกรอกรายการ — "ใช้ KTC Visa Signature ได้ +฿20.00" พร้อมชิปชื่อร้านให้แตะ</figcaption></figure>
 <p>ตั้ง reward rules ให้บัตรแต่ละใบเอง (หมวด, %, เพดาน, ยอดขั้นต่ำ — <strong>ฟรีไม่จำกัด</strong>) แล้วกด "บัตรไหนดี?" ดูใบคุ้มสุดก่อนจ่าย. <strong>ฟรี</strong> ดูคำแนะนำได้ <strong>1 หมวด</strong> (เลือกเอง สลับได้เดือนละครั้ง); <strong>Pro</strong> = ครบทุกหมวด + ระบบอัตโนมัติ: ✨ เด้งบอก "ใช้บัตรนี้ได้ X บาท reward" ให้เองตอนกรอกรายการ + เตือนก่อน reward เต็มเพดาน</p>
 
-<h3>วางแผนล้างหนี้ (Avalanche / Snowball)</h3>
+<h3 id="payoff-plan">วางแผนล้างหนี้ (Avalanche / Snowball)<a class="anc" href="#payoff-plan" aria-label="link">#</a></h3>
 <p>เพิ่มเติม → "วางแผนล้างหนี้" หรือ Dashboard tile "วางแผนล้างหนี้" ที่จะโผล่เมื่อมีบัตร 2+ ใบยอดค้าง</p>
 <ul>
   <li><strong>Avalanche</strong> — จ่ายดอกเบี้ยสูงสุดก่อน ประหยัดเงินมากสุด</li>
@@ -112,23 +181,25 @@
   <li>ตั้งงบจ่ายต่อเดือน → ดู timeline จะหมดเมื่อไหร่</li>
 </ul>
 
-<h3>นำเข้าข้อมูลจากที่อื่น</h3>
+<h3 id="bringing-data-in-from-elsewhere">นำเข้าข้อมูลจากที่อื่น<a class="anc" href="#bringing-data-in-from-elsewhere" aria-label="link">#</a></h3>
 <p><strong>ไฟล์ CSV / Excel</strong> (ส่งออกจากแอปเก่า เช่น Money Manager, Spendee — รวมไฟล์ Excel ที่บันทึกจาก Windows) — อ่านบนเครื่องล้วน ไม่ใช้ AI <strong>ฟรีเสมอ ไม่จำกัด</strong>. เข้าที่ "ย้ายมาจากแอปเก่า" → เลือกไฟล์ → แมปคอลัมน์ → เข้าคิว "ตรวจสอบ". ถ้าไฟล์มีหมวดที่ยังไม่มีในแอป <strong>สร้างหมวดใหม่ได้ตรงหน้าจับคู่</strong>เลย ไม่ต้องออกไปสร้างก่อน</p>
 <p><strong>Statement บัตรเครดิต (PDF)</strong> → AI แตกเป็นรายการทั้งใบในครั้งเดียว (รองรับ PDF สแกน + PDF ที่ใส่รหัสผ่าน) → เลือกเฉพาะที่จะนำเข้า. แนะนำใช้ PDF จริงจากอีเมลธนาคาร — อ่านยอดแม่นกว่าสกรีนช็อต. <strong>ครั้งแรกฟรีทุกคน</strong> ครั้งต่อไปเป็น Pro — ไฟล์ที่ต้องใช้ Pro จะบอกตั้งแต่ในลิสต์ "ตรวจสอบ" และถ้าอัปเกรดทีหลัง กดอ่านต่อจากรายการเดิมได้ ไม่ต้องแชร์ไฟล์ใหม่</p>
 
-<h3>ยอดค้างยกมา (เริ่มใช้แอปกลางคัน)</h3>
+<h3 id="balance-carried-over">ยอดค้างยกมา (เริ่มใช้แอปกลางคัน)<a class="anc" href="#balance-carried-over" aria-label="link">#</a></h3>
 <p>เพิ่งเริ่มใช้แอปแต่บัตรมียอดค้างอยู่แล้ว → ใส่ <strong>"ยอดค้างยกมา"</strong> ตอนเพิ่ม/แก้บัตร แอปจะรวมเข้ากับยอดที่จดใหม่ ทำให้ยอดค้างตรงกับใบแจ้งหนี้จริงตั้งแต่เดือนแรก</p>
 
-<h3>กดเงินสดจากบัตร</h3>
+<h3 id="cash-advance-from-a-card">กดเงินสดจากบัตร<a class="anc" href="#cash-advance-from-a-card" aria-label="link">#</a></h3>
 <p>จดเป็น<strong>รายการโอน</strong> จากบัตรไปบัญชีที่รับเงิน (ธนาคาร/วอลเล็ต) — ยอดนั้น<strong>เข้ายอดค้างของบัตร</strong>อย่างที่อยู่บนใบแจ้งหนี้จริง และไปโผล่ในบิลรอบที่ตรงกับวันที่กด · ไม่ถูกนับเป็น "ค่าใช้จ่าย" เพราะเงินยังอยู่กับคุณ แค่ย้ายที่ · <strong>ดอกกดเงินสดแอปไม่คิดให้</strong> (ธนาคารคิดคนละอัตรากับการรูดซื้อของ) — พอธนาคารเรียกเก็บ ค่อยจดยอดดอกเป็นรายการแยก</p>
 
-<h3>แจ้งเตือนวันครบกำหนด</h3>
+<h3 id="due-date-reminders">แจ้งเตือนวันครบกำหนด<a class="anc" href="#due-date-reminders" aria-label="link">#</a></h3>
 <p>ระบบ schedule local notification 5 จังหวะอัตโนมัติ (7d/3d/1d/วันครบ/หลัง 1d) ปิด/เปิดได้ใน เพิ่มเติม → "แจ้งเตือนบัตรเครดิต"</p>
 
-<h3>วงเงินร่วม (บัตรหลัก + บัตรเสริม)</h3>
+<h3 id="shared-credit-limit">วงเงินร่วม (บัตรหลัก + บัตรเสริม)<a class="anc" href="#shared-credit-limit" aria-label="link">#</a></h3>
 <p>บัตรเสริมหรือบัตรที่แชร์วงเงินก้อนเดียวกับบัตรหลัก → เปิด <strong>"ใช้วงเงินร่วมกับบัตรอื่น"</strong> ในหน้าแก้ไขบัตรใบที่มาร่วม แล้วเลือกบัตรหลัก. แอปจะคิดยอดใช้รวมทั้งกลุ่มเทียบวงเงินก้อนเดียว และเตือนเมื่อยอดรวมใกล้ (≥85%) หรือเต็มวงเงิน แทนที่จะมองทีละใบ (ที่จะรายงานต่ำกว่าจริง)</p>
 
-<h2>สมุด — จดร่วม / หารกับเพื่อน</h2>
+</section>
+<section class="hsec" id="pockets">
+<h2>สมุด — จดร่วม / หารกับเพื่อน<a class="anc" href="#pockets" aria-label="link">#</a></h2>
 
 <p>สมุด = สมุดบัญชีร่วมสำหรับแบ่งค่าใช้จ่ายกับครอบครัว เพื่อน หรือทริปกลุ่ม มี 2 แบบ:</p>
 <ul>
@@ -136,7 +207,7 @@
   <li><strong>สมุดที่แชร์</strong> — เชิญคนอื่นเข้าร่วม จดพร้อมกันแบบเรียลไทม์ ทุกคนเห็นรายการชุดเดียวกัน</li>
 </ul>
 
-<h3>สร้างสมุดที่แชร์ + เชิญเพื่อน</h3>
+<h3 id="create-a-shared-pocket">สร้างสมุดที่แชร์ + เชิญเพื่อน<a class="anc" href="#create-a-shared-pocket" aria-label="link">#</a></h3>
 <p><em>การ<strong>สร้าง</strong>สมุดที่แชร์เป็นฟีเจอร์ Pro — ส่วนการ<strong>เข้าร่วม</strong>สมุดที่เพื่อนชวน ใช้ได้ฟรีเสมอ</em></p>
 <ol>
   <li>tab "สมุด" → "+" → ตั้งชื่อ + ไอคอน/สี → เปิดสวิตช์ <strong>"แชร์กับคนอื่นได้"</strong></li>
@@ -145,7 +216,7 @@
 </ol>
 <p><strong>ถ้าซิงค์ช้า/ไม่ขึ้น</strong> — ลองสลับเป็นเน็ตมือถือแล้วดึงรีเฟรชใหม่ (WiFi บางที่บล็อกการซิงค์ของ iCloud). เชิญได้เฉพาะสมุดที่เปิดแชร์ — สมุดส่วนตัวแชร์ไม่ได้</p>
 
-<h3>เพิ่มรายการในสมุดที่แชร์</h3>
+<h3 id="adding-entries-to-a-shared">เพิ่มรายการในสมุดที่แชร์<a class="anc" href="#adding-entries-to-a-shared" aria-label="link">#</a></h3>
 <ol>
   <li>เปิดสมุด → "+" → ใส่จำนวนด้วยเครื่องคิดเลข + เลือกหมวด</li>
   <li>เลือก <strong>"ใครจ่าย"</strong> — ถ้าเพื่อนเป็นคนจ่ายแทน เลือกชื่อเขา</li>
@@ -153,10 +224,10 @@
   <li>save → รายการ sync ขึ้นให้ทุกคนเห็น (หน้าเพิ่มรายการใช้สีของสมุดนั้นๆ จะได้รู้ว่ากำลังจดลงสมุดไหน)</li>
 </ol>
 
-<h3>แบ่งกับใคร (เลือกคนหารบิล)</h3>
+<h3 id="split">แบ่งกับใคร (เลือกคนหารบิล)<a class="anc" href="#split" aria-label="link">#</a></h3>
 <p>แต่ละบิลเลือกได้ว่าหารกับใครบ้าง ค่าเริ่มต้น = หารเท่ากันทุกคน; ในฟอร์มเพิ่มรายการแตะ "แบ่งกับ" แล้วติ๊กเฉพาะคนที่ร่วมบิลนั้น (ตัวเองร่วมเสมอ) — settlement คำนวณให้ตามนั้น</p>
 
-<h3>สรุปสมุด — "ใครติดใคร"</h3>
+<h3 id="pocket-summary">สรุปสมุด — "ใครติดใคร"<a class="anc" href="#pocket-summary" aria-label="link">#</a></h3>
 <p>การ์ด settlement โผล่ขึ้นมาเองเมื่อมี 2+ คนมีรายการ โชว์:</p>
 <ul>
   <li>ค่าเริ่มต้นหารเท่ากัน แต่เลือกได้ว่าบิลไหนหารกับใคร แล้วแอปคำนวณ minimum transfers ให้</li>
@@ -165,23 +236,25 @@
 </ul>
 <p>นำตัวเลข transfer ไป PromptPay โอนหากันเองตามนั้น — DooSpend ไม่ได้ทำธุรกรรม</p>
 
-<h3>แชร์สรุปทริป + ให้เพื่อนสแกนจ่ายคืน</h3>
+<h3 id="share-a-trip-summary-and-let">แชร์สรุปทริป + ให้เพื่อนสแกนจ่ายคืน<a class="anc" href="#share-a-trip-summary-and-let" aria-label="link">#</a></h3>
 <p>จบทริปแล้วกด "แชร์สรุปทริป" → ได้การ์ดสรุปใครติดใคร พร้อม PromptPay QR ของคุณ ส่งเข้ากลุ่มแชท เพื่อนสแกน QR โอนคืนได้เลย (ครั้งแรกจะให้ตั้งเลขพร้อมเพย์ก่อน). DooSpend ไม่ได้ทำธุรกรรม เป็นแค่ตัวช่วยสรุป + สร้าง QR</p>
 
-<h3>ออกจากสมุด / ลบสมุด</h3>
+<h3 id="leaving-or-deleting-a-pocket">ออกจากสมุด / ลบสมุด<a class="anc" href="#leaving-or-deleting-a-pocket" aria-label="link">#</a></h3>
 <ul>
   <li><strong>ผู้เข้าร่วม</strong> ปัดซ้าย → "ออกจากสมุด": สมุดหายจากเครื่องคุณ แต่เจ้าของและคนอื่นยังมีครบ</li>
   <li><strong>เจ้าของ</strong> ปัดซ้าย → "ลบถาวร": ลบรายการทั้งหมด ทุกคนที่แชร์ด้วยจะหายไปด้วย กู้คืนไม่ได้</li>
 </ul>
 
-<h3>ข้อมูลในสมุด</h3>
+<h3 id="how-pocket-data-is-stored">ข้อมูลในสมุด<a class="anc" href="#how-pocket-data-is-stored" aria-label="link">#</a></h3>
 <ul>
   <li>sync ผ่าน Apple iCloud (CKShare) — ไม่มี server ของ DooSpend</li>
   <li>เฉพาะคนที่ได้รับเชิญเท่านั้นที่เห็น เจ้าของยุติ share ได้ทันที</li>
   <li>อัปเดตแบบเรียลไทม์ (silent push) — ถ้าไม่เห็นทันทีให้สลับออก-เข้าแอปเพื่อ refresh</li>
 </ul>
 
-<h2>เพื่อใคร — จ่ายให้ใคร</h2>
+</section>
+<section class="hsec" id="for-whom">
+<h2>เพื่อใคร — จ่ายให้ใคร<a class="anc" href="#for-whom" aria-label="link">#</a></h2>
 <p>"เพื่อใคร" เป็นแกนที่<strong>ตั้งฉากกับหมวด</strong> ใช้ตอบคำถามที่หมวดตอบไม่ได้ เช่น "เดือนนี้จ่ายเพื่อลูกไปเท่าไหร่" — ค่าเทอมลูกยังอยู่หมวด "การศึกษา" แต่ติดป้ายเพื่อใคร = ลูก</p>
 <ul>
   <li>ตั้งรายชื่อที่ เพิ่มเติม → <strong>"เพื่อใคร / คนที่ดูแล"</strong> (พ่อ, แม่, ลูก, ตัวเอง…)</li>
@@ -191,10 +264,12 @@
 </ul>
 <p><em>ต่างจาก "ใครจ่าย" ในสมุดที่แชร์ — อันนั้นคือคนที่ควักเงิน ส่วนอันนี้คือคนที่เงินถูกใช้ไปเพื่อ</em></p>
 
-<h2>งบประมาณ &amp; รอบเดือนการเงิน</h2>
+</section>
+<section class="hsec" id="budgets-and-your-financial-month">
+<h2>งบประมาณ &amp; รอบเดือนการเงิน<a class="anc" href="#budgets-and-your-financial-month" aria-label="link">#</a></h2>
 <p>ตั้งงบรายเดือน/รายหมวด และตั้ง "วันเริ่มรอบเดือน" ให้ตรงวันเงินเดือนออก (เช่น ทุกวันที่ 25) — สรุป/งบทั้งหมดยึดรอบนี้แทนปฏิทิน 1–สิ้นเดือน</p>
 
-<h3>เลือกงบขึ้นหน้าหลัก (ดาว)</h3>
+<h3 id="pin-budgets-to-home">เลือกงบขึ้นหน้าหลัก (ดาว)<a class="anc" href="#pin-budgets-to-home" aria-label="link">#</a></h3>
 <p><strong>งบรวมรายเดือน</strong> (ทุกหมวด ทุกบัญชี) เป็นแถบยาวบนหน้าหลัก และได้ดาวให้เองตั้งแต่สร้าง · งบอื่นแตะ <strong>⭐</strong> ที่แถวงบในหน้างบ (หรือเมนู ⋯ ในจอรายละเอียดงบ) เพื่อขึ้นเป็น<strong>วงกลมได้อีก 4 งบ</strong></p>
 <ul>
   <li>ใต้แถบมีบรรทัด "งบรวม · วันนี้ใช้ได้อีก" — มาจากงบรวมรายเดือนใบเดียว ไม่ได้รวมวงกลม (Pro)</li>
@@ -203,7 +278,7 @@
   <li><strong>แตะแถบหรือวงกลม</strong> เปิดรายละเอียดของงบนั้นเลย · กดย้อนกลับไปที่ลิสต์งบ</li>
 </ul>
 
-<h3>งบหมวดบนบัญชีเดียว</h3>
+<h3 id="category-budgets-on-one-account">งบหมวดบนบัญชีเดียว<a class="anc" href="#category-budgets-on-one-account" aria-label="link">#</a></h3>
 <p>ตอนสร้างงบ เลือก<strong>บัญชี</strong>ก่อน แล้วค่อยเลือก<strong>หมวด</strong> — เช่น "อาหาร + คาเฟ่ บน KTC" นับเฉพาะรายจ่ายสองหมวดนั้นที่จ่ายด้วย KTC</p>
 <ul>
   <li>หมวดเดียวกันตั้งงบได้คนละบัญชี (อาหารบน KTC กับอาหารบนกสิกร) · ตั้ง "อาหาร ทุกบัญชี" คู่กันได้ด้วย — งบบัญชีเป็นส่วนย่อยของงบทุกบัญชี รายจ่ายจึงนับทั้งสองใบ</li>
@@ -212,7 +287,7 @@
   <li><strong>ลบบัญชี = งบที่ผูกบัญชีนั้นถูกลบด้วย</strong> กล่องยืนยันบอกชื่องบก่อนกด (ไม่ปล่อยให้งบกลายเป็น "ทุกบัญชี" เงียบ ๆ)</li>
 </ul>
 
-<h3>จอรายละเอียดงบ</h3>
+<h3 id="budget-detail">จอรายละเอียดงบ<a class="anc" href="#budget-detail" aria-label="link">#</a></h3>
 <ul>
   <li><strong>กราฟใช้สะสม</strong> เทียบกับเส้นงบตลอดรอบ — รายสัปดาห์/รายเดือนเป็นรายวัน รายปีเป็นรายเดือน</li>
   <li><strong>ใช้จ่ายตามหมวด</strong> พร้อม % ของยอดใช้ไป (ยอดทุกหมวดรวมกันเท่ายอดใช้ไปพอดี) · แตะหมวดเพื่อดูเฉพาะรายการของหมวดนั้น แตะซ้ำเพื่อดูทั้งหมด</li>
@@ -221,7 +296,7 @@
   <li><strong>ขีด "วันนี้"</strong> บนแถบและวงของงบ บอกว่าผ่านมาถึงไหนของรอบแล้ว · หน้ารายละเอียดบอกช่วงวันที่ของทุกคาบ</li>
 </ul>
 
-<h3>ไม่นับในค่าใช้จ่าย (แยกหนี้/ผ่อน)</h3>
+<h3 id="not-counted-as-spending">ไม่นับในค่าใช้จ่าย (แยกหนี้/ผ่อน)<a class="anc" href="#not-counted-as-spending" aria-label="link">#</a></h3>
 <p>ยอดจ่ายหนี้/ผ่อนก้อนใหญ่มักกลบค่าใช้จ่ายจริง ตั้ง <strong>"ไม่นับในค่าใช้จ่าย"</strong> ให้ยอดพวกนี้ไม่ไปรวมในสรุปเดือน/งบได้ — ตั้งได้ 2 ระดับ:</p>
 <ul>
   <li><strong>ทั้งหมวด</strong> — แก้หมวด (เช่น "ผ่อนบ้าน" / "จ่ายหนี้") เปิด "รายการหมวดนี้ไม่นับในค่าใช้จ่าย" → รายการที่จดใหม่ในหมวดนั้นไม่นับให้เอง (รายการเก่าไม่เปลี่ยนย้อนหลัง)</li>
@@ -231,7 +306,7 @@
 
 <p><strong>อยากเห็นว่า "ถ้านับหมดจะเป็นเท่าไหร่"</strong> — จอสรุปมีสวิตช์ <strong>"รวมรายการที่ไม่นับ"</strong> อยู่ใต้การ์ด/ใต้ legend เปิดดูชั่วคราวได้ · <strong>ไม่จำค่า</strong> ออกจากจอแล้วกลับมาเป็นปิดเสมอ (จำค่าไว้ = สองความจริงในแอปเดียว แล้วสกรีนช็อตที่ส่งต่อก็อ่านผิด) · เปิดแล้ว<strong>กราฟ</strong> (โดนัท/วาฟเฟิล) แยกเงินก้อนนั้นเป็นก้อน <strong>"ไม่นับในค่าใช้จ่าย"</strong> สีอำพันตรึงท้าย legend ไม่กลืนเข้าหมวดของมัน — จะได้รู้ว่าส่วนต่างมาจากไหน · ปิดสวิตช์ = ก้อนนั้นไม่อยู่ในกราฟเลย (กราฟตรงกับการ์ดเสมอ) · <em>หน้าหลัก งบ และสมุดไม่มีสวิตช์นี้โดยตั้งใจ</em></p>
 
-<h3>ช่อง "เดือนนี้" บนหน้าหลัก — ใช้ไป · สุทธิวันนี้ · สุทธิสิ้นเดือน</h3>
+<h3 id="the-this-month-slot-on-home">ช่อง "เดือนนี้" บนหน้าหลัก — ใช้ไป · สุทธิวันนี้ · สุทธิสิ้นเดือน<a class="anc" href="#the-this-month-slot-on-home" aria-label="link">#</a></h3>
 <p>แตะ <strong>ⓘ</strong> ข้างคำว่า "เดือนนี้" บนการ์ดสรุป เลือกได้ว่าจะให้ช่องนี้โชว์อะไร:</p>
 <ul>
   <li><strong>ใช้ไปเดือนนี้</strong> — ยอดจ่ายของเดือนการเงินนี้ (แบบเดิม)</li>
@@ -240,41 +315,45 @@
 </ul>
 <p>ชีต ⓘ มี<strong>ไทม์ไลน์</strong>ของเดือน (เส้นสุทธิสะสม · จุดกลวงสีส้ม = ที่ตั้งไว้) และบอกด้วยว่าอะไรไม่ได้นับ เช่น แถวในตรวจสอบที่ยังไม่ยืนยัน · <strong>แอปไม่เดาค่าใช้จ่ายรายวันในอนาคต</strong> ยอดสิ้นเดือนจึงมาจากของที่คุณตั้งไว้เท่านั้น · ยิ่งตั้งรายรับประจำ/รายจ่ายประจำไว้ครบ ยอดนี้ยิ่งใกล้ความจริง ใช้วางแผนเงินให้ถึงสิ้นเดือนได้ · จ่ายบิลบัตรเครดิตไม่นับซ้ำ เพราะของที่รูดนับเป็นรายจ่ายไปแล้วตอนรูด</p>
 
-<h3>วันนี้ใช้ได้อีกเท่าไหร่ (คุมงบรายวัน)</h3>
+<h3 id="whats-left-to-spend-today">วันนี้ใช้ได้อีกเท่าไหร่ (คุมงบรายวัน)<a class="anc" href="#whats-left-to-spend-today" aria-label="link">#</a></h3>
 <figure class="shot"><img src="help-daily.png" width="900" height="184" loading="lazy" decoding="async" alt="บรรทัด "วันนี้ใช้ได้อีก" บนการ์ดสรุปหน้าหลัก พร้อมคำเตือนถ้าจังหวะนี้จะเกินงบ"><figcaption>บรรทัด "วันนี้ใช้ได้อีก" บนการ์ดสรุปหน้าหลัก พร้อมคำเตือนถ้าจังหวะนี้จะเกินงบ</figcaption></figure>
 <p>เมื่อตั้งงบรวมรายเดือนไว้ แอปเกลี่ยงบทั้งเดือนเป็นรายวันตามรอบเดือนการเงินของคุณ แล้วบอกบน Dashboard ว่า "วันนี้ใช้ได้อีก ฿X" ถ้าจังหวะการใช้กำลังจะเกินงบก่อนสิ้นรอบ จะเตือนล่วงหน้า และมีแจ้งเตือนยอดทุกเช้า (ปิด/เปิดได้ใน เพิ่มเติม → แจ้งเตือน). ตัวเลขคิดสดตามที่ใช้จริงวันนี้ ใช้เกินส่วนของวันนี้จะขึ้นเป็น "วันนี้เกินมา ฿X". ตัวเลขรายวันนี้เป็นฟีเจอร์ Pro — ผู้ใช้ฟรียังเห็นแถบงบและยอด "เหลือ" ของเดือนนี้ได้ตามปกติ</p>
 <p><strong>หักบิลก่อนหารวัน</strong> — วันละ = (งบ − บิลที่ครบในรอบของงบ − ที่ใช้เองก่อนวันนี้) ÷ วันที่เหลือ · บิลคือ รายจ่ายประจำ · งวดผ่อน · ดอกหนี้ · รายการจดล่วงหน้า ที่ครบในรอบนี้ (จ่ายแล้วใช้ยอดจริง ยังไม่จ่ายใช้ยอดที่ตั้งไว้) ค่าเช่าที่จะตัดปลายเดือนจึงไม่ถูกนับเป็นเงินที่ใช้ได้ตั้งแต่ต้นเดือน · แตะ <strong>ⓘ</strong> บนหน้าหลักเพื่อดูสูตรและรายการบิล · บิลรวมกันเกินงบแล้วจะไม่มีตัวเลข ขึ้นว่า "บิลที่ตั้งไว้เกินงบแล้ว" แทน · แถบงบและยอดใช้ไปไม่เปลี่ยน</p>
 
-<h3>นับบิลในงบนี้ (ต่องบ)</h3>
+<h3 id="count-bills-in-this-budget">นับบิลในงบนี้ (ต่องบ)<a class="anc" href="#count-bills-in-this-budget" aria-label="link">#</a></h3>
 <p>ทุกงบมีสวิตช์ <strong>"นับบิลในงบนี้"</strong> — ในชีตสร้าง/แก้งบ ใต้ยอด และในจอรายละเอียดงบ · <strong>เปิดเป็นค่าตั้งต้น</strong> (เหมือนงบเดิมทุกใบ): บิลเข้างบนี้และถูกหักไว้ก่อนหารวัน · <strong>ปิด</strong> = งบนี้นับแค่ที่ใช้เอง — จ่ายบิลไม่เข้างบ และไม่หักบิลก่อนหารวัน เหมาะกับคนที่อยากคุมเฉพาะเงินใช้จ่ายทั่วไป · งบรวมบนหน้าหลักที่ปิดสวิตช์นี้จะมีคำว่า "· ไม่นับบิล" ต่อท้ายชื่อ เพราะยอด "เดือนนี้" ข้างบนยังนับทุกยอด</p>
 
-<h3>งบหลายใบ เมื่อหมด Pro</h3>
+<h3 id="several-budgets-after-pro-ends">งบหลายใบ เมื่อหมด Pro<a class="anc" href="#several-budgets-after-pro-ends" aria-label="link">#</a></h3>
 <p>ผู้ใช้ฟรีนับและแก้ได้ <strong>1 งบ (ใบแรกที่สร้าง)</strong>. ถ้าเคยตั้งงบไว้หลายใบตอนเป็น Pro ใบอื่นจะ<strong>หยุดนับ</strong> — ยังอยู่ในหน้างบเป็นแถวสีเทา "หยุดนับแล้ว" ไม่มีแถบ ไม่เตือน และไม่ขึ้นหน้าหลัก แต่<strong>ไม่ถูกลบ</strong> (ลบเองได้). กลับมาเป็น Pro เมื่อไหร่ ทุกใบนับต่อทันที เพราะรายการไม่เคยหาย</p>
 
-<h2>สกุลเงินของสมุด</h2>
+</section>
+<section class="hsec" id="your-books-currency">
+<h2>สกุลเงินของสมุด<a class="anc" href="#your-books-currency" aria-label="link">#</a></h2>
 <p>ตั้งได้ว่าสมุดนี้เป็นเงินสกุลไหน — ทั้งแอปเปลี่ยนตามทันที ทั้งยอด สัญลักษณ์ และจำนวนทศนิยม (เยนกับวอนไม่มีหน่วยย่อย จึงไม่โชว์ทศนิยมเลย) เข้าที่ <strong>เพิ่มเติม → สกุลเงินหลัก</strong></p>
 <p><strong>ตัวเลขที่จดไว้แล้วจะไม่ถูกแปลงค่า</strong> — เปลี่ยนสกุลคือเปลี่ยน<em>ป้ายที่เขียนข้างหน้า</em> ไม่ใช่การคูณเรต ถ้าจดไว้ 500 ก็ยังเป็น 500</p>
 <p><strong>สำรองก่อนเปลี่ยนเสมอ (เมื่อสมุดมีข้อมูลแล้ว)</strong> — แอปเก็บ<strong>สำเนาไว้ในเครื่อง</strong>ก่อน แล้วให้เลือก<strong>โฟลเดอร์</strong>เก็บไฟล์สำรองอีกที่ (iCloud Drive, ในเครื่อง หรือที่เก็บที่เปิดไว้ในแอป Files) · จะเปลี่ยนสกุลให้ก็ต่อเมื่อไฟล์ถูกเก็บจริงและเปิดกู้คืนได้เท่านั้น · ชื่อไฟล์ประทับเวลา ไม่เขียนทับไฟล์เดิม · <strong>สมุดที่ยังไม่มีข้อมูล</strong> (เพิ่งลงแอป ยังไม่มีรายการ ยอดตั้งต้นเป็นศูนย์) เปลี่ยนได้ทันที ไม่ต้องสำรอง</p>
 <p><strong>ถ้าเจอกล่อง "บัญชีมีหลายสกุล"</strong> — เกิดได้เมื่อสองเครื่องที่ใช้ iCloud เดียวกันเปลี่ยนสกุลคนละแบบก่อนซิงก์ถึงกัน · กด "เลือกสกุลของสมุด" แล้วเลือกสกุลเดียว ตัวเลขไม่ถูกแปลง</p>
 <p><strong>บางอย่างใช้ได้เฉพาะสมุดสกุลบาท</strong> เพราะผูกกับระบบของไทยโดยตรง — สแกนจ่าย PromptPay, สมุดร่วมจ่าย, หน้าประมาณการภาษี และค่าเริ่มต้นตามกฎบัตรเครดิตไทย (ดอกเบี้ย 16%/ปี, ค่าติดตามทวงถาม, ขั้นต่ำ 10%) · บัตรในสมุดสกุลอื่นให้กรอกเงื่อนไขเองได้ แอปจะไม่เดาแทน</p>
 
-<h3>จดของที่จ่ายเป็นเงินต่างประเทศ</h3>
+<h3 id="spending-in-a-foreign-currency">จดของที่จ่ายเป็นเงินต่างประเทศ<a class="anc" href="#spending-in-a-foreign-currency" aria-label="link">#</a></h3>
 <p>รูดบัตรที่ต่างประเทศแล้วไม่ต้องไปหาเรตเอง — เลือกสกุลที่จ่าย ใส่ยอดตามใบเสร็จ แล้วใส่ <strong>ยอดที่ถูกตัดจริง</strong> ตามที่ธนาคารแจ้ง แอปคิดเรตที่ได้จริงให้เอง (รวมค่าธรรมเนียมความเสี่ยงเงินตราไปแล้วในตัว) · ถ้ายังไม่รู้ยอดที่ถูกตัด ใส่ทีหลังได้ แถวจะขึ้นยอดประมาณไว้ก่อน</p>
 <p>ในลิสต์ แถวแบบนี้จะบอกทั้งยอดต่างประเทศและยอดที่ถูกตัด เพื่อให้ตรวจกับใบแจ้งยอดบัตรได้ทีละบรรทัด</p>
 
-<h2>เป้าหมายออม</h2>
+</section>
+<section class="hsec" id="savings-goals">
+<h2>เป้าหมายออม<a class="anc" href="#savings-goals" aria-label="link">#</a></h2>
 <figure class="shot"><img src="help-savings.png" width="900" height="514" loading="lazy" decoding="async" alt="จอเป้าออม — ออมแล้วเท่าไหร่ เหลือเท่าไหร่ และต้องออมเดือนละเท่าไหร่ถึงจะทันวันครบ"><figcaption>จอเป้าออม — ออมแล้วเท่าไหร่ เหลือเท่าไหร่ และต้องออมเดือนละเท่าไหร่ถึงจะทันวันครบ</figcaption></figure>
 <p>ตั้งเป้าเก็บเงิน (ทริป, เงินฉุกเฉิน, ดาวน์รถ) แล้วแอป<strong>กันเงินก้อนนั้นออกจากยอด "ใช้ได้"</strong> ให้ — เข้าที่ เพิ่มเติม → <strong>เป้าหมายออม</strong> (อยู่ติดกระเป๋าเงิน เพราะเป็นเงินก้อนเดียวกัน)</p>
 <p><em>แอปไม่ได้ถือเงินและไม่ได้ต่อกับธนาคาร — ล็อกเงินจริงไม่ได้ สิ่งที่ทำได้คือไม่ชวนให้คุณใช้เงินก้อนนั้น</em></p>
 
-<h3>เงินก้อนนี้อยู่ที่ไหน — เลือกครั้งเดียวตอนสร้าง</h3>
+<h3 id="where-does-this-money-sit">เงินก้อนนี้อยู่ที่ไหน — เลือกครั้งเดียวตอนสร้าง<a class="anc" href="#where-does-this-money-sit" aria-label="link">#</a></h3>
 <p>คำถามนี้ตัดสินพฤติกรรมทั้งหมดของเป้า และ<strong>เปลี่ยนทีหลังไม่ได้</strong> (ของที่ผูกไว้จะไม่มีที่ไป):</p>
 <ul>
   <li><strong>อยู่ในบัญชีแยกแล้ว</strong> — แอปสร้าง "บัญชีเงินออม" ให้หนึ่งใบ · ออมเข้าเป้า = <strong>รายการโอนจริง</strong> จากบัญชีที่เลือก · ถอนเงินออกได้ (โอนกลับ) · ยอดที่ออมได้อ่านจากยอดคงเหลือของบัญชีนั้น จึงรวมยอดยกมาที่ใส่ไว้ตอนสร้างด้วย</li>
   <li><strong>ยังปนอยู่ในบัญชีเดิม</strong> — ไม่มีเงินขยับสักบาท แค่<strong>จองยอด</strong>ไว้จากบัญชีที่เลือก · ลดออม = ปลดจอง · แอปเฝ้าให้ว่าเงินจริงในบัญชียังพอกับที่จองไว้ไหม <strong>โดยนับรวมทุกเป้าที่จองจากบัญชีใบเดียวกัน</strong> (แต่ละใบมองตัวเองแล้วยังพอ ทั้งที่รวมกันเกิน)</li>
 </ul>
 
-<h3>ตารางออมเงิน <span style="font-weight:400;font-size:.8em;opacity:.75">(Pro)</span></h3>
+<h3 id="savings-board">ตารางออมเงิน <span style="font-weight:400;font-size:.8em;opacity:.75">(Pro)</span><a class="anc" href="#savings-board" aria-label="link">#</a></h3>
 <p>กำหนดวันครบเป้าแล้วเลือกความถี่ (รายวัน / สัปดาห์ / เดือน) แอปจะปั้น<strong>ตารางเป็นช่อง ๆ</strong> ให้ — แตะช่องเพื่อออมทีละครั้ง เหมือนตารางออมเงินบนกระดาษ</p>
 <p>ผู้ใช้ฟรี<strong>เห็นตารางจริงของเป้าตัวเอง</strong>ได้ทั้งแผ่น (ยอดต่อช่องคำนวณไว้ให้แล้ว) แต่เป็นสีเทาและยังติ๊กไม่ได้ — บันทึกออมเองจากปุ่ม "บันทึกออม" ได้ตามปกติ</p>
 <ul>
@@ -284,7 +363,7 @@
   <li>เปลี่ยนความถี่ทีหลังได้ ช่องที่ติ๊กแล้วจะถูกยุบมาชิดต้นตาราง ไม่หลุดหาย</li>
 </ul>
 
-<h3>ประวัติการออม — แก้ย้อนหลังได้</h3>
+<h3 id="savings-history">ประวัติการออม — แก้ย้อนหลังได้<a class="anc" href="#savings-history" aria-label="link">#</a></h3>
 <ul>
   <li>ตอนบันทึกใส่ <strong>วันที่บันทึก</strong> ย้อนหลังและ <strong>โน้ต</strong> ได้ (โน้ตโผล่ต่อท้ายวันที่ในประวัติ)</li>
   <li><strong>แตะแถวประวัติเพื่อแก้ยอด</strong> — ทางบัญชีแยกจะแก้รายการโอนให้พร้อมกัน ยอดบัญชีเดินตามทันที</li>
@@ -292,10 +371,10 @@
   <li>ปัดเพื่อลบ มีปุ่ม "เลิกทำ" ให้กดคืน · ลบแถวแล้วรายการโอนที่ผูกอยู่หายไปด้วย และช่องบนตารางคืนเป็นว่าง — <strong>"เลิกทำ" คืนให้ทั้งคู่</strong> (ทั้งแถวการออมและรายการโอน) ไม่ใช่คืนช่องเขียวโดยไม่มีเงินรองรับ</li>
 </ul>
 
-<h3>ถึงเป้าแล้ว</h3>
+<h3 id="when-you-reach-the-goal">ถึงเป้าแล้ว<a class="anc" href="#when-you-reach-the-goal" aria-label="link">#</a></h3>
 <p>กด <strong>"ทำเครื่องหมายว่าสำเร็จ"</strong> เพื่อเก็บเข้ากรุ — ยังเปิดดูย้อนหลังได้ในหัวข้อ "สำเร็จแล้ว" ซึ่งพับไว้ให้ไม่เกะกะเป้าที่ยังทำอยู่ · กดกลับมาทำต่อได้ตลอด</p>
 
-<h3>เงินที่กันไว้ไปโผล่ที่ไหนบ้าง</h3>
+<h3 id="where-the-reserved-money-shows">เงินที่กันไว้ไปโผล่ที่ไหนบ้าง<a class="anc" href="#where-the-reserved-money-shows" aria-label="link">#</a></h3>
 <ul>
   <li><strong>กระเป๋าเงิน</strong> — ใต้ยอดเงินขึ้นบรรทัด "ใช้ได้ ฿X · กันไว้ให้เป้าออม ฿Y" · ถ้ากันไว้เกินเงินที่มีจริงจะขึ้น "กันไว้เกินเงินที่มี ฿Z" เพิ่มอีกบรรทัด (ขึ้นที่จอเป้าด้วย)</li>
   <li><strong>กลุ่ม "กันไว้จากบัญชีอื่น"</strong> ในหน้ากระเป๋า — เป้าแบบปนบัญชีเดิมมีแถวของตัวเองทุกใบ บอกว่ากันไว้เท่าไหร่จากบัญชีไหน (เดิมยุบเป็นบรรทัดเทาบรรทัดเดียวว่า "อีก ฿24,000 กันไว้จากบัญชีอื่น" ซึ่งอ่านไม่ออกว่าของเป้าไหน)</li>
@@ -304,24 +383,26 @@
   <li><strong>กระดิ่ง</strong> — เตือนจังหวะการออม (เช่น ตอนนี้ออมครั้งละเท่าไหร่ถึงจะทันวันครบ)</li>
 </ul>
 
-<h3>ลบเป้า / ลบบัญชีของเป้า</h3>
+<h3 id="deleting-a-goal-or-its-account">ลบเป้า / ลบบัญชีของเป้า<a class="anc" href="#deleting-a-goal-or-its-account" aria-label="link">#</a></h3>
 <ul>
   <li>ลบเป้าที่หน้า <strong>แก้ไขเป้าหมาย</strong> — ทางบัญชีแยก <strong>บัญชีกับเงินในนั้นยังอยู่ครบ</strong> ลบแค่ตัวเป้าหมายพร้อมประวัติการออม · ทางปนบัญชีเดิม เงินที่กันไว้จะถูกปลดคืนเข้ายอด "ใช้ได้" (เงินจริงไม่ขยับ)</li>
   <li><strong>บัญชีเงินออมลบจากหน้ากระเป๋าไม่ได้</strong> ตราบใดที่ยังมีเป้าผูกอยู่ — ลบเป้าก่อน แล้วบัญชีนั้นจะลบได้ตามปกติ (รายการโอนที่เคยจดไม่หายไปด้วย)</li>
 </ul>
 <p><em>ฟรีตั้งได้ 1 เป้า — บันทึกออมเองได้ไม่จำกัด แอปกันเงินและเตือนให้ตามปกติ · <strong>ตารางออมเงิน</strong> (แอปเกลี่ยยอดลงทุกช่องให้ ติ๊กเก็บทีละช่อง) และการตั้งหลายเป้าพร้อมกันเป็นฟีเจอร์ Pro — เป้าที่เกินโควตายังดูได้ครบ แค่ขยับตัวเลขไม่ได้</em></p>
 
-<h2>เงินเข้ารายปี &amp; เกณฑ์สรรพากร</h2>
+</section>
+<section class="hsec" id="money-in-by-year-and-the-revenue">
+<h2>เงินเข้ารายปี &amp; เกณฑ์สรรพากร<a class="anc" href="#money-in-by-year-and-the-revenue" aria-label="link">#</a></h2>
 <p>ธนาคารต้องรายงานบัญชีที่มี<strong>เงินเข้า</strong>ถึงเกณฑ์ให้กรมสรรพากร (ธุรกรรมที่มีลักษณะเฉพาะ) · แอปนับเงินเข้าที่คุณจดไว้ทั้งปี ให้เทียบกับเกณฑ์นั้นได้เอง — เข้าที่ เพิ่มเติม → <strong>เงินเข้ารายปี</strong> หรือแตะแถว <strong>เงินเข้าปี 2569</strong> ในหน้าบัญชีธนาคาร/อีวอลเล็ต (มีเฉพาะสมุดสกุลบาท)</p>
 
-<h3>เกณฑ์ที่ธนาคารต้องรายงาน</h3>
+<h3 id="the-reporting-thresholds">เกณฑ์ที่ธนาคารต้องรายงาน<a class="anc" href="#the-reporting-thresholds" aria-label="link">#</a></h3>
 <ul>
   <li><strong>ข้อ 1</strong> — เงินเข้า 400 ครั้งขึ้นไป <strong>และ</strong>ยอดรวม 2,000,000 บาทขึ้นไป</li>
   <li><strong>ข้อ 2</strong> — เงินเข้า 3,000 ครั้งขึ้นไป ไม่ดูยอดเงิน</li>
 </ul>
 <p>เข้าข้อใดข้อหนึ่ง · นับ<strong>ต่อธนาคาร</strong> (ทุกบัญชีในธนาคารเดียวกันรวมกัน) · ตามปีปฏิทิน ม.ค.–ธ.ค. · แอปโหลดตัวเลขเกณฑ์ล่าสุดจากเว็บเมื่อต่อเน็ต</p>
 
-<h3>แอปนับอะไรบ้าง</h3>
+<h3 id="what-the-app-counts">แอปนับอะไรบ้าง<a class="anc" href="#what-the-app-counts" aria-label="link">#</a></h3>
 <ul>
   <li>นับเฉพาะ<strong>เงินเข้า</strong> ของบัญชีธนาคารและอีวอลเล็ต — ฝาก/รับเงิน และรับโอน รวม<strong>โอนจากบัญชีตัวเอง</strong>ด้วย (ธนาคารก็นับ)</li>
   <li><strong>ไม่นับ</strong>รายการในหน้าตรวจสอบที่ยังไม่ได้ยืนยัน และรายการที่ลงวันที่ล่วงหน้า (นับเมื่อถึงวัน) — จอบอกจำนวนไว้ แตะแล้วไปหน้าตรวจสอบได้เลย</li>
@@ -329,55 +410,15 @@
 </ul>
 <p><em>แอปนับจากรายการที่จดไว้ในแอปเท่านั้น ส่วนธนาคารนับจากทุกรายการในบัญชีจริง — ตัวเลขสองที่จะตรงกันเมื่อจดเงินเข้าครบทุกรายการ</em></p>
 
-<h3>ฟรี / Pro</h3>
+<h3 id="free-pro">ฟรี / Pro<a class="anc" href="#free-pro" aria-label="link">#</a></h3>
 <ul>
   <li><strong>ฟรี</strong> — ดูรายการเงินเข้าทั้งปีทีละรายการ แยกรายเดือน · ดูตารางเกณฑ์</li>
   <li><strong>Pro</strong> — ยอดรวมและจำนวนครั้งทั้งปีของแต่ละบัญชี · <strong>ติ๊กรวมบัญชีธนาคารเดียวกัน</strong>แล้วเทียบกับเกณฑ์ทั้งสองข้อ · <strong>ส่งออกแฟ้มชี้แจง</strong> เป็น PDF (แนบรูปสลิปได้) หรือ CSV เปิดใน Excel</li>
 </ul>
 
-<h2>ฟีเจอร์อื่นๆ</h2>
-
-<h3>แท็ก</h3>
-<p>ติดแท็กข้ามหมวดได้ เช่น "รถคันนี้" "งานลูกค้า A" "ลดหย่อนภาษี" — <strong>ติดได้หลายแท็กต่อรายการ</strong> ในฟอร์มจด (ปุ่ม # บนแป้น หรือ "เพิ่มเติม") · ดูยอดรวมของแท็กได้ที่ เพิ่มเติม → แท็ก แตะเม็ด "N รายการ" เพื่อดูรายการของแท็กนั้น · กดค้างที่แท็ก → "ติดให้รายการเก่า…" เพื่อติดย้อนหลัง · ผู้ใช้ฟรีสร้างได้ 1 แท็ก · ชิปแนะนำแท็กจากร้านเป็น Pro</p>
-
-<h3>หน้ารายการ — เลือกช่วง &amp; กราฟแนวโน้ม</h3>
-<p>แตะชื่อช่วงบนหัวจอ เลือกดูเป็น วัน · สัปดาห์ · เดือน · ปี หรือแท็บ <strong>ช่วง</strong> (7 วัน · 30 วัน · 3 เดือน · ปีนี้ · ปีที่แล้ว · ทั้งหมด · กำหนดเอง) · ดูรายปีจะเห็นการ์ดรายเดือน (รับ · จ่าย · สุทธิ) แตะเพื่อกาง · มีกราฟแนวโน้มเส้น/แท่ง · ไอคอน ⓘ ข้าง "จ่าย"/"รับ" บนการ์ด = มีรายการที่ไม่นับในช่วงนี้ แตะเพื่อดู · ส่งออก PDF จากแท็บปีมีหน้ายอดรายเดือน</p>
-<p><strong>ค้นหา</strong> — แตะ 🔍 มุมขวาบน ค้นจากชื่อร้าน โน้ต หมวด หรือบัญชี · ตัวกรองทั้งหมดรวมอยู่ในชีตเดียว (กรวยข้างช่องค้นหา) · มีช่วงลัด · บรรทัดยอดตอนค้นหาบอกจำนวนรายการ ยอดจ่าย/รับ และส่งออกผลค้นหาได้ (Pro)</p>
-
-<h3>ปรับแต่งแป้นพิมพ์</h3>
-<p>เลือกแสดงหรือซ่อนปุ่มลัดบนแป้นจด — งวดผ่อน · สมุด · เพื่อใคร · แท็ก — ได้ที่ ตั้งค่า → ปรับแต่งแป้นพิมพ์</p>
-
-<h3>ปรับแต่งหน้าจด</h3>
-<p>ยกแถวที่ใช้บ่อย (เช่น สมุด · เพื่อใคร · แท็ก) ขึ้นมาไว้บนหน้าจดเลย ไม่ต้องเข้า "เพิ่มเติม" แล้วลากเรียงลำดับได้ — ที่ ตั้งค่า → ปรับแต่งหน้าจด · แถวที่ยกขึ้นมาจะไม่อยู่ใน "เพิ่มเติม" แล้ว</p>
-
-<h3>เรียงบัญชีในกระเป๋า</h3>
-<p>กระเป๋า → เมนู ⋯ → <strong>จัดเรียงบัญชี</strong> ลากเรียงลำดับบัญชีได้ตามใจ</p>
-
-<h3>ซิงก์ iCloud</h3>
-<p>ทำงานอัตโนมัติถ้าคุณ sign in iCloud — ข้อมูลตามไปทุกเครื่องที่ใช้ Apple ID เดียวกัน เช็คสถานะใน เพิ่มเติม → ความปลอดภัย & ซิงก์</p>
-<p>ดูสถานะได้ที่ ตั้งค่า → ความปลอดภัย &amp; ซิงก์: ไม่มีรายการค้างส่ง / กำลังซิงก์ / รอสัญญาณเน็ต / ยังไม่ได้ลงชื่อ iCloud. แต่ละสมุดที่แชร์มี chip บอกสถานะซิงก์ของตัวเอง</p>
-
-<h3>ดู summary ย้อนหลัง</h3>
-<p>summary card บน Dashboard มีปุ่ม chevron ซ้าย/ขวา ข้างชื่อเดือน — ดูยอดของเดือนก่อนๆ ได้โดยไม่ต้องเปิดหน้าอื่น</p>
-
-<h3>ชื่อร้านแทนที่ (Merchant Alias)</h3>
-<p>เมื่อ AI อ่านชื่อร้านยาวเกินไป เช่น "STARBUCKS COFFEE COMPANY LIMITED" → คุณเปลี่ยนเป็น "Starbucks" → แอปจำให้ ครั้งหน้าสลิปร้านเดิมจะเปลี่ยนชื่อให้อัตโนมัติ</p>
-<p>จัดการรายการ alias ได้ที่ เพิ่มเติม → "ชื่อร้านแทนที่"</p>
-
-<h3>พื้นที่ภาพ (ลบรูปสลิปเก่า)</h3>
-<p>เพิ่มเติม → "พื้นที่ภาพ" → เลือกอายุภาพที่อยากเก็บ (6 เดือน / 12 เดือน / เก็บถาวร) → กดปุ่ม "ลบรูปเก่ากว่า X เดือน" — รายการเงินยังอยู่ครบ ลบเฉพาะรูป</p>
-
-<h3>Quick Actions (Home Screen)</h3>
-<p>กดค้างที่ icon DooSpend บน Home Screen → menu: ถ่ายสลิป, สแกนจ่าย, เพิ่มรายการ, พูด</p>
-
-<h3>Widget (หน้าโฮม + Lock Screen)</h3>
-<p>กดค้างที่หน้าโฮม → + → ค้นหา "DooSpend" → เลือกขนาดเล็ก/กลาง เห็นยอดเดือนนี้ · งบ · หมวดที่ใช้บ่อย แตะ widget เพื่อเปิดหน้าจดเร็วได้เลย</p>
-<p>Lock Screen / StandBy: กดค้างหน้า Lock Screen → Customize → เพิ่ม widget DooSpend (วงกลมเกจงบ / สี่เหลี่ยม / บรรทัดเหนือนาฬิกา) — สีจะเป็นโทนเดียวตามระบบ</p>
-
-<h3>Siri &amp; Shortcuts (บันทึกด่วน)</h3>
-<p>สั่งจดรายจ่ายโดยไม่ต้องเปิดแอป: พูดกับ Siri "จดรายจ่ายด่วนใน DooSpend" หรือสร้าง Shortcut "บันทึกด่วน" (ใส่จำนวน + หมวด) แล้วผูกกับ Action Button / Home Screen / Spotlight — กดทีเดียวลงรายการทันที</p>
-
-<h3>ผ่อน (Installments)</h3>
+</section>
+<section class="hsec" id="debts-instalments-and-recurring">
+<h2>หนี้ ผ่อน &amp; รายการประจำ<a class="anc" href="#debts-instalments-and-recurring" aria-label="link">#</a></h2><h3 id="instalments">ผ่อน (Installments)<a class="anc" href="#instalments" aria-label="link">#</a></h3>
 <p>บันทึกยอดผ่อนสินค้า/บริการที่แบ่งจ่ายหลายงวด → แอปติดตามว่าเหลืออีกกี่งวด ยอดคงเหลือเท่าไหร่ และเตือนเมื่อถึงงวด</p>
 <p><strong>แผนผ่อนไม่จดเงินให้เองเงียบๆ</strong> — พอใกล้ถึงงวด แอปหย่อน "งวดผ่อน" เข้า <strong>ตรวจสอบ</strong> ให้คุณกดยืนยัน เหมือนรายจ่ายประจำ เพราะวันที่จ่ายจริงกับวันครบกำหนดมักไม่ตรงกัน และบางเดือนก็จ่ายไม่ตรงยอด</p>
 <ul>
@@ -398,7 +439,7 @@
   <li><strong>ลบแผน = เลิกติดตามหนี้ ไม่ใช่ลบเงินที่จ่ายไปแล้ว</strong> — รายการจ่ายที่ผูกไว้ยังอยู่ในสมุด แค่ปลดออกจากแผน</li>
 </ul>
 
-<h3>ยืม — ให้ยืม</h3>
+<h3 id="lending-and-borrowing">ยืม — ให้ยืม<a class="anc" href="#lending-and-borrowing" aria-label="link">#</a></h3>
 <p>เงินที่ยืมเพื่อนมา หรือให้เพื่อนยืมไป อยู่ที่ <strong>เพิ่มเติม → ผ่อน / ยืม-ให้ยืม</strong> ที่เดียวกับแผนผ่อน</p>
 <p><strong>ยอดค้างเข้าสมการ "เงินสุทธิ" ให้เอง</strong> — เงินที่ให้เพื่อนยืมไปยังเป็นของคุณ (บวก) เงินที่ยืมมายังต้องคืน (ลบ) การ์ดเงินสุทธิในกระเป๋าจึงนับให้ทั้งสองทาง</p>
 <ul>
@@ -417,7 +458,7 @@
 <p><strong>หน้าหนี้</strong> — ปุ่ม <strong>"บันทึกจ่ายคืน"</strong> อยู่เหนือประวัติ และบอกยอดที่จะบันทึก · ประวัติการจ่ายแต่ละแถวบอกวันที่และยอด อ่านแบบเดียวกับประวัติการออม</p>
 <p><strong>ฟรี:</strong> จดหนี้ไม่จำกัดก้อน บันทึกการคืน ดูยอดค้าง · <strong>Pro:</strong> ก้อนที่คิดดอกเบี้ย (แอปเป็นคนคิดดอก เกลี่ยงวด และเฝ้าวันครบให้) — ก้อนที่คิดดอกไว้ก่อนหน้ายังแก้ได้ตลอด</p>
 
-<h3>รายจ่ายประจำ (Subscriptions &amp; รายเดือน)</h3>
+<h3 id="recurring-payments">รายจ่ายประจำ (Subscriptions &amp; รายเดือน)<a class="anc" href="#recurring-payments" aria-label="link">#</a></h3>
 <p>รวมรายจ่ายที่จ่ายเป็นรอบ — ทั้งค่าสมาชิก (Netflix, Spotify, iCloud), ค่างวดรถ, ค่าเช่า, ประกัน, ค่าน้ำค่าไฟ — ไว้ที่เดียว พร้อมยอดรวมต่อเดือน/ต่อปี</p>
 <ul>
   <li><strong>รอบบิล</strong> เลือกได้ทั้ง รายสัปดาห์ / รายเดือน / รายปี — รายสัปดาห์เลือก<strong>วันในสัปดาห์</strong> · รายเดือนตั้ง "ตัดเงินวันที่" และตัด<strong>ทุก 1, 2, 3, 4 หรือ 6 เดือน</strong>ได้ · รายปีเลือก<strong>วันและเดือน</strong> (ยอดรายปีถูกเฉลี่ยเป็นต่อเดือนในยอดรวม จะได้เทียบกันได้) · ราคาในแถวคือราคา<strong>ต่อหนึ่งรอบ</strong> — บิลทุก 2 เดือนแสดงเป็น "/2 เดือน"</li>
@@ -440,41 +481,47 @@
 <p><strong>ผูกรายการกับรอบ</strong> — แตะบิลเพื่อดู<strong>หน้ารอบ</strong>: รอบไหนจ่ายแล้ว รอบไหนยังรอ · รายการที่ยืนยันจากตรวจสอบหรือจ่ายจากปุ่มในหน้ารอบผูกกับรอบนั้นให้เอง · ผูก/เลิกผูกทำที่หน้ารอบที่เดียว · รายการที่ผูกอยู่แก้ยอด วันที่ บัญชีได้ตามปกติ แต่เปลี่ยนจ่าย/รับไม่ได้ · ลบรายการ = รอบนั้นกลับเป็นยังไม่จ่าย</p>
 <p>หรือตอนจดรายจ่าย เปิด <strong>"ทำซ้ำทุกเดือน"</strong> ใต้ช่องวันที่ → แอปตั้งรายการรายเดือนให้เอง เดือนหน้าจะเตือน + เด้งเข้าคิว "ตรวจสอบ" ให้ยืนยันยอด. แก้/หยุดได้ที่ <strong>รายจ่ายประจำ</strong> (การหยุดทำซ้ำทำที่นี่ ไม่ใช่ที่ตัวรายการ — ลบรายการเดือนใดเดือนหนึ่งไม่ได้หยุดการทำซ้ำ)</p>
 
-<h3>จัดการข้อมูลซ้ำ</h3>
-<p>ถ้าซิงก์ทำรายการซ้ำขึ้นมา (เช่น กู้คืนทับ หรือ iCloud ส่งซ้ำ) กระดิ่งจะบอก แล้วกด <strong>"รวมทั้งหมด"</strong> เคลียร์ทีเดียวได้ — <strong>แอปไม่ลบข้อมูลให้เองเงียบๆ</strong> ทุกครั้งต้องให้คุณกดยืนยัน</p>
+</section>
+<section class="hsec" id="transactions-and-customizing">
+<h2>หน้ารายการ &amp; ปรับแต่ง<a class="anc" href="#transactions-and-customizing" aria-label="link">#</a></h2><h3 id="tags">แท็ก<a class="anc" href="#tags" aria-label="link">#</a></h3>
+<p>ติดแท็กข้ามหมวดได้ เช่น "รถคันนี้" "งานลูกค้า A" "ลดหย่อนภาษี" — <strong>ติดได้หลายแท็กต่อรายการ</strong> ในฟอร์มจด (ปุ่ม # บนแป้น หรือ "เพิ่มเติม") · ดูยอดรวมของแท็กได้ที่ เพิ่มเติม → แท็ก แตะเม็ด "N รายการ" เพื่อดูรายการของแท็กนั้น · กดค้างที่แท็ก → "ติดให้รายการเก่า…" เพื่อติดย้อนหลัง · ผู้ใช้ฟรีสร้างได้ 1 แท็ก · ชิปแนะนำแท็กจากร้านเป็น Pro</p>
 
-<h3>บัญชีเริ่มต้น + ทางลัดในลิสต์</h3>
+<h3 id="transactions">หน้ารายการ — เลือกช่วง &amp; กราฟแนวโน้ม<a class="anc" href="#transactions" aria-label="link">#</a></h3>
+<p>แตะชื่อช่วงบนหัวจอ เลือกดูเป็น วัน · สัปดาห์ · เดือน · ปี หรือแท็บ <strong>ช่วง</strong> (7 วัน · 30 วัน · 3 เดือน · ปีนี้ · ปีที่แล้ว · ทั้งหมด · กำหนดเอง) · ดูรายปีจะเห็นการ์ดรายเดือน (รับ · จ่าย · สุทธิ) แตะเพื่อกาง · มีกราฟแนวโน้มเส้น/แท่ง · ไอคอน ⓘ ข้าง "จ่าย"/"รับ" บนการ์ด = มีรายการที่ไม่นับในช่วงนี้ แตะเพื่อดู · ส่งออก PDF จากแท็บปีมีหน้ายอดรายเดือน</p>
+<p><strong>ค้นหา</strong> — แตะ 🔍 มุมขวาบน ค้นจากชื่อร้าน โน้ต หมวด หรือบัญชี · ตัวกรองทั้งหมดรวมอยู่ในชีตเดียว (กรวยข้างช่องค้นหา) · มีช่วงลัด · บรรทัดยอดตอนค้นหาบอกจำนวนรายการ ยอดจ่าย/รับ และส่งออกผลค้นหาได้ (Pro)</p>
+
+<h3 id="looking-back-at-past-months">ดู summary ย้อนหลัง<a class="anc" href="#looking-back-at-past-months" aria-label="link">#</a></h3>
+<p>summary card บน Dashboard มีปุ่ม chevron ซ้าย/ขวา ข้างชื่อเดือน — ดูยอดของเดือนก่อนๆ ได้โดยไม่ต้องเปิดหน้าอื่น</p>
+
+<h3 id="customize-the-keypad">ปรับแต่งแป้นพิมพ์<a class="anc" href="#customize-the-keypad" aria-label="link">#</a></h3>
+<p>เลือกแสดงหรือซ่อนปุ่มลัดบนแป้นจด — งวดผ่อน · สมุด · เพื่อใคร · แท็ก — ได้ที่ ตั้งค่า → ปรับแต่งแป้นพิมพ์</p>
+
+<h3 id="customize-the-entry-screen">ปรับแต่งหน้าจด<a class="anc" href="#customize-the-entry-screen" aria-label="link">#</a></h3>
+<p>ยกแถวที่ใช้บ่อย (เช่น สมุด · เพื่อใคร · แท็ก) ขึ้นมาไว้บนหน้าจดเลย ไม่ต้องเข้า "เพิ่มเติม" แล้วลากเรียงลำดับได้ — ที่ ตั้งค่า → ปรับแต่งหน้าจด · แถวที่ยกขึ้นมาจะไม่อยู่ใน "เพิ่มเติม" แล้ว</p>
+
+<h3 id="reorder-accounts-in-wallet">เรียงบัญชีในกระเป๋า<a class="anc" href="#reorder-accounts-in-wallet" aria-label="link">#</a></h3>
+<p>กระเป๋า → เมนู ⋯ → <strong>จัดเรียงบัญชี</strong> ลากเรียงลำดับบัญชีได้ตามใจ</p>
+
+<h3 id="default-account-and-list">บัญชีเริ่มต้น + ทางลัดในลิสต์<a class="anc" href="#default-account-and-list" aria-label="link">#</a></h3>
 <ul>
   <li>ตั้งบัญชีที่ใช้บ่อยเป็นค่าเริ่มต้น — เพิ่มเติม → กระเป๋าเงิน → <strong>แตะดาว</strong>หลังชื่อบัญชี รายการใหม่จะเริ่มที่บัญชีนั้นให้เลย</li>
   <li>ในลิสต์รายการ: <strong>ปัดซ้าย</strong>เพื่อลบ (มีปุ่ม "เลิกทำ" ให้กดคืนได้) · <strong>กดค้าง</strong>เพื่อดูรายละเอียด แก้ไข ทำซ้ำ หรือลบ</li>
 </ul>
 
-<h3>ภาษา &amp; ปฏิทิน</h3>
+<h3 id="merchant-aliases">ชื่อร้านแทนที่ (Merchant Alias)<a class="anc" href="#merchant-aliases" aria-label="link">#</a></h3>
+<p>เมื่อ AI อ่านชื่อร้านยาวเกินไป เช่น "STARBUCKS COFFEE COMPANY LIMITED" → คุณเปลี่ยนเป็น "Starbucks" → แอปจำให้ ครั้งหน้าสลิปร้านเดิมจะเปลี่ยนชื่อให้อัตโนมัติ</p>
+<p>จัดการรายการ alias ได้ที่ เพิ่มเติม → "ชื่อร้านแทนที่"</p>
+
+<h3 id="merging-duplicates">จัดการข้อมูลซ้ำ<a class="anc" href="#merging-duplicates" aria-label="link">#</a></h3>
+<p>ถ้าซิงก์ทำรายการซ้ำขึ้นมา (เช่น กู้คืนทับ หรือ iCloud ส่งซ้ำ) กระดิ่งจะบอก แล้วกด <strong>"รวมทั้งหมด"</strong> เคลียร์ทีเดียวได้ — <strong>แอปไม่ลบข้อมูลให้เองเงียบๆ</strong> ทุกครั้งต้องให้คุณกดยืนยัน</p>
+
+<h3 id="language-and-calendar">ภาษา &amp; ปฏิทิน<a class="anc" href="#language-and-calendar" aria-label="link">#</a></h3>
 <p><strong>เพิ่มเติม → ภาษา</strong> — สลับไทย / English / ตามเครื่อง ได้ทุกเมื่อ ไม่ต้องปิดแอป</p>
 <p>ปฏิทินเลือกได้ <strong>พ.ศ. หรือ ค.ศ.</strong> แยกจากภาษา — เป็นแค่เรื่องว่าจะ<em>แสดง</em>ยังไง ไฟล์สำรองข้อมูลใช้ ค.ศ. เสมอไม่ว่าตั้งอะไรไว้ ย้ายเครื่องข้ามการตั้งค่าได้ปลอดภัย</p>
 
-<h3>ให้ AI ช่วยจดให้ (เปิด/ปิดได้)</h3>
-<p>ก่อนส่งอะไรให้ AI ครั้งแรก แอปจะ<strong>ถามก่อนเสมอ</strong> — บอกว่าส่งอะไร ส่งให้ใคร และเอาไปทำอะไร แล้วคุณเป็นคนกดอนุญาต ไม่กดก็ยังจดมือได้ทุกอย่างตามปกติ</p>
-<ul>
-  <li><strong>ส่งอะไร</strong> — เฉพาะภาพสลิป/ไฟล์สเตทเมนต์/ข้อความที่คุณสั่งให้อ่าน <strong>เฉพาะตอนคุณกดใช้</strong> ไม่ได้ส่งสมุดทั้งเล่ม และไม่มีอะไรถูกส่งเบื้องหลัง</li>
-  <li><strong>ส่งให้ใคร</strong> — ผู้ช่วย AI ของ <strong>Anthropic (Claude)</strong> ซึ่งไม่นำคำขอผ่าน API ไปฝึกโมเดล</li>
-  <li><strong>เสียงไม่ออกจากเครื่อง</strong> — "พูด" แปลงเสียงเป็นข้อความบนเครื่องคุณ แล้วส่งเฉพาะข้อความ</li>
-  <li><strong>ถอนได้ทุกเมื่อ</strong> ที่ <strong>เพิ่มเติม → โควตา AI → "ให้ AI ช่วยจดให้"</strong> — ปิดแล้วจะขออนุญาตใหม่ก่อนส่งครั้งต่อไป</li>
-</ul>
-<p>อยากอ่านสรุปว่าข้อมูลอยู่ที่ไหนบ้าง ดูที่ <strong>เพิ่มเติม → ข้อมูลของคุณ</strong></p>
-
-<h3>ล็อกด้วย Face ID</h3>
-<p>เปิดล็อกแอปใน เพิ่มเติม → ต้องผ่าน Face ID / Touch ID ทุกครั้งที่เปิด DooSpend กันคนอื่นแอบดูรายการเงินของคุณ</p>
-
-<h3>สำรอง &amp; กู้คืน (.json) + ส่งออก CSV/PDF</h3>
-<p>เพิ่มเติม → สำรองข้อมูลเป็นไฟล์ .json แล้วกู้คืนกลับได้เต็มรูปแบบ. หรือส่งออกรายการเป็น CSV / PDF เพื่อเปิดในโปรแกรมอื่นหรือเก็บเป็นหลักฐาน</p>
-<p><strong>ส่งออกเฉพาะที่เห็นอยู่ (Pro)</strong> — ในจอรายการ ตั้งตัวกรองไว้แล้วเปิดเมนูกรวย → <strong>"ส่งออกตามที่กรองอยู่"</strong> ได้เฉพาะรายการที่ตัวกรองโชว์ · ในจอสมุด กดปุ่มส่งออกบนแถบบน ได้ทุกรายการของสมุดนั้นตลอดอายุสมุด</p>
-<p><strong>ไฟล์สำรองในเครื่อง</strong> — สำเนาที่แอปเก็บให้ก่อนเปลี่ยนสกุลเงิน อยู่ในจอ สำรอง &amp; กู้คืน (เก็บ 3 ชุดล่าสุด) · กด ⋯ ที่แถวเพื่อ <strong>"กู้คืนจากสำเนานี้"</strong> หรือ <strong>"ส่งไปเก็บที่อื่น"</strong> · สำเนาอยู่ในเครื่องนี้เท่านั้น ลบแอปแล้วหายด้วย และ "ลบข้อมูลทั้งหมด" ลบสำเนาเหล่านี้ด้วย</p>
-
-<h3>แชร์เข้าแอป (Share Sheet)</h3>
-<p>เจอสลิป / PDF / สกรีนช็อตในแอปอื่น (แชท, แกลเลอรี, อีเมล) → กดปุ่มแชร์ → เลือก DooSpend → ภาพเข้าคิว "ตรวจสอบ" ให้ AI อ่านต่อ ไม่ต้องเซฟรูปแล้วเปิดแอปเอง</p>
-
-<h3>ตรวจสอบ (คิวรอยืนยัน)</h3>
+</section>
+<section class="hsec" id="review-and-shortcuts">
+<h2>ตรวจสอบ &amp; ทางลัด<a class="anc" href="#review-and-shortcuts" aria-label="link">#</a></h2><h3 id="the-review-tab">ตรวจสอบ (คิวรอยืนยัน)<a class="anc" href="#the-review-tab" aria-label="link">#</a></h3>
 <figure class="shot"><img src="help-inbox-row.png" width="900" height="275" loading="lazy" decoding="async" alt="แถวที่รอยืนยันในแท็บ "ตรวจสอบ" — แก้ยอด/ร้าน/หมวดได้ก่อนกดยืนยัน"><figcaption>แถวที่รอยืนยันในแท็บ "ตรวจสอบ" — แก้ยอด/ร้าน/หมวดได้ก่อนกดยืนยัน</figcaption></figure>
 <p>ทุกรายการที่ AI อ่านมา (สลิป, voice/text, statement, QR) มารอที่แท็บ "ตรวจสอบ" ให้คุณแก้ยอด / ร้าน / หมวด / วันที่ ได้ก่อน แล้วยืนยันก่อนเข้าบัญชีจริงเสมอ</p>
 <ul>
@@ -487,7 +534,49 @@
   <li>รายการที่เป็นการโอน (เติม e-wallet · โอนเข้าบัญชีตัวเอง) สลับไปแถบ <strong>"โอน"</strong> แล้วเลือกบัญชีปลายทาง — ไม่ถูกนับเป็นรายจ่าย</li>
 </ul>
 
-<h2>Quota AI</h2>
+<h3 id="share-into-the-app">แชร์เข้าแอป (Share Sheet)<a class="anc" href="#share-into-the-app" aria-label="link">#</a></h3>
+<p>เจอสลิป / PDF / สกรีนช็อตในแอปอื่น (แชท, แกลเลอรี, อีเมล) → กดปุ่มแชร์ → เลือก DooSpend → ภาพเข้าคิว "ตรวจสอบ" ให้ AI อ่านต่อ ไม่ต้องเซฟรูปแล้วเปิดแอปเอง</p>
+
+<h3 id="letting-ai-do-the-logging">ให้ AI ช่วยจดให้ (เปิด/ปิดได้)<a class="anc" href="#letting-ai-do-the-logging" aria-label="link">#</a></h3>
+<p>ก่อนส่งอะไรให้ AI ครั้งแรก แอปจะ<strong>ถามก่อนเสมอ</strong> — บอกว่าส่งอะไร ส่งให้ใคร และเอาไปทำอะไร แล้วคุณเป็นคนกดอนุญาต ไม่กดก็ยังจดมือได้ทุกอย่างตามปกติ</p>
+<ul>
+  <li><strong>ส่งอะไร</strong> — เฉพาะภาพสลิป/ไฟล์สเตทเมนต์/ข้อความที่คุณสั่งให้อ่าน <strong>เฉพาะตอนคุณกดใช้</strong> ไม่ได้ส่งสมุดทั้งเล่ม และไม่มีอะไรถูกส่งเบื้องหลัง</li>
+  <li><strong>ส่งให้ใคร</strong> — ผู้ช่วย AI ของ <strong>Anthropic (Claude)</strong> ซึ่งไม่นำคำขอผ่าน API ไปฝึกโมเดล</li>
+  <li><strong>เสียงไม่ออกจากเครื่อง</strong> — "พูด" แปลงเสียงเป็นข้อความบนเครื่องคุณ แล้วส่งเฉพาะข้อความ</li>
+  <li><strong>ถอนได้ทุกเมื่อ</strong> ที่ <strong>เพิ่มเติม → โควตา AI → "ให้ AI ช่วยจดให้"</strong> — ปิดแล้วจะขออนุญาตใหม่ก่อนส่งครั้งต่อไป</li>
+</ul>
+<p>อยากอ่านสรุปว่าข้อมูลอยู่ที่ไหนบ้าง ดูที่ <strong>เพิ่มเติม → ข้อมูลของคุณ</strong></p>
+
+<h3 id="quick-actions">Quick Actions (Home Screen)<a class="anc" href="#quick-actions" aria-label="link">#</a></h3>
+<p>กดค้างที่ icon DooSpend บน Home Screen → menu: ถ่ายสลิป, สแกนจ่าย, เพิ่มรายการ, พูด</p>
+
+<h3 id="widgets">Widget (หน้าโฮม + Lock Screen)<a class="anc" href="#widgets" aria-label="link">#</a></h3>
+<p>กดค้างที่หน้าโฮม → + → ค้นหา "DooSpend" → เลือกขนาดเล็ก/กลาง เห็นยอดเดือนนี้ · งบ · หมวดที่ใช้บ่อย แตะ widget เพื่อเปิดหน้าจดเร็วได้เลย</p>
+<p>Lock Screen / StandBy: กดค้างหน้า Lock Screen → Customize → เพิ่ม widget DooSpend (วงกลมเกจงบ / สี่เหลี่ยม / บรรทัดเหนือนาฬิกา) — สีจะเป็นโทนเดียวตามระบบ</p>
+
+<h3 id="siri-and-shortcuts">Siri &amp; Shortcuts (บันทึกด่วน)<a class="anc" href="#siri-and-shortcuts" aria-label="link">#</a></h3>
+<p>สั่งจดรายจ่ายโดยไม่ต้องเปิดแอป: พูดกับ Siri "จดรายจ่ายด่วนใน DooSpend" หรือสร้าง Shortcut "บันทึกด่วน" (ใส่จำนวน + หมวด) แล้วผูกกับ Action Button / Home Screen / Spotlight — กดทีเดียวลงรายการทันที</p>
+
+</section>
+<section class="hsec" id="sync-backup-and-security">
+<h2>ซิงก์ สำรอง &amp; ความปลอดภัย<a class="anc" href="#sync-backup-and-security" aria-label="link">#</a></h2><h3 id="icloud-sync">ซิงก์ iCloud<a class="anc" href="#icloud-sync" aria-label="link">#</a></h3>
+<p>ทำงานอัตโนมัติถ้าคุณ sign in iCloud — ข้อมูลตามไปทุกเครื่องที่ใช้ Apple ID เดียวกัน เช็คสถานะใน เพิ่มเติม → ความปลอดภัย & ซิงก์</p>
+<p>ดูสถานะได้ที่ ตั้งค่า → ความปลอดภัย &amp; ซิงก์: ไม่มีรายการค้างส่ง / กำลังซิงก์ / รอสัญญาณเน็ต / ยังไม่ได้ลงชื่อ iCloud. แต่ละสมุดที่แชร์มี chip บอกสถานะซิงก์ของตัวเอง</p>
+
+<h3 id="backup-and-restore-export-csv">สำรอง &amp; กู้คืน (.json) + ส่งออก CSV/PDF<a class="anc" href="#backup-and-restore-export-csv" aria-label="link">#</a></h3>
+<p>เพิ่มเติม → สำรองข้อมูลเป็นไฟล์ .json แล้วกู้คืนกลับได้เต็มรูปแบบ. หรือส่งออกรายการเป็น CSV / PDF เพื่อเปิดในโปรแกรมอื่นหรือเก็บเป็นหลักฐาน</p>
+<p><strong>ส่งออกเฉพาะที่เห็นอยู่ (Pro)</strong> — ในจอรายการ ตั้งตัวกรองไว้แล้วเปิดเมนูกรวย → <strong>"ส่งออกตามที่กรองอยู่"</strong> ได้เฉพาะรายการที่ตัวกรองโชว์ · ในจอสมุด กดปุ่มส่งออกบนแถบบน ได้ทุกรายการของสมุดนั้นตลอดอายุสมุด</p>
+<p><strong>ไฟล์สำรองในเครื่อง</strong> — สำเนาที่แอปเก็บให้ก่อนเปลี่ยนสกุลเงิน อยู่ในจอ สำรอง &amp; กู้คืน (เก็บ 3 ชุดล่าสุด) · กด ⋯ ที่แถวเพื่อ <strong>"กู้คืนจากสำเนานี้"</strong> หรือ <strong>"ส่งไปเก็บที่อื่น"</strong> · สำเนาอยู่ในเครื่องนี้เท่านั้น ลบแอปแล้วหายด้วย และ "ลบข้อมูลทั้งหมด" ลบสำเนาเหล่านี้ด้วย</p>
+
+<h3 id="face-id-lock">ล็อกด้วย Face ID<a class="anc" href="#face-id-lock" aria-label="link">#</a></h3>
+<p>เปิดล็อกแอปใน เพิ่มเติม → ต้องผ่าน Face ID / Touch ID ทุกครั้งที่เปิด DooSpend กันคนอื่นแอบดูรายการเงินของคุณ</p>
+
+<h3 id="photo-storage">พื้นที่ภาพ (ลบรูปสลิปเก่า)<a class="anc" href="#photo-storage" aria-label="link">#</a></h3>
+<p>เพิ่มเติม → "พื้นที่ภาพ" → เลือกอายุภาพที่อยากเก็บ (6 เดือน / 12 เดือน / เก็บถาวร) → กดปุ่ม "ลบรูปเก่ากว่า X เดือน" — รายการเงินยังอยู่ครบ ลบเฉพาะรูป</p>
+
+</section>
+<section class="hsec" id="ai-quota">
+<h2>Quota AI<a class="anc" href="#ai-quota" aria-label="link">#</a></h2>
 <table>
   <thead>
     <tr><th>แผน</th><th>โควต้า</th><th>ราคา</th></tr>
@@ -501,42 +590,44 @@
 <p>1 "ครั้ง" = 1 งานที่ AI อ่าน: <strong>สลิป 1 รูป</strong> · <strong>โน้ต/เสียง 1 ข้อความ</strong> · <strong>สเตทเมนต์ 1 ไฟล์</strong> (กี่หน้าก็นับครั้งเดียว) = 1 ครั้ง. เลือกจากคลัง/แชร์ 10 รูปพร้อมกัน = 10 ครั้ง. จดมือไม่นับ. กด "ตรวจสอบใหม่" บนรายการที่ AI อ่านไปแล้วนับเพิ่ม</p>
 <p>โควตา<strong>นับรวมทุกเครื่องที่ใช้ Apple ID เดียวกัน</strong> — iPhone กับ iPad เห็นตัวเลขเดียวกัน</p>
 
-<h2>คำถามที่พบบ่อย</h2>
-
-<h3>Q: ข้อมูลของฉันปลอดภัยมั้ย?</h3>
+</section>
+<section class="hsec" id="faq">
+<h2>คำถามที่พบบ่อย<a class="anc" href="#faq" aria-label="link">#</a></h2><h3 id="faq-data-safe">Q: ข้อมูลของฉันปลอดภัยมั้ย?<a class="anc" href="#faq-data-safe" aria-label="link">#</a></h3>
 <p>ปลอดภัย — เก็บใน iPhone/iPad + iCloud private ส่วนตัวของคุณ เราไม่มี server ที่เก็บ transactions ดูรายละเอียดที่ <a href="privacy.html">นโยบายความเป็นส่วนตัว</a></p>
 
-<h3>Q: แอปทำงานบน Android มั้ย?</h3>
+<h3 id="faq-there-android-version">Q: แอปทำงานบน Android มั้ย?<a class="anc" href="#faq-there-android-version" aria-label="link">#</a></h3>
 <p>ยังไม่มี — ตอนนี้ DooSpend เป็น iOS-only ถ้าใช้ Android ลงชื่อรับข่าวเวอร์ชัน Android ได้ที่ <a href="./#android">หน้าแรก</a></p>
 
-<h3>Q: ถ้าเปลี่ยน iPhone ข้อมูลจะหายมั้ย?</h3>
+<h3 id="faq-if-change-iphone-lose-data">Q: ถ้าเปลี่ยน iPhone ข้อมูลจะหายมั้ย?<a class="anc" href="#faq-if-change-iphone-lose-data" aria-label="link">#</a></h3>
 <p>ไม่หาย ถ้าคุณ sign in iCloud — ลง DooSpend บนเครื่องใหม่ → ข้อมูลขึ้นเองภายในไม่กี่วินาที</p>
 
-<h3>Q: ในสมุด — ใครเห็นข้อมูลของฉัน?</h3>
+<h3 id="faq-pocket-see-data">Q: ในสมุด — ใครเห็นข้อมูลของฉัน?<a class="anc" href="#faq-pocket-see-data" aria-label="link">#</a></h3>
 <p>เฉพาะคนที่คุณ (หรือเจ้าของสมุด) เชิญผ่าน iCloud link เท่านั้น สมาชิกเห็นรายการทั้งหมดในสมุด แต่ไม่เห็นรายการส่วนตัวของคุณ (ส่วนตัว = ไม่ tag สมุด)</p>
 
-<h3>Q: Settlement คำนวณยังไง?</h3>
+<h3 id="faq-settlement-calculated">Q: Settlement คำนวณยังไง?<a class="anc" href="#faq-settlement-calculated" aria-label="link">#</a></h3>
 <p>ค่าเริ่มต้นหารเท่ากัน แต่เลือกได้ว่าบิลไหนหารกับใคร แล้วแอปคำนวณ minimum transfers ให้. ใครจ่ายเกิน → คนอื่นติด, ใครจ่ายขาด → ต้องคืน</p>
 
-<h3>Q: AI อ่านสลิปผิด ทำยังไง?</h3>
+<h3 id="faq-ai-misread-slip-now">Q: AI อ่านสลิปผิด ทำยังไง?<a class="anc" href="#faq-ai-misread-slip-now" aria-label="link">#</a></h3>
 <p>ตรวจที่ pending entry ก่อนยืนยัน — คุณแก้ยอด, ร้านค้า, วันที่ ได้ ถ้าแก้ชื่อร้านบ่อยๆ ครั้งหน้าแอปจะจำให้ผ่าน Merchant Alias</p>
 
-<h3>Q: ตอนใช้ AI ส่งอะไรออกจากเครื่องบ้าง?</h3>
+<h3 id="faq-use-ai-leaves-phone">Q: ตอนใช้ AI ส่งอะไรออกจากเครื่องบ้าง?<a class="anc" href="#faq-use-ai-leaves-phone" aria-label="link">#</a></h3>
 <p>เฉพาะภาพ/ข้อความที่คุณเลือกให้อ่าน (สลิป, statement, screenshot, ข้อความ voice) ส่งผ่าน proxy ของเราไปยัง Anthropic Claude พร้อม "รหัสสุ่มประจำเครื่อง" สำหรับนับโควตา/กันใช้เกิน — รหัสนี้ไม่ใช่ชื่อ อีเมล หรือ Apple ID และไม่บอกว่าคุณเป็นใคร proxy เก็บแค่จำนวนครั้ง ไม่เก็บภาพ/เนื้อหา</p>
 
-<h3>Q: Best Card แนะนำจากข้อมูลโปรจริงไหม?</h3>
+<h3 id="faq-does-best-card-use-real-live">Q: Best Card แนะนำจากข้อมูลโปรจริงไหม?<a class="anc" href="#faq-does-best-card-use-real-live" aria-label="link">#</a></h3>
 <p>คำนวณจาก "กฎเก็บแต้ม/เงินคืน" ที่คุณตั้งเองให้แต่ละบัตร (หมวด, %, เพดาน, ยอดขั้นต่ำ) — ไม่ใช่ฐานข้อมูลโปรสดของธนาคาร ดังนั้นถ้าโปรเปลี่ยน อย่าลืมอัปเดตกฎ แอปจะอธิบายเหตุผลทุกครั้งให้คุณตรวจสอบเองได้</p>
 
-<h3>Q: บัตร co-brand ที่ให้แต้มเฉพาะร้าน (เช่น บัตร Shopee) ตั้งกฎยังไง?</h3>
+<h3 id="faq-set-up-co-brand-card-that-only">Q: บัตร co-brand ที่ให้แต้มเฉพาะร้าน (เช่น บัตร Shopee) ตั้งกฎยังไง?<a class="anc" href="#faq-set-up-co-brand-card-that-only" aria-label="link">#</a></h3>
 <p>ตอนเพิ่ม/แก้กฎ มีช่อง "ร้านที่ใช้กฎ" อยู่ใต้ตัวเลือกหมวด — ใส่คำที่อยู่ในชื่อร้าน (เช่น shopee) คั่นด้วยจุลภาค แล้วเลือกโหมด <strong>"เฉพาะร้านนี้"</strong> = ได้แต้มเฉพาะเมื่อจดรายการร้านนั้น หรือ <strong>"ยกเว้นร้านนี้"</strong> = ได้ทุกร้านยกเว้นที่ใส่ (เช่น โปรร้านอาหารที่ไม่รวม Grab/LINE MAN) · การจับคู่ดูจากช่อง "ร้านค้า" ของรายการ — จดชื่อร้านไว้ด้วยถึงจะได้แต้มพิเศษ ตอนจดแอปมีชิปชื่อร้านจากกฎให้แตะ ไม่ต้องพิมพ์เอง</p>
 
-<h3>Q: ยกเลิก Pro ยังไง?</h3>
+<h3 id="faq-cancel-pro">Q: ยกเลิก Pro ยังไง?<a class="anc" href="#faq-cancel-pro" aria-label="link">#</a></h3>
 <p>iOS Settings → Apple ID (ชื่อคุณบนสุด) → Subscriptions → DooSpend Pro → ยกเลิก ใช้ได้จนครบรอบเดือนที่จ่ายไปแล้ว</p>
 
-<h3>Q: ส่ง refund ตรงกับคุณได้มั้ย?</h3>
+<h3 id="faq-refund-me-directly">Q: ส่ง refund ตรงกับคุณได้มั้ย?<a class="anc" href="#faq-refund-me-directly" aria-label="link">#</a></h3>
 <p>ไม่ได้ — refund ทำผ่าน Apple ที่ <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a></p>
 
-<h2>ติดต่อ</h2>
+</section>
+<section class="hsec" id="contact">
+<h2>ติดต่อ<a class="anc" href="#contact" aria-label="link">#</a></h2>
 <p>ปัญหาการใช้งาน, feature request, รายงานบัก — เลือกช่องทางที่สะดวก:</p>
 <ul>
 <li>อีเมล — <a href="mailto:hello@doospend.com">hello@doospend.com</a></li>
@@ -545,12 +636,80 @@
 </ul>
 <p>บอกเวอร์ชันแอปมาด้วยจะช่วยได้มาก (ดูที่ เพิ่มเติม → เวอร์ชัน) ปุ่มทักแชทในแอปคัดลอกให้อัตโนมัติแล้ว</p>
 
+</section>
+
+<a class="totop" href="#">↑ กลับขึ้นบน</a>
 <footer>
   <span>© 2026 DooSpend</span>
   <span><a href="./">Home</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
 </footer>
 
+
+</main>
 </div>
+<script>
+(function(){
+  var toc=document.querySelector('.toc'), links=[].slice.call(toc.querySelectorAll('a[href^="#"]'));
+  var byId={}; links.forEach(function(a){byId[a.getAttribute('href').slice(1)]=a});
+  var heads=[].slice.call(document.querySelectorAll('.hsec, .hmain h3[id]'));
+  var cur=null;
+  function mark(id){
+    if(id===cur) return; cur=id;
+    links.forEach(function(a){a.classList.remove('on')});
+    var a=byId[id]; if(!a) return; a.classList.add('on');
+    var g=a.closest('.grp');
+    toc.querySelectorAll('.grp').forEach(function(x){x.classList.toggle('open',x===g)});
+    if(!toc.classList.contains('filtering')){
+      var r=a.getBoundingClientRect(), t=toc.getBoundingClientRect();
+      if(r.top<t.top+60||r.bottom>t.bottom-20) toc.scrollTop+=r.top-t.top-120;
+    }
+  }
+  function spy(){
+    var y=window.scrollY+110, id=heads.length?heads[0].id:null;
+    for(var i=0;i<heads.length;i++){ if(heads[i].offsetTop<=y) id=heads[i].id; else break; }
+    mark(id);
+  }
+  heads.sort(function(a,b){return a.offsetTop-b.offsetTop});
+  window.addEventListener('scroll',spy,{passive:true}); window.addEventListener('resize',spy); spy();
+  // ค้นหา: ชื่อหัวข้อ + เนื้อหาใต้หัวข้อ
+  var text={};
+  document.querySelectorAll('.hmain h3[id]').forEach(function(h){
+    var t=h.textContent, n=h.nextElementSibling;
+    while(n&&n.tagName!=='H3'){t+=' '+n.textContent;n=n.nextElementSibling}
+    text[h.id]=t.toLowerCase();
+  });
+  document.querySelectorAll('.hsec').forEach(function(s){text[s.id]=(s.querySelector('h2').textContent+' '+
+    [].slice.call(s.children).filter(function(c){return c.tagName!=='H3'}).map(function(c){return c.textContent}).join(' ')).toLowerCase()});
+  var box=toc.querySelector('input'), none=toc.querySelector('.none');
+  box.addEventListener('input',function(){
+    var q=box.value.trim().toLowerCase(); toc.classList.toggle('filtering',!!q); var any=false;
+    toc.querySelectorAll('.grp').forEach(function(g){
+      var gid=g.dataset.sec, gHit=!q||(text[gid]||'').indexOf(q)>=0, sub=false;
+      g.querySelectorAll('ul li').forEach(function(li){
+        var id=li.querySelector('a').getAttribute('href').slice(1), hit=!q||(text[id]||'').indexOf(q)>=0;
+        li.classList.toggle('hide',!hit); sub=sub||hit;
+      });
+      var show=!q||gHit||sub; g.classList.toggle('hide',!show); any=any||show;
+    });
+    none.style.display=any?'none':'block';
+  });
+  // มือถือ: ลิ้นชักสารบัญ
+  var b=document.body;
+  document.querySelector('.tocbtn').addEventListener('click',function(){b.classList.add('tocopen')});
+  document.querySelector('.scrim').addEventListener('click',function(){b.classList.remove('tocopen')});
+  links.forEach(function(a){a.addEventListener('click',function(){b.classList.remove('tocopen')})});
+})();
+</script>
 <script src="_chat.js?v=8" defer></script>
+<script>
+(function(){
+  var t=document.createElement('div');t.className='toast';document.body.appendChild(t);
+  document.querySelectorAll('.anc').forEach(function(a){a.addEventListener('click',function(e){
+    var url=location.origin+location.pathname+a.getAttribute('href');
+    history.replaceState(null,'',a.getAttribute('href'));
+    if(navigator.clipboard){navigator.clipboard.writeText(url).then(function(){t.textContent='คัดลอกลิงก์หัวข้อนี้แล้ว';t.classList.add('show');setTimeout(function(){t.classList.remove('show')},1600)},function(){})}
+  })});
+})();
+</script>
 </body>
 </html>
