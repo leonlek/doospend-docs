@@ -22,7 +22,7 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="lastUpdated">Last updated: August 8, 2026 · <a href="../privacy.html">ภาษาไทย</a> (the Thai version prevails if the two differ)</p>
+<p class="lastUpdated">Last updated: October 25, 2026 · <a href="../privacy.html">ภาษาไทย</a> (the Thai version prevails if the two differ)</p>
 
 <div class="nav">
   <a href="./">Home</a>
@@ -33,11 +33,11 @@
 </div>
 
 <div class="callout">
-  <strong>In short:</strong> your financial data <strong>does not leave your iPhone/iPad</strong> and your own private Apple iCloud. We have no server that stores your transactions, balances, or accounts. The only things "sent out" are the images/text you ask the AI to read — slips, card statements, order-history screenshots, and voice-note text (to Anthropic, via a Cloudflare Worker). AI requests carry only a "random ID" used to count quota and prevent overuse; it is not your name, email, or Apple ID and does not say who you are.
+  <strong>In short:</strong> your financial data <strong>does not leave your iPhone/iPad</strong> and your own private Apple iCloud (on Android: your device, plus any backup location you choose — see section 5). We have no server that stores your transactions, balances, or accounts. The only things "sent out" are the images/text you ask the AI to read — slips, card statements, order-history screenshots, and voice-note text (to Anthropic, via a Cloudflare Worker). AI requests carry only a "random ID" used to count quota and prevent overuse; it is not your name, email, or Apple ID and does not say who you are.
 </div>
 
 <h2>1. Who we are</h2>
-<p>DooSpend is an independent iOS app (indie developer) built by Apiwat Pengjam. Contact: <a href="mailto:hello@doospend.com">hello@doospend.com</a></p>
+<p>DooSpend is an independent iOS and Android app (indie developer) built by Apiwat Pengjam. Contact: <a href="mailto:hello@doospend.com">hello@doospend.com</a></p>
 
 <h2>2. Data we keep and where it lives</h2>
 <table>
@@ -115,20 +115,39 @@
   <li>"Added by: name" on an entry uses Apple's Apple ID record name — not your email or phone number</li>
 </ul>
 
-<h2>5. Deleting data</h2>
+<h2>5. The Android app</h2>
+<p>The Android app follows the same principles as iOS (no analytics · no user accounts · we have no server that stores financial data). It differs in where data lives and which system services it uses:</p>
+<table>
+  <thead>
+    <tr><th>Topic</th><th>On Android</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Financial data, slip photos, settings</td><td>On the device only (the app's database) · <strong>no syncing between devices</strong>, and shared books are not available on Android yet</td></tr>
+    <tr><td>AI reading slips/text</td><td>Same as section 4.1 — consent is asked before the first send · sent through a Cloudflare Worker to Anthropic · carries a random ID created on the device (not your name/email/Google account) · this ID does not sync between devices, but it comes back if the device restores the app's data from Google's backup</td></tr>
+    <tr><td>Speech</td><td>Converted to text by the Android system speech recognizer (usually Google's, which may process audio on that provider's servers under its own policy) · raw audio is not sent to our proxy or to Anthropic</td></tr>
+    <tr><td>QR scanning / reading text in images</td><td>Done on the device (Google ML Kit for QR · Tesseract for text) · ML Kit may send usage and performance metrics about the API itself to Google under ML Kit's terms — no images or financial data</td></tr>
+    <tr><td>Buying Pro</td><td>Through Google Play Billing · Google handles payment under Google's policy · the app sends the purchase token + the random ID to our proxy to check with Google Play that the purchase is real — no name, email, or card details</td></tr>
+    <tr><td>Google's backup (Android Backup)</td><td>If you have Google backup turned on for the device, Android may copy the app's data to your Google Drive so it can be restored when you reinstall or switch phones · Google stores and encrypts it; we cannot access it · you can turn it off in the device settings</td></tr>
+    <tr><td>Daily auto backup (in the app)</td><td><strong>Off by default</strong> · when on, the app writes a .json backup file once a day to a folder <strong>you choose</strong> (keeping the latest 3) · the file contains all your financial data including attached images and is <strong>not encrypted</strong> — if you choose a cloud folder (e.g. Google Drive), the file is under that provider's care and policy · we never receive this file</td></tr>
+    <tr><td>Notifications</td><td>Created on the device, not through a server</td></tr>
+  </tbody>
+</table>
+
+<h2>6. Deleting data</h2>
 <ul>
   <li>Delete a single transaction: swipe it in the list</li>
   <li>Delete slip photos in groups: Settings → "Image storage" → by image age</li>
   <li>Delete everything on the device: delete the app (from the Home Screen) → this removes the data on the device and in your iCloud private database</li>
+  <li>Android: Settings → Delete all data, or uninstall the app → removes the data on the device · backup files in the folder you chose and the copy in Google's backup are <strong>not deleted with it</strong> — delete them yourself in that folder / Google Drive</li>
 </ul>
 
-<h2>6. Children</h2>
+<h2>7. Children</h2>
 <p>DooSpend is designed for adults (17+ per the App Store rating). The app keeps no separate data about children. If a child uses the app, the data stays on that child's device/iCloud as usual.</p>
 
-<h2>7. Changes to this policy</h2>
+<h2>8. Changes to this policy</h2>
 <p>If we change this policy, we will update the date at the top of this page. Significant changes (such as adding a new third party) will also be announced in the app.</p>
 
-<h2>8. Privacy contact</h2>
+<h2>9. Privacy contact</h2>
 <p>Questions or requests about your data — <a href="mailto:hello@doospend.com">hello@doospend.com</a></p>
 
 <footer>
