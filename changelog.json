@@ -2,6 +2,69 @@
   "$schema_note": "Lives at https://doospend.com/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array. Every entry MUST carry an \"en\" object (title/date/items) — the app shows it when the user picks English; without it the popup falls back to Thai.",
   "versions": [
     {
+      "version": "2.11.0",
+      "date": "24 ตุลาคม 2569",
+      "title": "🧾 สรุปไว้ยื่นภาษี\n🎨 ปรับแต่งแอปได้เอง",
+      "highlights": [
+        {
+          "icon": "🧾",
+          "title": "สรุปไว้ยื่นภาษี (Pro)",
+          "detail": "รายรับทั้งปีแยกหมวด · หัก ณ ที่จ่าย · รายการที่ทำเครื่องหมายลดหย่อน · ไปต่อที่ e-Filing"
+        },
+        {
+          "icon": "👛",
+          "title": "เงินที่ใช้ได้จริง (Pro)",
+          "detail": "การ์ดกระเป๋าบอก ใช้ได้ · กันไว้ หักบิลที่ยังต้องจ่ายเดือนนี้"
+        },
+        {
+          "icon": "💳",
+          "title": "หน้าบัตร",
+          "detail": "ยอดต้องจ่ายรอบนี้ + ปุ่มจ่ายบิล · ผ่อนบนบัตรกันวงเงินเหมือนธนาคาร"
+        },
+        {
+          "icon": "🎨",
+          "title": "ปรับแต่งแอปได้เอง",
+          "detail": "หน้ากระเป๋า (เลือกแสดงเงินที่มี หรือเงินที่ใช้ได้) · หน้าจด (เลือกเฉพาะที่ใช้บ่อย) · ปุ่มลัด · แป้นพิมพ์"
+        }
+      ],
+      "items": [
+        "🔎 หน้ารายการ — ค้นตามยอด · กรองช่วงยอด · ปฏิทินทั้งปี/ช่วง",
+        "🏪 ชิปร้านค้า — ร้านที่ไปบ่อยขึ้นก่อน · ค้นร้านได้ย้อนหลัง 12 เดือน",
+        "✨ ปรับการแสดงผลหลายจุด"
+      ],
+      "en": {
+        "date": "24 October 2026",
+        "title": "🧾 Tax filing summary\n🎨 Make it yours",
+        "highlights": [
+          {
+            "icon": "🧾",
+            "title": "Tax filing summary (Pro)",
+            "detail": "A year of income by category · tax withheld · entries marked as deductible · then on to e-Filing"
+          },
+          {
+            "icon": "👛",
+            "title": "Money you can really spend (Pro)",
+            "detail": "The Wallet card shows Available · Set aside, after bills still due this month"
+          },
+          {
+            "icon": "💳",
+            "title": "Card page",
+            "detail": "What's due this cycle + a Pay bill button · installments on a card hold your limit, like the bank does"
+          },
+          {
+            "icon": "🎨",
+            "title": "Make the app yours",
+            "detail": "Wallet (show Money you have or Money you can spend) · entry screen (only what you use often) · quick menu · keypad"
+          }
+        ],
+        "items": [
+          "🔎 Transactions — search by amount · amount range filter · calendar for a year or range",
+          "🏪 Merchant chips — the shops you visit most come first · search shops from the past 12 months",
+          "✨ Many small display polishes"
+        ]
+      }
+    },
+    {
       "version": "2.10.0",
       "date": "17 ตุลาคม 2569",
       "title": "📊 สุทธิสิ้นเดือน\n💰 รายรับประจำ",
@@ -561,7 +624,7 @@
       "title": "📥 ย้ายจากแอปเก่าได้แล้ว — นำเข้า CSV / Excel / statement บัตร",
       "date": "12 กรกฎาคม 2569",
       "items": [
-        "📥 ย้ายมาจากแอปเก่า — นำเข้าไฟล์ CSV / Excel (Money Manager, Spendee, MoneyLover ฯลฯ) หรือ statement บัตร (PDF จากอีเมลแบงก์) → เข้าแท็บ \"ตรวจสอบ\" ให้ยืนยัน · CSV/Excel ฟรี ไม่ใช้โควตา AI",
+        "📥 ย้ายมาจากแอปเก่า — นำเข้าไฟล์ CSV / Excel หรือ statement บัตร (PDF จากอีเมลแบงก์) → เข้าแท็บ \"ตรวจสอบ\" ให้ยืนยัน · CSV/Excel ฟรี ไม่ใช้โควตา AI",
         "🔁 รายการที่เกิดซ้ำ (subscription) พอถึงกำหนด เด้งเข้า \"ตรวจสอบ\" ให้ยืนยันเองอัตโนมัติ + เตือนล่วงหน้าหน้าแรก",
         "📤 ส่งออกดีขึ้น — CSV เปิดใน Excel ภาษาไทยไม่เพี้ยน · PDF เป็นรายงานสรุป (ยอด/หมวด/ร้าน) · กดส่งออกแล้วแชร์จบในปุ่มเดียว"
       ]
