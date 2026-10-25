@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — DooSpend</title>
+<meta name="description" content="DooSpend Privacy Policy — what we keep and where it goes, said plainly">
+<link rel="canonical" href="https://doospend.com/en/privacy.html">
+<link rel="alternate" hreflang="th" href="https://doospend.com/privacy.html">
+<link rel="alternate" hreflang="en" href="https://doospend.com/en/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://doospend.com/privacy.html">
+<link rel="stylesheet" href="../_shared.css?v=8">
+<link rel="icon" type="image/png" href="../icon-180.png">
+<link rel="apple-touch-icon" href="../icon-180.png">
+</head>
+<body>
+<div class="container">
+
+<header>
+  <img class="logo" src="../icon-180.png" width="40" height="40" alt="DooSpend">
+  <div class="name"><a href="./">DooSpend</a></div>
+</header>
+
+<h1>Privacy Policy</h1>
+<p class="lastUpdated">Last updated: August 8, 2026 · <a href="../privacy.html">ภาษาไทย</a> (the Thai version prevails if the two differ)</p>
+
+<div class="nav">
+  <a href="./">Home</a>
+  <a href="privacy.html" class="active">Privacy Policy</a>
+  <a href="terms.html">Terms of Use</a>
+  <a href="help.html">User Guide</a>
+  <a href="changelog.html">What's New</a>
+</div>
+
+<div class="callout">
+  <strong>In short:</strong> your financial data <strong>does not leave your iPhone/iPad</strong> and your own private Apple iCloud. We have no server that stores your transactions, balances, or accounts. The only things "sent out" are the images/text you ask the AI to read — slips, card statements, order-history screenshots, and voice-note text (to Anthropic, via a Cloudflare Worker). AI requests carry only a "random ID" used to count quota and prevent overuse; it is not your name, email, or Apple ID and does not say who you are.
+</div>
+
+<h2>1. Who we are</h2>
+<p>DooSpend is an independent iOS app (indie developer) built by Apiwat Pengjam. Contact: <a href="mailto:hello@doospend.com">hello@doospend.com</a></p>
+
+<h2>2. Data we keep and where it lives</h2>
+<table>
+  <thead>
+    <tr><th>Data</th><th>Where it is kept</th><th>Notes</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Income/expense entries, balances, accounts, categories, budgets, installments, subscriptions</td>
+      <td>On your iPhone/iPad + your own private Apple iCloud</td>
+      <td>We have no server that stores your financial data, and we cannot see it</td>
+    </tr>
+    <tr>
+      <td>Books (shared accounts) + the entries in them</td>
+      <td>Apple CKShare → iCloud shared database</td>
+      <td>Only people the book's owner invites by link can see it. The owner can end sharing at any time</td>
+    </tr>
+    <tr>
+      <td>Slip photos (when you tap "Snap slip")</td>
+      <td>On your iPhone/iPad + private iCloud</td>
+      <td>Kept until you delete them — Settings → "Image storage" lets you delete them in groups</td>
+    </tr>
+    <tr>
+      <td>Images/text sent for the AI to read — slips, card statements, order-history screenshots (Shopee/Lazada/etc.)</td>
+      <td>Sent through a Cloudflare Worker → Anthropic Claude API (US)</td>
+      <td>Sent only when you use that feature, once, to be read; not stored permanently. A random ID is attached for quota counting (not your name/email/Apple ID)</td>
+    </tr>
+    <tr>
+      <td>Speech (when you tap "Speak")</td>
+      <td>Converted to text by Apple's SFSpeechRecognizer (Apple may process the audio on Apple's servers)</td>
+      <td>Raw audio is <strong>not sent to our proxy or to Anthropic</strong> — only the transcribed text is passed to the AI. Audio processing follows Apple's policy</td>
+    </tr>
+    <tr>
+      <td>AI usage (number of uses per month)</td>
+      <td>Counted at our proxy (tied to the random ID) + shown on your device</td>
+      <td>Used to check the Free/Pro quota — the same quota applies to every device on the same Apple ID</td>
+    </tr>
+    <tr>
+      <td>Pro subscription purchases</td>
+      <td>Apple StoreKit (not through us)</td>
+      <td>Apple handles billing and stores payment information under Apple's own policy</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3. Data we do not collect</h2>
+<ul>
+  <li>We use no analytics / tracking SDKs (Google Analytics, Firebase, Facebook SDK, etc.)</li>
+  <li>There are no user accounts / logins — you can use the app without signing up</li>
+  <li>We do not read SMS, contacts, location, calendar, or health data</li>
+  <li>We do not sell data to third parties (we have no data to sell)</li>
+</ul>
+
+<h2>4. Third-party services we use</h2>
+
+<h3>4.1 Anthropic Claude (via Cloudflare Worker)</h3>
+<p>When you use an AI feature, the following images or text are sent through a Cloudflare Worker (our own proxy) to the Anthropic Claude API to read the amount, merchant, and date and to suggest a category: slip images, credit-card statement images/text, order-history screenshots (e.g. Shopee, Lazada, TrueMoney), and voice transcripts. This data may contain financial details (merchant, amount, date) — we send it to the AI only when you ask. <strong>The app asks for your consent before sending anything to the AI for the first time</strong> (stating clearly what is sent and to whom), and you can turn it off or withdraw consent at any time in Settings › Your data — when it is off, the app sends nothing to the AI.</p>
+<ul>
+  <li>Requests carry a <strong>random ID</strong> (a random UUID created on your device and kept in the Keychain) in the <code>x-device-id</code> header, used to count monthly AI quota and prevent overuse. This ID survives deleting and reinstalling the app, but it is <strong>not</strong> your name, email, or Apple ID and cannot tell who you are. Requests also carry the tier (free/pro) and the app version.</li>
+  <li>Since version 1.8.2 this ID is kept in <strong>iCloud Keychain</strong>, so <strong>every device signed in to the same Apple ID uses the same ID</strong> — AI quota is therefore counted together across iPhone and iPad instead of separately. We never receive your Apple ID; only the random UUID is synced, and if you turn off iCloud Keychain the app falls back to an ID for that device only.</li>
+  <li>Anthropic does <strong>not</strong> receive this device ID (only our proxy uses it), and its policy states it does not use API requests to train models (<a href="https://www.anthropic.com/privacy">Anthropic Privacy</a>)</li>
+  <li>Anthropic processes requests under its <a href="https://www.anthropic.com/legal/commercial-terms">Commercial Terms</a> + privacy policy, which provide <strong>the same level of protection</strong> as described in this policy — inputs/outputs are not used to train models and are kept only temporarily for abuse monitoring, then deleted on Anthropic's schedule</li>
+  <li>Our Cloudflare Worker proxy does not log images or content — it records only the number of requests per device ID for quota / rate limiting</li>
+</ul>
+
+<h3>4.2 Apple iCloud + Apple StoreKit</h3>
+<p>Data in the CloudKit database is <strong>your own private database</strong> under your Apple ID. Apple stores it encrypted and does not read it. We have no access to it.</p>
+
+<h3>4.3 Sharing books via CKShare</h3>
+<p>When you invite others to a book, Apple's CKShare API handles permissions and syncing between the participants' iCloud accounts:</p>
+<ul>
+  <li>Invite links work only for Apple IDs the owner allows → people who were not invited cannot open the link</li>
+  <li>Data in a shared book lives in the owner's <strong>Apple iCloud shared database</strong> — Apple handles encryption + access control</li>
+  <li>We have no central server for books — when the owner stops sharing, participants lose access immediately</li>
+  <li>"Added by: name" on an entry uses Apple's Apple ID record name — not your email or phone number</li>
+</ul>
+
+<h2>5. Deleting data</h2>
+<ul>
+  <li>Delete a single transaction: swipe it in the list</li>
+  <li>Delete slip photos in groups: Settings → "Image storage" → by image age</li>
+  <li>Delete everything on the device: delete the app (from the Home Screen) → this removes the data on the device and in your iCloud private database</li>
+</ul>
+
+<h2>6. Children</h2>
+<p>DooSpend is designed for adults (17+ per the App Store rating). The app keeps no separate data about children. If a child uses the app, the data stays on that child's device/iCloud as usual.</p>
+
+<h2>7. Changes to this policy</h2>
+<p>If we change this policy, we will update the date at the top of this page. Significant changes (such as adding a new third party) will also be announced in the app.</p>
+
+<h2>8. Privacy contact</h2>
+<p>Questions or requests about your data — <a href="mailto:hello@doospend.com">hello@doospend.com</a></p>
+
+<footer>
+  <span>© 2026 DooSpend</span>
+  <span><a href="./">Home</a> · <a href="terms.html">Terms</a> · <a href="help.html">Help</a></span>
+</footer>
+
+</div>
+<script src="../_chat.js?v=8" defer></script>
+</body>
+</html>
