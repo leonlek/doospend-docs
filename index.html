@@ -268,6 +268,21 @@
   .price .amt small{font-size:12px;color:var(--faint);font-weight:600}
   .price ul{list-style:none;display:grid;gap:7px}
   .price li::before{content:"✓ ";color:var(--green);font-weight:700}
+  .cmp-wrap{margin-top:24px;overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:var(--card)}
+  .cmp{width:100%;min-width:520px;border-collapse:collapse;font-size:13.5px}
+  .cmp th,.cmp td{padding:11px 14px;text-align:center;border-top:1px solid var(--line)}
+  .cmp thead th{border-top:0;padding-top:18px;vertical-align:bottom}
+  .cmp thead b{display:block;font-family:var(--display);font-size:17px;color:var(--ink)}
+  .cmp thead span{display:block;font-size:12px;color:var(--muted);font-weight:600}
+  .cmp tbody th{text-align:left;font-weight:500;color:var(--ink);width:52%}
+  .cmp tr.g th{font-size:12px;font-weight:700;color:var(--faint);padding-top:18px;padding-bottom:6px;letter-spacing:.02em}
+  .cmp td{color:var(--ink);font-weight:600;font-size:12.5px}
+  .cmp .pro{background:rgba(46,125,91,.08)}
+  .cmp thead th.pro{border-radius:14px 14px 0 0}
+  .cmp td.y{color:var(--green);font-size:16px;font-weight:800}
+  .cmp td.n{color:var(--faint);font-weight:400}
+  .cmp-note{margin-top:10px;font-size:12.5px;color:var(--faint)}
+  .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
   .faq{margin-top:22px;display:grid;gap:10px;max-width:720px}
   .faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 16px;font-size:13.5px}
   .faq summary{font-weight:700;cursor:pointer}
@@ -527,34 +542,39 @@
   <section class="sec alt" id="pricing"><div class="wrap">
     <span class="eyebrow">ราคา</span>
     <h2>เริ่มฟรี อัปเกรดเมื่อพร้อม</h2>
-    <div class="pricing">
-      <div class="price">
-        <b class="t">ฟรี</b>
-        <div class="amt">฿0</div>
-        <ul>
-          <li>จดมือไม่จำกัด + ทุกสรุป</li>
-          <li>ตั้งงบ + เห็นยอดเหลือเดือนนี้</li>
-          <li>สุทธิวันนี้ — รับ − จ่าย ถึงวันนี้</li>
-          <li>ตั้งกฎบัตร + Best Card 1 หมวด</li>
-          <li>เป้าหมายออม 1 เป้า — แอปกันเงินออกจากยอดที่ใช้ได้ + เตือนให้</li>
-          <li>AI จดให้ — เดือนแรก 30 ครั้ง จากนั้น 5 ครั้ง/เดือน</li>
-          <li>เข้าร่วมสมุดหารบิลของเพื่อน</li>
-        </ul>
-      </div>
-      <div class="price pro">
-        <b class="t">Pro — สมัครครั้งเดียว ปลดล็อกครบทุกฟีเจอร์</b>
-        <div class="amt">฿69/เดือน <small>หรือ ฿590/ปี (ประหยัด 29%)</small></div>
-        <ul>
-          <li>☀️ วันนี้ใช้ได้อีก + พยากรณ์ + เตือนทุกเช้า</li>
-          <li>📊 สุทธิสิ้นเดือน — รวมรายรับ/รายจ่ายที่ตั้งไว้ + ไทม์ไลน์ของเดือน</li>
-          <li>💳 Best Card ครบทุกหมวด + เด้งตอนจ่าย + เตือนเพดาน</li>
-          <li>🤖 AI จดให้ 150 ครั้ง/เดือน</li>
-          <li>🎯 ตารางออมเงิน — แอปเกลี่ยยอดลงทุกช่อง ติ๊กเก็บทีละช่อง + ตั้งได้หลายเป้า</li>
-          <li>👥 สร้างสมุดหารบิลเองไม่จำกัด</li>
-          <li>📥 นำเข้า statement ไม่จำกัด · ส่งออก CSV/PDF</li>
-        </ul>
-      </div>
-    </div>
+    <div class="cmp-wrap"><table class="cmp">
+      <thead><tr><th scope="col"><span class="vh">ฟีเจอร์</span></th>
+        <th scope="col"><b>ฟรี</b><span>฿0</span></th>
+        <th scope="col" class="pro"><b>Pro</b><span>฿69/เดือน หรือ ฿590/ปี (ประหยัด 29%)</span></th></tr></thead>
+      <tbody>
+        <tr class="g"><th scope="rowgroup" colspan="3">จด</th></tr>
+        <tr><th scope="row">จดเอง แก้ ลบ ไม่จำกัด + ทุกสรุป</th><td class="y" aria-label="มี">✓</td><td class="pro y" aria-label="มี">✓</td></tr>
+        <tr><th scope="row">AI จดให้ — ถ่ายสลิป พูด หรือพิมพ์</th><td>5 ครั้ง/เดือน*</td><td class="pro">150 ครั้ง/เดือน</td></tr>
+        <tr><th scope="row">นำเข้า CSV / Excel จากแอปเดิม</th><td class="y" aria-label="มี">✓</td><td class="pro y" aria-label="มี">✓</td></tr>
+        <tr><th scope="row">นำเข้า statement บัตร (PDF)</th><td>ใบแรก</td><td class="pro">ไม่จำกัด</td></tr>
+        <tr class="g"><th scope="rowgroup" colspan="3">ตัวเลขที่แอปคิดให้</th></tr>
+        <tr><th scope="row">ตั้งงบ + เห็นยอดเหลือเดือนนี้</th><td class="y" aria-label="มี">✓</td><td class="pro y" aria-label="มี">✓</td></tr>
+        <tr><th scope="row">สุทธิวันนี้ — รับ − จ่าย ถึงวันนี้</th><td class="y" aria-label="มี">✓</td><td class="pro y" aria-label="มี">✓</td></tr>
+        <tr><th scope="row">วันนี้ใช้ได้อีก + เตือนทุกเช้า</th><td class="n" aria-label="ไม่มี">—</td><td class="pro y" aria-label="มี">✓</td></tr>
+        <tr><th scope="row">สุทธิสิ้นเดือน + ไทม์ไลน์ของเดือน</th><td class="n" aria-label="ไม่มี">—</td><td class="pro y" aria-label="มี">✓</td></tr>
+        <tr><th scope="row">เงินที่ใช้ได้ หลังกันบิลและเงินออม</th><td class="n" aria-label="ไม่มี">—</td><td class="pro y" aria-label="มี">✓</td></tr>
+        <tr><th scope="row">กราฟเงินโต</th><td>ถึงวันนี้</td><td class="pro">ย้อนหลังทั้งหมด</td></tr>
+        <tr class="g"><th scope="rowgroup" colspan="3">บัตรเครดิต</th></tr>
+        <tr><th scope="row">ตั้งกฎบัตร เงินคืน แต้ม ไมล์</th><td class="y" aria-label="มี">✓</td><td class="pro y" aria-label="มี">✓</td></tr>
+        <tr><th scope="row">บัตรไหนคุ้ม</th><td>1 หมวด</td><td class="pro">ทุกหมวด</td></tr>
+        <tr><th scope="row">เด้งบอกใบคุ้มตอนจ่าย + เตือนก่อนเต็มเพดาน</th><td class="n" aria-label="ไม่มี">—</td><td class="pro y" aria-label="มี">✓</td></tr>
+        <tr class="g"><th scope="rowgroup" colspan="3">งบ · ออม · บัญชี</th></tr>
+        <tr><th scope="row">จำนวนบัญชี</th><td>3</td><td class="pro">ไม่จำกัด</td></tr>
+        <tr><th scope="row">จำนวนงบ</th><td>1</td><td class="pro">ไม่จำกัด</td></tr>
+        <tr><th scope="row">เป้าหมายออม</th><td>1 เป้า</td><td class="pro">หลายเป้า + ตารางออม</td></tr>
+        <tr class="g"><th scope="rowgroup" colspan="3">อื่น ๆ</th></tr>
+        <tr><th scope="row">สมุดหารบิลกับเพื่อน</th><td>เข้าร่วมได้</td><td class="pro">สร้างได้</td></tr>
+        <tr><th scope="row">เงินเข้ารายปี เทียบเกณฑ์สรรพากร</th><td>ดูทีละรายการ</td><td class="pro y" aria-label="มี">✓</td></tr>
+        <tr><th scope="row">สรุปไว้ยื่นภาษี</th><td class="n" aria-label="ไม่มี">—</td><td class="pro y" aria-label="มี">✓</td></tr>
+        <tr><th scope="row">ส่งออก CSV / PDF</th><td class="n" aria-label="ไม่มี">—</td><td class="pro y" aria-label="มี">✓</td></tr>
+      </tbody>
+    </table></div>
+    <p class="cmp-note">* AI ฟรี: เดือนแรก 30 ครั้ง จากนั้น 5 ครั้ง/เดือน · ข้อมูลอยู่ในเครื่องคุณ ไม่อ่าน SMS ไม่ผูกแบงก์ — ทุกแพ็กเกจ</p>
   </div></section>
 
   <!-- faq -->

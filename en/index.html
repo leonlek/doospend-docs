@@ -269,6 +269,21 @@
   .price .amt small{font-size:12px;color:var(--faint);font-weight:600}
   .price ul{list-style:none;display:grid;gap:7px}
   .price li::before{content:"✓ ";color:var(--green);font-weight:700}
+  .cmp-wrap{margin-top:24px;overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:var(--card)}
+  .cmp{width:100%;min-width:520px;border-collapse:collapse;font-size:13.5px}
+  .cmp th,.cmp td{padding:11px 14px;text-align:center;border-top:1px solid var(--line)}
+  .cmp thead th{border-top:0;padding-top:18px;vertical-align:bottom}
+  .cmp thead b{display:block;font-family:var(--display);font-size:17px;color:var(--ink)}
+  .cmp thead span{display:block;font-size:12px;color:var(--muted);font-weight:600}
+  .cmp tbody th{text-align:left;font-weight:500;color:var(--ink);width:52%}
+  .cmp tr.g th{font-size:12px;font-weight:700;color:var(--faint);padding-top:18px;padding-bottom:6px;letter-spacing:.02em}
+  .cmp td{color:var(--ink);font-weight:600;font-size:12.5px}
+  .cmp .pro{background:rgba(46,125,91,.08)}
+  .cmp thead th.pro{border-radius:14px 14px 0 0}
+  .cmp td.y{color:var(--green);font-size:16px;font-weight:800}
+  .cmp td.n{color:var(--faint);font-weight:400}
+  .cmp-note{margin-top:10px;font-size:12.5px;color:var(--faint)}
+  .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
   .faq{margin-top:22px;display:grid;gap:10px;max-width:720px}
   .faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 16px;font-size:13.5px}
   .faq summary{font-weight:700;cursor:pointer}
@@ -548,34 +563,39 @@
   <section class="sec alt" id="pricing"><div class="wrap">
     <span class="eyebrow">Pricing</span>
     <h2>Start free, upgrade when you are ready</h2>
-    <div class="pricing">
-      <div class="price">
-        <b class="t">Free</b>
-        <div class="amt">฿0</div>
-        <ul>
-          <li>Unlimited manual entries and every summary</li>
-          <li>Budgets, and what is left this month</li>
-          <li>Net so far — money in − money out up to today</li>
-          <li>Card rules, plus the best-card pick for one category</li>
-          <li>One savings goal — the app holds that money back and keeps an eye on it</li>
-          <li>AI logging — 30 in your first month, then 5 a month</li>
-          <li>Join a friend's shared pocket</li>
-        </ul>
-      </div>
-      <div class="price pro">
-        <b class="t">Pro — one subscription, everything unlocked</b>
-        <div class="amt">฿69/month <small>or ฿590/year (save 29%)</small></div>
-        <ul>
-          <li>☀️ What is left today (bills taken out first) and the morning nudge</li>
-          <li>📊 Month-end net — your scheduled income and bills added up, with a timeline of the month</li>
-          <li>💳 Best card for every category, the prompt while you are logging, and cap warnings</li>
-          <li>🤖 AI logging, 150 a month</li>
-          <li>🎯 The savings board — the app spreads the target across the squares and you tick them off · plus more than one goal</li>
-          <li>👥 Create as many shared pockets as you like</li>
-          <li>📥 Unlimited statement imports · CSV and PDF export</li>
-        </ul>
-      </div>
-    </div>
+    <div class="cmp-wrap"><table class="cmp">
+      <thead><tr><th scope="col"><span class="vh">Feature</span></th>
+        <th scope="col"><b>Free</b><span>฿0</span></th>
+        <th scope="col" class="pro"><b>Pro</b><span>฿69/month or ฿590/year (save 29%)</span></th></tr></thead>
+      <tbody>
+        <tr class="g"><th scope="rowgroup" colspan="3">Logging</th></tr>
+        <tr><th scope="row">Unlimited manual entries + every summary</th><td class="y" aria-label="Yes">✓</td><td class="pro y" aria-label="Yes">✓</td></tr>
+        <tr><th scope="row">AI logging — snap a slip, speak, or type</th><td>5 a month*</td><td class="pro">150 a month</td></tr>
+        <tr><th scope="row">Import CSV / Excel from your old app</th><td class="y" aria-label="Yes">✓</td><td class="pro y" aria-label="Yes">✓</td></tr>
+        <tr><th scope="row">Import card statements (PDF)</th><td>First one</td><td class="pro">Unlimited</td></tr>
+        <tr class="g"><th scope="rowgroup" colspan="3">Numbers the app works out</th></tr>
+        <tr><th scope="row">Budgets + what is left this month</th><td class="y" aria-label="Yes">✓</td><td class="pro y" aria-label="Yes">✓</td></tr>
+        <tr><th scope="row">Net so far — money in − money out up to today</th><td class="y" aria-label="Yes">✓</td><td class="pro y" aria-label="Yes">✓</td></tr>
+        <tr><th scope="row">What is left today + the morning nudge</th><td class="n" aria-label="No">—</td><td class="pro y" aria-label="Yes">✓</td></tr>
+        <tr><th scope="row">Month-end net + a timeline of the month</th><td class="n" aria-label="No">—</td><td class="pro y" aria-label="Yes">✓</td></tr>
+        <tr><th scope="row">Spendable money, after bills and savings</th><td class="n" aria-label="No">—</td><td class="pro y" aria-label="Yes">✓</td></tr>
+        <tr><th scope="row">Balance trend</th><td>To today</td><td class="pro">Full history</td></tr>
+        <tr class="g"><th scope="rowgroup" colspan="3">Credit cards</th></tr>
+        <tr><th scope="row">Card rules — cashback, points, miles</th><td class="y" aria-label="Yes">✓</td><td class="pro y" aria-label="Yes">✓</td></tr>
+        <tr><th scope="row">Best card</th><td>1 category</td><td class="pro">Every category</td></tr>
+        <tr><th scope="row">Best-card prompt while paying + cap warnings</th><td class="n" aria-label="No">—</td><td class="pro y" aria-label="Yes">✓</td></tr>
+        <tr class="g"><th scope="rowgroup" colspan="3">Budgets · savings · accounts</th></tr>
+        <tr><th scope="row">Accounts</th><td>3</td><td class="pro">Unlimited</td></tr>
+        <tr><th scope="row">Budgets</th><td>1</td><td class="pro">Unlimited</td></tr>
+        <tr><th scope="row">Savings goals</th><td>1 goal</td><td class="pro">Many + savings board</td></tr>
+        <tr class="g"><th scope="rowgroup" colspan="3">More</th></tr>
+        <tr><th scope="row">Shared pockets with friends</th><td>Join</td><td class="pro">Create</td></tr>
+        <tr><th scope="row">Yearly money-in vs. the Revenue Department threshold</th><td>Row by row</td><td class="pro y" aria-label="Yes">✓</td></tr>
+        <tr><th scope="row">Tax filing summary</th><td class="n" aria-label="No">—</td><td class="pro y" aria-label="Yes">✓</td></tr>
+        <tr><th scope="row">CSV / PDF export</th><td class="n" aria-label="No">—</td><td class="pro y" aria-label="Yes">✓</td></tr>
+      </tbody>
+    </table></div>
+    <p class="cmp-note">* Free AI: 30 in your first month, then 5 a month · Your data stays on your device, no SMS reading, no bank login — every plan</p>
   </div></section>
 
   <!-- faq -->
