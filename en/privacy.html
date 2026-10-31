@@ -22,7 +22,7 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="lastUpdated">Last updated: October 25, 2026 · <a href="../privacy.html">ภาษาไทย</a> (the Thai version prevails if the two differ)</p>
+<p class="lastUpdated">Last updated: October 31, 2026 · <a href="../privacy.html">ภาษาไทย</a> (the Thai version prevails if the two differ)</p>
 
 <div class="nav">
   <a href="./">Home</a>
@@ -85,7 +85,7 @@
 
 <h2>3. Data we do not collect</h2>
 <ul>
-  <li>We use no analytics / tracking SDKs (Google Analytics, Firebase, Facebook SDK, etc.)</li>
+  <li>We use no analytics / tracking SDKs (Google Analytics, Firebase, Facebook SDK, etc.) — the only usage counts are the AI-request counts described in section 4</li>
   <li>There are no user accounts / logins — you can use the app without signing up</li>
   <li>We do not read SMS, contacts, location, calendar, or health data</li>
   <li>We do not sell data to third parties (we have no data to sell)</li>
@@ -96,7 +96,7 @@
 <h3>4.1 Anthropic Claude (via Cloudflare Worker)</h3>
 <p>When you use an AI feature, the following images or text are sent through a Cloudflare Worker (our own proxy) to the Anthropic Claude API to read the amount, merchant, and date and to suggest a category: slip images, credit-card statement images/text, order-history screenshots (e.g. Shopee, Lazada, TrueMoney), and voice transcripts. This data may contain financial details (merchant, amount, date) — we send it to the AI only when you ask. <strong>The app asks for your consent before sending anything to the AI for the first time</strong> (stating clearly what is sent and to whom), and you can turn it off or withdraw consent at any time in Settings › Your data — when it is off, the app sends nothing to the AI.</p>
 <ul>
-  <li>Requests carry a <strong>random ID</strong> (a random UUID created on your device and kept in the Keychain) in the <code>x-device-id</code> header, used to count monthly AI quota and prevent overuse. This ID survives deleting and reinstalling the app, but it is <strong>not</strong> your name, email, or Apple ID and cannot tell who you are. Requests also carry the tier (free/pro) and the app version.</li>
+  <li>Requests carry a <strong>random ID</strong> (a random UUID created on your device and kept in the Keychain) in the <code>x-device-id</code> header, used to count monthly AI quota and prevent overuse. This ID survives deleting and reinstalling the app, but it is <strong>not</strong> your name, email, or Apple ID and cannot tell who you are. Requests also carry the tier (free/pro), the app version, the platform (iOS/Android), and the name of the entry point you used (e.g. "snap slip", "share", "type") — a fixed label, never your content. We use the random ID and these labels only to count overall usage (how many devices use AI and which entry points are used most); they are not linked to who you are.</li>
   <li>Since version 1.8.2 this ID is kept in <strong>iCloud Keychain</strong>, so <strong>every device signed in to the same Apple ID uses the same ID</strong> — AI quota is therefore counted together across iPhone and iPad instead of separately. We never receive your Apple ID; only the random UUID is synced, and if you turn off iCloud Keychain the app falls back to an ID for that device only.</li>
   <li>Anthropic does <strong>not</strong> receive this device ID (only our proxy uses it), and its policy states it does not use API requests to train models (<a href="https://www.anthropic.com/privacy">Anthropic Privacy</a>)</li>
   <li>Anthropic processes requests under its <a href="https://www.anthropic.com/legal/commercial-terms">Commercial Terms</a> + privacy policy, which provide <strong>the same level of protection</strong> as described in this policy — inputs/outputs are not used to train models and are kept only temporarily for abuse monitoring, then deleted on Anthropic's schedule</li>

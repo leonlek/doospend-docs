@@ -19,7 +19,7 @@
 </header>
 
 <h1>นโยบายความเป็นส่วนตัว</h1>
-<p class="lastUpdated">ปรับปรุงล่าสุด: 25 ตุลาคม 2569 (2026) · <a href="en/privacy.html">English</a></p>
+<p class="lastUpdated">ปรับปรุงล่าสุด: 31 ตุลาคม 2569 (2026) · <a href="en/privacy.html">English</a></p>
 
 <div class="nav">
   <a href="./">หน้าหลัก</a>
@@ -82,7 +82,7 @@
 
 <h2>3. ข้อมูลที่เราไม่เก็บ</h2>
 <ul>
-  <li>เราไม่ใช้ analytics / tracking SDK (Google Analytics, Firebase, Facebook SDK, ฯลฯ)</li>
+  <li>เราไม่ใช้ analytics / tracking SDK (Google Analytics, Firebase, Facebook SDK, ฯลฯ) — สถิติที่มีคือการนับคำขอ AI ตามข้อ 4 เท่านั้น</li>
   <li>เราไม่มี user account / login — ไม่ต้องสมัครก็ใช้ได้</li>
   <li>เราไม่อ่าน SMS, contacts, location, calendar, health</li>
   <li>เราไม่ขายข้อมูลให้ third party (เราไม่มีข้อมูลให้ขายอยู่แล้ว)</li>
@@ -93,7 +93,7 @@
 <h3>4.1 Anthropic Claude (ผ่าน Cloudflare Worker)</h3>
 <p>เมื่อคุณกดใช้ฟีเจอร์ AI ภาพหรือข้อความต่อไปนี้จะถูกส่งผ่าน Cloudflare Worker (proxy ของเราเอง) ไปยัง Anthropic Claude API เพื่ออ่านยอด ร้านค้า วันที่ และจำแนกหมวด: ภาพสลิป, ภาพ/ข้อความสเตทเมนต์บัตรเครดิต, screenshot ประวัติคำสั่งซื้อ (เช่น Shopee, Lazada, TrueMoney), และข้อความ voice transcript ข้อมูลเหล่านี้อาจมีรายละเอียดการเงิน (ร้านค้า ยอด วันที่) — เราส่งให้ AI อ่านเฉพาะตอนที่คุณสั่งเท่านั้น <strong>แอปจะขอความยินยอมจากคุณก่อนส่งข้อมูลให้ AI ในครั้งแรก</strong> (แจ้งชัดว่าส่งอะไรและส่งให้ใคร) และคุณปิดหรือถอนความยินยอมได้ทุกเมื่อที่ ตั้งค่า › ข้อมูลของคุณ — เมื่อปิด แอปจะไม่ส่งข้อมูลใด ๆ ให้ AI</p>
 <ul>
-  <li>คำขอแนบ <strong>รหัสสุ่ม</strong> (random UUID ที่สร้างขึ้นในเครื่องคุณและเก็บใน Keychain) ส่งใน header <code>x-device-id</code> เพื่อใช้นับโควตา AI ต่อเดือนและกันการใช้เกิน · รหัสนี้คงอยู่ข้ามการลบ-ติดตั้งแอปใหม่ แต่ <strong>ไม่ใช่</strong> ชื่อ อีเมล หรือ Apple ID และไม่สามารถบอกได้ว่าคุณเป็นใคร นอกจากนี้ยังแนบ tier (free/pro) และเวอร์ชันแอป</li>
+  <li>คำขอแนบ <strong>รหัสสุ่ม</strong> (random UUID ที่สร้างขึ้นในเครื่องคุณและเก็บใน Keychain) ส่งใน header <code>x-device-id</code> เพื่อใช้นับโควตา AI ต่อเดือนและกันการใช้เกิน · รหัสนี้คงอยู่ข้ามการลบ-ติดตั้งแอปใหม่ แต่ <strong>ไม่ใช่</strong> ชื่อ อีเมล หรือ Apple ID และไม่สามารถบอกได้ว่าคุณเป็นใคร นอกจากนี้ยังแนบ tier (free/pro) · เวอร์ชันแอป · แพลตฟอร์ม (iOS/Android) และชื่อทางเข้าที่คุณใช้ (เช่น "ถ่ายสลิป" · "แชร์" · "พิมพ์") ซึ่งเป็นป้ายคงที่ ไม่ใช่เนื้อหาของคุณ · เราใช้รหัสสุ่มและป้ายเหล่านี้นับสถิติการใช้งานรวมเท่านั้น (มีกี่เครื่องที่ใช้ AI · ทางเข้าไหนถูกใช้บ่อย) ไม่ผูกกับตัวตนของคุณ</li>
     <li>ตั้งแต่เวอร์ชัน 1.8.2 รหัสนี้เก็บใน <strong>iCloud Keychain</strong> ทำให้<strong>ทุกเครื่องที่ลงชื่อ Apple ID เดียวกันใช้รหัสเดียวกัน</strong> — โควตา AI จึงนับรวมกันทั้ง iPhone และ iPad แทนที่จะแยกกันคนละก้อน. เราไม่ได้รับ Apple ID ของคุณ ตัวที่ซิงก์คือ UUID สุ่มเท่านั้น และถ้าคุณปิด iCloud Keychain แอปจะกลับไปใช้รหัสเฉพาะเครื่องนั้น</li>
   <li>Anthropic <strong>ไม่</strong> ได้รับรหัสประจำเครื่องนี้ (proxy ของเราใช้เอง) และระบุใน policy ว่าไม่ใช้ API requests ไปเทรนโมเดล (<a href="https://www.anthropic.com/privacy">Anthropic Privacy</a>)</li>
   <li>Anthropic ประมวลผลคำขอภายใต้ <a href="https://www.anthropic.com/legal/commercial-terms">Commercial Terms</a> + นโยบายความเป็นส่วนตัวของ Anthropic ซึ่งให้การคุ้มครองข้อมูล<strong>ในระดับเดียวกับ</strong>ที่ระบุในนโยบายนี้ — ไม่นำ inputs/outputs ไปเทรนโมเดล และเก็บไว้ชั่วคราวเพื่อตรวจการใช้ในทางที่ผิดเท่านั้นแล้วลบตามกำหนดของ Anthropic</li>
