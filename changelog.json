@@ -2,6 +2,99 @@
   "$schema_note": "Lives at https://doospend.com/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array. Every entry MUST carry an \"en\" object (title/date/items) — the app shows it when the user picks English; without it the popup falls back to Thai.",
   "versions": [
     {
+      "version": "3.0.0",
+      "date": "29 ตุลาคม 2569",
+      "title": "♾️ Pro ตลอดชีวิต\n✦ ข้อมูลน่าสนใจ",
+      "highlights": [
+        {
+          "icon": "🗂️",
+          "title": "กลุ่มหมวด",
+          "detail": "รวมหลายหมวดเป็นก้อน · ลากเรียงเอง · ตั้งงบตามกลุ่ม (Pro)"
+        },
+        {
+          "icon": "♾️",
+          "title": "Pro ตลอดชีวิต",
+          "detail": "จ่ายครั้งเดียว ใช้ฟีเจอร์ Pro ได้ตลอด · ไม่รวม AI จดให้"
+        },
+        {
+          "icon": "✦",
+          "title": "ข้อมูลน่าสนใจ",
+          "detail": "หน้ารายการสรุปให้ · เหลือเก็บ · บิล · หนี้ · หมวดและวันที่ใช้มากสุด"
+        },
+        {
+          "icon": "🤝",
+          "title": "ยืม/ให้ยืมแบบบันทึกในใจ",
+          "detail": "ปิด \"ลงบัญชี\" ได้ — อยู่แค่หน้าหนี้ ไม่เข้ายอดในสมุด"
+        },
+        {
+          "icon": "🏷️",
+          "title": "หมวดผูกบัญชีตั้งต้น",
+          "detail": "จดในหมวดนั้น แอปเลือกบัญชีให้"
+        },
+        {
+          "icon": "🏦",
+          "title": "เงินเข้าใกล้เกณฑ์สรรพากร (Pro)",
+          "detail": "เตือนก่อนถึงเกณฑ์ · จัดบัญชีเป็นกลุ่มธนาคาร"
+        }
+      ],
+      "items": [
+        "🧩 ปุ่มจดสำเร็จรูป — ตารางปุ่มลัดวางตรงไหนก็ได้ ซิงก์ iCloud",
+        "⚡ ปุ่มลัดเพิ่ม — จดเอง · ให้ยืม · หนี้ · รายจ่ายประจำ · กาแฟ/เติมน้ำมันพร้อมยอด · สร้างปุ่มของฉันได้",
+        "📊 ไอคอนสรุปในหน้าแท็ก · เพื่อใคร · สมุด · หมวด — แตะแล้วเปิดกราฟของหน้านั้น",
+        "💾 สำรองข้อมูลเบาลง ไม่มีรูป · เลือกสำรองพร้อมรูปได้",
+        "➕ กดค้างปุ่ม ＋ เลือกทางลัดเองได้",
+        "🧾 สรุปไว้ยื่นภาษี — ตราบริจาค · ครึ่งปีแรก",
+        "🤖 AI อ่านสลิปเติมเงิน wallet แม่นขึ้น",
+        "✨ ปรับการแสดงผลหลายจุด"
+      ],
+      "en": {
+        "date": "29 October 2026",
+        "title": "♾️ Pro Lifetime\n✦ Highlights",
+        "highlights": [
+          {
+            "icon": "🗂️",
+            "title": "Category groups",
+            "detail": "Put categories together · drag into your order · budget by group (Pro)"
+          },
+          {
+            "icon": "♾️",
+            "title": "Pro Lifetime",
+            "detail": "Pay once, keep every Pro feature · AI not included"
+          },
+          {
+            "icon": "✦",
+            "title": "Highlights",
+            "detail": "Transactions sums it up · saved · bills · debt · top category and day"
+          },
+          {
+            "icon": "🤝",
+            "title": "Loans off the books",
+            "detail": "Turn off \"Record in account\" — it stays on the Debts page, out of your balances"
+          },
+          {
+            "icon": "🏷️",
+            "title": "Default account per category",
+            "detail": "Log in that category and the account is picked for you"
+          },
+          {
+            "icon": "🏦",
+            "title": "Money in near tax thresholds (Pro)",
+            "detail": "A heads-up before the threshold · accounts grouped by bank"
+          }
+        ],
+        "items": [
+          "🧩 Ready-made buttons — place shortcuts anywhere in the grid, synced with iCloud",
+          "⚡ More shortcuts — Manual · Lent · Debts · Recurring · Coffee/Fuel with amounts · make your own in My buttons",
+          "📊 Summary icon on Tags · For whom · Pockets · Categories — tap to open that page's chart",
+          "💾 Backups are lighter, without photos · Choose Back up with photos to keep them",
+          "➕ Long-press ＋ to pick your own shortcut",
+          "🧾 Tax summary — donation tags · first half of the year",
+          "🤖 AI reads e-wallet top-up slips better",
+          "✨ Many small display polishes"
+        ]
+      }
+    },
+    {
       "version": "2.11.0",
       "date": "24 ตุลาคม 2569",
       "title": "🧾 สรุปไว้ยื่นภาษี\n🎨 ปรับแต่งแอปได้เอง",
