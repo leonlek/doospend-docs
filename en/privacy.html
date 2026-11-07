@@ -10,7 +10,8 @@
 <link rel="alternate" hreflang="en" href="https://doospend.com/en/privacy.html">
 <link rel="alternate" hreflang="x-default" href="https://doospend.com/privacy.html">
 <link rel="stylesheet" href="../_shared.css?v=8">
-<link rel="icon" type="image/png" href="../icon-180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../favicon.png">
 <link rel="apple-touch-icon" href="../icon-180.png">
 </head>
 <body>
@@ -128,7 +129,7 @@
     <tr><td>QR scanning / reading text in images</td><td>Done on the device (Google ML Kit for QR · Tesseract for text) · ML Kit may send usage and performance metrics about the API itself to Google under ML Kit's terms — no images or financial data</td></tr>
     <tr><td>Buying Pro</td><td>Through Google Play Billing · Google handles payment under Google's policy · the app sends the purchase token + the random ID to our proxy to check with Google Play that the purchase is real — no name, email, or card details</td></tr>
     <tr><td>Google's backup (Android Backup)</td><td>If you have Google backup turned on for the device, Android may copy the app's data to your Google Drive so it can be restored when you reinstall or switch phones · Google stores and encrypts it; we cannot access it · you can turn it off in the device settings</td></tr>
-    <tr><td>Daily auto backup (in the app)</td><td><strong>Off by default</strong> · when on, the app writes a .json backup file once a day to a folder <strong>you choose</strong> (keeping the latest 3) · the file contains all your financial data including attached images and is <strong>not encrypted</strong> — if you choose a cloud folder (e.g. Google Drive), the file is under that provider's care and policy · we never receive this file</td></tr>
+    <tr><td>Daily auto backup (in the app)</td><td><strong>Off by default</strong> · when on, the app writes a .json backup file once a day to a folder <strong>you choose</strong> (keeping the latest 3) · the file contains all your financial data (without attached images) and is <strong>not encrypted</strong> — if you choose a cloud folder (e.g. Google Drive), the file is under that provider's care and policy · we never receive this file</td></tr>
     <tr><td>Notifications</td><td>Created on the device, not through a server</td></tr>
   </tbody>
 </table>

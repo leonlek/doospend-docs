@@ -3,7 +3,7 @@
   "versions": [
     {
       "version": "3.0.0",
-      "date": "29 ตุลาคม 2569",
+      "date": "7 พฤศจิกายน 2569",
       "title": "♾️ Pro ตลอดชีวิต\n✦ ข้อมูลน่าสนใจ",
       "highlights": [
         {
@@ -22,9 +22,9 @@
           "detail": "หน้ารายการสรุปให้ · เหลือเก็บ · บิล · หนี้ · หมวดและวันที่ใช้มากสุด"
         },
         {
-          "icon": "🤝",
-          "title": "ยืม/ให้ยืมแบบบันทึกในใจ",
-          "detail": "ปิด \"ลงบัญชี\" ได้ — อยู่แค่หน้าหนี้ ไม่เข้ายอดในสมุด"
+          "icon": "⚡",
+          "title": "สร้างปุ่มลัดเองได้",
+          "detail": "เพิ่มปุ่มของฉันเอง · ปุ่มใหม่ จดเอง · ให้ยืม · หนี้ · รายจ่ายประจำ · กาแฟ/เติมน้ำมันพร้อมยอด"
         },
         {
           "icon": "🏷️",
@@ -39,8 +39,8 @@
       ],
       "items": [
         "🧩 ปุ่มจดสำเร็จรูป — ตารางปุ่มลัดวางตรงไหนก็ได้ ซิงก์ iCloud",
-        "⚡ ปุ่มลัดเพิ่ม — จดเอง · ให้ยืม · หนี้ · รายจ่ายประจำ · กาแฟ/เติมน้ำมันพร้อมยอด · สร้างปุ่มของฉันได้",
         "📊 ไอคอนสรุปในหน้าแท็ก · เพื่อใคร · สมุด · หมวด — แตะแล้วเปิดกราฟของหน้านั้น",
+        "🤝 ยืม/ให้ยืมแบบบันทึกในใจ — ปิด \"ลงบัญชี\" ได้ อยู่แค่หน้าหนี้ ไม่เข้ายอดในสมุด",
         "💾 สำรองข้อมูลเบาลง ไม่มีรูป · เลือกสำรองพร้อมรูปได้",
         "➕ กดค้างปุ่ม ＋ เลือกทางลัดเองได้",
         "🧾 สรุปไว้ยื่นภาษี — ตราบริจาค · ครึ่งปีแรก",
@@ -48,7 +48,7 @@
         "✨ ปรับการแสดงผลหลายจุด"
       ],
       "en": {
-        "date": "29 October 2026",
+        "date": "7 November 2026",
         "title": "♾️ Pro Lifetime\n✦ Highlights",
         "highlights": [
           {
@@ -67,9 +67,9 @@
             "detail": "Transactions sums it up · saved · bills · debt · top category and day"
           },
           {
-            "icon": "🤝",
-            "title": "Loans off the books",
-            "detail": "Turn off \"Record in account\" — it stays on the Debts page, out of your balances"
+            "icon": "⚡",
+            "title": "Make your own shortcuts",
+            "detail": "Add your own to My buttons · new: Manual · Lent · Debts · Recurring · Coffee/Fuel with amounts"
           },
           {
             "icon": "🏷️",
@@ -84,8 +84,8 @@
         ],
         "items": [
           "🧩 Ready-made buttons — place shortcuts anywhere in the grid, synced with iCloud",
-          "⚡ More shortcuts — Manual · Lent · Debts · Recurring · Coffee/Fuel with amounts · make your own in My buttons",
           "📊 Summary icon on Tags · For whom · Pockets · Categories — tap to open that page's chart",
+          "🤝 Loans off the books — turn off \"Record in account\" and it stays on the Debts page, out of your balances",
           "💾 Backups are lighter, without photos · Choose Back up with photos to keep them",
           "➕ Long-press ＋ to pick your own shortcut",
           "🧾 Tax summary — donation tags · first half of the year",
