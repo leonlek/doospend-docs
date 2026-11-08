@@ -2,6 +2,75 @@
   "$schema_note": "Lives at https://doospend.com/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array. Every entry MUST carry an \"en\" object (title/date/items) — the app shows it when the user picks English; without it the popup falls back to Thai.",
   "versions": [
     {
+      "version": "3.1.0",
+      "date": "9 พฤศจิกายน 2569",
+      "title": "📌 ปักหมุดรายการ\n🧩 ปรับแต่งวิดเจ็ต",
+      "highlights": [
+        {
+          "icon": "📌",
+          "title": "ปักหมุดรายการ",
+          "detail": "การ์ดบนหน้าหลัก · กรองเฉพาะที่ปักหมุดในหน้ารายการ"
+        },
+        {
+          "icon": "🧩",
+          "title": "ปรับแต่งวิดเจ็ต",
+          "detail": "เลือกเลขใหญ่และบรรทัดรอง"
+        },
+        {
+          "icon": "⚡",
+          "title": "ปุ่มจดจากแผงควบคุม",
+          "detail": "เพิ่มรายการ · ถ่ายสลิป · สแกน · พูด ไม่ต้องเปิดแอปก่อน"
+        },
+        {
+          "icon": "🎨",
+          "title": "สีธีมเพิ่ม 14 สี (Pro)",
+          "detail": "วิดเจ็ตเปลี่ยนสีตามธีมหรือเลือกเอง · ลองดูก่อนซื้อได้"
+        }
+      ],
+      "items": [
+        "⏰ เลือกเวลาเตือนบิลและเตือนเช้าได้",
+        "🌙 เตือนจดตอนเย็น · พิมพ์จดในแจ้งเตือนได้เลย",
+        "📏 เลือกได้ว่าแถบยาวบนหน้าหลักเป็นงบไหน · ลากเรียงวงกลม",
+        "🔍 ค้นหาข้อมูลทั่วทั้งแอป",
+        "🏷️ ยอดใช้จ่ายใต้แท็ก/เพื่อใคร",
+        "✨ ปรับการแสดงผลหลายจุด"
+      ],
+      "en": {
+        "date": "9 November 2026",
+        "title": "📌 Pinned entries\n🧩 Customize the widget",
+        "highlights": [
+          {
+            "icon": "📌",
+            "title": "Pin entries",
+            "detail": "A card on Home · filter pinned in the ledger"
+          },
+          {
+            "icon": "🧩",
+            "title": "Customize the widget",
+            "detail": "Pick the big number and the second line"
+          },
+          {
+            "icon": "⚡",
+            "title": "Log buttons outside the app",
+            "detail": "Add · Snap a slip · Scan · Speak from your phone's controls"
+          },
+          {
+            "icon": "🎨",
+            "title": "14 more theme colors (Pro)",
+            "detail": "The widget follows the theme or a color you pick · try before you buy"
+          }
+        ],
+        "items": [
+          "⏰ Pick the time for bill and morning reminders",
+          "🌙 Evening log reminder · type an entry in the notification",
+          "📏 Choose which budget is the long bar · drag to order rings",
+          "🔍 Search across the whole app",
+          "🏷️ Spending under each tag and person",
+          "✨ Many small display polishes"
+        ]
+      }
+    },
+    {
       "version": "3.0.0",
       "date": "7 พฤศจิกายน 2569",
       "title": "♾️ Pro ตลอดชีวิต\n✦ ข้อมูลน่าสนใจ",
