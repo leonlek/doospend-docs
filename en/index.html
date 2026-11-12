@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DooSpend — the expense app that logs your receipts for you · Best card to swipe + what you can still spend today</title>
-<meta name="description" content="DooSpend is a free iPhone expense tracker for people who hate logging things — snap a receipt, speak it, or share a screenshot from any app and AI writes the entry for you · It tells you which credit card to swipe before you pay, and what you can still spend today · Split bills and settle trips with friends in-app · Your data stays on your device — no bank login, no SMS reading">
-<meta name="keywords" content="expense tracker iphone, receipt scanner app, ai expense tracking, best credit card to use, cashback tracker, credit card rewards tracker, bill splitting app, trip expense sharing, personal finance app thailand, promptpay, DooSpend">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DooSpend — expense tracker that logs for you · all your money in one app · iPhone &amp; Android</title>
+<meta name="description" content="DooSpend is an expense tracker and household budget app for people who hate logging — 6 ways to log: snap a slip for AI to read, speak, share a screenshot, import a statement · know what you can really spend after bills · what's left today · which credit card pays most · alerts near Thailand's e-Payment reporting thresholds (400 / 3,000 deposits) · your data stays on your phone, no bank linking, no SMS reading">
+<meta name="keywords" content="expense tracker, expense tracker iphone, expense tracker android, budget app, household budget, receipt scanner app, ai expense tracking, slip scanner, spending tracker thailand, money tracker, safe to spend, daily spending limit, best credit card to use, cashback tracker, credit card rewards tracker, credit card statement tracker, bill splitting app, trip expense splitter, promptpay qr, thailand e-payment tax 3000 deposits, withholding tax tracker, savings goal app, personal finance app thailand, DooSpend">
 <meta name="theme-color" content="#2E7D5B">
 <meta name="author" content="DooSpend">
 <link rel="canonical" href="https://doospend.com/en/">
@@ -13,675 +13,769 @@
 <link rel="alternate" hreflang="en" href="https://doospend.com/en/">
 <link rel="alternate" hreflang="x-default" href="https://doospend.com/">
 <meta name="apple-itunes-app" content="app-id=6774424817">
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DooSpend">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="th_TH">
-<meta property="og:title" content="DooSpend — hate logging expenses? Let AI do it · Best card to swipe + what's left today">
-<meta property="og:description" content="Snap a receipt, speak it, or share it in — AI writes the entry · Know which card pays best before you pay, and what you can still spend today · Split bills with friends in-app · Your data stays on your device">
+<meta property="og:title" content="DooSpend — all your money in one app">
+<meta property="og:description" content="6 ways to log · know what you can really spend · which card pays most · plan payments on a calendar · your data stays on your phone · iPhone &amp; Android">
 <meta property="og:url" content="https://doospend.com/en/">
-<meta property="og:image" content="https://doospend.com/og-cover.png">
+<meta property="og:image" content="https://doospend.com/og-cover-en.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="DooSpend — hate logging expenses? Let AI do it · Best card to swipe + what's left today">
-<meta name="twitter:description" content="An expense app for people who hate logging things · The card advisor tells you which card pays best + what you can still spend today · Your data stays on your device">
-<meta name="twitter:image" content="https://doospend.com/og-cover.png">
+<meta name="twitter:title" content="DooSpend — all your money in one app">
+<meta name="twitter:description" content="6 ways to log · know what you can really spend · which card pays most · plan payments on a calendar · your data stays on your phone · iPhone &amp; Android">
+<meta name="twitter:image" content="https://doospend.com/og-cover-en.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="../favicon.png">
 <link rel="apple-touch-icon" href="../icon-180.png">
-<!-- Progressive font enhancement (degrades to the system Thai stack if blocked/offline) -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "SoftwareApplication",
+ "name": "DooSpend",
+ "applicationCategory": "FinanceApplication",
+ "operatingSystem": "iOS, Android",
+ "description": "DooSpend is an expense tracker and household budget app for people who hate logging — 6 ways to log: snap a slip for AI to read, speak, share a screenshot, import a statement · know what you can really spend after bills · what's left today · which credit card pays most · alerts near Thailand's e-Payment reporting thresholds (400 / 3,000 deposits) · your data stays on your phone, no bank linking, no SMS reading",
+ "url": "https://doospend.com/en/",
+ "downloadUrl": [
+  "https://apps.apple.com/th/app/doospend/id6774424817",
+  "https://play.google.com/store/apps/details?id=app.doospend.android"
+ ],
+ "installUrl": "https://apps.apple.com/th/app/doospend/id6774424817",
+ "image": "https://doospend.com/og-cover-en.png",
+ "inLanguage": "en",
+ "offers": [
+  {
+   "@type": "Offer",
+   "price": "0",
+   "priceCurrency": "THB",
+   "name": "Free"
+  },
+  {
+   "@type": "Offer",
+   "price": "69",
+   "priceCurrency": "THB",
+   "name": "Pro monthly"
+  },
+  {
+   "@type": "Offer",
+   "price": "590",
+   "priceCurrency": "THB",
+   "name": "Pro yearly"
+  },
+  {
+   "@type": "Offer",
+   "price": "1490",
+   "priceCurrency": "THB",
+   "name": "Pro Lifetime (without AI)"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://doospend.com/#org",
+   "name": "DooSpend",
+   "url": "https://doospend.com/",
+   "logo": "https://doospend.com/icon-180.png"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://doospend.com/en/#website",
+   "name": "DooSpend",
+   "url": "https://doospend.com/en/",
+   "inLanguage": "en",
+   "publisher": {
+    "@id": "https://doospend.com/#org"
+   }
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Does DooSpend read my bank data?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No — DooSpend doesn't link bank accounts, ask for passwords or read SMS. Your data stays on your phone (on iPhone it syncs through your private iCloud). Logging from a slip means you snap or share the image yourself."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How does AI logging work, and is it safe?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "You snap a slip, speak or share an image, and AI (Anthropic's Claude) reads the amount, shop and category. The app asks your consent before the first send. Data goes through a proxy with a random per-device ID used only to count your quota — not your name or email — and the result always waits in Review for you to confirm before it's saved · Without AI you can still log everything yourself."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I use DooSpend without a credit card?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Absolutely — the card advisor is just an extra; it's a full household budget app. Cash, PromptPay and e-wallet users get everything: 6 ways to log, spendable money after bills, what's left today by your pay cycle, recurring bills, installments, loans, and bill splitting with a PromptPay QR to pay back (iPhone) · e-wallets that earn points or cashback (like TrueMoney) can have advisor rules just like cards."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I keep debt and installment payments out of my spending?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes — mark entries or whole categories (like \"Mortgage\" or \"Debt payment\") as \"Excluded from spending\". Those big amounts won't bury your real spending in the monthly summary and budgets, but still come off your balance, and paying by card still earns points or cashback as usual."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How is the card advisor different from rewards apps?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "DooSpend doesn't keep a database of card promos — you set your own cards' reward rules once, and the app ranks which card pays most for this category right now, and alerts you before a cashback or points cap fills up."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do co-brand cards like a Shopee card with shop-only points work?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes — set a \"shop-only\" rule (e.g. shopee, lazada) and the card earns the bonus only when you log that shop, plus \"except shops\" rules, like a dining promo that excludes delivery (Grab, LINE MAN) — Home has shop chips to tap and see which card pays most there."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I see my credit card spending each month?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes — each card page shows the current cycle, the latest statement and the due date, following the card's real closing date · To look back, filter entries by card and go month by month · No bank linking — the numbers come from what you log or import from statements."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How does the app count the 3,000-deposit threshold?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The Money in by year page counts each account's deposits and totals by calendar year and compares them with the thresholds Thai banks must report to the Revenue Department (3,000 deposits, or 400 deposits totaling ฿2 million or more, per year) · The numbers come from what you log — the app doesn't calculate your tax · Free users can view each account; combining accounts against the thresholds and alerts near them are Pro."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is it really free? What do I pay for?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Logging, budgets and what's left, card rules, tracking points and cashback, CSV/Excel import and 1 savings goal are free · Pro (฿69/month or ฿590/year) unlocks \"Left today\", month-end net, spendable money after bills, the card advisor in every category, the savings board and multiple goals, 150 AI logs a month, statement import and creating shared books · Don't need AI? Pro Lifetime is ฿1,490 once, with every Pro feature (except AI logging and statement import)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is it on both iPhone and Android?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, both — iPhone (iOS 18 or later) on the App Store and Android on Google Play · A few things differ: on iPhone your data syncs through your private iCloud and you can split bills with friends · on Android your data stays on the phone and you back it up wherever you choose."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I bring my data from another expense app?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes — import the CSV / Excel file your old app exports for free, or import a credit card statement (PDF) and let AI split it into entries. Everything lands in \"Review\" for you to confirm before it's saved."
+   }
+  }
+ ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "DooSpend",
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "iOS",
-  "description": "An iPhone expense tracker for people who hate logging things — snap a receipt and AI writes the entry, know which credit card pays best (cashback / points / miles), split bills and settle trips with friends. Data stays on your device and in your own private iCloud.",
-  "url": "https://doospend.com/en/",
-  "installUrl": "https://apps.apple.com/th/app/doospend/id6774424817",
-  "image": "https://doospend.com/og-cover.png",
-  "inLanguage": "en",
-  "offers": [
-    { "@type": "Offer", "price": "0", "priceCurrency": "THB", "name": "Free" },
-    { "@type": "Offer", "price": "69", "priceCurrency": "THB", "name": "Pro monthly" },
-    { "@type": "Offer", "price": "590", "priceCurrency": "THB", "name": "Pro yearly" },
-    { "@type": "Offer", "price": "1490", "priceCurrency": "THB", "name": "Pro Lifetime (no AI)" }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://doospend.com/#org",
-      "name": "DooSpend",
-      "url": "https://doospend.com/",
-      "logo": "https://doospend.com/icon-180.png"
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://doospend.com/en/#website",
-      "name": "DooSpend",
-      "url": "https://doospend.com/en/",
-      "inLanguage": "en",
-      "publisher": { "@id": "https://doospend.com/#org" }
-    }
-  ]
-}
-</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;700;800&amp;display=swap" rel="stylesheet">
 <style>
-  :root{
-    --green:#2E7D5B; --green-deep:#1C563C; --green-soft:#E7F0E9; --gold:#DD9F32; --coral:#E1705E;
-    --ink:#16241C; --muted:#5C6D62; --faint:#8A988E;
-    --page:#FBFCF8; --alt:#F2F5F0; --card:#FFFFFF; --line:#E2E7DE;
-    --display:"Plus Jakarta Sans","IBM Plex Sans Thai",system-ui,sans-serif;
-    --sans:"IBM Plex Sans Thai",system-ui,sans-serif;
-  }
-  /* dark theme — follows OS, or forced by the header toggle (data-theme) */
-  @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
-    --page:#0F1512;--alt:#141C17;--card:#1A231D;--line:#28332B;
-    --ink:#EAF1EA;--muted:#9DB0A2;--faint:#6E8175;
-    --green:#4FB483;--green-soft:#1C2C22;--green-deep:#173D2C;
-  }}
-  :root[data-theme="dark"]{
-    --page:#0F1512;--alt:#141C17;--card:#1A231D;--line:#28332B;
-    --ink:#EAF1EA;--muted:#9DB0A2;--faint:#6E8175;
-    --green:#4FB483;--green-soft:#1C2C22;--green-deep:#173D2C;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{font-family:var(--sans);background:var(--page);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6}
-  h1,h2,h3{font-family:var(--display);letter-spacing:-.012em;line-height:1.14;text-wrap:balance}
-  a{color:inherit}
-  .wrap{max-width:1020px;margin:0 auto;padding:0 24px}
-  .eyebrow{font-size:14px;font-weight:700;letter-spacing:.02em;text-transform:uppercase;color:var(--green)}
-  .grad{background:linear-gradient(100deg,var(--green),#54ba86 55%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+/* Layout: คำถามของผู้ใช้ตัวใหญ่ → คำตอบเป็นข้อสั้น ๆ คู่กับจอจริง สลับซ้ายขวา · ตัวเลขเงินจริงจากจอเป็นตัวเอกของแต่ละบท */
+:root{
+  --paper:#F4F7F5; --surface:#FFFFFF; --ink:#0F221A; --muted:#566B61; --line:#DAE4DE;
+  --brand:#2E7D5B; --brand-ink:#1E5C42; --mint:#E3F1EA; --gold:#B8862E; --on-brand:#FFFFFF;
+  --shadow:0 30px 60px -28px rgba(15,34,26,.35), 0 10px 24px -14px rgba(15,34,26,.18);
+  --f-display:"Plus Jakarta Sans","IBM Plex Sans Thai",system-ui,sans-serif;
+  --f-thai:"IBM Plex Sans Thai","Sukhumvit Set","Thonburi",system-ui,sans-serif;
+  --r-lg:28px; --r-md:16px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0B1410; --surface:#121E18; --ink:#E7F0EB; --muted:#9AB0A5; --line:#22342B;
+  --brand:#5DBE8F; --brand-ink:#8FD8B3; --mint:#163327; --gold:#D9AE5E; --on-brand:#06140D;
+  --shadow:0 30px 60px -28px rgba(0,0,0,.7), 0 10px 24px -14px rgba(0,0,0,.5); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0B1410; --surface:#121E18; --ink:#E7F0EB; --muted:#9AB0A5; --line:#22342B;
+  --brand:#5DBE8F; --brand-ink:#8FD8B3; --mint:#163327; --gold:#D9AE5E; --on-brand:#06140D;
+  --shadow:0 30px 60px -28px rgba(0,0,0,.7), 0 10px 24px -14px rgba(0,0,0,.5); color-scheme:dark}
 
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-thai);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:8px}
+.num{font-family:var(--f-display);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
 
-  /* header */
-  header{position:sticky;top:0;z-index:60;background:rgba(251,252,248,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;gap:18px;padding-block:12px}
-  .brand{display:flex;align-items:center;gap:9px;font-family:var(--display);font-weight:800;font-size:17px}
-  .brand img{width:30px;height:30px;border-radius:8px}
-  .nav .links{margin-left:auto;display:flex;gap:16px;font-size:13.5px;font-weight:600;color:var(--muted)}
-  .nav .links a{text-decoration:none}
-  .nav .links a:hover{color:var(--green)}
-  @media(max-width:640px){.nav .links{display:none}}
-  .navright{display:flex;align-items:center;gap:10px;margin-left:18px}
-  @media(max-width:640px){.navright{margin-left:auto}}
-  .toggle{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--card);display:grid;place-items:center;cursor:pointer;color:var(--muted);transition:.16s}
-  .toggle:hover{color:var(--ink);transform:rotate(-15deg)}
-  /* ตัวสลับภาษา — เม็ดกลมเหมือนปุ่มธีม อยู่ข้างกัน จะได้อ่านเป็นชุดเดียว ไม่ใช่เมนูใหม่ */
-  .lang{height:36px;padding:0 13px;border-radius:18px;border:1px solid var(--line);background:var(--card);display:grid;place-items:center;color:var(--muted);font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;transition:.16s}
-  .lang:hover{color:var(--ink);border-color:var(--green)}
-  .btn-p{background:var(--green);color:#fff;border-radius:11px;padding:9px 17px;font-size:13.5px;font-weight:700;text-decoration:none;white-space:nowrap;box-shadow:0 10px 26px -12px rgba(46,125,91,.6)}
-  .btn-p:hover{transform:translateY(-1px)}
-  /* header adapts to dark */
-  @media(prefers-color-scheme:dark){:root:not([data-theme="light"]) header{background:rgba(15,21,18,.85)}}
-  :root[data-theme="dark"] header{background:rgba(15,21,18,.85)}
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--paper)}
+.nav .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:800;font-size:19px;text-decoration:none;letter-spacing:-.01em}
+.logo img{width:30px;height:30px;border-radius:8px;display:block}
+.logo .wm{display:flex;align-items:baseline;gap:10px} /* ข้อความข้างโลโก้ชิดเส้นฐานเดียวกับ DooSpend */
+.logo .tagline{font-family:var(--f-thai);font-weight:500;font-size:14.5px;color:var(--muted);letter-spacing:0;padding-left:12px;margin-left:2px;border-left:1px solid var(--line);white-space:nowrap}
+@media (max-width:560px){.logo .tagline{font-size:13px;padding-left:10px}}
+.nav nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+.nav nav a{text-decoration:none;color:var(--muted)}
+.nav nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;font-weight:600;text-decoration:none;white-space:nowrap;transition:transform .15s ease,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--ink);color:var(--paper);padding:12px 20px}
+.btn-sm{padding:8px 16px;font-size:14.5px}
+.btn-ghost{border:1px solid var(--line);padding:11px 18px;color:var(--ink);background:var(--surface)}
+@media (max-width:820px){.nav nav{display:none}.nav .btn-sm{margin-left:auto}}
 
-  /* hero */
-  .hero{padding:58px 0 26px;position:relative;overflow:hidden}
-  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
-  @media(max-width:820px){.hero-grid{grid-template-columns:1fr}}
-  .hero h1{font-size:clamp(30px,4.4vw,46px);font-weight:800;margin-top:14px}
-  .h1kick{display:block;font-size:.66em;font-weight:700;color:var(--ink);line-height:1.3;margin-top:10px}
-  /* mobile: keep the gradient headline on one line (shrink to fit, don't wrap) */
-  @media(max-width:560px){.hero h1{font-size:clamp(26px,7.5vw,30px)}.hero h1 .grad{white-space:nowrap}.hero .lead{font-size:13.5px}}
-  .hero .lead{font-size:16px;color:var(--muted);margin-top:14px;max-width:33em}
-  .cta{display:inline-flex;align-items:center;gap:9px;background:#15221B;color:#fff;border-radius:13px;padding:12px 22px;font-size:14.5px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.08)}
-  .cta small{display:block;font-size:10px;font-weight:500;opacity:.75}
-  .cta-row{display:flex;gap:12px;align-items:center;margin-top:20px;flex-wrap:wrap}
-  .ghost{font-size:13.5px;font-weight:700;color:var(--green);text-decoration:none}
-  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
-  .chips span{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--muted);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
-  .chips svg{flex:0 0 auto;color:var(--green)}
-  /* mobile: a touch more breathing room on the sides */
-  @media(max-width:560px){.wrap{padding-left:24px;padding-right:24px}header .wrap.nav{padding-left:24px;padding-right:24px}}
-  /* mobile hero tidy-up: centered CTA, one-line chips, no secondary link */
-  @media(max-width:560px){
-    .cta-row{justify-content:center;margin-top:22px}
-    .ghost{display:none}
-    .chips{gap:6px;flex-wrap:nowrap;justify-content:center}
-    .chips span{font-size:11px;padding:5px 9px;gap:4px}
-    .chips svg{width:13px;height:13px}
-  }
+/* hero */
+.hero{padding-block:56px 40px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+@media (min-width:961px){.hero .wrap>div:first-child{align-self:start;padding-top:96px}} /* กลุ่มข้อความขึ้นสูงกว่ากึ่งกลางมือถือนิดหนึ่ง (เจ้าของขอ 10 พ.ย. 69) */
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--brand-ink);background:var(--mint);padding:6px 12px;border-radius:999px}
+.eyebrow b{width:7px;height:7px;border-radius:50%;background:var(--brand)}
+h1{font-family:var(--f-thai);font-weight:700;font-size:clamp(38px,5.6vw,66px);line-height:1.12;letter-spacing:-.01em;margin:18px 0 18px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--brand)}
+h1 .lt{font-weight:400}
+.lede{font-size:clamp(17px,1.6vw,19.5px);color:var(--muted);max-width:34em;margin:0 0 28px}
+.lede .nw{white-space:nowrap} /* ตัดบรรทัดระหว่างวลี ไม่ตัดกลางวลี */
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.store{display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:var(--paper);border-radius:14px;padding:10px 18px 10px 14px;text-decoration:none;min-height:56px}
+.store svg{width:26px;height:26px;fill:currentColor;flex:none}
+.store small{display:block;font-size:11.5px;opacity:.75;line-height:1.2}
+.store span{font-family:var(--f-display);font-weight:700;font-size:18px;line-height:1.15}
+.badge{display:inline-block;line-height:0}.badge img{height:52px;width:auto;display:block} /* ป้ายทางการทั้งสองร้าน สูงเท่ากัน */
+.trust{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;color:var(--muted);font-size:14.5px}
+.trust span{display:inline-flex;align-items:center;gap:8px}
+.trust span::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--mint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.3 2.3 4.7-5' fill='none' stroke='%232E7D5B' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
 
-  /* phone frame */
-  .phone{background:#101511;border-radius:38px;padding:9px;box-shadow:0 30px 70px -30px rgba(16,36,24,.5);max-width:280px;margin:0 auto}
-  .phone img{display:block;width:100%;border-radius:30px}
-  /* gentle float on the hero phone — subtle sign of life (like the old landing) */
-  .hero-grid .phone{animation:float 6s ease-in-out infinite}
-  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-  @media(prefers-reduced-motion:reduce){.hero-grid .phone{animation:none}}
-  .phone.sm{max-width:240px}
-  .phones2{display:flex;gap:18px;justify-content:center;align-items:flex-start}
-  .phones2 .phone:last-child{margin-top:34px}
-  /* mobile: side-by-side phones become a swipeable carousel (customers read on phones) */
-  @media(max-width:560px){
-    .phones2{flex-direction:row;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding:4px 20px 12px;margin:0 -20px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-    .phones2::-webkit-scrollbar{display:none}
-    .phones2 .phone{flex:0 0 74%;max-width:74%;scroll-snap-align:center;margin-top:0!important}
-  }
-  .swipehint{display:none}
-  @media(max-width:560px){.swipehint{display:block;text-align:center;font-size:11.5px;color:var(--faint);margin-top:8px}}
+.stage{position:relative;height:620px}
+.phone{position:absolute;width:290px;aspect-ratio:1320/2868;border-radius:44px;padding:9px;background:#0E1612;box-shadow:var(--shadow);max-width:100%}
+.phone img{display:block;width:100%;height:100%;object-fit:cover;border-radius:36px}
+.stage .p1{left:8%;top:0;z-index:2}
+.stage .p2{left:46%;top:70px;transform:rotate(4deg);z-index:1}
+.chip{position:absolute;z-index:3;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px 16px;box-shadow:var(--shadow);font-size:13.5px;color:var(--muted);min-width:0}
+.chip strong{display:block;font-size:24px;color:var(--ink);line-height:1.2}
+.chip.c1{left:-2%;bottom:92px}
+.chip.c2{right:0;top:18px}
+@media (max-width:960px){
+  .hero .wrap{grid-template-columns:1fr}
+  .stage{height:520px;max-width:520px;margin:0 auto;width:100%}
+  .phone{width:240px;border-radius:38px}
+  .phone img{border-radius:30px}
+}
+@media (max-width:520px){
+  .stage{height:440px}
+  .phone{width:200px;padding:7px;border-radius:32px}
+  .phone img{border-radius:26px}
+  .stage .p1{left:2%}.stage .p2{left:44%;top:50px}
+  .chip{padding:10px 12px;font-size:12px}.chip strong{font-size:19px}
+  .chip.c1{left:0;bottom:30px}.chip.c2{right:0;top:0}
+}
 
-  /* fork */
-  .fork{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
-  @media(max-width:680px){.fork{grid-template-columns:1fr}}
-  .forkcard{display:block;text-decoration:none;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:20px 22px;transition:.16s}
-  .forkcard:hover{border-color:var(--green);transform:translateY(-2px);box-shadow:0 16px 34px -22px rgba(20,50,32,.35)}
-  .forkcard .tag{font-size:12px;font-weight:700;color:var(--faint)}
-  .forkcard h3{font-size:19px;font-weight:800;margin:7px 0 5px}
-  .forkcard p{font-size:13.5px;color:var(--muted)}
-  .forkcard .go{font-size:13px;font-weight:700;color:var(--green);margin-top:10px;display:inline-block}
-  .bothline{margin:16px 0 0;font-size:13.5px;color:var(--muted);text-align:center}
-  .bothline b{color:var(--green)}
+/* ways strip */
+.ways{border-block:1px solid var(--line);background:var(--surface)}
+.ways .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;padding-block:18px;justify-content:center;font-size:15px;color:var(--muted)}
+.ways b{color:var(--ink);font-weight:600}
 
-  .strip{background:var(--green-deep);color:#DFEBE2;font-size:13px;font-weight:600;padding:12px 0;margin-top:34px}
-  .strip .wrap{display:flex;gap:26px;flex-wrap:wrap;justify-content:center}
-  /* mobile: tighten so the 5 chips wrap to 2 rows (not 3) */
-  @media(max-width:560px){.strip{font-size:12px}.strip .wrap{gap:6px 11px}}
+/* chapters */
+.chapter{padding-block:96px}
+.chapter + .chapter{border-top:1px solid var(--line)}
+.chapter .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.chapter.flip .copy{order:2}
+.kicker{font-family:var(--f-display);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand)}
+h2{font-weight:700;font-size:clamp(28px,3.4vw,42px);line-height:1.22;margin:12px 0 24px;text-wrap:balance}
+.copy{min-width:0}
+.points{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.points li{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start}
+.points li::before{content:"";width:22px;height:22px;margin-top:3px;border-radius:7px;background:var(--mint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath d='M6.5 11.3l3 3 6-6.6' fill='none' stroke='%232E7D5B' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/22px no-repeat}
+.points small{display:block;color:var(--muted);font-size:15px}
+.tag{display:inline-block;font-size:12px;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:2px;white-space:nowrap}
+.tag.pro{color:var(--gold);border-color:color-mix(in srgb,var(--gold) 45%,transparent)}
+.shot{position:relative;display:flex;justify-content:center;min-width:0}
+.shot .phone{position:relative;width:300px}
+.shot .phone.second{position:absolute;width:240px;right:4%;bottom:-30px;transform:rotate(5deg)}
+.figure{position:absolute;left:0;top:14%;z-index:2;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:16px 18px;box-shadow:var(--shadow);max-width:230px}
+.figure .lbl{font-size:13px;color:var(--muted)}
+.figure .val{font-size:30px;font-weight:800;color:var(--brand);line-height:1.15}
+.figure .sub{font-size:12.5px;color:var(--muted);margin-top:4px}
+.chapter.flip .figure{left:auto;right:0}
+@media (max-width:900px){
+  .chapter{padding-block:64px}
+  .chapter .wrap{grid-template-columns:1fr;gap:36px}
+  .chapter.flip .copy{order:0}
+  .shot .phone{width:250px}
+  .shot .phone.second{width:190px;right:2%}
+  .figure{left:0;top:auto;bottom:24px;max-width:200px}
+  .chapter.flip .figure{right:0}
+}
+@media (max-width:420px){.shot .phone{width:220px}.shot .phone.second{display:none}.figure .val{font-size:24px}}
 
-  /* sections */
-  .sec{padding:56px 0}
-  .sec.alt{background:var(--alt)}
-  .sec h2{font-size:clamp(22px,3vw,30px);font-weight:800;margin-top:10px}
-  .sec .sub{font-size:14.5px;color:var(--muted);margin-top:10px;max-width:36em}
-  .twocol{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
-  .twocol.flip .txt{order:2}
-  .twocol.flip .vis{order:1}
-  @media(max-width:820px){.twocol{grid-template-columns:1fr}.twocol.flip .txt{order:1}.twocol.flip .vis{order:2}}
-  .bullets{margin-top:16px;display:grid;gap:9px;font-size:13.5px;color:var(--muted)}
-  .bullets span b{color:var(--ink)}
-  .checks{list-style:none;margin-top:16px;display:grid;gap:10px}
-  .checks li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--muted)}
-  .checks .tick{flex:0 0 auto;width:21px;height:21px;border-radius:50%;background:var(--green-soft);color:var(--green);display:grid;place-items:center;font-size:11px;font-weight:800;margin-top:1px}
+/* การ์ดลอย = ภาพครอปจากจอจริง (ไม่วาดใหม่) */
+.float{position:absolute;z-index:3;width:300px;border-radius:22px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow);border:1px solid var(--line)}
+.float img{display:block;width:100%;height:auto}
+.float.sheet{width:270px;border-radius:26px}
+.shot .phone.third{position:absolute;width:210px;left:-2%;bottom:-40px;transform:rotate(-5deg);z-index:0}
+@media (max-width:900px){.float{width:230px}.float.sheet{width:210px}.shot .phone.third{width:170px;left:0}}
+@media (max-width:420px){.float{width:190px}.float.sheet{width:170px}.shot .phone.third{display:none}}
 
-  /* daily CSS phone (real capture ตอน implement) */
-  .appcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 18px;font-size:13.5px;box-shadow:0 14px 34px -22px rgba(20,50,32,.3)}
-  .appcard .row{display:flex;justify-content:space-between;align-items:baseline;padding:3px 0}
-  .appcard .m{color:var(--faint);font-size:11.5px}
-  .appcard .g{color:var(--green)}
-  .appcard .big{font-family:var(--display);font-weight:800;font-size:24px}
-  .appcard .barline{height:9px;border-radius:99px;background:#E9EEE7;overflow:hidden;margin:8px 0 5px}
-  .appcard .barline i{display:block;height:100%;width:58%;background:var(--green)}
-  /* real cropped UI card (daily-spend feature) + iOS-style morning nudge banner on top */
-  .dailyvis{max-width:440px;margin:0 auto;display:grid;gap:14px}
-  .shotcard{border-radius:22px;overflow:hidden;box-shadow:0 26px 56px -26px rgba(20,50,32,.42);background:#fff;padding:22px}
-  .shotcard img{display:block;width:100%}
-  .iosnotif{display:flex;gap:11px;align-items:flex-start;background:rgba(248,249,246,.92);backdrop-filter:blur(14px);border:1px solid rgba(0,0,0,.05);border-radius:18px;padding:12px 14px;box-shadow:0 16px 38px -20px rgba(20,50,32,.4)}
-  .iosnotif .ic{width:38px;height:38px;border-radius:9px;flex:0 0 auto}
-  .iosnotif .hd{display:flex;justify-content:space-between;font-size:11px;color:var(--faint);letter-spacing:.02em;margin-bottom:2px}
-  .iosnotif .hd b{color:var(--muted);font-weight:700}
-  .iosnotif .ti{font-size:14px;font-weight:700;color:var(--ink)}
-  .iosnotif .bd{font-size:13px;color:var(--muted);margin-top:1px}
-  .appstack{max-width:330px;margin:0 auto;display:grid;gap:12px}
-  .notif{background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:14px;padding:11px 14px;font-size:12.5px;box-shadow:0 10px 26px -18px rgba(20,50,32,.4)}
-  .notif b{display:block;font-size:12px}
-  .notif .app{display:flex;align-items:center;gap:6px;font-size:10.5px;color:var(--faint);margin-bottom:4px}
-  .notif .app img{width:14px;height:14px;border-radius:4px}
+/* ปุ่มลัด: ภาพค่อย ๆ เปลี่ยน + วงแตะ (หน้าหลัก → แตะ + → เมนูตั้งต้น → แตะ ✎ → ตาราง + → ปุ่มของคุณ) */
+.seq{position:relative;width:100%;height:100%;border-radius:36px;overflow:hidden;background:#F2F2F7}
+.seq img{position:absolute;inset:0;opacity:0;transition:opacity .45s ease;border-radius:0}
+.seq img.on{opacity:1}
+.tap{position:absolute;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;background:rgba(255,255,255,.5);border:2px solid #fff;box-shadow:0 2px 12px rgba(0,0,0,.25);opacity:0;transform:scale(.4);pointer-events:none;z-index:2}
+.tap.go{animation:tapgo .7s ease-out}
+@keyframes tapgo{0%{opacity:0;transform:scale(1.3)}30%{opacity:1;transform:scale(.85)}60%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.5)}}
+@media (max-width:900px){.seq{border-radius:30px}}
 
-  /* AI section: text LEFT · two visuals (FAB phone + share→inbox composite) RIGHT */
-  .aigrid{display:grid;grid-template-columns:1fr .85fr;gap:34px;align-items:center}
-  .aivisrow{display:flex;gap:12px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
-  .aivisrow .phone{flex:0 0 auto}
-  .aivisrow .phone.sm{max-width:205px}
-  .aigrid .sharecol{width:205px}
-  /* mobile: the two visuals sit side by side in a swipeable carousel (not stacked) */
-  @media(max-width:900px){
-    .aigrid{grid-template-columns:1fr;gap:22px}
-    .aivisrow{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;justify-content:flex-start;gap:14px;padding:2px 20px 12px;margin:0 -20px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-    .aivisrow::-webkit-scrollbar{display:none}
-    .aivisrow .phone.sm{flex:0 0 72%;max-width:72%;scroll-snap-align:center}
-    .aigrid .sharecol{flex:0 0 72%;width:auto;max-width:72%;scroll-snap-align:center}
-  }
-  .phonecenter{margin:0 auto}
-  /* share→inbox composite (ยกจาก landing เก่า): source chips → white arrows curve DOWN → inbox */
-  .sharecol{width:240px;max-width:100%;flex:0 0 auto}
-  .share-srcs{display:flex;gap:8px;justify-content:center}
-  .share-srcs .src{display:flex;flex-direction:column;align-items:center;gap:3px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 6px;flex:1;min-width:0;box-shadow:0 2px 10px rgba(20,40,30,.08)}
-  .share-srcs .src b{font-size:11px;line-height:1.1;white-space:nowrap}
-  .share-srcs .src small{font-size:9.5px;color:var(--muted);line-height:1.1;white-space:nowrap}
-  .share-srcs .src .si{width:24px;height:24px;border-radius:7px;display:grid;place-items:center;color:#fff}
-  .share-arrows{display:block;width:100%;margin:2px auto 8px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.38))}
-  .share-arrows path{stroke:#fff;stroke-width:2.4;stroke-linecap:round;fill:none}
-  .sharecol .phone{max-width:100%;margin:0}
+/* grid of smaller chapters */
+.more{padding-block:96px;background:var(--surface);border-block:1px solid var(--line)}
+.more h2{max-width:20em}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.card{border:1px solid var(--line);border-radius:var(--r-lg);padding:26px;background:var(--paper);display:grid;grid-template-rows:auto auto 1fr;gap:12px;min-width:0}
+.card h3{font-size:21px;line-height:1.3;margin:0;text-wrap:balance}
+.card .q{font-size:13.5px;color:var(--brand-ink);font-weight:600}
+.card ul{margin:0;padding-left:1.1em;color:var(--muted);font-size:15.5px;display:grid;gap:6px}
+.card .thumb{margin-top:8px;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--surface)}
+.card .thumb img{width:100%;height:100%;object-fit:cover;object-position:50% var(--fy,25%);transform-origin:50% var(--fy,25%)}
+@media (max-width:960px){.cards{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.cards{grid-template-columns:1fr}}
 
-  /* feature grid + pricing + faq + final */
-  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
-  @media(max-width:760px){.grid3{grid-template-columns:1fr 1fr}}
-  /* mobile: stay 2-up (compact) so 12 features don't stack into a 12-tall list */
-  @media(max-width:520px){.grid3{grid-template-columns:1fr 1fr;gap:10px}
-    .feat{padding:12px 11px;font-size:11.5px}.feat b{font-size:12px}}
-  .feat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 16px;font-size:13px;color:var(--muted)}
-  .feat b{display:block;color:var(--ink);font-size:13.5px;margin-bottom:3px}
-  .pricing{display:grid;grid-template-columns:1fr 1.15fr;gap:16px;margin-top:24px}
-  @media(max-width:680px){.pricing{grid-template-columns:1fr}}
-  .price{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;font-size:13.5px;color:var(--muted)}
-  .price.pro{border-color:var(--green);box-shadow:0 18px 40px -26px rgba(46,125,91,.5)}
-  .price b.t{display:block;font-family:var(--display);font-size:17px;color:var(--ink)}
-  .price .amt{font-family:var(--display);font-size:24px;font-weight:800;color:var(--ink);margin:6px 0 10px}
-  .price .amt small{font-size:12px;color:var(--faint);font-weight:600}
-  .price ul{list-style:none;display:grid;gap:7px}
-  .price li::before{content:"✓ ";color:var(--green);font-weight:700}
-  .cmp-wrap{margin-top:24px;overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:var(--card)}
-  .cmp{width:100%;min-width:520px;border-collapse:collapse;font-size:13.5px}
-  .cmp th,.cmp td{padding:11px 14px;text-align:center;border-top:1px solid var(--line)}
-  .cmp thead th{border-top:0;padding-top:18px;vertical-align:bottom}
-  .cmp thead b{display:block;font-family:var(--display);font-size:17px;color:var(--ink)}
-  .cmp thead span{display:block;font-size:12px;color:var(--muted);font-weight:600}
-  .cmp tbody th{text-align:left;font-weight:500;color:var(--ink);width:52%}
-  .cmp tr.g th{font-size:12px;font-weight:700;color:var(--faint);padding-top:18px;padding-bottom:6px;letter-spacing:.02em}
-  .cmp td{color:var(--ink);font-weight:600;font-size:12.5px}
-  .cmp .pro{background:rgba(46,125,91,.08)}
-  .cmp thead th.pro{border-radius:14px 14px 0 0}
-  .cmp td.y{color:var(--green);font-size:16px;font-weight:800}
-  .cmp td.n{color:var(--faint);font-weight:400}
-  .cmp-note{margin-top:10px;font-size:12.5px;color:var(--faint)}
-  .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-  .faq{margin-top:22px;display:grid;gap:10px;max-width:720px}
-  .faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 16px;font-size:13.5px}
-  .faq summary{font-weight:700;cursor:pointer}
-  .faq p{color:var(--muted);margin-top:8px}
-  .final{background:var(--green-deep);color:#fff;text-align:center;padding:62px 0}
-  .final h2{font-size:clamp(24px,3.2vw,32px)}
-  .final .cta{background:#fff;color:var(--ink);margin-top:20px}
-  /* Android waitlist (in the final CTA band) */
-  .androidwait{margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16);scroll-margin-top:84px}
-  .aw-t{font-size:13.5px;opacity:.9}
-  .aw-form{display:flex;gap:8px;justify-content:center;margin-top:12px;flex-wrap:wrap}
-  .aw-form input{padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.12);color:#fff;font-size:14px;min-width:220px}
-  .aw-form input::placeholder{color:rgba(255,255,255,.55)}
-  .aw-form button{padding:10px 16px;border-radius:10px;border:0;background:rgba(255,255,255,.92);color:var(--ink);font-weight:700;font-size:13.5px;cursor:pointer}
-  .aw-form button:disabled{opacity:.7;cursor:default}
-  .aw-note{font-size:11px;opacity:.6;margin-top:9px}
-  footer{font-size:12px;color:var(--faint);text-align:center;padding:26px 0}
-  /* footer */
-  footer{border-top:1px solid var(--line);padding:46px 0 36px;background:var(--alt)}
-  .foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
-  .footcols{display:flex;gap:44px;flex-wrap:wrap}
-  .footcol{display:flex;flex-direction:column;gap:8px;font-size:13px}
-  .footcol b{color:var(--faint);font-weight:700;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
-  .footcol a{color:var(--muted);text-decoration:none}
-  .footcol a:hover{color:var(--green)}
-  .copy{max-width:1020px;margin:32px auto 0;padding:20px 24px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--faint)}
-  @media(max-width:600px){.foot{gap:22px}.footcols{gap:26px}}
-  /* ─── ทับ CSS ของหน้าไทยเฉพาะจุดที่ผูกกับ "ความยาวของภาษาไทย" ─────────────
-     ต้นฉบับจูนมาสำหรับไทยซึ่งกินที่น้อยกว่าอังกฤษมากในข้อความเดียวกัน · วัดจริง
-     บนวิวพอร์ต 420px (Chrome headless) แล้วสามจุดนี้ล้นออกนอกจอ:
+/* privacy */
+.privacy{padding-block:96px}
+.privacy .box{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:center;background:var(--ink);color:var(--paper);border-radius:36px;padding:56px}
+.privacy h2{color:var(--paper);margin-top:10px}
+.privacy .kicker{color:color-mix(in srgb,var(--paper) 70%,var(--brand))}
+.privacy ul{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.privacy li{border-top:1px solid color-mix(in srgb,var(--paper) 18%,transparent);padding-top:16px;font-size:17.5px}
+.privacy li span{display:block;font-size:14.5px;opacity:.72}
+.privacy a.more-link{display:inline-block;margin-top:22px;color:var(--paper);font-weight:600}
+@media (max-width:900px){.privacy .box{grid-template-columns:1fr;padding:32px 24px;border-radius:28px;gap:24px}}
 
-     1. `.hero h1 .grad{white-space:nowrap}` — ต้นฉบับบังคับพาดหัวเป็นบรรทัดเดียว
-        บนมือถือโดยตั้งใจ เพราะ**ไทยไม่มีช่องว่าง** ตัดบรรทัดแล้วคำขาดกลางคำ ·
-        อังกฤษตัดที่ช่องว่างได้สวย จึงปล่อยให้ห่อบรรทัดตามปกติ
-     2. `.chips{flex-wrap:nowrap}` — สามชิปภาษาอังกฤษกว้างกว่าไทยรวมกัน
-     3. `.eyebrow` ตัวใหญ่หมด + ไม่ลดขนาดบนมือถือ — ข้อความอังกฤษยาวกว่า
-     4. ตัวสลับภาษาเพิ่มของใหม่เข้าไปในแถบหัว ที่ 420px เลยดันปุ่มดาวน์โหลดตกขอบ
-        → ทำให้เป็นเม็ดเล็กเท่าปุ่มธีม (ยังอ่านออกว่า "ไทย") */
-  .lang{padding:0 10px;font-size:12.5px}
-  @media(max-width:560px){
-    .hero h1 .grad{white-space:normal}
-    .hero h1{font-size:clamp(25px,6.6vw,30px);line-height:1.18}
-    .eyebrow{font-size:11.5px;letter-spacing:.03em}
-    .chips{flex-wrap:wrap;justify-content:flex-start}
-    .lang{padding:0 8px;font-size:12px}
-  }
+/* pricing */
+.pricing{padding-block:96px;border-top:1px solid var(--line)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;align-items:stretch}
+.plan{border:1px solid var(--line);border-radius:var(--r-lg);padding:28px;background:var(--surface);display:flex;flex-direction:column;gap:14px;min-width:0}
+.plan.hl{border:2px solid var(--brand)}
+.plan h3{margin:0;font-size:18px}
+.plan .price{font-size:40px;font-weight:800;line-height:1}
+.plan .price small{font-size:15px;font-weight:500;color:var(--muted);font-family:var(--f-thai)}
+.plan ul{margin:0;padding-left:1.1em;color:var(--muted);font-size:15.5px;display:grid;gap:6px}
+.plan .note{font-size:13px;color:var(--muted);margin-top:auto}
+@media (max-width:900px){.plans{grid-template-columns:1fr}}
+.fineprint{color:var(--muted);font-size:14px;margin-top:20px}
 
-  /* ── รีวิวผู้ใช้ (ก่อนส่วนราคา · เจ้าของเคาะ 11 ก.ย. 69) ──────────────────
-     **ไม่มีคะแนน ไม่มีจำนวนคน ไม่มีวันที่ ไม่มีดาว — เหลือแต่คำที่ผู้ใช้เขียน**
-     เพราะเลขทุกตัวเก่าได้ (5.0 ตกได้ · 42 เพิ่มได้) แล้วหน้าเว็บก็พูดของเก่าเงียบ ๆ
-     ส่วนคำพูดของคนเป็นจริงตลอดไป ไม่ต้องมีใครมาอัปเดตและไม่ต้องมีวันกำกับ
+/* final */
+.final{padding-block:80px 96px;text-align:left}
+.final .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:end}
+.final h2{font-size:clamp(32px,4.2vw,52px);margin:0}
+@media (max-width:820px){.final .wrap{grid-template-columns:1fr}}
 
-     เครื่องหมายคำพูดสีเขียวทำงานแทนดาว: บอกว่านี่คือคำของคนอื่น ไม่ใช่คำโฆษณาที่เราเขียน ·
-     **ห้ามใช้ไอคอน/แบดจ์ของ Apple และห้ามทำหน้าตาเลียนแบบ UI ของ App Store** */
-  .reviews{border-top:1px solid var(--line)}
-  .qmark{font-family:var(--display);font-size:30px;font-weight:800;line-height:.7;color:var(--green);opacity:.35}
-  .rv{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 19px;display:flex;flex-direction:column;gap:9px}
-  .rv .q{font-size:14.5px;line-height:1.66;margin:0}
-  .rv .nm{font-size:12.5px;color:var(--faint);font-weight:600;margin-top:auto}
-  .cgrid{display:grid;grid-template-columns:1.25fr 1fr;gap:14px;margin-top:18px}
-  @media(max-width:820px){.cgrid{grid-template-columns:1fr}}
-  .hero-rv{background:linear-gradient(150deg,var(--green-soft),var(--card) 72%);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column}
-  .hero-rv .q{font-family:var(--display);font-size:19.5px;font-weight:700;line-height:1.5;letter-spacing:-.01em;margin:12px 0 0}
-  .hero-rv .q2{font-size:14px;color:var(--muted);line-height:1.62;margin:12px 0 0}
-  .hero-rv .nm{font-size:12.5px;color:var(--muted);font-weight:600;margin-top:16px}
-  .csmall{display:flex;flex-direction:column;gap:14px}
-  .storelink{display:inline-block;margin-top:20px;color:var(--green);font-size:13.5px;font-weight:700;text-decoration:none}
-  @media(max-width:560px){.hero-rv{padding:20px}.hero-rv .q{font-size:17.5px}}
+footer{border-top:1px solid var(--line);padding-block:40px;color:var(--muted);font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 22px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--ink)}
+
+/* รีวิว App Store (ยกจากหน้าเดิม ตามที่เขียนไว้ทุกคำ) */
+.reviews{padding-block:96px}
+.rvgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:20px;margin-top:32px}
+.rv{margin:0;border:1px solid var(--line);border-radius:var(--r-lg);padding:26px;background:var(--surface);display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+.rv blockquote{margin:0;font-size:17px;line-height:1.6}
+.rv.big blockquote{font-size:20px}
+.rv blockquote::before{content:"\201C";display:block;font-family:var(--f-display);font-size:44px;line-height:.6;color:var(--brand);margin-bottom:8px}
+.rv em{font-style:normal;color:var(--brand);font-weight:600}
+.rv figcaption{color:var(--muted);font-size:14.5px}
+.storelink{display:inline-block;margin-top:22px;font-weight:600;color:var(--brand-ink)}
+@media (max-width:900px){.rvgrid{grid-template-columns:1fr}.reviews{padding-block:64px}}
+
+/* FAQ */
+.faq{padding-block:96px;border-top:1px solid var(--line)}
+.faqlist{margin-top:28px;display:grid;gap:12px;max-width:860px}
+.faq details{border:1px solid var(--line);border-radius:18px;background:var(--surface);padding:0 22px}
+.faq summary{cursor:pointer;list-style:none;padding:18px 28px 18px 0;font-weight:600;font-size:17px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:14px;font-size:24px;color:var(--brand);font-weight:400}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0 0 18px;color:var(--muted);font-size:15.5px}
+@media (max-width:900px){.faq{padding-block:64px}}
+
+/* ตารางเทียบ ฟรี / Pro (ยกจากหน้าเดิม) */
+.cmp-wrap{margin-top:32px;overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);max-width:920px}
+.cmp{width:100%;min-width:520px;border-collapse:collapse;font-size:15px}
+.cmp th,.cmp td{padding:12px 16px;text-align:center;border-top:1px solid var(--line)}
+.cmp thead th{border-top:0;padding-top:20px;vertical-align:bottom}
+.cmp thead b{display:block;font-family:var(--f-display);font-size:20px;color:var(--ink)}
+.cmp thead span{display:block;font-size:12.5px;color:var(--muted);font-weight:600}
+.cmp tbody th{text-align:left;font-weight:500;color:var(--ink);width:52%}
+.cmp tr.g th{font-size:12.5px;font-weight:700;color:var(--muted);padding-top:20px;padding-bottom:6px;letter-spacing:.02em}
+.cmp td{color:var(--ink);font-weight:600;font-size:14px}
+.cmp .pro{background:color-mix(in srgb,var(--brand) 9%,transparent)}
+.cmp thead th.pro{border-radius:14px 14px 0 0}
+.cmp td.y{color:var(--brand);font-size:17px;font-weight:800}
+.cmp td.n{color:var(--muted);font-weight:400}
+.cmp-note{margin-top:12px;font-size:13.5px;color:var(--muted)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (max-width:620px){.cmp{min-width:0;table-layout:fixed;font-size:13px}.cmp th,.cmp td{padding:9px 8px}.cmp tbody th{width:46%}.cmp thead b{font-size:17px}.cmp thead span{font-size:10.5px;font-weight:500}.cmp td{font-size:12.5px}} /* มือถือ: สามคอลัมน์อยู่ในจอเดียว ไม่ต้องเลื่อนข้าง */
+
+/* มือถือ: ภาพลอยของส่วนจดใช้ตำแหน่ง (translate) ที่จัดบนจอกว้าง — บนจอแคบหลุดขวาจอ หน้าเลื่อนข้างได้ (13 พ.ย. 69) */
+@media (max-width:620px){#log .float{translate:none!important;scale:none!important;left:auto!important;top:auto!important;right:-6px!important;width:150px!important}#log .float:nth-of-type(1){bottom:60px!important}#log .float:nth-of-type(2){bottom:auto!important;top:40px!important}}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is the app itself in English?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — Settings → Language switches the whole interface to English, and the calendar can be set to the Gregorian year instead of the Thai Buddhist era. Amounts are in Thai baht and the QR features are PromptPay, so DooSpend fits best if you spend in Thailand."}}, {"@type": "Question", "name": "Does DooSpend read my bank account?", "acceptedAnswer": {"@type": "Answer", "text": "No. It never connects to a bank, never asks for a password, and never reads your SMS. Your entries live on your device and in your own private iCloud. When a slip gets logged, it is because you took or shared that image yourself."}}, {"@type": "Question", "name": "How does the AI logging work, and is it safe?", "acceptedAnswer": {"@type": "Answer", "text": "You snap a slip or speak, and the AI reads out the amount, the store and a category. The image goes through our proxy to Anthropic's Claude with a random per-device id used only to count your quota — not your name, e-mail or Apple ID. The result always comes back for you to confirm before anything is saved, and the app asks for your permission before the first time it sends anything."}}, {"@type": "Question", "name": "I do not use credit cards — is DooSpend still for me?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. The card advisor is an extra, not the heart of the app. On cash, PromptPay or a wallet you still get all of it: AI logging from slips, \"what is left today\" on a payday-aligned budget, bill splitting with a who-owes-whom summary and a PromptPay QR to settle, a heads-up when a subscription has gone quiet, lending records, and QR scanning that shows you the payee before you transfer. If your wallet earns cashback or points (TrueMoney, say), you can give it reward rules just like a card."}}, {"@type": "Question", "name": "Can I keep loan and installment payments out of my spending?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — mark it \"excluded from spending\", either on the single entry or on a whole category (a \"mortgage\" or \"debt repayment\" category, say). Those big amounts stop burying what you actually spent in the monthly summary and the budget, while the money still leaves your balance for real — and if you paid by card you still earn the rewards. A switch on the summary screen lets you fold them back in temporarily when you want to see the all-in figure."}}, {"@type": "Question", "name": "How is the card advisor different from a rewards app?", "acceptedAnswer": {"@type": "Answer", "text": "DooSpend keeps no database of bank promotions. You enter your own cards' reward rules once, and the app ranks them for the category you are about to spend on, right now — including a warning before a cashback or points cap fills up. Because the rules are yours, nothing goes stale behind your back; if a bank changes its promo, you update the rule."}}, {"@type": "Question", "name": "What about a co-brand card that only earns at one store?", "acceptedAnswer": {"@type": "Answer", "text": "Supported — set the rule to \"this store only\" (shopee, lazada…) and the card only earns the bonus on entries at that store. There is an \"every store except\" mode too, for a dining promo that excludes delivery apps. The home screen shows store chips you can tap to see which card wins there."}}, {"@type": "Question", "name": "Is the free tier actually usable? What costs money?", "acceptedAnswer": {"@type": "Answer", "text": "Logging, budgets and what is left this month, card rules, reward tracking and one savings goal are free — and logging your own data is never paywalled. Pro (฿69/month or ฿590/year) is for the work the app does on your behalf: what you can still spend today plus the morning nudge, the best-card pick across every category with the prompt while you log and cap warnings, the savings board and extra goals, 150 AI entries a month, unlimited statement imports, and creating shared pockets. Not using AI? Pro Lifetime is ฿1,490 once for every Pro feature (AI capture and statement import not included)."}}, {"@type": "Question", "name": "Is it iPhone only? Is there an Android version?", "acceptedAnswer": {"@type": "Answer", "text": "For now DooSpend is built for iPhone (iOS 18 and up) so it can lean on your own private iCloud. There is no Android release yet — leave your e-mail here and you will hear when there is."}}, {"@type": "Question", "name": "Can I bring my data over from another expense app?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — import the CSV or Excel file your old app exports for free, or hand it a credit-card statement PDF and let the AI break the whole page into entries. Everything lands in the review queue for you to confirm before it is saved."}}]}</script>
 </head>
 <body>
-
-<header><div class="wrap nav">
-  <span class="brand"><img src="../icon-180.png" alt="DooSpend">DooSpend</span>
-  <nav class="links">
-    <a href="#card">Best card</a><a href="#cash">Left today</a><a href="#ai">AI logging</a><a href="#share">Split bills</a><a href="#pricing">Pricing</a><a href="help.html">Help</a>
-  </nav>
-  <div class="navright">
-    <button class="toggle" id="themeToggle" aria-label="Toggle light/dark theme">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg>
-    </button>
-    <a class="lang" href="../" hreflang="th" aria-label="อ่านภาษาไทย">ไทย</a>
-    <a class="btn-p" href="#download">Download</a>
-  </div>
-</div></header>
-
-<main>
-
-  <!-- HERO -->
-  <section class="hero"><div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">Expense tracker · for people who hate logging</span>
-      <h1><span class="grad">Hate logging expenses? Let AI do it</span><span class="h1kick">Best card to swipe · what's left today · split bills</span></h1>
-      <p class="lead">Snap a receipt, say it out loud, or share it in — AI writes the entry for you</p>
-      <div class="cta-row">
-        <a class="cta" href="https://apps.apple.com/th/app/doospend/id6774424817?ct=web"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.54c-.02-2.06 1.68-3.05 1.76-3.1-.96-1.4-2.46-1.6-2.99-1.62-1.27-.13-2.48.75-3.13.75-.64 0-1.64-.73-2.7-.71-1.39.02-2.67.81-3.38 2.05-1.44 2.5-.37 6.2 1.03 8.23.69.99 1.5 2.1 2.57 2.06 1.03-.04 1.42-.67 2.67-.67 1.24 0 1.6.67 2.69.65 1.11-.02 1.81-1.01 2.49-2.01.78-1.15 1.1-2.27 1.12-2.32-.02-.01-2.15-.83-2.17-3.28zM15.01 6.5c.57-.69.95-1.65.85-2.6-.82.03-1.81.55-2.4 1.24-.53.61-.99 1.58-.87 2.51.91.07 1.85-.46 2.42-1.15z"/></svg><span><small>Free on the</small>App Store</span></a>
-        <a class="ghost" href="#android">Join the Android list →</a>
-      </div>
-      <div class="chips">
-        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Stays on your device</span>
-        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/><path d="M3 3l18 18" stroke-width="2.2"/></svg> No bank login</span>
-        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2.5"/><path d="M10 6h4" stroke-width="2.2"/></svg> No SMS reading</span>
-      </div>
-    </div>
-    <div class="phone"><img src="shot-hero.png" alt="DooSpend home — what you can still spend today, and which card to swipe"></div>
-  </div>
+<header class="nav">
   <div class="wrap">
-    <div class="fork">
-      <a class="forkcard" href="#card">
-        <span class="tag">💳 At the till</span>
-        <h3>Know which card pays best — before you pay</h3>
-        <p>Set your card rules once, then one tap tells you which card to use for this store or category — no rewards left on the table, no cap overshot</p>
-        <span class="go">More ↓</span>
-      </a>
-      <a class="forkcard" href="#cash">
-        <span class="tag">☀️ Every day</span>
-        <h3>What you can still spend today</h3>
-        <p>Set a budget around your payday — the app takes your set bills out first, then spreads the rest across the days</p>
-        <span class="go">More ↓</span>
-      </a>
-    </div>
-    <div class="bothline">All of it in one app — <b>card or cash, every baht goes further</b></div>
-  </div></section>
+    <a class="logo" href="#top"><img src="../landing/icon.png" alt="" width="30" height="30"><span class="wm">DooSpend</span></a>
+    <nav aria-label="Main">
+      <a href="#log">Log</a><a href="#money">Spendable</a><a href="#plan">Plan payments</a><a href="#card">Cards</a><a href="#privacy">Privacy</a><a href="#pricing">Pricing</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="#download">Download free</a>
+  </div>
+</header>
 
-  <div class="strip"><div class="wrap"><span>📸 Snap it, AI logs it</span><span>💳 Best card to swipe</span><span>☀️ What's left today</span><span>👥 Split with friends</span><span>🔒 Data stays on device</span></div></div>
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1><span class="lt">All your money</span><br><em>in one app</em></h1>
+      <p class="lede">6 ways to log • know where you stand till month-end • alerts near the Thai tax-reporting thresholds</p>
+      <div class="cta-row">
+        <a class="badge" href="https://apps.apple.com/th/app/doospend/id6774424817?ct=web-en"><img src="../landing/badge-appstore-en.svg" alt="Download on the App Store"></a>
+        <a class="badge" href="https://play.google.com/store/apps/details?id=app.doospend.android"><img src="../landing/badge-googleplay-en.png" alt="Get it on Google Play"></a>
+      </div>
+      <div class="trust"><span>Free to start</span><span>No bank linking, no SMS reading</span><span>Your data stays on your phone</span></div>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <div class="phone p1"><img src="../landing/en-home.jpg" alt="DooSpend expense tracker home screen"></div>
+      <div class="phone p2"><img src="../landing/en-home_dark.jpg" alt="DooSpend expense app in dark mode"></div>
+      <div class="chip c2">Left today<strong class="num">฿185.54</strong></div>
+      <div class="chip c1">Month-end net<strong class="num">+฿12,938.00</strong></div>
+    </div>
+  </div>
+</section>
 
-  <!-- AI จดให้ (จุดร่วม) + ★ screenshot FAB กาง -->
-  <section class="sec" id="ai"><div class="wrap aigrid">
-    <div class="txt">
-      <span class="eyebrow">It starts with logging</span>
-      <h2>Log it six ways — snap or scan, pick a photo, type, speak, share it in, or import a file</h2>
-      <p class="sub">One button, pick whatever is easiest, and AI fills in the amount, the store and the category — anything it is unsure about waits in the review tray first</p>
-      <div class="bullets">
-        <span>📸 <b>Snap a slip or receipt</b> — AI reads the amount and the store</span>
-        <span>🖼️ <b>Share a screenshot from any app</b> — bank transfer slips, shopping and food orders</span>
-        <span>🧾 <b>Several orders in one image?</b> AI splits them into separate entries</span>
-        <span>🎙️ <b>Speak it</b> — "lunch, sixty" and it is logged</span>
-        <span>⌨️ <b>Type a few words</b> and the app pulls out the amount and category</span>
-        <span>🔳 <b>Scan a QR before you pay</b> — see the amount before you transfer</span>
-      </div>
-    </div>
-    <div class="aivisrow">
-     <div class="phone sm"><img src="shot-quickmenu.png" alt="One button shows every way to log — camera, photo library, voice, QR scan"></div>
-     <div class="sharecol">
-      <div class="share-srcs" aria-hidden="true">
-        <div class="src"><span class="si" style="background:#EE4D2D"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></span><b>Shopee</b><small>order screenshot</small></div>
-        <div class="src"><span class="si" style="background:#8A8F98"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-2-1.5L14 21l-2-1.5L10 21l-2-1.5L6 21V3z"/><path d="M9 8h6M9 12h6"/></svg></span><b>Receipt</b><small>many items</small></div>
-        <div class="src"><span class="si" style="background:#FF6F00"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18M15 15h3"/></svg></span><b>TrueMoney</b><small>transfer slip</small></div>
-      </div>
-      <svg class="share-arrows" viewBox="0 0 236 32" aria-hidden="true">
-        <defs><marker id="shareAh" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="4.6" markerHeight="4.6" orient="auto"><path d="M1 0.8 L6.8 4 L1 7.2" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-        <path d="M40 3 C43 15 80 19 104 25" marker-end="url(#shareAh)"/>
-        <path d="M118 3 V24" marker-end="url(#shareAh)"/>
-        <path d="M196 3 C193 15 156 19 132 25" marker-end="url(#shareAh)"/>
-      </svg>
-      <div class="phone sm"><img src="shot-inbox.png" alt="Review tray — share from any app and AI logs it"></div>
-     </div>
-    </div>
-  </div></section>
+<div class="ways" id="log-ways">
+  <div class="wrap"><span><b>Snap/share a slip</b></span><span><b>Type</b></span><span><b>Speak</b></span><span><b>Pick from Photos</b> 10 at a time</span><span><b>Screenshot</b> online shops</span><span><b>Import</b> PDF · CSV</span></div>
+</div>
 
-  <!-- สายบัตร -->
-  <section class="sec alt" id="card"><div class="wrap twocol flip">
-    <div class="txt">
-      <span class="eyebrow">💳 At the till</span>
-      <h2>About to pay? One tap and you know which card to pull out</h2>
-      <p class="sub">Enter your own card rules once — cashback, points, miles, store-only promos, co-brand cards — and the app ranks them for you every time before you pay</p>
-      <div class="bullets">
-        <span>👑 <b>Best card per store or category</b> — tap the store (Shopee, Lotus…) and see the right one</span>
-        <span>🔔 <b>Warns you before a reward cap fills up</b> — it tells you when to switch cards</span>
-        <span>📊 <b>Tracks the cashback you actually earned</b> across the statement cycle, so you do not have to read the fine print again</span>
-      </div>
-    </div>
-    <div class="vis">
-      <div class="phones2">
-        <div class="phone sm"><img src="shot-bestcard.png" alt="About to pay? — which card is best"></div>
-        <div class="phone sm"><img src="shot-dashboard.png" alt="The card advisor on the home screen"></div>
-      </div>
-      <p class="swipehint">← swipe for more →</p>
-    </div>
-  </div></section>
-
-  <!-- สายทั่วไป (daily) -->
-  <section class="sec" id="cash"><div class="wrap twocol">
-    <div class="txt">
-      <span class="eyebrow">☀️ Day-to-day budgeting</span>
-      <h2>What you can still spend today — the app does the dividing</h2>
-      <p class="sub">Set a monthly budget that starts on your payday and the app spreads it across the days — spend less today and tomorrow gets more, overspend and you find out before the cycle ends</p>
-      <div class="bullets">
-        <span>☀️ <b>One number before you reach for your wallet</b> — "฿480 left today"</span>
-        <span>🧾 <b>Bills first</b> — rent that isn't due yet isn't counted as money to spend</span>
-        <span>🌅 <b>A nudge every morning at 8</b> — start the day knowing your number</span>
-        <span>🧾 <b>Bills come off first</b> — rent and installments due this cycle are set aside before the daily number</span>
-        <span>🗓️ <b>Cycle follows your payday</b> — paid on the 25th? Start the month on the 25th</span>
-        <span>🧭 <b>Each number answers its own question</b> — left today (by your budget) · money you can spend (by your real balance, minus what's spoken for) · month-end net · net worth — <a href="help.html#the-numbers">see how they differ</a></span>
-      </div>
-    </div>
-    <div class="vis dailyvis">
-      <div class="iosnotif">
-        <img class="ic" src="../icon-180.png" alt="">
-        <div>
-          <div class="hd"><b>DOOSPEND</b><span>8:00</span></div>
-          <div class="ti">This morning ☀️</div>
-          <div class="bd">Tap to see what you can still spend today · still inside the budget?</div>
-        </div>
-      </div>
-      <div class="shotcard"><img src="shot-daily-card.png" alt="฿500 left today — the daily budget card on the home screen"></div>
-    </div>
-  </div></section>
-
-  <!-- หารบิล -->
-  <section class="sec alt" id="share"><div class="wrap twocol flip">
-    <div class="txt">
-      <span class="eyebrow">Together with friends</span>
-      <h2>Split bills and share trip costs — without the awkward chasing</h2>
-      <p class="sub">Sharing rent with a partner, or a trip abroad with friends — create a shared pocket, send the link, everyone adds their own entries, and at the end the app works out who owes whom, with a PromptPay QR to settle up on the spot (joining is free for the friends you invite)</p>
-      <ul class="checks">
-        <li><span class="tick">✓</span> Split evenly, or pick who was in on each bill</li>
-        <li><span class="tick">✓</span> "Who owes whom" is worked out for you — no napkin maths</li>
-        <li><span class="tick">✓</span> A trip summary card plus a QR you can send so they can pay you back</li>
+<section class="chapter" id="log">
+  <div class="wrap">
+    <div class="copy">
+      <div class="kicker">Expense tracking</div>
+      <h2>Hate logging? You can still log</h2>
+      <ul class="points">
+        <li><div>6 ways to log <small>Snap or share a slip for AI to read · type · speak · pick 10 photos at a time · online-shop screenshots, 5 items per image · import PDF and CSV</small></div></li>
+        <li><div>Jot it down, confirm later <small>Recurring income and bills, installments, loans, planned entries and anything AI read for you wait in Review when they're due — confirm the amounts when you have a minute</small></div></li>
+        <li><div>18 shortcut buttons of your own <small>Create new ones or make one from an entry you logged — tags, notes, withholding tax or a foreign currency can live in the button. One tap logs it</small></div></li>
+        <li><div>Log without opening the app <small>Home screen widget · type an entry in a notification · iPhone: Lock Screen widget, Lock Screen corner button, Control Center · Siri · Android: Quick Settings</small></div></li>
       </ul>
     </div>
-    <div class="vis phone"><img src="shot-trip.png" alt="Trip pocket — who owes whom"></div>
-  </div></section>
-
-  <!-- features + privacy -->
-  <section class="sec" id="features"><div class="wrap">
-    <span class="eyebrow">And the rest of it</span>
-    <h2>Everything a money app should have</h2>
-    <p class="sub">Not just a log of what you spent — tools that make the money easier to run, and every baht go further</p>
-    <div class="grid3">
-      <div class="feat"><b>🌐 English interface</b>The whole app runs in English — Settings → Language · calendar switches between the Gregorian and Thai Buddhist era · amounts are in Thai baht and the QR features are PromptPay, so it fits best if you spend in Thailand</div>
-      <div class="feat"><b>💳 Card debt &amp; installments</b>Pay-off planner (avalanche or snowball) plus installment tracking — how many payments are left and how much</div>
-      <div class="feat"><b>📅 Card due dates</b>Five reminder points you can switch on and off separately (7, 3 and 1 day before · on the day · a day late), a clear outstanding balance, and shared credit limits for supplementary cards</div>
-      <div class="feat"><b>🔁 Recurring bills &amp; income</b>Heads-up before a subscription, installment, rent or insurance charge — then a row to confirm it actually went out · set your salary as recurring income and see your month-end net (Pro) to plan your spending to the end of the month</div>
-      <div class="feat"><b>🎯 Savings goals</b>Set a goal and the app holds that money back out of what you can spend (one goal free) · the tick-a-square savings board is Pro</div>
-      <div class="feat"><b>🤝 Borrowed and lent</b>Record both directions — it feeds into your net worth automatically — plus a nudge to chase it · whatever interest you agreed on, record it as agreed (none · equal installments · interest-only · deducted upfront) · with interest = Pro</div>
-      <div class="feat"><b>➖ Keep debt out of "spending"</b>Mark an entry (or a whole category) as "excluded from spending" so big repayments do not bury what you actually spent</div>
-      <div class="feat"><b>📕 Pockets — money in separate pots</b>A trip, a wedding, the house — keep it in its own pocket, give the pocket its own budget, and see which categories ate it</div>
-      <div class="feat"><b>👤 Who it was for</b>Tag spending by person (kids, partner, parents) and see a per-person summary</div>
-      <div class="feat"><b>🗂️ Category groups</b>Put categories together (Food &amp; drinks · Home · Car), see each group's total on the chart · drag them into your own order · budget by group (Pro)</div>
-      <div class="feat"><b>🏪 By store and by category</b>Which shops and which categories eat the most — tap any of them to dig in</div>
-      <div class="feat"><b>📥 Move in from another app</b>CSV and Excel import is always free · a credit-card statement PDF can be read for you too</div>
-      <div class="feat"><b>📲 Widget + Siri</b>This month at a glance on your home screen · log by voice or shortcut without opening the app</div>
-      <div class="feat"><b>🗓️ A month that starts on payday</b>Pick the day your month begins (say the 25th) — budgets and summaries follow that cycle, not a fixed 1st-to-31st</div>
-      <div class="feat"><b>🔐 Face ID lock</b>Face or passcode before the app opens — nobody else browses your money</div>
-      <div class="feat"><b>☁️ Sync, backup, export</b>Synced across your devices through your own iCloud, so a lost phone is not lost data · restore, or export CSV and PDF yourself</div>
+    <div class="shot">
+      <div class="phone" style="translate: -65px -1px;"><div class="seq" id="qSeq" role="img" aria-label="Tap the square button to open the shortcut menu, tap the pencil to add your own buttons">
+        <img src="../landing/th-home2.jpg" alt="" data-step="0"><img src="../landing/en-qmenu5.jpg" alt="" data-step="1"><img src="../landing/en-qedit.jpg" alt="" data-step="2"><img class="on" src="../landing/en-qmenu.jpg" alt="" data-step="3">
+        <span class="tap" id="qTap"></span></div></div>
+      <div class="phone second" style="translate: 81px -56px;"><img src="../landing/en-inbox.jpg" alt="Review tab with entries waiting to be confirmed" loading="lazy"></div>
+      <div class="float" style="width: 250px; left: -10%; bottom: -40px; border-radius: 26px; translate: 563px -95px; scale: 0.4;"><img src="../landing/fl-notif.jpg" alt="Type an entry from a Lock Screen notification: amount, category, then into Review" loading="lazy"></div>
+      <div class="float" style="width: 190px; left: -8%; top: 2%; border-radius: 26px; translate: 584px 458px; scale: 0.5;"><img src="../landing/fl-quickactions.jpg" alt="Long-press the app icon for quick logging" loading="lazy"></div>
     </div>
-  </div></section>
+  </div>
+</section>
 
-  <!-- User reviews — quoted verbatim from App Store Connect · never reworded -->
-  <section class="sec reviews" id="reviews"><div class="wrap">
-    <p class="sub" style="margin-top:0">Reviews on the App Store — quoted word for word, translated from Thai</p>
-    <div class="cgrid">
-      <div class="hero-rv">
-        <span class="qmark" style="font-size:42px">&ldquo;</span>
-        <p class="q">I have tried a lot of expense-tracking apps, <span style="color:var(--green)">and this one is my favourite by far</span></p>
-        <p class="q2">Thank you for making such a good app — it is so easy and convenient to use. Rooting for you 🩷<br><span style="opacity:.75">ต้นฉบับ: “ลองใช้แอปจดบันทึกรายรับรายจ่ายมาเยอะมาก แต่ชอบของแอปนี้มากที่สุดเลย ขอบคุณที่ทำแอปดีๆ ออกมานะคะ ใช้งานง่ายและสะดวกมากเลยค่ะ เป็นกำลังใจให้นะคะ”</span></p>
-        <span class="nm">— peach.pink</span>
-      </div>
-      <div class="csmall">
-        <div class="rv">
-          <span class="qmark">&ldquo;</span>
-          <p class="q">Easy to use, clean UI, <b>managing my cards is simple</b>, and I can add my own categories. Exactly what I needed.</p>
-          <span class="nm">— AHermoi</span>
-        </div>
-        <div class="rv">
-          <span class="qmark">&ldquo;</span>
-          <p class="q">Good app, cute icon, fun to use. <b>I will definitely recommend it to people I know.</b></p>
-          <span class="nm">— RTN56</span>
-        </div>
-      </div>
+<section class="chapter flip" id="money">
+  <div class="wrap">
+    <div class="copy">
+      <div class="kicker">Spendable money</div>
+      <h2>You have this much — but how much can you really spend?</h2>
+      <ul class="points">
+        <li><div>Set aside what you must pay first <small>Bills · installments · debt · monthly savings come off first, leaving what you can really spend</small></div></li>
+        <li><div>Set your payday <small>Months follow your pay cycle — they don't have to start on the 1st</small></div></li>
+      </ul>
     </div>
-    <a class="storelink" href="https://apps.apple.com/th/app/doospend/id6774424817?see-all=reviews">Read all the reviews on the App Store →</a>
-  </div></section>
+    <div class="shot">
+      <div class="phone" style="translate: -178px;"><img src="../landing/en-wallet.jpg" alt="Wallet with the net worth chart" loading="lazy"></div>
+      <div class="float sheet" style="right: -2%; bottom: -24px; translate: -6px -71px;"><img src="../landing/fl-en-reserve.jpg" alt="Set-aside sheet: money you have, minus savings, card balances and this month&#x27;s bills, leaving what&#x27;s spendable" loading="lazy"></div>
+    </div>
+  </div>
+</section>
 
-  <!-- pricing -->
-  <section class="sec alt" id="pricing"><div class="wrap">
-    <span class="eyebrow">Pricing</span>
-    <h2>Start free, upgrade when you are ready</h2>
+<section class="chapter" id="month">
+  <div class="wrap">
+    <div class="copy">
+      <div class="kicker">Month-end</div>
+      <h2>Know ahead whether you'll cover your bills — or how much you'll have left</h2>
+      <ul class="points">
+        <li><div>Set recurring income and bills <small>Plus entries you planned ahead</small></div></li>
+        <li><div>Recurring income with tax withheld <small>Set 1–15% or a fixed amount on the bill; the app records the tax withheld every round and totals it for your year-end tax filing</small></div></li>
+        <li><div>Net so far and month-end net, charted <small>See the whole month's money line on one screen</small></div></li>
+      </ul>
+    </div>
+    <div class="shot">
+      <div class="figure"><div class="lbl">Month-end net</div><div class="val num">+฿12,938.00</div><div class="sub">In − out to the last day of the cycle</div></div>
+      <div class="phone"><img src="../landing/en-monthnet.jpg" alt="Chart of net so far and month-end net" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter flip" id="budget">
+  <div class="wrap">
+    <div class="copy">
+      <div class="kicker">Budgets</div>
+      <h2>Track and get alerts with weekly, monthly and yearly budgets</h2>
+      <ul class="points">
+        <li><div>Overall, by category, by account, by category group</div></li>
+        <li><div>How much is left for today <small>The app spreads what's left of your budget into a daily amount, taking out bills due in the cycle first (your choice)</small></div></li>
+      </ul>
+    </div>
+    <div class="shot">
+      <div class="phone" style="translate: -73px 1px;"><img src="../landing/th-budgets.jpg" alt="Budgets: overall and by category" loading="lazy"></div>
+      <div class="float" style="right: -4%; top: 12%; translate: 4px -27px;"><img src="../landing/fl-en-monthcard.jpg" alt="This month card on Home with what&#x27;s left today" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="plan">
+  <div class="wrap">
+    <div class="copy">
+      <div class="kicker">Plan payments</div>
+      <h2>Plan payments on a calendar or as a list</h2>
+      <ul class="points">
+        <li><div>Credit cards by their real statement cycles <small>Statement balance, due date and available credit after installment plans</small></div></li>
+        <li><div>Recurring bills, installments and loans in one place</div></li>
+        <li><div>Plan to clear card debt <small>Enter what you can pay each month and compare highest-interest first (Avalanche) with smallest first (Snowball) — months to debt-free and total interest</small></div></li>
+        <li><div>Lent money? Set a payback reminder <small>In 7 / 15 / 30 days, or pick a date</small></div></li>
+        <li><div>Reminders before the due date <small>Tap to log the payment right away</small></div></li>
+      </ul>
+    </div>
+    <div class="shot">
+      <div class="phone" style="translate: 40px 2px;"><img src="../landing/en-obcal.jpg" alt="Calendar of payments due" loading="lazy"></div>
+      <div class="phone second" style="translate: 166px 5px;"><img src="../landing/en-ob.jpg" alt="List of payments due this month" loading="lazy"></div>
+      <div class="phone third"><img src="../landing/th-card.jpg" alt="Credit card page with the statement cycle and Pay bill button" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter flip" id="card">
+  <div class="wrap">
+    <div class="copy">
+      <div class="kicker">Credit cards</div>
+      <h2>Which card pays you most</h2>
+      <ul class="points">
+        <li><div>Set the points, cashback and miles rules for each card <small>Home shows the best card (1 category free) · while logging, the app flags the best card in every category</small></div></li>
+        <li><div>Track rewards earned <small>Alerts when a cycle's cap is nearly full</small></div></li>
+        <li><div>Spending on each credit card <small>Current cycle, latest statement, due date — and filter entries by card to look back month by month</small></div></li>
+        <li><div>A full-year credit card summary <small>By statement, by monthly spending or by monthly payments, per card or all cards, with overdue balances</small></div></li>
+        <li><div>Refunds after the closing date reduce the unpaid statement <small>Just like the bank — statement plus current cycle always equals the card's total balance</small></div></li>
+      </ul>
+    </div>
+    <div class="shot">
+      <div class="phone" style="translate: -180px -2px;"><img src="../landing/en-bestcard.jpg" alt="Entry screen with the suggested card" loading="lazy"></div>
+      <div class="float" style="right: -6%; top: 18%; translate: -8px -66px;"><img src="../landing/fl-paycard.jpg" alt="&quot;Paying?&quot; card on Home showing the best card" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="more" id="insight">
+  <div class="wrap">
+    <div class="kicker">And more the app works out for you</div>
+    <h2>Where your money went, who it was for, and the future you're saving for</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="q">Spent on what, and for whom</div>
+        <h3>Charts by category, category group, fixed costs, account, person, tag and trend</h3>
+        <ul><li>Split fixed costs (bills, installments, debt) from everyday spending and see what % is fixed</li><li>See which card or account paid · filter cards only, banks only or e-wallets only in one tap</li><li>Separate books, like a home renovation or a business trip, then export a PDF to claim expenses</li><li>Compare your spending habits with the previous period</li></ul>
+        <div class="thumb"><img style="--fy:31%" src="../landing/en-donut.jpg" alt="Donut chart by category" loading="lazy"></div>
+      </article>
+      <article class="card">
+        <div class="q">Split bills with friends <span class="tag">iOS only</span></div>
+        <h3>Everyone pays as they go — the app settles up at the end</h3>
+        <ul><li>Who owes whom</li><li>Share a trip summary with a PromptPay QR so friends can pay you back</li></ul>
+        <div class="thumb"><img style="--fy:27%" src="../landing/en-shared.jpg" alt="Shared books for splitting bills" loading="lazy"></div>
+      </article>
+      <article class="card">
+        <div class="q">Near the tax-reporting threshold yet?</div>
+        <h3>Track money in each year against the thresholds banks must report</h3>
+        <ul><li>Thailand's e-Payment rule: 3,000 deposits, or 400 deposits totaling ฿2 million or more, per year</li><li>Alerts as you near a threshold</li><li>A tax-filing summary, deductions and a PDF</li></ul>
+        <div class="thumb"><img style="--fy:24%" src="../landing/en-income.jpg" alt="Yearly money in vs. thresholds" loading="lazy"></div>
+      </article>
+      <article class="card">
+        <div class="q">Saving up</div>
+        <h3>Set an amount and a date — the app spreads it into a savings board</h3>
+        <ul><li>Savings board</li><li>Savings are set aside from what's spendable automatically</li></ul>
+        <div class="thumb"><img style="--fy:20%" src="../landing/en-savboard.jpg" alt="Savings board" loading="lazy"></div>
+      </article>
+      <article class="card">
+        <div class="q">Home cluttered with things you don't use?</div>
+        <h3>Show or hide any card on Home</h3>
+        <ul><li>Customize shortcuts, the keypad and the entry screen</li></ul>
+        <div class="thumb"><img style="--fy:18%" src="../landing/en-dashcust.jpg" alt="Customize Home screen" loading="lazy"></div>
+      </article>
+      <article class="card">
+        <div class="q">What do you spend on most?</div>
+        <h3>Spending habits compared with the previous period</h3>
+        <ul><li>See which categories and shops went up or down</li></ul>
+        <div class="thumb"><img style="--fy:29%" src="../landing/en-habits.jpg" alt="Spending habits tab" loading="lazy"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="kicker">Reviews on the App Store</div>
+    <h2>In users' own words (translated)</h2>
+    <div class="rvgrid">
+      <figure class="rv big"><blockquote>I've tried so many expense apps, <em>but I like this one the most.</em> Thank you for making such a good app — it's really easy and convenient. Cheering you on 🩷</blockquote><figcaption>— peach.pink</figcaption></figure>
+      <figure class="rv"><blockquote>Easy to use, clean UI, <em>managing cards is easy,</em> and you can add your own categories. Exactly what I needed</blockquote><figcaption>— AHermoi</figcaption></figure>
+      <figure class="rv"><blockquote>Great app, cute icons, fun to use — <em>I'll definitely recommend it to people I know</em></blockquote><figcaption>— RTN56</figcaption></figure>
+    </div>
+    <a class="storelink" href="https://apps.apple.com/th/app/doospend/id6774424817?see-all=reviews">Read all reviews on the App Store →</a>
+  </div>
+</section>
+
+<section class="privacy" id="privacy">
+  <div class="wrap">
+    <div class="box">
+      <div>
+        <div class="kicker">Privacy</div>
+        <h2>Your financial data stays with you</h2>
+        <a class="more-link" href="privacy.html">Read the privacy policy →</a>
+      </div>
+      <ul>
+        <li>Stored on your phone and in your own iCloud<span>iCloud only on iPhones signed in to an Apple ID</span></li>
+        <li>Asks your consent before sending anything to AI the first time<span>Without AI you can still log everything yourself</span></li>
+        <li>No bank linking, no SMS reading<span>You choose what to log</span></li>
+        <li>Lock the app with Face ID or fingerprint<span>Keep others out of your money</span></li>
+        <li>Back up and restore as a file<span>Keep it anywhere and restore it on a new phone</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="kicker">Pricing</div>
+    <h2>Start free, upgrade when you're ready</h2>
     <div class="cmp-wrap"><table class="cmp">
       <thead><tr><th scope="col"><span class="vh">Feature</span></th>
         <th scope="col"><b>Free</b><span>฿0</span></th>
-        <th scope="col" class="pro"><b>Pro</b><span>฿69/month or ฿590/year (save 29%) · Lifetime ฿1,490, no AI</span></th></tr></thead>
+        <th scope="col" class="pro"><b>Pro</b><span>฿69/month or ฿590/year (save 29%) · Lifetime ฿1,490 without AI</span></th></tr></thead>
       <tbody>
-        <tr class="g"><th scope="rowgroup" colspan="3">Logging</th></tr>
-        <tr><th scope="row">Unlimited manual entries + every summary</th><td class="y" aria-label="Yes">✓</td><td class="pro y" aria-label="Yes">✓</td></tr>
-        <tr><th scope="row">AI logging — snap a slip, speak, or type</th><td>5 a month*</td><td class="pro">150 a month</td></tr>
-        <tr><th scope="row">Import CSV / Excel from your old app</th><td class="y" aria-label="Yes">✓</td><td class="pro y" aria-label="Yes">✓</td></tr>
+        <tr class="g"><th scope="rowgroup" colspan="3">Log</th></tr>
+        <tr><th scope="row">Unlimited manual logging, editing, deleting + monthly summary</th><td class="y" aria-label="Included">✓</td><td class="pro y" aria-label="Included">✓</td></tr>
+        <tr><th scope="row">AI logging — snap a slip, speak or type</th><td>5/month*</td><td class="pro">150/month</td></tr>
+        <tr><th scope="row">Import CSV / Excel from your old app</th><td class="y" aria-label="Included">✓</td><td class="pro y" aria-label="Included">✓</td></tr>
         <tr><th scope="row">Import card statements (PDF)</th><td>First one</td><td class="pro">Unlimited</td></tr>
         <tr class="g"><th scope="rowgroup" colspan="3">Numbers the app works out</th></tr>
-        <tr><th scope="row">Budgets + what is left this month</th><td class="y" aria-label="Yes">✓</td><td class="pro y" aria-label="Yes">✓</td></tr>
-        <tr><th scope="row">Net so far — money in − money out up to today</th><td class="y" aria-label="Yes">✓</td><td class="pro y" aria-label="Yes">✓</td></tr>
-        <tr><th scope="row">What is left today + the morning nudge</th><td class="n" aria-label="No">—</td><td class="pro y" aria-label="Yes">✓</td></tr>
-        <tr><th scope="row">Month-end net + a timeline of the month</th><td class="n" aria-label="No">—</td><td class="pro y" aria-label="Yes">✓</td></tr>
-        <tr><th scope="row">Spendable money, after bills and savings</th><td class="n" aria-label="No">—</td><td class="pro y" aria-label="Yes">✓</td></tr>
-        <tr><th scope="row">Balance trend</th><td>To today</td><td class="pro">Full history</td></tr>
+        <tr><th scope="row">Budgets + what's left this month</th><td class="y" aria-label="Included">✓</td><td class="pro y" aria-label="Included">✓</td></tr>
+        <tr><th scope="row">Net so far — in − out up to today</th><td class="y" aria-label="Included">✓</td><td class="pro y" aria-label="Included">✓</td></tr>
+        <tr><th scope="row">Left today + a morning reminder</th><td class="n" aria-label="Not included">—</td><td class="pro y" aria-label="Included">✓</td></tr>
+        <tr><th scope="row">Month-end net + the month's timeline</th><td class="n" aria-label="Not included">—</td><td class="pro y" aria-label="Included">✓</td></tr>
+        <tr><th scope="row">Spendable money after bills and savings</th><td class="n" aria-label="Not included">—</td><td class="pro y" aria-label="Included">✓</td></tr>
+        <tr><th scope="row">Net worth chart</th><td>Up to today</td><td class="pro">Full history</td></tr>
         <tr class="g"><th scope="rowgroup" colspan="3">Credit cards</th></tr>
-        <tr><th scope="row">Card rules — cashback, points, miles</th><td class="y" aria-label="Yes">✓</td><td class="pro y" aria-label="Yes">✓</td></tr>
+        <tr><th scope="row">Card rules for cashback, points, miles</th><td class="y" aria-label="Included">✓</td><td class="pro y" aria-label="Included">✓</td></tr>
         <tr><th scope="row">Best card</th><td>1 category</td><td class="pro">Every category</td></tr>
-        <tr><th scope="row">Best-card prompt while paying + cap warnings</th><td class="n" aria-label="No">—</td><td class="pro y" aria-label="Yes">✓</td></tr>
+        <tr><th scope="row">Best-card prompt when you pay + cap alerts</th><td class="n" aria-label="Not included">—</td><td class="pro y" aria-label="Included">✓</td></tr>
         <tr class="g"><th scope="rowgroup" colspan="3">Budgets · savings · accounts</th></tr>
         <tr><th scope="row">Accounts</th><td>3</td><td class="pro">Unlimited</td></tr>
         <tr><th scope="row">Budgets</th><td>1</td><td class="pro">Unlimited</td></tr>
         <tr><th scope="row">Tags</th><td>1</td><td class="pro">Unlimited</td></tr>
-        <tr><th scope="row">Savings goals</th><td>1 goal</td><td class="pro">Many + savings board</td></tr>
-        <tr class="g"><th scope="rowgroup" colspan="3">More</th></tr>
-        <tr><th scope="row">Shared pockets with friends</th><td>Join</td><td class="pro">Create</td></tr>
-        <tr><th scope="row">Loans with interest</th><td>—</td><td class="pro y" aria-label="Yes">✓</td></tr>
-        <tr><th scope="row">Yearly money-in vs. the Revenue Department threshold</th><td>Row by row</td><td class="pro y" aria-label="Yes">✓</td></tr>
-        <tr><th scope="row">Alert at 80% of the threshold</th><td>—</td><td class="pro y" aria-label="Yes">✓</td></tr>
-        <tr><th scope="row">Tax filing summary</th><td class="n" aria-label="No">—</td><td class="pro y" aria-label="Yes">✓</td></tr>
-        <tr><th scope="row">CSV / PDF export</th><td class="n" aria-label="No">—</td><td class="pro y" aria-label="Yes">✓</td></tr>
+        <tr><th scope="row">Savings goals</th><td>1 goal</td><td class="pro">Many goals + savings board</td></tr>
+        <tr class="g"><th scope="rowgroup" colspan="3">Other</th></tr>
+        <tr><th scope="row">Shared books for splitting bills</th><td>Join</td><td class="pro">Create</td></tr>
+        <tr><th scope="row">Loans with interest</th><td>—</td><td class="pro y" aria-label="Included">✓</td></tr>
+        <tr><th scope="row">Yearly money in vs. tax-reporting thresholds</th><td>Entries only</td><td class="pro y" aria-label="Included">✓</td></tr>
+        <tr><th scope="row">Alert at 80% of a threshold</th><td>—</td><td class="pro y" aria-label="Included">✓</td></tr>
+        <tr><th scope="row">Tax-filing summary</th><td class="n" aria-label="Not included">—</td><td class="pro y" aria-label="Included">✓</td></tr>
+        <tr><th scope="row">Export CSV / PDF</th><td class="n" aria-label="Not included">—</td><td class="pro y" aria-label="Included">✓</td></tr>
       </tbody>
     </table></div>
-    <p class="cmp-note">* Free AI: 30 in your first month, then 5 a month · Your data stays on your device, no SMS reading, no bank login — every plan</p>
-  </div></section>
+    <p class="cmp-note">* Free AI: 30 in the first month, then 5/month · your data stays on your phone, no SMS reading, no bank linking — on every plan</p>
+  </div>
+</section>
 
-  <!-- faq -->
-  <section class="sec" id="faq"><div class="wrap">
-    <span class="eyebrow">FAQ</span>
-    <h2>Frequently asked</h2>
-    <div class="faq">
-      <details><summary>Is the app itself in English?</summary><p>Yes — Settings → Language switches the whole interface to English, and the calendar can be set to the Gregorian year instead of the Thai Buddhist era. Amounts are in Thai baht and the QR features are PromptPay, so DooSpend fits best if you spend in Thailand.</p></details>
-      <details><summary>Does DooSpend read my bank account?</summary><p>No. It never connects to a bank, never asks for a password, and never reads your SMS. Your entries live on your device and in your own private iCloud. When a slip gets logged, it is because you took or shared that image yourself.</p></details>
-      <details><summary>How does the AI logging work, and is it safe?</summary><p>You snap a slip or speak, and the AI reads out the amount, the store and a category. The image goes through our proxy to Anthropic's Claude with a random per-device id used only to count your quota — not your name, e-mail or Apple ID. The result always comes back for you to confirm before anything is saved, and the app asks for your permission before the first time it sends anything.</p></details>
-      <details><summary>I do not use credit cards — is DooSpend still for me?</summary><p>Absolutely. The card advisor is an extra, not the heart of the app. On cash, PromptPay or a wallet you still get all of it: AI logging from slips, "what is left today" on a payday-aligned budget, bill splitting with a who-owes-whom summary and a PromptPay QR to settle, a heads-up when a subscription has gone quiet, lending records, and QR scanning that shows you the payee before you transfer. If your wallet earns cashback or points (TrueMoney, say), you can give it reward rules just like a card.</p></details>
-      <details><summary>Can I keep loan and installment payments out of my spending?</summary><p>Yes — mark it "excluded from spending", either on the single entry or on a whole category (a "mortgage" or "debt repayment" category, say). Those big amounts stop burying what you actually spent in the monthly summary and the budget, while the money still leaves your balance for real — and if you paid by card you still earn the rewards. A switch on the summary screen lets you fold them back in temporarily when you want to see the all-in figure.</p></details>
-      <details><summary>How is the card advisor different from a rewards app?</summary><p>DooSpend keeps no database of bank promotions. You enter your own cards' reward rules once, and the app ranks them for the category you are about to spend on, right now — including a warning before a cashback or points cap fills up. Because the rules are yours, nothing goes stale behind your back; if a bank changes its promo, you update the rule.</p></details>
-      <details><summary>What about a co-brand card that only earns at one store?</summary><p>Supported — set the rule to "this store only" (shopee, lazada…) and the card only earns the bonus on entries at that store. There is an "every store except" mode too, for a dining promo that excludes delivery apps. The home screen shows store chips you can tap to see which card wins there.</p></details>
-      <details><summary>Is the free tier actually usable? What costs money?</summary><p>Logging, budgets and what is left this month, card rules, reward tracking and one savings goal are free — and logging your own data is never paywalled. Pro (฿69/month or ฿590/year) is for the work the app does on your behalf: what you can still spend today plus the morning nudge, the best-card pick across every category with the prompt while you log and cap warnings, the savings board and extra goals, 150 AI entries a month, unlimited statement imports, and creating shared pockets. Not using AI? Pro Lifetime is ฿1,490 once for every Pro feature (AI capture and statement import not included).</p></details>
-      <details><summary>Is it iPhone only? Is there an Android version?</summary><p>For now DooSpend is built for iPhone (iOS 18 and up) so it can lean on your own private iCloud. There is no Android release yet — <a href="#android">leave your e-mail here</a> and you will hear when there is.</p></details>
-      <details><summary>Can I bring my data over from another expense app?</summary><p>Yes — import the CSV or Excel file your old app exports for free, or hand it a credit-card statement PDF and let the AI break the whole page into entries. Everything lands in the review queue for you to confirm before it is saved.</p></details>
-    </div>
-  </div></section>
-
-  <!-- final CTA -->
-  <section class="final" id="download"><div class="wrap">
-    <h2>Ready to make every baht go further?</h2>
-    <p style="opacity:.85;font-size:14px;margin-top:8px">Free to start · no account to create · no bank details asked</p>
-    <a class="cta" href="https://apps.apple.com/th/app/doospend/id6774424817?ct=web"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.54c-.02-2.06 1.68-3.05 1.76-3.1-.96-1.4-2.46-1.6-2.99-1.62-1.27-.13-2.48.75-3.13.75-.64 0-1.64-.73-2.7-.71-1.39.02-2.67.81-3.38 2.05-1.44 2.5-.37 6.2 1.03 8.23.69.99 1.5 2.1 2.57 2.06 1.03-.04 1.42-.67 2.67-.67 1.24 0 1.6.67 2.69.65 1.11-.02 1.81-1.01 2.49-2.01.78-1.15 1.1-2.27 1.12-2.32-.02-.01-2.15-.83-2.17-3.28zM15.01 6.5c.57-.69.95-1.65.85-2.6-.82.03-1.81.55-2.4 1.24-.53.61-.99 1.58-.87 2.51.91.07 1.85-.46 2.42-1.15z"/></svg><span><small>Free on the</small>App Store</span></a>
-    <div class="androidwait" id="android">
-      <p class="aw-t">Android waiting list</p>
-      <form class="aw-form" id="awForm">
-        <input type="email" id="awEmail" required maxlength="254" placeholder="Your e-mail" autocomplete="email" aria-label="E-mail for news about the Android version">
-        <button type="submit" id="awBtn">Notify me</button>
-      </form>
-      <p class="aw-note">Only used to tell you about the Android version · nothing else · ask us to delete it any time</p>
-    </div>
-  </div></section>
-
-</main>
-<footer><div class="wrap">
-  <div class="foot">
-    <div>
-      <span class="brand"><img src="../icon-180.png" alt="DooSpend">DooSpend</span>
-      <p style="color:var(--muted);font-size:13.5px;margin-top:12px;max-width:38ch">An iPhone expense tracker for people who hate logging things — snap the slip and AI writes it up</p>
-    </div>
-    <div class="footcols">
-      <div class="footcol"><b>Product</b><a href="#features">Features</a><a href="#card">Card advisor</a><a href="#pricing">Pricing</a><a href="changelog.html">What’s new <span id="clFoot" style="opacity:.7"></span></a></div>
-      <div class="footcol"><b>Company</b><a href="privacy.html">Privacy</a><a href="#faq">FAQ</a></div>
-      <div class="footcol"><b>Legal</b><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of use</a></div>
-      <div class="footcol"><b>Contact</b><a href="mailto:hello@doospend.com">E-mail</a><a href="help.html">Help</a></div>
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2>Frequently asked questions</h2>
+    <div class="faqlist">
+      <details><summary>Does DooSpend read my bank data?</summary><p>No — DooSpend doesn't link bank accounts, ask for passwords or read SMS. Your data stays on your phone (on iPhone it syncs through your private iCloud). Logging from a slip means you snap or share the image yourself.</p></details>
+      <details><summary>How does AI logging work, and is it safe?</summary><p>You snap a slip, speak or share an image, and AI (Anthropic's Claude) reads the amount, shop and category. The app asks your consent before the first send. Data goes through a proxy with a random per-device ID used only to count your quota — not your name or email — and the result always waits in Review for you to confirm before it's saved · Without AI you can still log everything yourself.</p></details>
+      <details><summary>Can I use DooSpend without a credit card?</summary><p>Absolutely — the card advisor is just an extra; it's a full household budget app. Cash, PromptPay and e-wallet users get everything: 6 ways to log, spendable money after bills, what's left today by your pay cycle, recurring bills, installments, loans, and bill splitting with a PromptPay QR to pay back (iPhone) · e-wallets that earn points or cashback (like TrueMoney) can have advisor rules just like cards.</p></details>
+      <details><summary>Can I keep debt and installment payments out of my spending?</summary><p>Yes — mark entries or whole categories (like "Mortgage" or "Debt payment") as "Excluded from spending". Those big amounts won't bury your real spending in the monthly summary and budgets, but still come off your balance, and paying by card still earns points or cashback as usual.</p></details>
+      <details><summary>How is the card advisor different from rewards apps?</summary><p>DooSpend doesn't keep a database of card promos — you set your own cards' reward rules once, and the app ranks which card pays most for this category right now, and alerts you before a cashback or points cap fills up.</p></details>
+      <details><summary>Do co-brand cards like a Shopee card with shop-only points work?</summary><p>Yes — set a "shop-only" rule (e.g. shopee, lazada) and the card earns the bonus only when you log that shop, plus "except shops" rules, like a dining promo that excludes delivery (Grab, LINE MAN) — Home has shop chips to tap and see which card pays most there.</p></details>
+      <details><summary>Can I see my credit card spending each month?</summary><p>Yes — each card page shows the current cycle, the latest statement and the due date, following the card's real closing date · To look back, filter entries by card and go month by month · No bank linking — the numbers come from what you log or import from statements.</p></details>
+      <details><summary>How does the app count the 3,000-deposit threshold?</summary><p>The Money in by year page counts each account's deposits and totals by calendar year and compares them with the thresholds Thai banks must report to the Revenue Department (3,000 deposits, or 400 deposits totaling ฿2 million or more, per year) · The numbers come from what you log — the app doesn't calculate your tax · Free users can view each account; combining accounts against the thresholds and alerts near them are Pro.</p></details>
+      <details><summary>Is it really free? What do I pay for?</summary><p>Logging, budgets and what's left, card rules, tracking points and cashback, CSV/Excel import and 1 savings goal are free · Pro (฿69/month or ฿590/year) unlocks "Left today", month-end net, spendable money after bills, the card advisor in every category, the savings board and multiple goals, 150 AI logs a month, statement import and creating shared books · Don't need AI? Pro Lifetime is ฿1,490 once, with every Pro feature (except AI logging and statement import).</p></details>
+      <details><summary>Is it on both iPhone and Android?</summary><p>Yes, both — iPhone (iOS 18 or later) on the App Store and Android on Google Play · A few things differ: on iPhone your data syncs through your private iCloud and you can split bills with friends · on Android your data stays on the phone and you back it up wherever you choose.</p></details>
+      <details><summary>Can I bring my data from another expense app?</summary><p>Yes — import the CSV / Excel file your old app exports for free, or import a credit card statement (PDF) and let AI split it into entries. Everything lands in "Review" for you to confirm before it's saved.</p></details>
     </div>
   </div>
-  <div class="copy"><span>© 2026 DooSpend · made in Thailand</span><span>Your data stays on your device</span></div>
-</div></footer>
+</section>
+
+<section class="final" id="download">
+  <div class="wrap">
+    <h2>Start logging today — and know before month-end whether you'll have enough</h2>
+    <div class="cta-row">
+        <a class="badge" href="https://apps.apple.com/th/app/doospend/id6774424817?ct=web-en"><img src="../landing/badge-appstore-en.svg" alt="Download on the App Store"></a>
+        <a class="badge" href="https://play.google.com/store/apps/details?id=app.doospend.android"><img src="../landing/badge-googleplay-en.png" alt="Get it on Google Play"></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="../landing/icon.png" alt="" width="30" height="30"><span class="wm">DooSpend</span></a>
+    <nav aria-label="Footer">
+      <a href="help.html">Help</a><a href="changelog.html">What's new <span id="clFoot" style="opacity:.7"></span></a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of use</a><a href="../" hreflang="th" lang="th">ภาษาไทย</a>
+    </nav>
+    <span>hello@doospend.com · © 2026 DooSpend</span>
+  </div>
+</footer>
+
+
+
+
 <script>
 (function(){
-  var root=document.documentElement, tog=document.getElementById('themeToggle');
-  if(tog) tog.addEventListener('click',function(){
-    var cur=root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
-    root.setAttribute('data-theme',cur==='dark'?'light':'dark');
-  });
-})();
-(function(){
-  var f=document.getElementById('awForm'); if(!f) return;
-  // arriving on #android from an outside link → focus the e-mail field right away
-  if(location.hash==='#android'){
-    setTimeout(function(){ var em=document.getElementById('awEmail'); if(em) em.focus(); }, 400);
+  // ปุ่มลัด: เล่นวนเฉพาะตอนเห็น · ลดการเคลื่อนไหว = ภาพสุดท้ายนิ่ง
+  var box=document.getElementById('qSeq'); if(!box) return;
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var imgs=box.querySelectorAll('img'), tap=document.getElementById('qTap');
+  // [ภาพที่โชว์, ค้างกี่ ms, จุดแตะก่อนไปภาพถัดไป (% ของจอ) หรือ null]
+  var steps=[[0,1400,[56.3,90]],[1,1500,[84,43.7]],[2,1500,[24,50]],[3,2600,null]];
+  var i=0,timer=null,visible=false;
+  function show(n){imgs.forEach(function(im){im.classList.toggle('on',+im.dataset.step===n)})}
+  function run(){
+    if(!visible) return;
+    var st=steps[i]; show(st[0]);
+    timer=setTimeout(function(){
+      var next=function(){i=(i+1)%steps.length; run()};
+      if(st[2]){tap.style.left=st[2][0]+'%';tap.style.top=st[2][1]+'%';tap.classList.remove('go');void tap.offsetWidth;tap.classList.add('go');timer=setTimeout(next,420)}
+      else next();
+    },st[1]);
   }
-  f.addEventListener('submit', function(e){
-    e.preventDefault();
-    var btn=document.getElementById('awBtn'), em=document.getElementById('awEmail');
-    btn.disabled=true; btn.textContent='Sending…';
-    fetch('https://api.doospend.com/android-waitlist',{
-      method:'POST', headers:{'content-type':'application/json'},
-      body:JSON.stringify({email:em.value.trim()})
-    }).then(function(r){
-      if(!r.ok) throw 0;
-      btn.textContent='You are on the list ✓ thanks!'; em.disabled=true;
-    }).catch(function(){
-      btn.disabled=false; btn.textContent='Notify me';
-      alert('That did not go through — please try again.');
-    });
-  });
+  new IntersectionObserver(function(es){
+    var v=es[0].isIntersecting;
+    if(v&&!visible){visible=true;i=0;run()} else if(!v&&visible){visible=false;clearTimeout(timer);show(3)}
+  },{threshold:.35}).observe(box);
 })();
 </script>
 <script src="../_changelog.js?v=1" defer></script>

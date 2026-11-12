@@ -20,11 +20,11 @@
 <meta property="og:title" content="DooSpend — ทุกเรื่องเงิน อยู่ในแอปเดียว">
 <meta property="og:description" content="จดได้ 6 ทาง · รู้ว่าเงินใช้ได้จริงเท่าไหร่ · รูดบัตรใบไหนคุ้ม · วางแผนจ่ายบนปฏิทิน · ข้อมูลอยู่ในเครื่องคุณ · iPhone และ Android">
 <meta property="og:url" content="https://doospend.com/">
-<meta property="og:image" content="https://doospend.com/og-cover.png">
+<meta property="og:image" content="https://doospend.com/og-cover-th.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="DooSpend — ทุกเรื่องเงิน อยู่ในแอปเดียว">
 <meta name="twitter:description" content="จดได้ 6 ทาง · รู้ว่าเงินใช้ได้จริงเท่าไหร่ · รูดบัตรใบไหนคุ้ม · วางแผนจ่ายบนปฏิทิน · ข้อมูลอยู่ในเครื่องคุณ · iPhone และ Android">
-<meta name="twitter:image" content="https://doospend.com/og-cover.png">
+<meta name="twitter:image" content="https://doospend.com/og-cover-th.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
 <link rel="apple-touch-icon" href="icon-180.png">
@@ -42,7 +42,7 @@
   "https://play.google.com/store/apps/details?id=app.doospend.android"
  ],
  "installUrl": "https://apps.apple.com/th/app/doospend/id6774424817",
- "image": "https://doospend.com/og-cover.png",
+ "image": "https://doospend.com/og-cover-th.png",
  "inLanguage": "th",
  "offers": [
   {
@@ -434,6 +434,8 @@ footer a:hover{color:var(--ink)}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 @media (max-width:620px){.cmp{min-width:0;table-layout:fixed;font-size:13px}.cmp th,.cmp td{padding:9px 8px}.cmp tbody th{width:46%}.cmp thead b{font-size:17px}.cmp thead span{font-size:10.5px;font-weight:500}.cmp td{font-size:12.5px}} /* มือถือ: สามคอลัมน์อยู่ในจอเดียว ไม่ต้องเลื่อนข้าง */
 
+/* มือถือ: ภาพลอยของส่วนจดใช้ตำแหน่ง (translate) ที่จัดบนจอกว้าง — บนจอแคบหลุดขวาจอ หน้าเลื่อนข้างได้ (13 พ.ย. 69) */
+@media (max-width:620px){#log .float{translate:none!important;scale:none!important;left:auto!important;top:auto!important;right:-6px!important;width:150px!important}#log .float:nth-of-type(1){bottom:60px!important}#log .float:nth-of-type(2){bottom:auto!important;top:40px!important}}
 </style>
 </head>
 <body>
