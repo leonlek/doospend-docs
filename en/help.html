@@ -194,6 +194,8 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
   <li><strong>Installments on a card hold the limit, like a bank does</strong> — "available" = limit − balance owed − installment principal not yet due · the card page shows the installment amount still held</li>
   <li>Going over the limit: the entry sheet <strong>tells</strong> you, but still lets you save</li>
   <li><strong>Recent transactions</strong> on the card page are split into one card per cycle — this cycle shows every entry, its dates and the whole card balance, such as "฿7,504.00 (bill due) + ฿1,500.00" · closed cycles show the bill, what carried over from the bill before, what you paid and what is left</li>
+  <li><strong>A refund (return/cancellation) that lands after the closing date reduces the oldest unpaid statement first</strong> — just like a payment to the card · the line under the bill shows it separately, e.g. "Refund −฿500.00 · ฿6,000.00 left" · if the statement is already paid or the refund is larger than what's owed, the rest reduces the current cycle · statement + current cycle always equals the card's whole balance</li>
+  <li><strong>Card summary</strong> (card page, or Wallet → ⋯) shows the year three ways: <strong>By statement</strong> (one card that has a closing date · one row per bill with its status) · <strong>Spent by month</strong> (charges − refunds per calendar month) · <strong>Paid by month</strong> (money transferred into the card that month) · the full year and all cards together are Pro</li>
   <li>The same statement amount feeds the Due card · the bell · due-date reminders</li>
 </ul>
 
@@ -321,6 +323,19 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
 </ul>
 <p>The money still leaves the account for real, and if you paid by card you still earn the points or cashback — it simply isn't included in the <em>spending</em> total, and it <strong>counts toward no budget</strong> (overall, category or account). Excluded entries show a − mark and appear dimmed in the list. On the Dashboard, "today" and "this month" always leave them out; the <strong>Transactions</strong> screen shows them dimmed — to leave them out, open the filter (funnel) → turn on <strong>Hide not-counted rows</strong> (search always finds everything).</p>
 <p>Want to see what the total would be if everything counted? The summary screen has an <strong>Include excluded rows</strong> switch under the card. It's temporary on purpose — leave the screen and it's off again, because remembering it would mean two versions of the truth in one app and a screenshot travels further than its context. With it on, the chart splits that money out as its own amber <em>excluded from spending</em> slice pinned to the end of the legend, rather than folding it into its category — so you can see where the difference comes from. With it off, that money isn't in the chart at all, so the chart always matches the card. The Dashboard, budgets and pockets deliberately do not have this switch.</p>
+
+<h3 id="month-summary">Monthly summary — the whole month on one page<a class="anc" href="#month-summary" aria-label="link">#</a></h3>
+<p>Tap <strong>Summary</strong> on the This month card on Home. Use ‹ › to pick a month (it follows your month start day). Every number is the same one the other screens show (Transactions, budgets, Due this month, debts, savings goals) — nothing is calculated differently.</p>
+<ul>
+  <li><strong>01 Money in &amp; out</strong> — income · spending · left · savings rate · vs last month · last 6 months · where income came from</li>
+  <li><strong>02 Where it went</strong> — by category, book, person and tag · fixed vs everyday · top 5 expenses · daily spending calendar · weekdays vs weekends</li>
+  <li><strong>03 Against your plans</strong> — monthly budgets · bills and installments paid / still due</li>
+  <li><strong>04 Cards, debt and savings</strong> — net worth at the start/end of the month · card bills · debt left · savings goals</li>
+  <li><strong>05 Tax and perks</strong> — tax withheld · tax-deductible items · money in this year vs the reporting thresholds · card rewards</li>
+  <li><strong>06 Lent out · 07 Set for next month</strong></li>
+</ul>
+<p><strong>Free:</strong> all of section 01 · <strong>Pro:</strong> sections 02–07 and <strong>Export as PDF</strong> (a two-page A4 report) · tap a section header to expand or collapse it, or use "Expand all / Collapse all" — the app remembers what you left open ·
+turn on the <strong>monthly summary notification</strong> in Settings → Notifications (first day of the month, 09:00 · off by default)</p>
 
 <h3 id="the-this-month-slot-on-home">The "This month" slot on Home — Month spent · Net so far · Month-end net<a class="anc" href="#the-this-month-slot-on-home" aria-label="link">#</a></h3>
 <p>Tap the <strong>ⓘ</strong> next to "This month" on the summary card to choose what that slot shows:</p>
@@ -567,6 +582,7 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
 <ul>
   <li>Each row shows <strong>only its most important status</strong>: overdue → waiting in Review → today/tomorrow/in N days → closes → due</li>
   <li>Tap the card → the <strong>Due screen</strong>, card bills apart from other payments · as a list or a calendar · the button at the end of a row takes you to pay or to confirm</li>
+  <li><strong>Overdue items and the new round both count</strong> — a recurring bill left unconfirmed for several rounds shows one row per round and every round counts, until you confirm or delete that row in Review · an overdue installment or debt payment doesn't hide this month's one (they're separate rows) · the app can't know whether you already paid an old round, so it keeps counting it rather than letting the total drop on its own</li>
   <li>"Bills still due this month" in Wallet (Pro) comes from this same screen</li>
 </ul>
 
@@ -619,7 +635,7 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
   <li><strong>Amount varies</strong> (water, electricity) — turn this on and the row that arrives in the queue is tagged <em>check against the bill</em>, pre-filled with last month's amount to edit. It still pre-fills; it just tells you not to confirm blindly. A bill you ticked <em>repeat monthly</em> on while logging is not marked as varying, because the amount you just typed is the real one</li>
   <li>Near the billing date the app drops the entry into <strong>Review</strong> to confirm — it never logs money silently, because the amount may change or the service may have been cancelled. How many days ahead is set in More → <strong>Reminders</strong> (1 day by default); the same number controls both the row and the notification · The <strong>bell</strong> reminds you of bills coming up within 7 days and of bills waiting in Review, including overdue ones — one row per bill, and tapping it opens Review</li>
   <li>The card header says <strong>billed next</strong> — which one comes soonest, on what date, in how many days, for how much. Several on the same day are combined into one row with the total</li>
-  <li>Quiet for more than 45 days → a <em>forgot to cancel?</em> tag on the row and a note in the bell (something that genuinely saves money)</li>
+  <li>Quiet for one billing cycle + 15 days (about 45 days for monthly · a year-based wait for yearly) → a <em>forgot to cancel?</em> tag on the row and a note in the bell (something that genuinely saves money) · for recurring income it asks <em>still coming in?</em></li>
 </ul>
 <p>The app also <strong>detects them automatically</strong> from entries you pay repeatedly. Anything it spots lands in a <em>waiting for confirmation</em> group where you tap <strong>Yes, a subscription</strong> or <strong>No</strong> before it counts towards the total (tap No and it won't ask again).</p>
 <p><strong>How it guesses</strong> — deliberately tuned to ask rarely rather than guess cleverly, because asking wrongly costs you an answer while asking late costs nothing:</p>
@@ -756,7 +772,7 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
 <h3 id="backup-and-restore-export-csv">Backup &amp; restore (.json) + export CSV/PDF<a class="anc" href="#backup-and-restore-export-csv" aria-label="link">#</a></h3>
 <p>More → <strong>Backup &amp; restore</strong> writes a complete <code>.json</code> of everything to Files or iCloud Drive, and restores it back. Backup files always use the Gregorian era, so they move safely between devices whatever your calendar setting.</p>
 <p><strong>Export just what you see (Pro)</strong> — on Transactions, set a filter, then open the funnel menu → <strong>Export filtered</strong> to get only the rows it shows · on a pocket, tap the export button in the top bar for every entry in that pocket</p>
-<p><strong>Attached photos</strong> — when you back up you choose whether to include photos (no photos by default): the app tells you how many and the file size first, and the file isn't encrypted, so anyone who has it can open it. Every copy kept on this device (your own · automatic · before a restore · before a currency change) has no photos. On iPhone, if you have too many photos to fit in one file, the app tells you first and backs up without photos. Restoring a file without photos removes the photos on this device, and the app tells you how many first.</p>
+<p><strong>Attached photos</strong> — when you back up you choose whether to include photos (no photos by default): the app tells you how many and the file size first (no photos: it just backs up), and the file isn't encrypted, so anyone who has it can open it. Every copy kept on this device (your own · automatic · before a restore · before a currency change) has no photos. On iPhone, if you have too many photos to fit in one file, the app tells you first and backs up without photos. Restoring a file without photos removes the photos on this device, and the app tells you how many first.</p>
 <p><strong>Backups on this device</strong> — the copies the app keeps are listed on the Backup &amp; restore screen. iPhone also keeps an automatic copy once a day (the latest 3). Tap ⋯ on a row to <strong>Restore from this copy</strong> or <strong>Save elsewhere</strong>. They live on this device only: deleting the app removes them, and "Delete all data" removes them too.</p>
 <p>Export to <strong>CSV</strong> (for a spreadsheet) or <strong>PDF</strong> (a report) from More → <strong>Export</strong> — pick a period and an account. Exporting is a Pro feature; importing CSV back in is always free.</p>
 

@@ -4,8 +4,13 @@
     {
       "version": "3.1.0",
       "date": "9 พฤศจิกายน 2569",
-      "title": "📌 ปักหมุดรายการ\n🧩 ปรับแต่งวิดเจ็ต",
+      "title": "📊 สรุปเดือน\n📌 ปักหมุดรายการ",
       "highlights": [
+        {
+          "icon": "📊",
+          "title": "สรุปเดือน",
+          "detail": "หน้าเดียวเห็นทั้งเดือน · ส่งออกเป็น PDF (Pro)"
+        },
         {
           "icon": "📌",
           "title": "ปักหมุดรายการ",
@@ -28,6 +33,7 @@
         }
       ],
       "items": [
+        "🧾 ตั้งภาษีที่รายการประจำได้ · ทุกรอบติดตราลดหย่อนหรือหัก ณ ที่จ่ายให้เอง",
         "⏰ เลือกเวลาเตือนบิลและเตือนเช้าได้",
         "🌙 เตือนจดตอนเย็น · พิมพ์จดในแจ้งเตือนได้เลย",
         "📏 เลือกได้ว่าแถบยาวบนหน้าหลักเป็นงบไหน · ลากเรียงวงกลม",
@@ -37,8 +43,13 @@
       ],
       "en": {
         "date": "9 November 2026",
-        "title": "📌 Pinned entries\n🧩 Customize the widget",
+        "title": "📊 Monthly summary\n📌 Pinned entries",
         "highlights": [
+          {
+            "icon": "📊",
+            "title": "Monthly summary",
+            "detail": "The whole month on one page · export as PDF (Pro)"
+          },
           {
             "icon": "📌",
             "title": "Pin entries",
@@ -61,6 +72,7 @@
           }
         ],
         "items": [
+          "🧾 Set tax on recurring items · every round gets the deduction stamp or withholding",
           "⏰ Pick the time for bill and morning reminders",
           "🌙 Evening log reminder · type an entry in the notification",
           "📏 Choose which budget is the long bar · drag to order rings",
