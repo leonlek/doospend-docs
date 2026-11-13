@@ -442,6 +442,10 @@ footer a:hover{color:var(--ink)}
 main{overflow-x:clip}
 /* หน้าคอลัมน์เดียว (≤900): ตำแหน่งที่ลากไว้จัดบนจอสองคอลัมน์ — บนจอแคบภาพตกขอบ ใช้ตำแหน่งตั้งต้นของหน้าแทน (13 พ.ย. 69) */
 @media (max-width:900px){.shot .phone,.shot .figure,.shot .float,.stage .phone,.stage .chip{translate:none!important;scale:none!important}}
+/* มือถือ ส่วนจด: ไม่มีการ์ดลอย · โชว์หน้าตรวจสอบเป็นเครื่องที่สองแทน (เจ้าของสั่ง 13 พ.ย. 69) */
+@media (max-width:620px){#log .float{display:none!important}#log .shot .phone.second{display:block!important;width:170px;right:0;bottom:-24px}}
+/* มือถือ ส่วนวางแผนจ่าย: หน้าบัตร (ปุ่มจ่ายบิล) ด้านซ้าย (เจ้าของสั่ง 13 พ.ย. 69) */
+@media (max-width:620px){#plan .shot .phone.third{display:block!important;width:170px;left:0;bottom:-24px;z-index:2}}
 @media (min-width:621px) and (max-width:1439px){#log .float{translate:none!important;scale:none!important;left:auto!important;top:auto!important;bottom:auto!important}#log .float:has(img[src*="quickactions"]){right:-2%!important;top:0!important;width:160px!important}#log .float:has(img[src*="notif"]){right:-4%!important;bottom:-56px!important;width:210px!important}}
 
 /* มือถือ: ภาพลอยของส่วนจดใช้ตำแหน่ง (translate) ที่จัดบนจอกว้าง — บนจอแคบหลุดขวาจอ หน้าเลื่อนข้างได้ (13 พ.ย. 69) */
