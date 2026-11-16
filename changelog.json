@@ -2,6 +2,59 @@
   "$schema_note": "Lives at https://doospend.com/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array. Every entry MUST carry an \"en\" object (title/date/items) — the app shows it when the user picks English; without it the popup falls back to Thai.",
   "versions": [
     {
+      "version": "3.2.0",
+      "date": "17 พฤศจิกายน 2569",
+      "title": "🖼️ เฝ้าสลิปใหม่ในคลัง\n🇱🇦 สกุลเงินกีบ",
+      "highlights": [
+        {
+          "icon": "🖼️",
+          "title": "เฝ้าสลิปใหม่ในคลัง",
+          "detail": "แอปเฝ้าคลังรูปให้ เจอสลิปใหม่แล้วแจ้ง · เลือกอ่านได้ทีละหลายใบ · ฟรี"
+        },
+        {
+          "icon": "🇱🇦",
+          "title": "สกุลเงินกีบ (LAK)",
+          "detail": "ปุ่มลัดสกุลต่างประเทศใช้เรตล่าสุดให้เอง"
+        },
+        {
+          "icon": "🕐",
+          "title": "อ่านวันเวลาบนสลิปแม่นขึ้น",
+          "detail": "รองรับเวลาแบบ 14.05 และ AM/PM"
+        }
+      ],
+      "items": [
+        "📄 statement ที่อ่านไม่สำเร็จ อ่านใหม่ได้ครบทุกหน้า · ไฟล์ที่แชร์เข้ามาไม่หาย",
+        "📌 ปักหมุดสมุดและเพื่อใครเป็นชิปบนแป้นจด",
+        "✨ ปรับการแสดงผลและแก้บั๊กหลายจุด"
+      ],
+      "en": {
+        "date": "17 November 2026",
+        "title": "🖼️ Watch Photos for new slips\n🇱🇦 Lao kip",
+        "highlights": [
+          {
+            "icon": "🖼️",
+            "title": "Watch Photos for new slips",
+            "detail": "The app watches your photos and lets you know when a new slip lands · read several at once · free"
+          },
+          {
+            "icon": "🇱🇦",
+            "title": "Lao kip (LAK)",
+            "detail": "Foreign-currency shortcuts use the latest rate for you"
+          },
+          {
+            "icon": "🕐",
+            "title": "Better date and time reading on slips",
+            "detail": "Handles times like 14.05 and AM/PM"
+          }
+        ],
+        "items": [
+          "📄 Statements that failed to read can be read again from every page · shared files are never lost",
+          "📌 Pin pockets and people as chips on the keypad",
+          "✨ Display polishes and bug fixes"
+        ]
+      }
+    },
+    {
       "version": "3.1.0",
       "date": "9 พฤศจิกายน 2569",
       "title": "📊 สรุปเดือน\n📌 ปักหมุดรายการ",
