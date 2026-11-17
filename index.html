@@ -235,7 +235,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .logo .tagline{font-family:var(--f-thai);font-weight:500;font-size:14.5px;color:var(--muted);letter-spacing:0;padding-left:12px;margin-left:2px;border-left:1px solid var(--line);white-space:nowrap}
 @media (max-width:560px){.logo .tagline{font-size:13px;padding-left:10px}}
 .nav nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
-.nav nav a{text-decoration:none;color:var(--muted)}
+.nav nav a{text-decoration:none;color:var(--muted);white-space:nowrap}
+@media (max-width:1060px){.nav nav{gap:14px;font-size:14px}}
 .nav nav a:hover{color:var(--ink)}
 .btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;font-weight:600;text-decoration:none;white-space:nowrap;transition:transform .15s ease,background .15s}
 .btn:hover{transform:translateY(-1px)}
@@ -459,7 +460,7 @@ main{overflow-x:clip}
   <div class="wrap">
     <a class="logo" href="#top"><img src="landing/icon.png" alt="" width="30" height="30"><span class="wm">DooSpend</span></a>
     <nav aria-label="หลัก">
-      <a href="#log">จด</a><a href="#money">ใช้ได้จริง</a><a href="#plan">วางแผนจ่าย</a><a href="#card">บัตร</a><a href="#privacy">ความเป็นส่วนตัว</a><a href="#pricing">ราคา</a>
+      <a href="#log">จด</a><a href="#money">ใช้ได้จริง</a><a href="#plan">วางแผนจ่าย</a><a href="#card">บัตร</a><a href="#privacy">ความเป็นส่วนตัว</a><a href="#pricing">ราคา</a><a href="help.html">คู่มือ</a>
     </nav>
     <a class="langsw" href="en/" hreflang="en" lang="en" aria-label="English">EN</a>
     <a class="btn btn-primary btn-sm" href="#download">ดาวน์โหลดฟรี</a>
