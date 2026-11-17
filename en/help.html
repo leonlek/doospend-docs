@@ -84,6 +84,19 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
   font-size:14px;padding:9px 16px;border-radius:999px;opacity:0;pointer-events:none;transition:all .2s;z-index:60}
 .toast.show{opacity:1;transform:translateX(-50%)}
 </style>
+<style>
+/* ทีละหัวข้อใหญ่ (เจ้าของเคาะ 17 พ.ย. 69) — สคริปต์ใส่ .paged ให้ main · ไม่มี JS = เห็นทั้งหน้าเหมือนเดิม */
+.hmain.paged .hsec{display:none}
+.hmain.paged .hsec.cur{display:block}
+.hmain.paged .hsec h2{border-top:0;padding-top:0;margin-top:20px}
+.pager{display:flex;gap:12px;justify-content:space-between;margin:36px 0 8px;padding-top:18px;border-top:1px solid var(--border)}
+.pager a{display:flex;flex-direction:column;gap:2px;max-width:48%;padding:10px 14px;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:inherit}
+.pager a:hover{border-color:var(--green)}
+.pager a.next{margin-left:auto;text-align:right}
+.pager small{font-size:12px;opacity:.65}
+.pager b{font-weight:600;color:var(--green)}
+.hmain:not(.paged) .pager{display:none}
+</style>
 </head>
 <body class="help">
 <div class="hbar"><div class="in">
@@ -103,7 +116,7 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
 <main class="hmain">
 <div class="crumb"><a href="../">DooSpend</a> › Help</div>
 <h1>Help</h1>
-<p class="lastUpdated">Last updated 7 November 2026 · matches version 3.0.0</p>
+<p class="lastUpdated">Last updated 17 November 2026 · matches version 3.2.0</p>
 <section class="hsec" id="getting-started">
 <h2>Getting started<a class="anc" href="#getting-started" aria-label="link">#</a></h2>
 <ol>
@@ -117,7 +130,7 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
 <section class="hsec" id="five-ways-to-log-an-expense">
 <h2>Six ways to log an expense<a class="anc" href="#five-ways-to-log-an-expense" aria-label="link">#</a></h2>
 <p>Tap the "+" in the middle of the tab bar and the shortcut menu opens — by default Snap a slip · Pick from library · Speak · Quick type, plus Recurring and Withdraw cash (the QR scan button sits beside the "+") · pick built-in buttons and make your own, up to 18 in any slot (the ✎ at the top of the menu, or Settings → Customize screens → Customize shortcuts). Anything that uses AI always waits in the <strong>Review</strong> tab for you to confirm before it becomes real money.</p>
-<figure class="shot" style="max-width:290px"><img src="shot-quickmenu.png" width="1320" height="2868" loading="lazy" decoding="async" alt="Tapping + opens the menu — the ✎ at the top lets you choose what's in it"><figcaption>Tapping + opens the menu — the ✎ at the top lets you choose what's in it</figcaption></figure>
+<figure class="shot" style="max-width:290px"><img src="shot-quickmenu.png" width="1320" height="2868" loading="lazy" decoding="async" alt="Tap ⛶ next to + to open the shortcut grid — the ✎ at the top lets you choose what's in it"><figcaption>Tap ⛶ next to + to open the shortcut grid — the ✎ at the top lets you choose what's in it</figcaption></figure>
 
 <h3 id="1-snap-a-slip-or-receipt">1. Snap a slip or scan a QR<a class="anc" href="#1-snap-a-slip-or-receipt" aria-label="link">#</a></h3>
 <p>Opens the camera, one image at a time — a transfer slip, a PromptPay slip, or a shop receipt. The AI reads the amount, the merchant and the date (counts as 1 of your AI quota).</p>
@@ -178,6 +191,7 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
 </section>
 <section class="hsec" id="credit-cards">
 <h2>Credit cards<a class="anc" href="#credit-cards" aria-label="link">#</a></h2><h3 id="best-card-selector">Best Card Selector<a class="anc" href="#best-card-selector" aria-label="link">#</a></h3>
+<figure class="shot" style="max-width:290px"><img src="help-bestcard.png" width="1320" height="2868" loading="lazy" decoding="async" alt="The tip pops up above the keypad once you pick a category — &quot;Use KTC Visa · earns +฿25.00 · Dining 5%&quot;"><figcaption>The tip pops up above the keypad once you pick a category — &quot;Use KTC Visa · earns +฿25.00 · Dining 5%&quot;</figcaption></figure>
 <p>A banner appears while you're filling in an entry — "Use KTC Visa Signature for +฿17.40" — and the shops you log most sit as chips in the Merchant row.</p>
 <p>Set up reward rules for each of your cards yourself (category, %, caps, minimum spend — free and unlimited), then tap <strong>Which card?</strong> to see the best one before you pay.</p>
 <p><strong>Free</strong> covers one category of your choosing (switchable once a month). <strong>Pro</strong> covers every category and adds the automatic part: the ✨ chip that tells you which card earns what while you type, and a warning before a reward cap runs out.</p>
@@ -417,7 +431,7 @@ turn on the <strong>monthly summary notification</strong> in Settings → Notifi
 <p><strong>Why Money you can spend doesn't add the salary that's coming</strong> — money that hasn't arrived can't be spent yet, and adding it would turn the number into Month-end net as a balance, which Home already shows</p>
 
 <h3 id="wallet-card">The Wallet card — money you have · available · set aside<a class="anc" href="#wallet-card" aria-label="link">#</a></h3>
-<figure class="shot"><img src="help-wallet.png" width="900" height="362" loading="lazy" decoding="async" alt="The top card of the Wallet tab — money you have, available, set aside, net worth"><figcaption>The top card of the Wallet tab — tap › to see what's set aside and why</figcaption></figure>
+<figure class="shot"><img src="help-wallet.png" width="900" height="902" loading="lazy" decoding="async" alt="The top card of the Wallet tab — money you have, available, set aside, net worth"><figcaption>The top card of the Wallet tab — tap › to see what's set aside and why</figcaption></figure>
 <ul>
   <li><strong>Money you have</strong> = cash, bank and e-wallet accounts added up</li>
   <li><strong>Set aside</strong> = money reserved for savings goals + card balances and money you borrowed + (Pro) bills still due before the end of your financial month (not bills charged to a card — those are already in the card balance · expected income isn't counted)</li>
@@ -691,7 +705,7 @@ turn on the <strong>monthly summary notification</strong> in Settings → Notifi
 <h3 id="customize-quick-menu">Customize shortcuts<a class="anc" href="#customize-quick-menu" aria-label="link">#</a></h3>
 <p>Choose which built-in buttons the shortcut grid holds, from 20 items (log · pay/save · view/open) · open it from the ✎ at the top of the menu, or Settings → Customize screens → Customize shortcuts</p>
 <p><b>Put them anywhere:</b> hold a button in the grid and drag it to any spot, gaps are fine (right-handed people can use just the two right columns, left-handed people the left) · dropping on another button swaps them · the bottom row is closest to your thumb, and the grid scrolls if it gets too tall · a button that can't be used yet stays hidden and its spot stays empty · on iPhone, buttons and positions sync through iCloud</p>
-<p><b>Ready-made buttons:</b> tap ✎, then ＋ in the slot you want, to create one or pick a starter (Donations · Insurance premiums · RMF / ThaiESG · Money sent home), or long-press a transaction and choose "Make a button" · tapping a button opens the entry sheet filled in, <b>nothing is saved until you save it</b> · a button made from a transaction copies its category, account, merchant, pocket, for-whom, excluded flag, tax deduction and amount (you can leave the amount blank), never its links to bills, installment plans or loans · free, up to 12 buttons · edit or delete them from the ✎</p>
+<p><b>Ready-made buttons:</b> tap ✎, then ＋ in the slot you want, to create one or pick a starter (Donations · Insurance premiums · RMF / ThaiESG · Money sent home), or long-press a transaction and choose "Make a button" · tapping a button opens the entry sheet filled in, <b>nothing is saved until you save it</b> · a button made from a transaction copies its category, account, merchant, pocket, for-whom, excluded flag, tax deduction and amount (you can leave the amount blank), never its links to bills, installment plans or loans · free · the grid holds 18 buttons in total (built-in + your own) · edit or delete them from the ✎</p>
 
 <h3 id="customize-the-keypad">Customize the keypad<a class="anc" href="#customize-the-keypad" aria-label="link">#</a></h3>
 <p>Show or hide the buttons above the number pad — Pocket · For whom · Tags — in Settings → Customize screens → Customize keypad · turned off, you can still set them from "More" on the entry screen</p>
@@ -731,6 +745,7 @@ turn on the <strong>monthly summary notification</strong> in Settings → Notifi
 </section>
 <section class="hsec" id="review-and-shortcuts">
 <h2>Review &amp; shortcuts<a class="anc" href="#review-and-shortcuts" aria-label="link">#</a></h2><h3 id="the-review-tab">The Review tab — fix it before you confirm<a class="anc" href="#the-review-tab" aria-label="link">#</a></h3>
+<figure class="shot" style="max-width:290px"><img src="help-inbox-row.png" width="1320" height="2868" loading="lazy" decoding="async" alt="The Review tab — new captures on top, then scheduled, then later · tap a row to fix it before you confirm"><figcaption>The Review tab — new captures on top, then scheduled, then later · tap a row to fix it before you confirm</figcaption></figure>
 <p>Everything the AI read (slips, voice or text, statements, QR) waits in <strong>Review</strong> so you can change the amount, merchant, category or date, and confirm before it ever touches your accounts.</p>
 <ul>
   <li><strong>Tap the amount</strong> to flip between expense and income (for a money-in slip the AI read the wrong way round)</li>
@@ -874,8 +889,9 @@ turn on the <strong>monthly summary notification</strong> in Settings → Notifi
     }
   }
   function spy(){
-    var y=window.scrollY+110, id=heads.length?heads[0].id:null;
-    for(var i=0;i<heads.length;i++){ if(heads[i].offsetTop<=y) id=heads[i].id; else break; }
+    var vis=heads.filter(function(h){return h.offsetParent!==null}).sort(function(a,b){return a.offsetTop-b.offsetTop});
+    var y=window.scrollY+110, id=vis.length?vis[0].id:null;
+    for(var i=0;i<vis.length;i++){ if(vis[i].offsetTop<=y) id=vis[i].id; else break; }
     mark(id);
   }
   heads.sort(function(a,b){return a.offsetTop-b.offsetTop});
@@ -918,6 +934,44 @@ turn on the <strong>monthly summary notification</strong> in Settings → Notifi
     history.replaceState(null,'',a.getAttribute('href'));
     if(navigator.clipboard){navigator.clipboard.writeText(url).then(function(){t.textContent='Link to this section copied';t.classList.add('show');setTimeout(function(){t.classList.remove('show')},1600)},function(){})}
   })});
+})();
+</script>
+<script>
+/* ทีละหัวข้อใหญ่ — โชว์ .hsec ทีละอัน · ลิงก์ #id เดิมทุกอันยังใช้ได้ (เปิดหัวข้อใหญ่ที่มีมัน แล้วเลื่อนไปหา) · ท้ายหัวข้อมีปุ่มก่อน/ถัดไป */
+(function(){
+  var th=document.documentElement.lang==='th';
+  var main=document.querySelector('.hmain'), secs=[].slice.call(main.querySelectorAll('.hsec'));
+  if(!secs.length) return;
+  function title(s){var h=s.querySelector('h2');return h?h.childNodes[0].textContent.trim():s.id}
+  secs.forEach(function(s,i){
+    var p=document.createElement('nav'); p.className='pager';
+    var a=secs[i-1], b=secs[i+1], h='';
+    if(a) h+='<a class="prev" href="#'+a.id+'"><small>‹ '+(th?'หัวข้อก่อน':'Previous')+'</small><b></b></a>';
+    if(b) h+='<a class="next" href="#'+b.id+'"><small>'+(th?'หัวข้อถัดไป':'Next')+' ›</small><b></b></a>';
+    p.innerHTML=h;
+    if(a) p.querySelector('.prev b').textContent=title(a);
+    if(b) p.querySelector('.next b').textContent=title(b);
+    s.appendChild(p);
+  });
+  main.classList.add('paged');
+  function show(id,push){
+    var el=id&&document.getElementById(id), sec=el&&(el.classList.contains('hsec')?el:el.closest('.hsec'));
+    if(!sec){sec=secs[0];el=null}
+    secs.forEach(function(s){s.classList.toggle('cur',s===sec)});
+    if(push) history.pushState(null,'','#'+id);
+    if(el&&el!==sec) el.scrollIntoView(); else window.scrollTo(0,0);
+    window.dispatchEvent(new Event('scroll'));
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="#"]');
+    if(!a||a.classList.contains('anc')||e.metaKey||e.ctrlKey) return;
+    if(a.getAttribute('href')==='#'){e.preventDefault();window.scrollTo(0,0);return}   // กลับขึ้นบน = บนสุดของหัวข้อเดิม ไม่ใช่หัวข้อแรก
+    var id=decodeURIComponent(a.getAttribute('href').slice(1));
+    if(!id||!document.getElementById(id)) return;
+    e.preventDefault(); show(id,true);
+  });
+  window.addEventListener('popstate',function(){show(decodeURIComponent(location.hash.slice(1)),false)});
+  show(decodeURIComponent(location.hash.slice(1)),false);
 })();
 </script>
 </body>

@@ -92,6 +92,19 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
   font-size:14px;padding:9px 16px;border-radius:999px;opacity:0;pointer-events:none;transition:all .2s;z-index:60}
 .toast.show{opacity:1;transform:translateX(-50%)}
 </style>
+<style>
+/* ทีละหัวข้อใหญ่ (เจ้าของเคาะ 17 พ.ย. 69) — สคริปต์ใส่ .paged ให้ main · ไม่มี JS = เห็นทั้งหน้าเหมือนเดิม */
+.hmain.paged .hsec{display:none}
+.hmain.paged .hsec.cur{display:block}
+.hmain.paged .hsec h2{border-top:0;padding-top:0;margin-top:20px}
+.pager{display:flex;gap:12px;justify-content:space-between;margin:36px 0 8px;padding-top:18px;border-top:1px solid var(--border)}
+.pager a{display:flex;flex-direction:column;gap:2px;max-width:48%;padding:10px 14px;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:inherit}
+.pager a:hover{border-color:var(--green)}
+.pager a.next{margin-left:auto;text-align:right}
+.pager small{font-size:12px;opacity:.65}
+.pager b{font-weight:600;color:var(--green)}
+.hmain:not(.paged) .pager{display:none}
+</style>
 </head>
 <body class="help">
 <div class="hbar"><div class="in">
@@ -111,7 +124,7 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
 <main class="hmain">
 <div class="crumb"><a href="./">DooSpend</a> › คู่มือใช้งาน</div>
 <h1>คู่มือใช้งาน</h1>
-<p class="lastUpdated">ปรับปรุงล่าสุด 7 พฤศจิกายน 2569 · ตรงกับเวอร์ชัน 3.0.0</p>
+<p class="lastUpdated">ปรับปรุงล่าสุด 17 พฤศจิกายน 2569 · ตรงกับเวอร์ชัน 3.2.0</p>
 <section class="hsec" id="getting-started">
 <h2>เริ่มต้นใช้งาน<a class="anc" href="#getting-started" aria-label="link">#</a></h2>
 <ol>
@@ -125,7 +138,7 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
 <section class="hsec" id="five-ways-to-log-an-expense">
 <h2>6 วิธีบันทึกค่าใช้จ่าย<a class="anc" href="#five-ways-to-log-an-expense" aria-label="link">#</a></h2>
 <p>แตะปุ่ม ⛶ ข้างปุ่ม "+" กลาง tab bar ตารางปุ่มลัดจะกางออก — ค่าตั้งต้นมี ถ่ายสลิป · เลือกจากคลัง · พูด · พิมพ์เร็ว + รายการประจำ + ถอนเงินสด · เลือกปุ่มระบบและสร้างปุ่มจดของตัวเองได้รวม 18 ปุ่ม วางช่องไหนก็ได้ (ปุ่ม ✎ บนสุดของเมนู หรือ ตั้งค่า → ปรับแต่งหน้าจอ → ปรับแต่งปุ่มลัด) · ทุกวิธีที่ใช้ AI จะไปรอที่แท็บ "ตรวจสอบ" ให้ยืนยันก่อนบันทึกจริงเสมอ</p>
-<figure class="shot" style="max-width:290px"><img src="shot-quickmenu.png" width="1320" height="2868" loading="lazy" decoding="async" alt="กดปุ่ม + แล้วเมนูกางออก — ปุ่ม ✎ บนสุดใช้เลือกเองว่าจะให้มีอะไร"><figcaption>กดปุ่ม + แล้วเมนูกางออก — ปุ่ม ✎ บนสุดใช้เลือกเองว่าจะให้มีอะไร</figcaption></figure>
+<figure class="shot" style="max-width:290px"><img src="shot-quickmenu.png" width="1320" height="2868" loading="lazy" decoding="async" alt="แตะปุ่ม ⛶ ข้างปุ่ม + ตารางปุ่มลัดกางออก — ปุ่ม ✎ บนสุดใช้เลือกเองว่าจะให้มีอะไร"><figcaption>แตะปุ่ม ⛶ ข้างปุ่ม + ตารางปุ่มลัดกางออก — ปุ่ม ✎ บนสุดใช้เลือกเองว่าจะให้มีอะไร</figcaption></figure>
 
 <h3 id="1-snap-a-slip-or-receipt">1. ถ่ายสลิป/สแกน QR<a class="anc" href="#1-snap-a-slip-or-receipt" aria-label="link">#</a></h3>
 <p>เปิดกล้องถ่ายทีละใบ — สลิปโอน/พร้อมเพย์ หรือใบเสร็จร้าน → AI อ่านยอด ร้าน วันที่ ให้ (นับ 1 ครั้ง quota)</p>
@@ -187,7 +200,7 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
 </section>
 <section class="hsec" id="credit-cards">
 <h2>ฟีเจอร์เด่นสำหรับบัตรเครดิต<a class="anc" href="#credit-cards" aria-label="link">#</a></h2><h3 id="best-card-selector">Best Card Selector<a class="anc" href="#best-card-selector" aria-label="link">#</a></h3>
-<figure class="shot"><img src="help-bestcard.png" width="900" height="489" loading="lazy" decoding="async" alt="ป้ายเด้งตอนกรอกรายการ — &quot;ใช้ KTC Visa Signature ได้ +฿17.40&quot; · ชิปร้านที่จดบ่อยอยู่ในแถวร้านค้า"><figcaption>ป้ายเด้งตอนกรอกรายการ — "ใช้ KTC Visa Signature ได้ +฿17.40" · ชิปร้านที่จดบ่อยอยู่ในแถวร้านค้า</figcaption></figure>
+<figure class="shot" style="max-width:290px"><img src="help-bestcard.png" width="1320" height="2868" loading="lazy" decoding="async" alt="ป้ายเด้งเหนือแป้นตัวเลขหลังเลือกหมวด — &quot;ใช้ KTC Visa ได้ +฿25.00 · อาหาร 5%&quot;"><figcaption>ป้ายเด้งเหนือแป้นตัวเลขหลังเลือกหมวด — "ใช้ KTC Visa ได้ +฿25.00 · อาหาร 5%"</figcaption></figure>
 <p>ตั้ง reward rules ให้บัตรแต่ละใบเอง (หมวด, %, เพดาน, ยอดขั้นต่ำ — <strong>ฟรีไม่จำกัด</strong>) แล้วกด "บัตรไหนดี?" ดูใบคุ้มสุดก่อนจ่าย. <strong>ฟรี</strong> ดูคำแนะนำได้ <strong>1 หมวด</strong> (เลือกเอง สลับได้เดือนละครั้ง); <strong>Pro</strong> = ครบทุกหมวด + ระบบอัตโนมัติ: ✨ เด้งบอก "ใช้บัตรนี้ได้ X บาท reward" ให้เองตอนกรอกรายการ + เตือนก่อน reward เต็มเพดาน</p>
 
 <h3 id="payoff-plan">วางแผนล้างหนี้ (Avalanche / Snowball)<a class="anc" href="#payoff-plan" aria-label="link">#</a></h3>
@@ -427,7 +440,7 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
 <p><strong>ทำไมเงินที่ใช้ได้ไม่บวกเงินเดือนที่จะเข้า</strong> — เงินที่ยังไม่เข้ายังใช้ไม่ได้ และถ้าบวกเข้าไป ตัวเลขจะกลายเป็นสุทธิสิ้นเดือนในรูปยอดคงเหลือ ซึ่งมีอยู่แล้วบนหน้าหลัก</p>
 
 <h3 id="wallet-card">การ์ดกระเป๋า — เงินที่มี · ใช้ได้ · กันไว้<a class="anc" href="#wallet-card" aria-label="link">#</a></h3>
-<figure class="shot"><img src="help-wallet.png" width="900" height="362" loading="lazy" decoding="async" alt="การ์ดบนสุดของหน้ากระเป๋า — เงินที่มี ตัวใหญ่ · ใช้ได้ · กันไว้ · ทรัพย์สินสุทธิ"><figcaption>การ์ดบนสุดของหน้ากระเป๋า — แตะ › ดูว่ากันไว้เพราะอะไรบ้าง</figcaption></figure>
+<figure class="shot"><img src="help-wallet.png" width="900" height="902" loading="lazy" decoding="async" alt="การ์ดบนสุดของหน้ากระเป๋า — เงินที่มี ตัวใหญ่ · ใช้ได้ · กันไว้ · ทรัพย์สินสุทธิ"><figcaption>การ์ดบนสุดของหน้ากระเป๋า — แตะ › ดูว่ากันไว้เพราะอะไรบ้าง</figcaption></figure>
 <ul>
   <li><strong>เงินที่มี</strong> = เงินในบัญชีเงินสด ธนาคาร และ e-wallet รวมกัน</li>
   <li><strong>กันไว้</strong> = เป้าออมที่จองไว้ + ค้างบัตรและหนี้ยืม + (Pro) บิลที่ยังต้องจ่ายถึงสิ้นเดือนการเงิน (ไม่รวมบิลที่ตัดบัตร เพราะนับในค้างบัตรแล้ว · ไม่คิดรายรับที่จะเข้า)</li>
@@ -699,7 +712,7 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
 <h3 id="customize-quick-menu">ปรับแต่งปุ่มลัด<a class="anc" href="#customize-quick-menu" aria-label="link">#</a></h3>
 <p>เลือกว่าตารางปุ่มลัดจะมีปุ่มระบบอะไร จาก 20 ข้อ (จด · จ่าย/ออม · ดู/เปิดจอ) · เข้าได้จากปุ่ม ✎ บนสุดของเมนู หรือ ตั้งค่า → ปรับแต่งหน้าจอ → ปรับแต่งปุ่มลัด</p>
 <p><b>วางตรงไหนก็ได้:</b> กดค้างปุ่มในตารางแล้วลากไปช่องไหนก็ได้ เว้นช่องว่างได้ (คนถนัดขวาใช้แค่สองคอลัมน์ขวา คนถนัดซ้ายใช้ซ้าย) · วางทับปุ่มอื่น = สลับตำแหน่ง · แถวล่างอยู่ใกล้นิ้ว ถ้าสูงเกินจอเลื่อนได้ · ปุ่มที่ตอนนี้ยังใช้ไม่ได้จะไม่ขึ้น ช่องนั้นเป็นช่องว่าง · บน iPhone ปุ่มและตำแหน่งซิงก์ผ่าน iCloud</p>
-<p><b>ปุ่มจดสำเร็จรูป:</b> แตะ ✎ แล้วแตะ ＋ ในช่องที่ต้องการ เพื่อสร้างเองหรือเลือกจากปุ่มตั้งต้น (ทำบุญ · เบี้ยประกัน · RMF / ThaiESG · ส่งเงินให้ที่บ้าน) หรือกดค้างแถวรายการแล้วเลือก "ทำเป็นปุ่ม" · แตะปุ่มแล้วเปิดชีตจดที่เติมค่าไว้ <b>ไม่บันทึกเอง</b> ต้องกดบันทึกทุกครั้ง · ทำเป็นปุ่มจากรายการ: ลอกหมวด บัญชี ร้าน สมุด เพื่อใคร ธงไม่นับ ตราลดหย่อน และยอด (เปลี่ยนเป็นเว้นว่างได้) แต่ไม่ลอกการผูกบิล แผนผ่อน หรือหนี้ · ใช้ฟรี สูงสุด 12 ปุ่ม · ลบหรือแก้ได้ที่ปุ่ม ✎</p>
+<p><b>ปุ่มจดสำเร็จรูป:</b> แตะ ✎ แล้วแตะ ＋ ในช่องที่ต้องการ เพื่อสร้างเองหรือเลือกจากปุ่มตั้งต้น (ทำบุญ · เบี้ยประกัน · RMF / ThaiESG · ส่งเงินให้ที่บ้าน) หรือกดค้างแถวรายการแล้วเลือก "ทำเป็นปุ่ม" · แตะปุ่มแล้วเปิดชีตจดที่เติมค่าไว้ <b>ไม่บันทึกเอง</b> ต้องกดบันทึกทุกครั้ง · ทำเป็นปุ่มจากรายการ: ลอกหมวด บัญชี ร้าน สมุด เพื่อใคร ธงไม่นับ ตราลดหย่อน และยอด (เปลี่ยนเป็นเว้นว่างได้) แต่ไม่ลอกการผูกบิล แผนผ่อน หรือหนี้ · ใช้ฟรี · ตารางมีได้รวม 18 ปุ่ม (ปุ่มระบบ + ปุ่มของคุณ) · ลบหรือแก้ได้ที่ปุ่ม ✎</p>
 
 <h3 id="customize-the-keypad">ปรับแต่งแป้นพิมพ์<a class="anc" href="#customize-the-keypad" aria-label="link">#</a></h3>
 <p>เลือกแสดงหรือซ่อนปุ่มเหนือแป้นตัวเลข — สมุด · เพื่อใคร · แท็ก — ได้ที่ ตั้งค่า → ปรับแต่งหน้าจอ → ปรับแต่งแป้นพิมพ์ · ปิดแล้วยังตั้งค่าได้จาก "เพิ่มเติม" ในหน้าจด</p>
@@ -740,7 +753,7 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
 </section>
 <section class="hsec" id="review-and-shortcuts">
 <h2>ตรวจสอบ &amp; ทางลัด<a class="anc" href="#review-and-shortcuts" aria-label="link">#</a></h2><h3 id="the-review-tab">ตรวจสอบ (คิวรอยืนยัน)<a class="anc" href="#the-review-tab" aria-label="link">#</a></h3>
-<figure class="shot"><img src="help-inbox-row.png" width="900" height="275" loading="lazy" decoding="async" alt="แถวที่รอยืนยันในแท็บ "ตรวจสอบ" — แก้ยอด/ร้าน/หมวดได้ก่อนกดยืนยัน"><figcaption>แถวที่รอยืนยันในแท็บ "ตรวจสอบ" — แก้ยอด/ร้าน/หมวดได้ก่อนกดยืนยัน</figcaption></figure>
+<figure class="shot" style="max-width:290px"><img src="help-inbox-row.png" width="1320" height="2868" loading="lazy" decoding="async" alt="แท็บตรวจสอบ — ที่เพิ่มเข้ามาอยู่บนสุด ตามด้วยตามกำหนด และล่วงหน้า · แตะแถวเพื่อแก้ก่อนยืนยัน"><figcaption>แท็บตรวจสอบ — ที่เพิ่มเข้ามาอยู่บนสุด ตามด้วยตามกำหนด และล่วงหน้า · แตะแถวเพื่อแก้ก่อนยืนยัน</figcaption></figure>
 <p>ทุกรายการที่ AI อ่านมา (สลิป, พูด/พิมพ์, statement, QR) มารอที่แท็บ "ตรวจสอบ" ให้คุณแก้ยอด / ร้าน / หมวด / วันที่ ได้ก่อน แล้วยืนยันก่อนเข้าบัญชีจริงเสมอ</p>
 <ul>
   <li><strong>แตะที่ยอด</strong> เพื่อสลับ รายจ่าย ⇄ รายรับ (เช่น สลิปเงินเข้าที่ AI เดาผิดทาง)</li>
@@ -906,8 +919,9 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
     }
   }
   function spy(){
-    var y=window.scrollY+110, id=heads.length?heads[0].id:null;
-    for(var i=0;i<heads.length;i++){ if(heads[i].offsetTop<=y) id=heads[i].id; else break; }
+    var vis=heads.filter(function(h){return h.offsetParent!==null}).sort(function(a,b){return a.offsetTop-b.offsetTop});
+    var y=window.scrollY+110, id=vis.length?vis[0].id:null;
+    for(var i=0;i<vis.length;i++){ if(vis[i].offsetTop<=y) id=vis[i].id; else break; }
     mark(id);
   }
   heads.sort(function(a,b){return a.offsetTop-b.offsetTop});
@@ -939,6 +953,44 @@ h2:hover .anc,h3:hover .anc,.anc:focus{opacity:1}
   document.querySelector('.tocbtn').addEventListener('click',function(){b.classList.add('tocopen')});
   document.querySelector('.scrim').addEventListener('click',function(){b.classList.remove('tocopen')});
   links.forEach(function(a){a.addEventListener('click',function(){b.classList.remove('tocopen')})});
+})();
+</script>
+<script>
+/* ทีละหัวข้อใหญ่ — โชว์ .hsec ทีละอัน · ลิงก์ #id เดิมทุกอันยังใช้ได้ (เปิดหัวข้อใหญ่ที่มีมัน แล้วเลื่อนไปหา) · ท้ายหัวข้อมีปุ่มก่อน/ถัดไป */
+(function(){
+  var th=document.documentElement.lang==='th';
+  var main=document.querySelector('.hmain'), secs=[].slice.call(main.querySelectorAll('.hsec'));
+  if(!secs.length) return;
+  function title(s){var h=s.querySelector('h2');return h?h.childNodes[0].textContent.trim():s.id}
+  secs.forEach(function(s,i){
+    var p=document.createElement('nav'); p.className='pager';
+    var a=secs[i-1], b=secs[i+1], h='';
+    if(a) h+='<a class="prev" href="#'+a.id+'"><small>‹ '+(th?'หัวข้อก่อน':'Previous')+'</small><b></b></a>';
+    if(b) h+='<a class="next" href="#'+b.id+'"><small>'+(th?'หัวข้อถัดไป':'Next')+' ›</small><b></b></a>';
+    p.innerHTML=h;
+    if(a) p.querySelector('.prev b').textContent=title(a);
+    if(b) p.querySelector('.next b').textContent=title(b);
+    s.appendChild(p);
+  });
+  main.classList.add('paged');
+  function show(id,push){
+    var el=id&&document.getElementById(id), sec=el&&(el.classList.contains('hsec')?el:el.closest('.hsec'));
+    if(!sec){sec=secs[0];el=null}
+    secs.forEach(function(s){s.classList.toggle('cur',s===sec)});
+    if(push) history.pushState(null,'','#'+id);
+    if(el&&el!==sec) el.scrollIntoView(); else window.scrollTo(0,0);
+    window.dispatchEvent(new Event('scroll'));
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="#"]');
+    if(!a||a.classList.contains('anc')||e.metaKey||e.ctrlKey) return;
+    if(a.getAttribute('href')==='#'){e.preventDefault();window.scrollTo(0,0);return}   // กลับขึ้นบน = บนสุดของหัวข้อเดิม ไม่ใช่หัวข้อแรก
+    var id=decodeURIComponent(a.getAttribute('href').slice(1));
+    if(!id||!document.getElementById(id)) return;
+    e.preventDefault(); show(id,true);
+  });
+  window.addEventListener('popstate',function(){show(decodeURIComponent(location.hash.slice(1)),false)});
+  show(decodeURIComponent(location.hash.slice(1)),false);
 })();
 </script>
 <script src="_chat.js?v=8" defer></script>
