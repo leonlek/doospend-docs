@@ -2,6 +2,111 @@
   "$schema_note": "Lives at https://doospend.com/changelog.json. Deploy alongside the rest of the docs (cp docs/*.json ../doospend-docs/ && git push). The DooSpend iOS app fetches this on launch and shows WhatsNewSheet whenever lastSeenVersion != version. To skip showing a release (e.g. patch with no user-visible changes), just omit its entry from the versions array. Every entry MUST carry an \"en\" object (title/date/items) — the app shows it when the user picks English; without it the popup falls back to Thai.",
   "versions": [
     {
+      "version": "3.3.0",
+      "date": "24 พฤศจิกายน 2569",
+      "title": "🔔 จดอัตโนมัติจากแจ้งเตือนธนาคาร\n⌚ Apple Watch",
+      "highlights": [
+        {
+          "icon": "🔔",
+          "title": "จดอัตโนมัติจากแจ้งเตือนธนาคาร",
+          "detail": "เงินเข้า-ออกลงตรวจสอบให้เอง · อ่านในเครื่อง ไม่ส่งข้อความออก · iOS 27 ขึ้นไป",
+          "link": "autolog",
+          "only": "ios"
+        },
+        {
+          "icon": "⌚",
+          "title": "DooSpend บน Apple Watch",
+          "detail": "พูดหรือกรอกยอดจากข้อมือ ไปรอในตรวจสอบบน iPhone · ดูยอดใช้ได้บนหน้าปัด",
+          "only": "ios"
+        },
+        {
+          "icon": "💳",
+          "title": "สรุปยอดบัตร",
+          "detail": "ดูตามรอบบิลหรือรายเดือน พร้อมกราฟยอดค้างทั้งปี"
+        },
+        {
+          "icon": "📈",
+          "title": "กราฟยอดรายบัญชี",
+          "detail": "ดูยอดคงเหลือและเงินเข้า-ออกของแต่ละบัญชีย้อนหลัง",
+          "only": "android"
+        },
+        {
+          "icon": "📸",
+          "title": "ถ่ายสลิปต่อได้ทันที",
+          "detail": "กดถ่ายใบต่อไประหว่างที่ใบก่อนกำลังอ่าน",
+          "only": "android"
+        }
+      ],
+      "items": [
+        "📸 ถ่ายสลิปแล้วกดถ่ายใบต่อไปได้เลย",
+        "🗣️ พูดหรือพิมพ์จด แยกร้าน หมวด และบัญชีได้แม่นขึ้น",
+        "📈 กราฟยอดรายบัญชีในหน้าบัญชี",
+        "🧾 หน้าบัตรแสดงรอบบัญชีเป็นเส้นเวลา",
+        "📊 สรุปหนี้และสรุปการออม หัวจอใหม่ เทียบกับต้นปี",
+        "🍩 กราฟหน้ารายการ แตะกลุ่มแล้วแตกเป็นหมวดในกลุ่ม",
+        "🎨 ไอคอนแอปเปลี่ยนสีตามธีม · เลือกเองได้ที่ ตั้งค่า → ลักษณะหน้าตา → ไอคอนแอป",
+        "✨ ปรับการแสดงผลและแก้บั๊กหลายจุด"
+      ],
+      "en": {
+        "date": "24 November 2026",
+        "title": "🔔 Auto-log from bank notifications\n⌚ Apple Watch",
+        "highlights": [
+          {
+            "icon": "🔔",
+            "title": "Auto-log from bank notifications",
+            "detail": "Money in and out lands in Review for you · read on your device, nothing sent out · iOS 27 and later",
+            "link": "autolog",
+            "only": "ios"
+          },
+          {
+            "icon": "⌚",
+            "title": "DooSpend on Apple Watch",
+            "detail": "Speak or type an amount on your wrist — it waits in Review on your iPhone · see what's left on your watch face",
+            "only": "ios"
+          },
+          {
+            "icon": "💳",
+            "title": "Card summary",
+            "detail": "View by billing cycle or by month, with a full-year balance chart"
+          },
+          {
+            "icon": "📈",
+            "title": "Account balance chart",
+            "detail": "See each account's balance and money in and out over time",
+            "only": "android"
+          },
+          {
+            "icon": "📸",
+            "title": "Keep snapping slips",
+            "detail": "Take the next slip while the last one is still being read",
+            "only": "android"
+          }
+        ],
+        "items": [
+          "📸 Snap a slip, then go straight on to the next one",
+          "🗣️ Speaking or typing an entry picks the store, category and account more accurately",
+          "📈 Balance chart on each account page",
+          "🧾 Card page shows billing cycles as a timeline",
+          "📊 Debt and savings summaries get a new header, compared with the start of the year",
+          "🍩 Transactions chart: tap a group to break it into its categories",
+          "🎨 App icon follows your theme color · pick your own in Settings → Appearance → App icon",
+          "✨ Display polishes and bug fixes"
+        ],
+        "iosOnlyItems": [
+          "📸 Snap a slip, then go straight on to the next one",
+          "📈 Balance chart on each account page",
+          "🎨 App icon follows your theme color · pick your own in Settings → Appearance → App icon"
+        ],
+        "titleAndroid": "💳 Card summary\n📈 Account balance chart"
+      },
+      "iosOnlyItems": [
+        "📸 ถ่ายสลิปแล้วกดถ่ายใบต่อไปได้เลย",
+        "📈 กราฟยอดรายบัญชีในหน้าบัญชี",
+        "🎨 ไอคอนแอปเปลี่ยนสีตามธีม · เลือกเองได้ที่ ตั้งค่า → ลักษณะหน้าตา → ไอคอนแอป"
+      ],
+      "titleAndroid": "💳 สรุปยอดบัตร\n📈 กราฟยอดรายบัญชี"
+    },
+    {
       "version": "3.2.0",
       "date": "17 พฤศจิกายน 2569",
       "title": "🖼️ เฝ้าสลิปใหม่ในคลัง\n🇱🇦 สกุลเงินกีบ",
@@ -9,7 +114,7 @@
         {
           "icon": "🖼️",
           "title": "เฝ้าสลิปใหม่ในคลัง",
-          "detail": "แอปเฝ้าคลังรูปให้ เจอสลิปใหม่แล้วแจ้ง · เลือกอ่านได้ทีละหลายใบ · ฟรี"
+          "detail": "แอปเฝ้าคลังรูปให้ เจอสลิปใหม่แล้วแจ้ง · เลือกอ่านได้ทีละหลายใบ"
         },
         {
           "icon": "🇱🇦",
@@ -34,7 +139,7 @@
           {
             "icon": "🖼️",
             "title": "Watch Photos for new slips",
-            "detail": "The app watches your photos and lets you know when a new slip lands · read several at once · free"
+            "detail": "The app watches your photos and lets you know when a new slip lands · read several at once"
           },
           {
             "icon": "🇱🇦",
@@ -62,7 +167,7 @@
         {
           "icon": "📊",
           "title": "สรุปเดือน",
-          "detail": "หน้าเดียวเห็นทั้งเดือน · ส่งออกเป็น PDF (Pro)"
+          "detail": "หน้าเดียวเห็นทั้งเดือน · ส่งออกเป็น PDF"
         },
         {
           "icon": "📌",
@@ -81,7 +186,7 @@
         },
         {
           "icon": "🎨",
-          "title": "สีธีมเพิ่ม 14 สี (Pro)",
+          "title": "สีธีมเพิ่ม 14 สี",
           "detail": "วิดเจ็ตเปลี่ยนสีตามธีมหรือเลือกเอง · ลองดูก่อนซื้อได้"
         }
       ],
@@ -101,7 +206,7 @@
           {
             "icon": "📊",
             "title": "Monthly summary",
-            "detail": "The whole month on one page · export as PDF (Pro)"
+            "detail": "The whole month on one page · export as PDF"
           },
           {
             "icon": "📌",
@@ -120,7 +225,7 @@
           },
           {
             "icon": "🎨",
-            "title": "14 more theme colors (Pro)",
+            "title": "14 more theme colors",
             "detail": "The widget follows the theme or a color you pick · try before you buy"
           }
         ],
@@ -138,17 +243,17 @@
     {
       "version": "3.0.0",
       "date": "7 พฤศจิกายน 2569",
-      "title": "♾️ Pro ตลอดชีวิต\n✦ ข้อมูลน่าสนใจ",
+      "title": "♾️ แพ็กเกจตลอดชีวิต\n✦ ข้อมูลน่าสนใจ",
       "highlights": [
         {
           "icon": "🗂️",
           "title": "กลุ่มหมวด",
-          "detail": "รวมหลายหมวดเป็นก้อน · ลากเรียงเอง · ตั้งงบตามกลุ่ม (Pro)"
+          "detail": "รวมหลายหมวดเป็นก้อน · ลากเรียงเอง · ตั้งงบตามกลุ่ม"
         },
         {
           "icon": "♾️",
-          "title": "Pro ตลอดชีวิต",
-          "detail": "จ่ายครั้งเดียว ใช้ฟีเจอร์ Pro ได้ตลอด · ไม่รวม AI จดให้"
+          "title": "แพ็กเกจตลอดชีวิต",
+          "detail": "จ่ายครั้งเดียว ใช้ได้ตลอด · ไม่รวม AI จดให้"
         },
         {
           "icon": "✦",
@@ -167,7 +272,7 @@
         },
         {
           "icon": "🏦",
-          "title": "เงินเข้าใกล้เกณฑ์สรรพากร (Pro)",
+          "title": "เงินเข้าใกล้เกณฑ์สรรพากร",
           "detail": "เตือนก่อนถึงเกณฑ์ · จัดบัญชีเป็นกลุ่มธนาคาร"
         }
       ],
@@ -183,17 +288,17 @@
       ],
       "en": {
         "date": "7 November 2026",
-        "title": "♾️ Pro Lifetime\n✦ Highlights",
+        "title": "♾️ Lifetime plan\n✦ Highlights",
         "highlights": [
           {
             "icon": "🗂️",
             "title": "Category groups",
-            "detail": "Put categories together · drag into your order · budget by group (Pro)"
+            "detail": "Put categories together · drag into your order · budget by group"
           },
           {
             "icon": "♾️",
-            "title": "Pro Lifetime",
-            "detail": "Pay once, keep every Pro feature · AI not included"
+            "title": "Lifetime plan",
+            "detail": "Pay once, keep it for good · AI not included"
           },
           {
             "icon": "✦",
@@ -212,7 +317,7 @@
           },
           {
             "icon": "🏦",
-            "title": "Money in near tax thresholds (Pro)",
+            "title": "Money in near tax thresholds",
             "detail": "A heads-up before the threshold · accounts grouped by bank"
           }
         ],
@@ -235,12 +340,12 @@
       "highlights": [
         {
           "icon": "🧾",
-          "title": "สรุปไว้ยื่นภาษี (Pro)",
+          "title": "สรุปไว้ยื่นภาษี",
           "detail": "รายรับทั้งปีแยกหมวด · หัก ณ ที่จ่าย · รายการที่ทำเครื่องหมายลดหย่อน · ไปต่อที่ e-Filing"
         },
         {
           "icon": "👛",
-          "title": "เงินที่ใช้ได้จริง (Pro)",
+          "title": "เงินที่ใช้ได้จริง",
           "detail": "การ์ดกระเป๋าบอก ใช้ได้ · กันไว้ หักบิลที่ยังต้องจ่ายเดือนนี้"
         },
         {
@@ -265,12 +370,12 @@
         "highlights": [
           {
             "icon": "🧾",
-            "title": "Tax filing summary (Pro)",
+            "title": "Tax filing summary",
             "detail": "A year of income by category · tax withheld · entries marked as deductible · then on to e-Filing"
           },
           {
             "icon": "👛",
-            "title": "Money you can really spend (Pro)",
+            "title": "Money you can really spend",
             "detail": "The Wallet card shows Available · Set aside, after bills still due this month"
           },
           {
@@ -299,7 +404,7 @@
         {
           "icon": "📊",
           "title": "รู้ก่อนว่าสิ้นเดือนเหลือเท่าไหร่",
-          "detail": "ตั้งเงินเดือนเป็นรายรับประจำ หรือจดรายรับที่คาดว่าจะได้ไว้ล่วงหน้า · ช่อง “เดือนนี้” บอกสุทธิวันนี้ และสุทธิสิ้นเดือน (Pro) ไว้วางแผนใช้เงินให้ถึงสิ้นเดือน"
+          "detail": "ตั้งเงินเดือนเป็นรายรับประจำ หรือจดรายรับที่คาดว่าจะได้ไว้ล่วงหน้า · ช่อง “เดือนนี้” บอกสุทธิวันนี้ และสุทธิสิ้นเดือน ไว้วางแผนใช้เงินให้ถึงสิ้นเดือน"
         },
         {
           "icon": "💰",
@@ -336,7 +441,7 @@
           {
             "icon": "📊",
             "title": "See your month-end balance ahead",
-            "detail": "Set your salary as recurring income, or add income you expect ahead of time · the “Month” slot shows Net today and Month-end net (Pro) so you can plan your spending to the end of the month"
+            "detail": "Set your salary as recurring income, or add income you expect ahead of time · the “Month” slot shows Net today and Month-end net so you can plan your spending to the end of the month"
           },
           {
             "icon": "💰",
@@ -465,8 +570,8 @@
       ],
       "items": [
         "💸 แถบ “โอน” ในชีตตรวจสอบ สำหรับเติม e-wallet หรือโอนเข้าบัญชีตัวเอง",
-        "📤 ส่งออกตามตัวกรองที่เปิดอยู่ และส่งออกรายสมุด (Pro)",
-        "📅 ยอดใช้ได้ต่อวันบนแถวงบและในหน้ารายละเอียดงบ (Pro)",
+        "📤 ส่งออกตามตัวกรองที่เปิดอยู่ และส่งออกรายสมุด",
+        "📅 ยอดใช้ได้ต่อวันบนแถวงบและในหน้ารายละเอียดงบ",
         "🚫 ติ๊ก “ไม่นับในค่าใช้จ่าย” แล้วไม่นับในงบไหนเลย · ยังเห็นเป็นแถวจางในรายละเอียดงบ",
         "📊 กราฟแนวโน้มมีเส้นเฉลี่ย แตะแท่งเพื่อดูยอด",
         "🗑️ ลบบัญชีแล้ว งบที่ผูกบัญชีนั้นถูกลบไปด้วย · กล่องยืนยันบอกทีละเรื่องว่าอะไรอยู่ อะไรหาย",
@@ -503,8 +608,8 @@
         ],
         "items": [
           "💸 A “Transfer” tab in the review sheet for e-wallet top-ups and moves between your own accounts",
-          "📤 Export what the current filter shows, or a single pocket (Pro)",
-          "📅 Daily allowance on each budget row and in budget detail (Pro)",
+          "📤 Export what the current filter shows, or a single pocket",
+          "📅 Daily allowance on each budget row and in budget detail",
           "🚫 Entries marked “Not counted as spending” count toward no budget · they still show, faded, in budget detail",
           "📊 Trend charts show an average line · tap a bar to see its amount",
           "🗑️ Deleting an account also deletes its budgets · the confirmation lists, line by line, what stays and what goes",
@@ -524,17 +629,17 @@
         {
           "icon": "🏦",
           "title": "เงินเข้ารายปีทุกบัญชี",
-          "detail": "นับฝากและรับโอนทั้งปี เทียบกับเกณฑ์ที่ธนาคารต้องรายงานกรมสรรพากร · ดูรายการทีละรายการได้ฟรี ยอดรวมทั้งปีสำหรับ Pro"
+          "detail": "นับฝากและรับโอนทั้งปี เทียบกับเกณฑ์ที่ธนาคารต้องรายงานกรมสรรพากร"
         },
         {
           "icon": "🧮",
           "title": "รวมบัญชีธนาคารเดียวกัน",
-          "detail": "ติ๊กหลายบัญชีในธนาคารเดียวกัน นับรวมแบบที่ธนาคารนับ (Pro)"
+          "detail": "ติ๊กหลายบัญชีในธนาคารเดียวกัน นับรวมแบบที่ธนาคารนับ"
         },
         {
           "icon": "📄",
           "title": "แฟ้มชี้แจงเงินเข้า",
-          "detail": "ส่งออก PDF แนบรูปสลิปได้ หรือ CSV เปิดใน Excel (Pro)"
+          "detail": "ส่งออก PDF แนบรูปสลิปได้ หรือ CSV เปิดใน Excel"
         },
         {
           "icon": "📊",
@@ -558,17 +663,17 @@
           {
             "icon": "🏦",
             "title": "Yearly incoming for every account",
-            "detail": "Counts deposits and transfers in for the whole year, against the thresholds banks must report to the Revenue Department · individual transactions are free, yearly totals are Pro"
+            "detail": "Counts deposits and transfers in for the whole year, against the thresholds banks must report to the Revenue Department"
           },
           {
             "icon": "🧮",
             "title": "Combine accounts at the same bank",
-            "detail": "Tick several accounts at one bank to count them together, the way the bank does (Pro)"
+            "detail": "Tick several accounts at one bank to count them together, the way the bank does"
           },
           {
             "icon": "📄",
             "title": "Incoming statement file",
-            "detail": "Export a PDF with slip photos, or a CSV for Excel (Pro)"
+            "detail": "Export a PDF with slip photos, or a CSV for Excel"
           },
           {
             "icon": "📊",
@@ -725,8 +830,8 @@
       "title": "🎯 เป้าหมายออมเงิน\n🗓️ ภาพรวมค่าใช้จ่ายเดือนนี้ (จอใหม่)",
       "date": "17 สิงหาคม 2569",
       "items": [
-        "🎯 เป้าหมายออม — ตั้งเป้าแล้วแอปกันเงินก้อนนั้นออกจากยอด “ใช้ได้” และบอกว่าต้องออมเดือนละเท่าไหร่ถึงจะทัน (ฟรี 1 เป้า)",
-        "🧩 ตารางออมเงิน (Pro) — แอปเกลี่ยยอดลงทุกช่องให้ ติ๊กเก็บทีละช่อง (รายวัน/สัปดาห์/เดือน) ผลรวมลงพอดีเป้า",
+        "🎯 เป้าหมายออม — ตั้งเป้าแล้วแอปกันเงินก้อนนั้นออกจากยอด “ใช้ได้” และบอกว่าต้องออมเดือนละเท่าไหร่ถึงจะทัน",
+        "🧩 ตารางออมเงิน — แอปเกลี่ยยอดลงทุกช่องให้ ติ๊กเก็บทีละช่อง (รายวัน/สัปดาห์/เดือน) ผลรวมลงพอดีเป้า",
         "🔔 เตือนเมื่อเงินในบัญชีเหลือน้อยกว่าที่กันไว้",
         "🗓️ จอภาพรวมค่าใช้จ่ายเดือนนี้ — บิลบัตร · รายจ่ายประจำ · งวดผ่อน · เงินที่ยืมมา เรียงตามวัน",
         "💳 ยอดแยกสองก้อนให้ชัด — บิลบัตร (รูดไปแล้ว) กับกำหนดจ่ายอื่น (ยังไม่ออก)",
@@ -741,8 +846,8 @@
         "title": "🎯 Savings goals\n🗓️ This month's obligations (new screen)",
         "date": "17 August 2026",
         "items": [
-          "🎯 Savings goals — set a target and the app keeps that money out of what's safe to spend, then tells you how much to put aside each month to get there (1 goal free)",
-          "🧩 Savings chart (Pro) — the app spreads the target across the squares and you tick them off one at a time (daily/weekly/monthly); the total lands exactly on your goal",
+          "🎯 Savings goals — set a target and the app keeps that money out of what's safe to spend, then tells you how much to put aside each month to get there",
+          "🧩 Savings chart — the app spreads the target across the squares and you tick them off one at a time (daily/weekly/monthly); the total lands exactly on your goal",
           "🔔 A warning when an account holds less than what you've set aside",
           "🗓️ A screen for this month's obligations — card bills · recurring payments · installments · money you borrowed, in date order",
           "💳 Two separate totals, kept clear — card bills (already spent) and everything else due (not yet gone)",
@@ -771,7 +876,7 @@
         "☀️ เตือนตอนเช้าว่าวันนี้ใช้ได้อีกเท่าไหร่",
         "🔎 ค้นหมวดไม่เจอ → เสนอสร้างด้วยคำที่พิมพ์",
         "📊 ยอดยกมาจากช่วงก่อนหน้า โชว์บนหน้ารายการ",
-        "📈 กราฟเงินโต (Pro) — ยอดเงินสุทธิย้อนหลังถึง 1 ปี"
+        "📈 กราฟเงินโต — ยอดเงินสุทธิย้อนหลังถึง 1 ปี"
       ]
     },
     {
@@ -807,7 +912,7 @@
         "🔢 ยอดผ่อน/เงินกู้ กรอกสตางค์ได้แล้ว",
         "📊 โควตา AI ตรงกันทุกเครื่องที่ใช้ Apple ID เดียวกัน — เดิมแต่ละเครื่องเห็นแค่จำนวนที่ตัวเองใช้",
         "⭐ ตั้งบัญชีเริ่มต้นได้จากหน้ารายการบัญชีเลย แตะดาวหลังชื่อ",
-        "🧾 สเตทเมนต์ที่ต้องใช้ Pro บอกตั้งแต่ในลิสต์ · อัปเกรดแล้วกดอ่านต่อได้จากรายการเดิม ไม่ต้องแชร์ไฟล์ใหม่"
+        "🧾 สเตทเมนต์ที่ต้องอัปเกรดก่อนอ่าน บอกตั้งแต่ในลิสต์ · อัปเกรดแล้วกดอ่านต่อได้จากรายการเดิม ไม่ต้องแชร์ไฟล์ใหม่"
       ]
     },
     {
@@ -851,7 +956,7 @@
       "title": "📥 ย้ายจากแอปเก่าได้แล้ว — นำเข้า CSV / Excel / statement บัตร",
       "date": "12 กรกฎาคม 2569",
       "items": [
-        "📥 ย้ายมาจากแอปเก่า — นำเข้าไฟล์ CSV / Excel หรือ statement บัตร (PDF จากอีเมลแบงก์) → เข้าแท็บ \"ตรวจสอบ\" ให้ยืนยัน · CSV/Excel ฟรี ไม่ใช้โควตา AI",
+        "📥 ย้ายมาจากแอปเก่า — นำเข้าไฟล์ CSV / Excel หรือ statement บัตร (PDF จากอีเมลแบงก์) → เข้าแท็บ \"ตรวจสอบ\" ให้ยืนยัน · CSV/Excel ไม่ใช้โควตา AI",
         "🔁 รายการที่เกิดซ้ำ (subscription) พอถึงกำหนด เด้งเข้า \"ตรวจสอบ\" ให้ยืนยันเองอัตโนมัติ + เตือนล่วงหน้าหน้าแรก",
         "📤 ส่งออกดีขึ้น — CSV เปิดใน Excel ภาษาไทยไม่เพี้ยน · PDF เป็นรายงานสรุป (ยอด/หมวด/ร้าน) · กดส่งออกแล้วแชร์จบในปุ่มเดียว"
       ]
